@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://eizeit.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eizeit.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-08-11T00:27:39+08:00</updated><id>https://eizeit.github.io/feed.xml</id><title type="html">为者常成 行者常至</title><subtitle>网络空间安全/后端/Golang/C/C++/学习笔记/日常随笔</subtitle><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><entry><title type="html">【考研英语】 2004年阅读理解重点单词、短语</title><link href="https://eizeit.github.io/blog/2020/08/09/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2004年阅读理解重点单词、短语" /><published>2020-08-09T00:00:00+08:00</published><updated>2020-08-09T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/08/09/english-reading</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/08/09/english-reading/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://eizeit.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eizeit.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-08-11T14:40:48+08:00</updated><id>https://eizeit.github.io/feed.xml</id><title type="html">为者常成 行者常至</title><subtitle>网络空间安全/后端/Golang/C/C++/学习笔记/日常随笔</subtitle><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><entry><title type="html">【考研408 · 数据结构】 第三章、栈和队列</title><link href="https://eizeit.github.io/blog/2020/08/11/ds-stack-queue/" rel="alternate" type="text/html" title="【考研408 · 数据结构】 第三章、栈和队列" /><published>2020-08-11T00:00:00+08:00</published><updated>2020-08-11T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/08/11/ds-stack-queue</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/08/11/ds-stack-queue/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#heading-栈&quot; id=&quot;markdown-toc-heading-栈&quot;&gt;栈&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;heading-栈&quot;&gt;栈&lt;/h2&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="数据结构" /><category term="数据结构" /><category term="408" /><category term="栈" /><category term="队列" /></entry><entry><title type="html">【考研英语】 2004年阅读理解重点单词、短语</title><link href="https://eizeit.github.io/blog/2020/08/09/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2004年阅读理解重点单词、短语" /><published>2020-08-09T00:00:00+08:00</published><updated>2020-08-09T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/08/09/english-reading</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/08/09/english-reading/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-2004&quot; id=&quot;markdown-toc-heading-2004&quot;&gt;2004&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-text-1&quot; id=&quot;markdown-toc-heading-text-1&quot;&gt;text 1&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-text-2&quot; id=&quot;markdown-toc-heading-text-2&quot;&gt;text 2&lt;/a&gt;&lt;/li&gt;
@@ -65,7 +69,28 @@
   &lt;li&gt;silver lining 一线光明；一线希望&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;heading-text-4&quot;&gt;text 4&lt;/h3&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研英语" /><category term="阅读理解" /></entry><entry><title type="html">【考研英语】 2001-2003年阅读理解重点单词、短语</title><link href="https://eizeit.github.io/blog/2020/08/07/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2001-2003年阅读理解重点单词、短语" /><published>2020-08-07T00:00:00+08:00</published><updated>2020-08-07T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/08/07/english-reading</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/08/07/english-reading/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+&lt;h3 id=&quot;heading-text-4&quot;&gt;text 4&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;pervasive [adj.]遍布的；充斥各处的；弥漫的&lt;/li&gt;
+  &lt;li&gt;counterbalance [n.]平衡抵消物 [vt.]抗衡；抵消；对…起平衡作用&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;vulnerable&lt;/strong&gt; [adj.]脆弱的；易受伤害的&lt;/li&gt;
+  &lt;li&gt;exploitation [n.]利用；开发&lt;/li&gt;
+  &lt;li&gt;populist [adj.]民粹主义的 [n.]平民主义者&lt;/li&gt;
+  &lt;li&gt;rigorous [adj.]严酷的；严密的；细致的&lt;/li&gt;
+  &lt;li&gt;recitation [n.]朗读；诵读；逐一列举&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;bellyful [n.]一肚子的&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;a bellyful of…&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;exemplify&lt;/strong&gt; [vt.]举例说明&lt;/li&gt;
+  &lt;li&gt;innate [adj.]天生的；先天的&lt;/li&gt;
+  &lt;li&gt;militantly [adv.]好战地；强硬地；霸气十足地&lt;/li&gt;
+  &lt;li&gt;identify with 认为…等同于；觉得与…有联系（牵连）；支持；同情（某人）；和…有同感&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研英语" /><category term="阅读理解" /></entry><entry><title type="html">【考研英语】 2001-2003年阅读理解重点单词、短语</title><link href="https://eizeit.github.io/blog/2020/08/07/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2001-2003年阅读理解重点单词、短语" /><published>2020-08-07T00:00:00+08:00</published><updated>2020-08-07T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/08/07/english-reading</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/08/07/english-reading/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-2001&quot; id=&quot;markdown-toc-heading-2001&quot;&gt;2001&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-text-1&quot; id=&quot;markdown-toc-heading-text-1&quot;&gt;text 1&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-text-2&quot; id=&quot;markdown-toc-heading-text-2&quot;&gt;text 2&lt;/a&gt;&lt;/li&gt;
@@ -312,7 +337,11 @@
   &lt;li&gt;start-up [n.]新兴公司 [adj.]起始阶段的&lt;/li&gt;
   &lt;li&gt;living proof 活生生的例子&lt;/li&gt;
   &lt;li&gt;overfund [vt.]为…提供资金过多&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研英语" /><category term="阅读理解" /></entry><entry><title type="html">【信息内容安全】 复习重点</title><link href="https://eizeit.github.io/blog/2020/07/22/content-security-review/" rel="alternate" type="text/html" title="【信息内容安全】 复习重点" /><published>2020-07-22T00:00:00+08:00</published><updated>2020-07-22T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/07/22/content-security-review</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/07/22/content-security-review/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+&lt;/ul&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研英语" /><category term="阅读理解" /></entry><entry><title type="html">【考研408 · 数据结构】 第二章、线性表</title><link href="https://eizeit.github.io/blog/2020/08/03/ds-linear-list/" rel="alternate" type="text/html" title="【考研408 · 数据结构】 第二章、线性表" /><published>2020-08-03T00:00:00+08:00</published><updated>2020-08-03T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/08/03/ds-linear-list</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/08/03/ds-linear-list/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#heading-顺序表&quot; id=&quot;markdown-toc-heading-顺序表&quot;&gt;顺序表&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;heading-顺序表&quot;&gt;顺序表&lt;/h2&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="数据结构" /><category term="数据结构" /><category term="408" /><category term="线性表" /></entry><entry><title type="html">【信息内容安全】 复习重点</title><link href="https://eizeit.github.io/blog/2020/07/22/content-security-review/" rel="alternate" type="text/html" title="【信息内容安全】 复习重点" /><published>2020-07-22T00:00:00+08:00</published><updated>2020-07-22T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/07/22/content-security-review</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/07/22/content-security-review/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-重点&quot; id=&quot;markdown-toc-heading-重点&quot;&gt;重点&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-pagerank算法暂时只写alpha--0的情况考试只考alpha0&quot; id=&quot;markdown-toc-heading-pagerank算法暂时只写alpha--0的情况考试只考alpha0&quot;&gt;PageRank算法（暂时只写$\alpha = 0$的情况，考试只考$\alpha=0$）&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-kmp算法&quot; id=&quot;markdown-toc-heading-kmp算法&quot;&gt;KMP算法&lt;/a&gt;&lt;/li&gt;
@@ -744,7 +773,7 @@ VPN、专网&lt;/li&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;heading-社交网络研究内容&quot;&gt;社交网络研究内容&lt;/h4&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="信息内容安全" /><category term="信息内容安全" /><category term="PageRank" /><category term="爬虫架构" /><category term="搜索引擎" /></entry><entry><title type="html">【考研408 · 数据结构】 第一章 绪论</title><link href="https://eizeit.github.io/blog/2020/07/10/ds-introduction/" rel="alternate" type="text/html" title="【考研408 · 数据结构】 第一章 绪论" /><published>2020-07-10T00:00:00+08:00</published><updated>2020-07-10T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/07/10/ds-introduction</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/07/10/ds-introduction/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+&lt;h4 id=&quot;heading-社交网络研究内容&quot;&gt;社交网络研究内容&lt;/h4&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="信息内容安全" /><category term="信息内容安全" /><category term="PageRank" /><category term="爬虫架构" /><category term="搜索引擎" /></entry><entry><title type="html">【考研408 · 数据结构】 第一章、绪论</title><link href="https://eizeit.github.io/blog/2020/07/10/ds-introduction/" rel="alternate" type="text/html" title="【考研408 · 数据结构】 第一章、绪论" /><published>2020-07-10T00:00:00+08:00</published><updated>2020-07-10T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/07/10/ds-introduction</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/07/10/ds-introduction/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-数据结构的基本概念&quot; id=&quot;markdown-toc-heading-数据结构的基本概念&quot;&gt;数据结构的基本概念&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-算法的基本概念&quot; id=&quot;markdown-toc-heading-算法的基本概念&quot;&gt;算法的基本概念&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-算法的特性&quot; id=&quot;markdown-toc-heading-算法的特性&quot;&gt;算法的特性&lt;/a&gt;&lt;/li&gt;
@@ -762,29 +791,47 @@ VPN、专网&lt;/li&gt;
 
 &lt;ul&gt;
   &lt;li&gt;数据&lt;/li&gt;
-  &lt;li&gt;数据元素
-是数据的基本单位，由若干数据项组成&lt;/li&gt;
-  &lt;li&gt;数据对象
-是数据元素的集合&lt;/li&gt;
-  &lt;li&gt;数据结构
-是&lt;strong&gt;数据元素&lt;/strong&gt;的集合，包括&lt;strong&gt;逻辑结构、存储结构、对数据的运算&lt;/strong&gt;&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;数据的逻辑结构
-与存储结构无关，同一种逻辑结构可以有多种存储结构&lt;/p&gt;
+    &lt;p&gt;数据元素&lt;/p&gt;
+
+    &lt;p&gt;是数据的基本单位，由若干数据项组成&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;数据对象&lt;/p&gt;
+
+    &lt;p&gt;是数据元素的集合&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;数据结构&lt;/p&gt;
+
+    &lt;p&gt;是&lt;strong&gt;数据元素&lt;/strong&gt;的集合，包括&lt;strong&gt;逻辑结构、存储结构、对数据的运算&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;数据的逻辑结构&lt;/p&gt;
+
+    &lt;p&gt;与存储结构无关，同一种逻辑结构可以有多种存储结构&lt;/p&gt;
 
     &lt;p&gt;逻辑结构分为线性结构和非线性结构&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;数据的物理结构（存储结构）
-是逻辑结构在计算机中的表示（又称为映像），分为顺序映像和非顺序映像&lt;/p&gt;
+    &lt;p&gt;数据的物理结构（存储结构）&lt;/p&gt;
+
+    &lt;p&gt;是逻辑结构在计算机中的表示（又称为映像），分为顺序映像和非顺序映像&lt;/p&gt;
 
     &lt;p&gt;四种常用存储方法&lt;/p&gt;
+
     &lt;ul&gt;
-      &lt;li&gt;顺序存储方法
-逻辑上相邻的结点物理位置也相邻&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;顺序存储方法&lt;/p&gt;
+
+        &lt;p&gt;逻辑上相邻的结点物理位置也相邻&lt;/p&gt;
+      &lt;/li&gt;
       &lt;li&gt;链式存储方法&lt;/li&gt;
-      &lt;li&gt;索引存储方法
-建立附加索引表&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;索引存储方法&lt;/p&gt;
+
+        &lt;p&gt;建立附加索引表&lt;/p&gt;
+      &lt;/li&gt;
       &lt;li&gt;散列存储方法&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -819,7 +866,7 @@ VPN、专网&lt;/li&gt;
 
 &lt;p&gt;就这么算就行了，遇到递归啥的先设一下k次结束然后代回去解出表达式然后算&lt;/p&gt;
 
-&lt;h3 id=&quot;heading-空间复杂度&quot;&gt;空间复杂度&lt;/h3&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研408" /><category term="数据结构" /><category term="408" /></entry><entry><title type="html">【计算机系统安全】 S/Key协议的实现</title><link href="https://eizeit.github.io/blog/2020/06/25/system-security-skey/" rel="alternate" type="text/html" title="【计算机系统安全】 S/Key协议的实现" /><published>2020-06-25T00:00:00+08:00</published><updated>2020-06-25T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/06/25/system-security-skey</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/06/25/system-security-skey/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+&lt;h3 id=&quot;heading-空间复杂度&quot;&gt;空间复杂度&lt;/h3&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="数据结构" /><category term="数据结构" /><category term="408" /></entry><entry><title type="html">【计算机系统安全】 S/Key协议的实现</title><link href="https://eizeit.github.io/blog/2020/06/25/system-security-skey/" rel="alternate" type="text/html" title="【计算机系统安全】 S/Key协议的实现" /><published>2020-06-25T00:00:00+08:00</published><updated>2020-06-25T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/06/25/system-security-skey</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/06/25/system-security-skey/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-skey协议原理&quot; id=&quot;markdown-toc-heading-skey协议原理&quot;&gt;S/Key协议原理&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-程序设计&quot; id=&quot;markdown-toc-heading-程序设计&quot;&gt;程序设计&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-源码&quot; id=&quot;markdown-toc-heading-源码&quot;&gt;源码&lt;/a&gt;&lt;/li&gt;
@@ -832,7 +879,7 @@ VPN、专网&lt;/li&gt;
     &lt;p&gt;初始化&lt;/p&gt;
 
     &lt;ul&gt;
-      &lt;li&gt;用户输入密码passord（长度大于8个字符）&lt;/li&gt;
+      &lt;li&gt;用户输入密码password（长度大于8个字符）&lt;/li&gt;
       &lt;li&gt;服务器产生一个8个字节的随机字符序列salt（加盐）&lt;/li&gt;
       &lt;li&gt;预处理：将password和salt拼接后做MD4散列操作 ，将32字节的输出结果分为左右两部分，每部分16个字节，两部分做异或运算，结果记为S&lt;/li&gt;
     &lt;/ul&gt;
@@ -1589,266 +1636,4 @@ exploit
 
 &lt;p&gt;该方法对POST包中的传入的headers进行处理，包括判断&quot;content-type&quot;，获取请求包中的wl_upload_application_name参数，然后判断是否为空以及构造上传路径等。&lt;/p&gt;
 
-&lt;p&gt;这个漏洞的利用需要先取得WebLogic的用户名和密码，因此危害程度有限，但一旦成功上传shell，就可以控制对方主机。&lt;/p&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="漏洞复现" /><category term="漏洞复现" /></entry><entry><title type="html">【日常记录】 驻法国使馆新闻发言人就近期个别法媒涉华谬论的回应（节选）</title><link href="https://eizeit.github.io/blog/2020/02/29/amb-chine-fr/" rel="alternate" type="text/html" title="【日常记录】 驻法国使馆新闻发言人就近期个别法媒涉华谬论的回应（节选）" /><published>2020-02-29T00:00:00+08:00</published><updated>2020-02-29T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/02/29/amb-chine-fr</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/02/29/amb-chine-fr/">&lt;p&gt;&lt;a href=&quot;http://www.amb-chine.fr/chn/ttxw/t1750844.htm#%201/2&quot;&gt;原文地址&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;他们质疑中国“想当超级大国，与美国平起平坐”。这是典型的酸葡萄心理。他们从心底里畏惧美国强权，自甘低人一等，从来不敢同美国以“你”相称，见到中国挺直腰杆就认为“大逆不道”。&lt;strong&gt;跪久了的人看到别人站着会觉得不顺眼。&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;他们叫嚣中国现在“空前孤立，国际地位受到削弱”。试问，仅仅欧盟或许因疫情考虑推迟同中国高层交往，以及西方一些国家暂停往来中国航班就等于中国被国际社会孤立了么？这些人张口闭口国际社会，恬不知耻地把自己同国际社会划等号，把自己对中国的歧视等同于国际社会对中国的孤立。事实上，即使把整个西方都算上，充其量也就二十几个国家、约十亿人口。他们难道看不到，至今已有170多个国家和40多个国际组织负责人向中方发电发函表示慰问？他们难道看不到，即便在欧洲，绝大多数国家政要和社会各界人士都纷纷向中国表达支持？事实证明，妄图孤立中国的，只是极少数成天在媒体上聒噪的顽固反华分子，而他们的声音只能在他们自己的小圈子里回荡。&lt;/li&gt;
-  &lt;li&gt;他们污蔑说中国政府“驱逐”伤害中国人民感情的《华尔街日报》3名驻京记者的举措是“打民族主义牌”。《华尔街日报》发表的文章，利用疫情对中国政府恶意攻击抹黑，甚至冠以《中国是真正的亚洲病夫》这一充满种族主义色彩的标题，严重伤害了中国人民的民族感情，也违背了西方国家自己标榜的“普世价值”。难道西方媒体有散布种族主义的“自由”，受害者就没有反击种族主义的权利？这是什么逻辑？这是强盗逻辑！身为记者，为这样的文章背书开脱，要么本身就是种族主义者，要么就是别有用心。&lt;/li&gt;
-  &lt;li&gt;　他们幸灾乐祸地声称“中国梦折翼了”，甚至引用不负责任的所谓“学者”的话，预言“中国的政治清算时刻疫情之后会到来”。这充分暴露了他们的阴暗心理和险恶用心。他们一直盼着中国被搞乱，甚至发生“切尔诺贝利”式的事件。今天看到中国遭难，这些人便欣喜若狂。但不幸的是，这只能是一厢情愿。正如习近平主席所说，中华民族历史上经历过很多磨难，但从来没有被压垮过，而是愈挫愈勇，不断在磨难中成长、从磨难中奋起。&lt;/li&gt;
-  &lt;li&gt;“小小寰球，有几个苍蝇碰壁。”少数人的聒噪，不会动摇中国人民众志成城抗击疫情的士气，不会影响国际社会对中国的支持，更不会阻挡中华民族伟大复兴的脚步。&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="日常记录" /><category term="日常记录" /></entry><entry><title type="html">【编译原理】 重难点 (First集、Follow集求法、LL语法分析、LR语法分析等)</title><link href="https://eizeit.github.io/blog/2020/01/05/compiler-keynote/" rel="alternate" type="text/html" title="【编译原理】 重难点 (First集、Follow集求法、LL语法分析、LR语法分析等)" /><published>2020-01-05T00:00:00+08:00</published><updated>2020-01-05T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/01/05/compiler-keynote</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/01/05/compiler-keynote/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#heading-语法分析&quot; id=&quot;markdown-toc-heading-语法分析&quot;&gt;语法分析&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#heading-自顶向下语法分析&quot; id=&quot;markdown-toc-heading-自顶向下语法分析&quot;&gt;自顶向下语法分析&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#heading-自底向上语法分析&quot; id=&quot;markdown-toc-heading-自底向上语法分析&quot;&gt;自底向上语法分析&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#heading-中间代码生成&quot; id=&quot;markdown-toc-heading-中间代码生成&quot;&gt;中间代码生成&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;heading-语法分析&quot;&gt;语法分析&lt;/h2&gt;
-
-&lt;h3 id=&quot;heading-自顶向下语法分析&quot;&gt;自顶向下语法分析&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;First集&lt;br /&gt;
-First集即一个文法符号串可能推导出的串的第一个终结符的集合（包括空字符 $\epsilon$ ）&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;单个终结符的First集&lt;/p&gt;
-
-        &lt;p&gt;单个终结符的First集就是它自己。&lt;br /&gt;
-First(X)={X}&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;单个非终结符的First集&lt;/p&gt;
-
-        &lt;ol&gt;
-          &lt;li&gt;
-            &lt;p&gt;$A\rightarrow a…$&lt;/p&gt;
-
-            &lt;p&gt;产生式右部以终结符开头，$a\in First(A)$&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;$A\rightarrow B…$&lt;/p&gt;
-
-            &lt;p&gt;产生式右部以非终结符开头，$First(B)\subseteq First(A)$&lt;/p&gt;
-          &lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;多个符号形成的符号串的First集&lt;/p&gt;
-
-        &lt;p&gt;$A\rightarrow B_1B_2…B_n$ ，$B_i$是第一个$\epsilon \notin First(B_i)$的字符，则$First(A)=First(B_1) \cup First(B_2) \cup …\cup First(B_i)-{ \epsilon }$&lt;/p&gt;
-
-        &lt;p&gt;若$B_1, B_2, …, B_n$均能推出空串，则$First(A)=First(B_1) \cup First(B_2) \cup …\cup First(B_n) \cup {\epsilon}$&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Follow集&lt;/p&gt;
-
-    &lt;p&gt;Follow集即一个文法符号后面可能跟随的终结符号的集合(&lt;strong&gt;不包括空字符&lt;/strong&gt;)&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;$Follow(S)= {@}$&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;欲求的非终结符后跟终结符&lt;/p&gt;
-
-        &lt;p&gt;$A\rightarrow \alpha Bx\beta$（$x$是终结符），则 $a\in Follow(B)$&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;欲求的非终结符后跟非终结符&lt;/p&gt;
-
-        &lt;p&gt;$A\rightarrow \alpha B\beta$，则 $First(\beta ) \subseteq Follow(B)$，若$\epsilon \in First(\beta )$，因为空字符不包括在Follow集中，因此B后面跟的内容就是A后面的内容了，则这种情况下还要加上 $Follow(A)\subseteq Follow(B)$&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;欲求的非终结符在产生式结尾&lt;/p&gt;
-
-        &lt;p&gt;$A\rightarrow \alpha B$，则$Follow(A)\subseteq Follow(B)$&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;判断某文法是不是LL(1)文法&lt;/p&gt;
-
-    &lt;p&gt;一个文法是LL(1)的，当且仅当G的任意两个不同的产生式 $A \rightarrow \alpha \mid \beta$ 满足下面的条件：&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;$First(\alpha)\cap First(\beta)=\phi$&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;当$\epsilon \in First(\beta)时，Follow(A) \cap First(\alpha)=\phi$&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;构造LL(1)分析表&lt;/p&gt;
-
-    &lt;p&gt;对文法G的每个产生式$A\rightarrow \alpha$做如下处理：&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;对于$First(\alpha)$中的每个终结符号$a$，将$A\rightarrow \alpha$加入到$M[A,a]$中&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;若$\epsilon \in First(\alpha)$，则对于每个终结符号$b\in Follow(A)$，将$A \rightarrow \alpha$加入到$M[A,b]$中；若$\epsilon \in First(\alpha)$ 且 \(\$ \in Follow(A)\) ，则将 $A \rightarrow \alpha$ 也加入到$M[A,@]$中&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;完成上面的操作后，空白条目即error&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;预测分析算法&lt;/p&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//ip为输入指针，栈的初始状态为S$
-令X=栈顶符号while(X!=$){    
-    if(X=ip指向的字符a) 
-      弹栈，ip+1    
-  else if(X是终结符) error    
-  else if(M[X,a]=error) error    
-  else if(M[X,a]=X-&amp;gt;Y1Y2...Yk){        
-      输出产生式        
-      弹出栈顶符号        
-      Yk...Y2Y1入栈，Y1在栈顶        
-      ip+1    
-  }        
-  X=栈顶符号
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;分析栈的作用：保存当前句型&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;消除左递归&lt;/p&gt;
-
-\[A \rightarrow A\alpha_1 |A\alpha_2 |...|A\alpha_n |\beta_1 |\beta_2 |...|\beta_m\\
-\Rightarrow A\rightarrow \beta_1 A'|\beta_2 A'|...|\beta_m A'\\
-A' \rightarrow \alpha_1 A'|\alpha_2 A'|...|\epsilon\]
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;heading-自底向上语法分析&quot;&gt;自底向上语法分析&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;构造LR(0)规范项集族&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;内核项&lt;/p&gt;
-
-        &lt;p&gt;$S\rightarrow ·S'$ 以及所有点不在最左端的项&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;非内核项&lt;/p&gt;
-
-        &lt;p&gt;除了$S\rightarrow ·S'$ 之外的所有点在最左端的项，非内核项可以通过闭包运算重新生成&lt;/p&gt;
-
-        &lt;ol&gt;
-          &lt;li&gt;增广文法&lt;/li&gt;
-        &lt;/ol&gt;
-
-        &lt;p&gt;在文法G中加上一个新的开始符号S'和产生式$S\rightarrow S'$，目的是使句柄的中止状态只有一个&lt;/p&gt;
-
-        &lt;ol&gt;
-          &lt;li&gt;CLOUSURE计算&lt;/li&gt;
-        &lt;/ol&gt;
-
-        &lt;p&gt;设I是文法G的一个项集，则CLOUSURE(I)根据以下规则计算得到：&lt;/p&gt;
-
-        &lt;ul&gt;
-          &lt;li&gt;将I中的各项加入到CLOUSURE(I)中&lt;/li&gt;
-          &lt;li&gt;若$A\rightarrow \alpha ·B \beta$在CLOUSURE(I)中，$B\rightarrow \gamma$是一个产生式，并且$B\rightarrow ·\gamma$不在CLOUSURE(I)中，则将其加入。不断应用该规则直到无新项加入（其实就是相同状态的集合，这两个状态都是准备识别B的状态）
-            &lt;ol&gt;
-              &lt;li&gt;GOTO函数&lt;/li&gt;
-            &lt;/ol&gt;
-
-            &lt;p&gt;反正就这么个意思。&lt;/p&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;构造GOTO图&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;构造LR分析表&lt;/p&gt;
-
-    &lt;p&gt;$si$表示移入并将状态$i$压栈&lt;/p&gt;
-
-    &lt;p&gt;$rj$表示按照编号为$j$的产生式进行归约&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;构造增广文法G'的规范项集族$C={ I_0,I_1,…,I_n}$&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;根据$I_i$构造得到状态$i$，状态$i$的语法分析动作如下决定：&lt;/p&gt;
-
-        &lt;ul&gt;
-          &lt;li&gt;
-            &lt;p&gt;若$[A\rightarrow \alpha ·a\beta]$在$I_i$中且$GOTO(I_i,a)=I_j$，则将$ACTION[i,a]$设置为$sj$，$a$必须是终结符&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;若$[A\rightarrow \alpha·]$在$I_i$中，则对于所有的$a\in Follow(A)$，将$ACTION[i,a]$设置为$rj$，这里$j$为产生式$A\rightarrow \alpha$的编号，$A\ne S'$&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;若$[S'\rightarrow S·]$在$I_i$中，则将$ACTION[i,@]$设置为acc（接受）&lt;/p&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;状态$i$对于各个&lt;strong&gt;非终结符号A&lt;/strong&gt;的GOTO转换根据下面的规则得到：若$GOTO(I_i,A)=I_j$，则$GOTO[i,A]=j$&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;前两条没定义的项设置为err&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;语法分析器的初始状态是根据$[S\rightarrow S']$所在项集构造得到的状态&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;：ACTION表中有错误信息，GOTO表中有吗？ 
-答：GOTO表中没有错误信息，因为GOTO表中是归约后的变化&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;LR语法分析器的行为&lt;/p&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    a=w$的第一个符号while(1){        
-    令s为栈顶的状态       
-    if(ACTION[s,a]=移入t){                
-        将t压栈                
-      令a为下一个输入的符号        
-      }else if(ACTION[s,a]=归约A-&amp;gt;B){                
-          从栈中弹出|B|个符号                
-          令t为当前栈顶状态                
-          将GOTO[t,A]压栈                
-          输出产生式A-&amp;gt;B                
-      }else if(ACTION[s,a]=acc) break;        
-      else error();
-  }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;判断某文法是否是SLR文法&lt;/p&gt;
-
-    &lt;p&gt;若在构造语法分析表时有任何冲突动作产生，则该文法不是SLR(1)文法&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;heading-中间代码生成&quot;&gt;中间代码生成&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;翻译语句生成中间代码&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="编译原理" /><category term="编译原理" /><category term="语法分析" /></entry></feed>
+&lt;p&gt;这个漏洞的利用需要先取得WebLogic的用户名和密码，因此危害程度有限，但一旦成功上传shell，就可以控制对方主机。&lt;/p&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="漏洞复现" /><category term="漏洞复现" /></entry></feed>
