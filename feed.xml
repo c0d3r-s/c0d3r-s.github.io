@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://eizeit.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eizeit.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-08-15T22:17:35+08:00</updated><id>https://eizeit.github.io/feed.xml</id><title type="html">为者常成 行者常至</title><subtitle>网络空间安全/后端/Golang/C/C++/学习笔记/日常随笔</subtitle><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><entry><title type="html">【数据结构】 KMP算法（第四章、串）</title><link href="https://eizeit.github.io/blog/2020/08/14/ds-kmp/" rel="alternate" type="text/html" title="【数据结构】 KMP算法（第四章、串）" /><published>2020-08-14T00:00:00+08:00</published><updated>2020-08-14T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/08/14/ds-kmp</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/08/14/ds-kmp/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://c0d3r-s.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://c0d3r-s.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-08-16T16:18:23+08:00</updated><id>https://c0d3r-s.github.io/feed.xml</id><title type="html">为者常成 行者常至</title><subtitle>网络空间安全/后端/Golang/C/C++/学习笔记/日常随笔</subtitle><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><entry><title type="html">【数据结构/算法】 KMP算法（第四章、串）</title><link href="https://c0d3r-s.github.io/blog/2020/08/14/ds-kmp/" rel="alternate" type="text/html" title="【数据结构/算法】 KMP算法（第四章、串）" /><published>2020-08-14T00:00:00+08:00</published><updated>2020-08-14T00:00:00+08:00</updated><id>https://c0d3r-s.github.io/blog/2020/08/14/ds-kmp</id><content type="html" xml:base="https://c0d3r-s.github.io/blog/2020/08/14/ds-kmp/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-相关概念&quot; id=&quot;markdown-toc-heading-相关概念&quot;&gt;相关概念&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-next数组的含义&quot; id=&quot;markdown-toc-heading-next数组的含义&quot;&gt;Next数组的含义&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-求-next-数组的方法&quot; id=&quot;markdown-toc-heading-求-next-数组的方法&quot;&gt;求 Next 数组的方法&lt;/a&gt;&lt;/li&gt;
@@ -268,11 +268,12 @@ next[j]=
   &lt;li&gt;KMP算法中主串的工作指针不需要回溯&lt;/li&gt;
   &lt;li&gt;KMP算法只需要考虑模式串&lt;/li&gt;
   &lt;li&gt;KMP算法中主串指针不需回溯意味着对于规模较大的外存中的字符串的匹配操作可以分段进行，先读入一部分到内存然后完成匹配后写回外存，可以保证发生不匹配时不需要将之前写回外存的部分再次读入，减少了I/O操作，提高了效率。&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="数据结构" /><category term="数据结构" /><category term="408" /><category term="KMP算法" /><category term="模式匹配" /></entry><entry><title type="html">【考研英语】 2005年阅读理解重点单词、短语</title><link href="https://eizeit.github.io/blog/2020/08/12/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2005年阅读理解重点单词、短语" /><published>2020-08-12T00:00:00+08:00</published><updated>2020-08-12T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/08/12/english-reading</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/08/12/english-reading/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+&lt;/ul&gt;</content><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><category term="数据结构" /><category term="算法" /><category term="数据结构" /><category term="408" /><category term="算法" /><category term="KMP算法" /><category term="模式匹配" /></entry><entry><title type="html">【考研英语】 2005年阅读理解重点单词、短语</title><link href="https://c0d3r-s.github.io/blog/2020/08/12/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2005年阅读理解重点单词、短语" /><published>2020-08-12T00:00:00+08:00</published><updated>2020-08-12T00:00:00+08:00</updated><id>https://c0d3r-s.github.io/blog/2020/08/12/english-reading</id><content type="html" xml:base="https://c0d3r-s.github.io/blog/2020/08/12/english-reading/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-2005&quot; id=&quot;markdown-toc-heading-2005&quot;&gt;2005&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-text-1&quot; id=&quot;markdown-toc-heading-text-1&quot;&gt;text 1&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-text-2&quot; id=&quot;markdown-toc-heading-text-2&quot;&gt;text 2&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-text-3&quot; id=&quot;markdown-toc-heading-text-3&quot;&gt;text 3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#heading-text-4&quot; id=&quot;markdown-toc-heading-text-4&quot;&gt;text 4&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -322,7 +323,42 @@ next[j]=
   &lt;li&gt;enlist [vt.]征募；争取&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;heading-text-3&quot;&gt;text 3&lt;/h3&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研英语" /><category term="阅读理解" /></entry><entry><title type="html">【数据结构】 第三章、栈和队列</title><link href="https://eizeit.github.io/blog/2020/08/11/ds-stack-queue/" rel="alternate" type="text/html" title="【数据结构】 第三章、栈和队列" /><published>2020-08-11T00:00:00+08:00</published><updated>2020-08-11T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/08/11/ds-stack-queue</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/08/11/ds-stack-queue/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+&lt;h3 id=&quot;heading-text-3&quot;&gt;text 3&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;disguised [adj.]伪装的&lt;/li&gt;
+  &lt;li&gt;limbic [adj.]边缘的；边的&lt;/li&gt;
+  &lt;li&gt;prefrontal [adj.]前额的；额前叶部的&lt;/li&gt;
+  &lt;li&gt;work through 解决；使逐渐通过&lt;/li&gt;
+  &lt;li&gt;visualize [vt.]设想；构思；想象&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;course&lt;/strong&gt; [n.]进展；课程；一道菜&lt;/li&gt;
+  &lt;li&gt;at the end of the day 归根结底；总的来说&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;heading-text-4&quot;&gt;text 4&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;contempt [n.]蔑视；轻蔑；鄙视；（对规则、危险等的）藐视，不顾&lt;/li&gt;
+  &lt;li&gt;degradation [n.]退化；恶化；堕落&lt;/li&gt;
+  &lt;li&gt;controversialist [n.]善辩者&lt;/li&gt;
+  &lt;li&gt;controversial [adj.]引起争议的&lt;/li&gt;
+  &lt;li&gt;counter-culture [n.]反主流文化&lt;/li&gt;
+  &lt;li&gt;modesty [n.]谦虚；庄重；朴素；贤淑；不突出；有限&lt;/li&gt;
+  &lt;li&gt;permissive [adj.]放纵的；允许的&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;cult [n.]狂热崇拜；异教团体&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;the cult of the authentic and the personal&lt;/p&gt;
+
+      &lt;p&gt;对真实化和个性化的狂热推崇&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;spell&lt;/strong&gt; [vt.]&lt;strong&gt;招致&lt;/strong&gt;；拼成 [v.]拼写&lt;/li&gt;
+  &lt;li&gt;elevated [adj.]高尚的；高雅的&lt;/li&gt;
+  &lt;li&gt;spontaneity [n.]自然行为；即兴发挥&lt;/li&gt;
+  &lt;li&gt;think straight 清楚地思考；思路清晰&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研英语" /><category term="阅读理解" /></entry><entry><title type="html">【数据结构】 第三章、栈和队列</title><link href="https://c0d3r-s.github.io/blog/2020/08/11/ds-stack-queue/" rel="alternate" type="text/html" title="【数据结构】 第三章、栈和队列" /><published>2020-08-11T00:00:00+08:00</published><updated>2020-08-11T00:00:00+08:00</updated><id>https://c0d3r-s.github.io/blog/2020/08/11/ds-stack-queue</id><content type="html" xml:base="https://c0d3r-s.github.io/blog/2020/08/11/ds-stack-queue/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-栈&quot; id=&quot;markdown-toc-heading-栈&quot;&gt;栈&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-队列&quot; id=&quot;markdown-toc-heading-队列&quot;&gt;队列&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-应用&quot; id=&quot;markdown-toc-heading-应用&quot;&gt;应用&lt;/a&gt;    &lt;ul&gt;
@@ -395,7 +431,7 @@ next[j]=
 &lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="数据结构" /><category term="数据结构" /><category term="408" /><category term="栈" /><category term="队列" /></entry><entry><title type="html">【考研英语】 2004年阅读理解重点单词、短语</title><link href="https://eizeit.github.io/blog/2020/08/09/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2004年阅读理解重点单词、短语" /><published>2020-08-09T00:00:00+08:00</published><updated>2020-08-09T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/08/09/english-reading</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/08/09/english-reading/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+&lt;/ul&gt;</content><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><category term="数据结构" /><category term="数据结构" /><category term="408" /><category term="栈" /><category term="队列" /></entry><entry><title type="html">【考研英语】 2004年阅读理解重点单词、短语</title><link href="https://c0d3r-s.github.io/blog/2020/08/09/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2004年阅读理解重点单词、短语" /><published>2020-08-09T00:00:00+08:00</published><updated>2020-08-09T00:00:00+08:00</updated><id>https://c0d3r-s.github.io/blog/2020/08/09/english-reading</id><content type="html" xml:base="https://c0d3r-s.github.io/blog/2020/08/09/english-reading/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-2004&quot; id=&quot;markdown-toc-heading-2004&quot;&gt;2004&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-text-1&quot; id=&quot;markdown-toc-heading-text-1&quot;&gt;text 1&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-text-2&quot; id=&quot;markdown-toc-heading-text-2&quot;&gt;text 2&lt;/a&gt;&lt;/li&gt;
@@ -483,7 +519,7 @@ next[j]=
   &lt;li&gt;innate [adj.]天生的；先天的&lt;/li&gt;
   &lt;li&gt;militantly [adv.]好战地；强硬地；霸气十足地&lt;/li&gt;
   &lt;li&gt;identify with 认为…等同于；觉得与…有联系（牵连）；支持；同情（某人）；和…有同感&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研英语" /><category term="阅读理解" /></entry><entry><title type="html">【考研英语】 2001-2003年阅读理解重点单词、短语</title><link href="https://eizeit.github.io/blog/2020/08/07/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2001-2003年阅读理解重点单词、短语" /><published>2020-08-07T00:00:00+08:00</published><updated>2020-08-07T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/08/07/english-reading</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/08/07/english-reading/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+&lt;/ul&gt;</content><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研英语" /><category term="阅读理解" /></entry><entry><title type="html">【考研英语】 2001-2003年阅读理解重点单词、短语</title><link href="https://c0d3r-s.github.io/blog/2020/08/07/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2001-2003年阅读理解重点单词、短语" /><published>2020-08-07T00:00:00+08:00</published><updated>2020-08-07T00:00:00+08:00</updated><id>https://c0d3r-s.github.io/blog/2020/08/07/english-reading</id><content type="html" xml:base="https://c0d3r-s.github.io/blog/2020/08/07/english-reading/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-2001&quot; id=&quot;markdown-toc-heading-2001&quot;&gt;2001&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-text-1&quot; id=&quot;markdown-toc-heading-text-1&quot;&gt;text 1&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-text-2&quot; id=&quot;markdown-toc-heading-text-2&quot;&gt;text 2&lt;/a&gt;&lt;/li&gt;
@@ -730,11 +766,11 @@ next[j]=
   &lt;li&gt;start-up [n.]新兴公司 [adj.]起始阶段的&lt;/li&gt;
   &lt;li&gt;living proof 活生生的例子&lt;/li&gt;
   &lt;li&gt;overfund [vt.]为…提供资金过多&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研英语" /><category term="阅读理解" /></entry><entry><title type="html">【数据结构】 第二章、线性表</title><link href="https://eizeit.github.io/blog/2020/08/03/ds-linear-list/" rel="alternate" type="text/html" title="【数据结构】 第二章、线性表" /><published>2020-08-03T00:00:00+08:00</published><updated>2020-08-03T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/08/03/ds-linear-list</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/08/03/ds-linear-list/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+&lt;/ul&gt;</content><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研英语" /><category term="阅读理解" /></entry><entry><title type="html">【数据结构】 第二章、线性表</title><link href="https://c0d3r-s.github.io/blog/2020/08/03/ds-linear-list/" rel="alternate" type="text/html" title="【数据结构】 第二章、线性表" /><published>2020-08-03T00:00:00+08:00</published><updated>2020-08-03T00:00:00+08:00</updated><id>https://c0d3r-s.github.io/blog/2020/08/03/ds-linear-list</id><content type="html" xml:base="https://c0d3r-s.github.io/blog/2020/08/03/ds-linear-list/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-顺序表&quot; id=&quot;markdown-toc-heading-顺序表&quot;&gt;顺序表&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;heading-顺序表&quot;&gt;顺序表&lt;/h2&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="数据结构" /><category term="数据结构" /><category term="408" /><category term="线性表" /></entry><entry><title type="html">【信息内容安全】 复习重点</title><link href="https://eizeit.github.io/blog/2020/07/22/content-security-review/" rel="alternate" type="text/html" title="【信息内容安全】 复习重点" /><published>2020-07-22T00:00:00+08:00</published><updated>2020-07-22T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/07/22/content-security-review</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/07/22/content-security-review/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+&lt;h2 id=&quot;heading-顺序表&quot;&gt;顺序表&lt;/h2&gt;</content><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><category term="数据结构" /><category term="数据结构" /><category term="408" /><category term="链表" /><category term="顺序表" /></entry><entry><title type="html">【信息内容安全】 复习重点</title><link href="https://c0d3r-s.github.io/blog/2020/07/22/content-security-review/" rel="alternate" type="text/html" title="【信息内容安全】 复习重点" /><published>2020-07-22T00:00:00+08:00</published><updated>2020-07-22T00:00:00+08:00</updated><id>https://c0d3r-s.github.io/blog/2020/07/22/content-security-review</id><content type="html" xml:base="https://c0d3r-s.github.io/blog/2020/07/22/content-security-review/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-重点&quot; id=&quot;markdown-toc-heading-重点&quot;&gt;重点&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-pagerank算法暂时只写alpha--0的情况考试只考alpha0&quot; id=&quot;markdown-toc-heading-pagerank算法暂时只写alpha--0的情况考试只考alpha0&quot;&gt;PageRank算法（暂时只写$\alpha = 0$的情况，考试只考$\alpha=0$）&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-kmp算法&quot; id=&quot;markdown-toc-heading-kmp算法&quot;&gt;KMP算法&lt;/a&gt;&lt;/li&gt;
@@ -811,7 +847,7 @@ $P_{n+1}=AP_n$ ，$A$ 矩阵为状态转移矩阵（随机、不可约、非周�
     &lt;/ol&gt;
 
     &lt;p&gt;话不多说，上个例题（考试就这样，不出要引入$\alpha$ 的题目）：&lt;br /&gt;
-&lt;img src=&quot;https://eizeit.github.io/assets/images/md/image-20200722125312095.png&quot; alt=&quot;image-20200722125312095&quot; style=&quot;zoom:67%;&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://c0d3r-s.github.io/assets/images/md/image-20200722125312095.png&quot; alt=&quot;image-20200722125312095&quot; style=&quot;zoom:67%;&quot; /&gt;&lt;/p&gt;
 
     &lt;p&gt;$PR_{A}= \frac{1}{2} PR_{B}+\frac {1}{2} PR_{D}$ &lt;br /&gt;
 $PR_{B}=\frac{1}{3} PR_{A}+\frac{1}{2} PR_D$ &lt;br /&gt;
@@ -1166,7 +1202,7 @@ VPN、专网&lt;/li&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;heading-社交网络研究内容&quot;&gt;社交网络研究内容&lt;/h4&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="信息内容安全" /><category term="信息内容安全" /><category term="PageRank" /><category term="爬虫架构" /><category term="搜索引擎" /></entry><entry><title type="html">【数据结构】 第一章、绪论</title><link href="https://eizeit.github.io/blog/2020/07/10/ds-introduction/" rel="alternate" type="text/html" title="【数据结构】 第一章、绪论" /><published>2020-07-10T00:00:00+08:00</published><updated>2020-07-10T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/07/10/ds-introduction</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/07/10/ds-introduction/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+&lt;h4 id=&quot;heading-社交网络研究内容&quot;&gt;社交网络研究内容&lt;/h4&gt;</content><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><category term="信息内容安全" /><category term="信息内容安全" /><category term="PageRank" /><category term="搜索引擎" /></entry><entry><title type="html">【数据结构】 第一章、绪论</title><link href="https://c0d3r-s.github.io/blog/2020/07/10/ds-introduction/" rel="alternate" type="text/html" title="【数据结构】 第一章、绪论" /><published>2020-07-10T00:00:00+08:00</published><updated>2020-07-10T00:00:00+08:00</updated><id>https://c0d3r-s.github.io/blog/2020/07/10/ds-introduction</id><content type="html" xml:base="https://c0d3r-s.github.io/blog/2020/07/10/ds-introduction/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-数据结构的基本概念&quot; id=&quot;markdown-toc-heading-数据结构的基本概念&quot;&gt;数据结构的基本概念&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-算法的基本概念&quot; id=&quot;markdown-toc-heading-算法的基本概念&quot;&gt;算法的基本概念&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-算法的特性&quot; id=&quot;markdown-toc-heading-算法的特性&quot;&gt;算法的特性&lt;/a&gt;&lt;/li&gt;
@@ -1259,7 +1295,7 @@ VPN、专网&lt;/li&gt;
 
 &lt;p&gt;就这么算就行了，遇到递归啥的先设一下k次结束然后代回去解出表达式然后算&lt;/p&gt;
 
-&lt;h3 id=&quot;heading-空间复杂度&quot;&gt;空间复杂度&lt;/h3&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="数据结构" /><category term="数据结构" /><category term="408" /></entry><entry><title type="html">【计算机系统安全】 S/Key协议的实现</title><link href="https://eizeit.github.io/blog/2020/06/25/system-security-skey/" rel="alternate" type="text/html" title="【计算机系统安全】 S/Key协议的实现" /><published>2020-06-25T00:00:00+08:00</published><updated>2020-06-25T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/06/25/system-security-skey</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/06/25/system-security-skey/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+&lt;h3 id=&quot;heading-空间复杂度&quot;&gt;空间复杂度&lt;/h3&gt;</content><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><category term="数据结构" /><category term="数据结构" /><category term="408" /></entry><entry><title type="html">【计算机系统安全】 S/Key协议的实现</title><link href="https://c0d3r-s.github.io/blog/2020/06/25/system-security-skey/" rel="alternate" type="text/html" title="【计算机系统安全】 S/Key协议的实现" /><published>2020-06-25T00:00:00+08:00</published><updated>2020-06-25T00:00:00+08:00</updated><id>https://c0d3r-s.github.io/blog/2020/06/25/system-security-skey</id><content type="html" xml:base="https://c0d3r-s.github.io/blog/2020/06/25/system-security-skey/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-skey协议原理&quot; id=&quot;markdown-toc-heading-skey协议原理&quot;&gt;S/Key协议原理&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-程序设计&quot; id=&quot;markdown-toc-heading-程序设计&quot;&gt;程序设计&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-源码&quot; id=&quot;markdown-toc-heading-源码&quot;&gt;源码&lt;/a&gt;&lt;/li&gt;
@@ -1545,7 +1581,7 @@ N = 100
 
 
 &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__main__'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s_key_run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="计算机系统安全" /><category term="S/key" /><category term="计算机系统安全" /></entry><entry><title type="html">【Python】 正则表达式</title><link href="https://eizeit.github.io/blog/2020/06/14/python-re/" rel="alternate" type="text/html" title="【Python】 正则表达式" /><published>2020-06-14T00:00:00+08:00</published><updated>2020-06-14T00:00:00+08:00</updated><id>https://eizeit.github.io/blog/2020/06/14/python-re</id><content type="html" xml:base="https://eizeit.github.io/blog/2020/06/14/python-re/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+    &lt;span class=&quot;n&quot;&gt;s_key_run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><category term="计算机系统安全" /><category term="S/key" /><category term="计算机系统安全" /></entry><entry><title type="html">【Python】 正则表达式</title><link href="https://c0d3r-s.github.io/blog/2020/06/14/python-re/" rel="alternate" type="text/html" title="【Python】 正则表达式" /><published>2020-06-14T00:00:00+08:00</published><updated>2020-06-14T00:00:00+08:00</updated><id>https://c0d3r-s.github.io/blog/2020/06/14/python-re</id><content type="html" xml:base="https://c0d3r-s.github.io/blog/2020/06/14/python-re/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-单字符匹配&quot; id=&quot;markdown-toc-heading-单字符匹配&quot;&gt;单字符匹配&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-多字符匹配&quot; id=&quot;markdown-toc-heading-多字符匹配&quot;&gt;多字符匹配&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-匹配字符串开头结尾&quot; id=&quot;markdown-toc-heading-匹配字符串开头结尾&quot;&gt;匹配字符串开头、结尾&lt;/a&gt;&lt;/li&gt;
@@ -1646,4 +1682,4 @@ N = 100
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;|&lt;/code&gt;——匹配左右任意一个表达式&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(ab)&lt;/code&gt;——将括号中的表达式作为一个分组&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>eizeit(sun)</name><email>hitsyw2017@163.com</email></author><category term="Python" /><category term="Python" /><category term="正则表达式" /></entry></feed>
+&lt;/ul&gt;</content><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><category term="Python" /><category term="Python" /><category term="正则表达式" /></entry></feed>
