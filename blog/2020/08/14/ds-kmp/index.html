@@ -12,17 +12,17 @@
 <title>【数据结构/算法】 KMP算法（第四章、串） | 为者常成 行者常至</title>
 <meta name="generator" content="Jekyll v4.1.1">
 <meta property="og:title" content="【数据结构/算法】 KMP算法（第四章、串）">
-<meta name="author" content="c0d3r-s(sun)">
+<meta name="author" content="sunullptr(sun)">
 <meta property="og:locale" content="en">
 <meta name="description" content="KMP算法">
 <meta property="og:description" content="KMP算法">
-<link rel="canonical" href="https://c0d3r-s.github.io/blog/2020/08/14/ds-kmp/">
-<meta property="og:url" content="https://c0d3r-s.github.io/blog/2020/08/14/ds-kmp/">
+<link rel="canonical" href="https://sunullptr.github.io/blog/2020/08/14/ds-kmp/">
+<meta property="og:url" content="https://sunullptr.github.io/blog/2020/08/14/ds-kmp/">
 <meta property="og:site_name" content="为者常成 行者常至">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2020-08-14T00:00:00+08:00">
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"https://c0d3r-s.github.io/blog/2020/08/14/ds-kmp/"},"url":"https://c0d3r-s.github.io/blog/2020/08/14/ds-kmp/","author":{"@type":"Person","name":"c0d3r-s(sun)"},"headline":"【数据结构/算法】 KMP算法（第四章、串）","datePublished":"2020-08-14T00:00:00+08:00","description":"KMP算法","dateModified":"2020-08-14T00:00:00+08:00","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://sunullptr.github.io/blog/2020/08/14/ds-kmp/"},"url":"https://sunullptr.github.io/blog/2020/08/14/ds-kmp/","author":{"@type":"Person","name":"sunullptr(sun)"},"headline":"【数据结构/算法】 KMP算法（第四章、串）","datePublished":"2020-08-14T00:00:00+08:00","description":"KMP算法","dateModified":"2020-08-14T00:00:00+08:00","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <meta name="keywords" content="数据结构,408,算法,KMP算法,模式匹配">
@@ -31,7 +31,7 @@
 
 
 
-<link type="application/atom+xml" rel="alternate" href="https://c0d3r-s.github.io/feed.xml" title="为者常成 行者常至">
+<link type="application/atom+xml" rel="alternate" href="https://sunullptr.github.io/feed.xml" title="为者常成 行者常至">
     <link href="/assets/stylesheets/blog.css" rel="stylesheet" type="text/css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script>window.Modernizr || document.write('<script src="/assets/javascripts/modernizr-2.8.3.min.js"><\/script>')</script>
@@ -46,6 +46,9 @@
     window.Pace || document.write('<script src="/assets/javascripts/pace.min.js"><\/script>')
 </script>
 
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
     
 <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]]}});</script>
 </head>
@@ -133,7 +136,7 @@
                             by
                             <a class="author" href="/" rel="author" title="Show Author">
                                 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                                    <span itemprop="name">c0d3r-s(sun)</span>
+                                    <span itemprop="name">sunullptr(sun)</span>
                                 </span>
                             </a>
                             
@@ -149,7 +152,7 @@
      
         <li>
             <a href="/blog/categories/#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84" title="数据结构">
-            数据结构 <span>4</span></a>
+            数据结构 <span>5</span></a>
         </li>
      
         <li>
@@ -167,7 +170,7 @@
     
         
         <li>
-            <a href="/blog/tags/#408" title="408">408 <span>4</span></a>
+            <a href="/blog/tags/#408" title="408">408 <span>5</span></a>
         </li>
     
         
@@ -177,7 +180,7 @@
     
         
         <li>
-            <a href="/blog/tags/#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84" title="数据结构">数据结构 <span>4</span></a>
+            <a href="/blog/tags/#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84" title="数据结构">数据结构 <span>5</span></a>
         </li>
     
         
@@ -206,7 +209,7 @@
   <li><a href="#heading-kmp%E7%AE%97%E6%B3%95%E8%BE%83%E4%B9%8Bbf%E7%AE%97%E6%B3%95%E7%9A%84%E4%BC%98%E5%8A%BF" id="markdown-toc-heading-kmp算法较之bf算法的优势">KMP算法较之BF算法的优势</a></li>
 </ul>
 
-<p>…佛了，KMP每次用的时候都要看一遍，每次学完下次就忘了，得记录一下。</p>
+<p>因为KMP每次用的时候都要看一遍，应该还是没有透彻理解，所以这里记录一下。</p>
 
 <p>数据结构不听课，考研流下两行泪。</p>
 
@@ -321,8 +324,9 @@
 
     <p>发生不匹配时，模式串向后移动move位后与主串的当前位继续比较。</p>
 
-    <p><br>
-  <strong>关于部分匹配值，可以这么理解，模式字符串向后移动的时候保留多少位已经匹配过的字符，显然如果部分匹配值为0，就直接把模式字符串的头移动到不匹配的地方然后继续匹配就行，不用保留任何字符。如果部分匹配值为1，说明模式字符串最后一个字符和第一个字符相同，下一轮比较的时候<em>保留一位</em>，把模式字符串的第一个字符和这一位对齐后，因为这一位已经相等了，就可以跳过这一位了，直接从后一位继续比较。部分匹配值为其余值时同理。</strong></p>
+    <p><br></p>
+
+    <p><strong>关于部分匹配值，可以这么理解，模式字符串向后移动的时候保留多少位已经匹配过的字符，显然如果部分匹配值为0，就直接把模式字符串的头移动到不匹配的地方然后继续匹配就行，不用保留任何字符。如果部分匹配值为1，说明模式字符串最后一个字符和第一个字符相同，下一轮比较的时候<em>保留一位</em>，把模式字符串的第一个字符和这一位对齐后，因为这一位已经相等了，就可以跳过这一位了，直接从后一位继续比较。部分匹配值为其余值时同理。</strong></p>
   </li>
 </ul>
 
@@ -515,6 +519,8 @@ next[j]=
                             <a class="internal" rel="prev" href="/blog/2020/08/12/english-reading/" title=" '【考研英语】 2005年阅读理解重点单词、短语'"> ← 【考研英语】 2005年阅读理解重点单词、短语</a>
                         
                         
+                            <a class="internal" rel="next" href="/blog/2020/08/16/ds-tree/" title="Next Post '【数据结构】 第五章、树（树、二叉树、森林及相关应用）'">【数据结构】 第五章、树（树、二叉树、森林及相关应用） → </a>
+                        
                     </nav>
                 </div>
             </footer>
@@ -538,7 +544,7 @@ next[j]=
                     
                         <p>时间带走一切 读书带走时间</p>
                     
-                    <p><small>Theme <a href="https://github.com/yizeng/jekyll-theme-simple-texture" target="_blank">Simple Texture</a> developed by <a href="https://yizeng.me" target="_blank">Yi Zeng</a>, powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>.</small></p>
+                    <p><small>Theme <a href="https://github.com/yizeng/jekyll-theme-simple-texture" target="_blank">Simple Texture</a> , powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>.</small></p>
                 </div>
                 <div class="social-links">
                     
@@ -549,7 +555,7 @@ next[j]=
                         
                     
                         
-                            <a class="ico-github" href="https://github.com/c0d3r-s" rel="me" target="_blank" title="github"></a>
+                            <a class="ico-github" href="https://github.com/sunullptr" rel="me" target="_blank" title="github"></a>
                         
                     
                         

@@ -1,4 +1,274 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://c0d3r-s.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://c0d3r-s.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-08-16T16:18:23+08:00</updated><id>https://c0d3r-s.github.io/feed.xml</id><title type="html">为者常成 行者常至</title><subtitle>网络空间安全/后端/Golang/C/C++/学习笔记/日常随笔</subtitle><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><entry><title type="html">【数据结构/算法】 KMP算法（第四章、串）</title><link href="https://c0d3r-s.github.io/blog/2020/08/14/ds-kmp/" rel="alternate" type="text/html" title="【数据结构/算法】 KMP算法（第四章、串）" /><published>2020-08-14T00:00:00+08:00</published><updated>2020-08-14T00:00:00+08:00</updated><id>https://c0d3r-s.github.io/blog/2020/08/14/ds-kmp</id><content type="html" xml:base="https://c0d3r-s.github.io/blog/2020/08/14/ds-kmp/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://sunullptr.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sunullptr.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-09-20T18:53:46+08:00</updated><id>https://sunullptr.github.io/feed.xml</id><title type="html">为者常成 行者常至</title><subtitle>web安全/后端/学习笔记/日常随笔</subtitle><author><name>sunullptr(sun)</name><email>hitsyw2017@163.com</email></author><entry><title type="html">【考研英语】 2009年阅读理解重点单词、短语</title><link href="https://sunullptr.github.io/blog/2020/09/05/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2009年阅读理解重点单词、短语" /><published>2020-09-05T00:00:00+08:00</published><updated>2020-09-05T00:00:00+08:00</updated><id>https://sunullptr.github.io/blog/2020/09/05/english-reading</id><content type="html" xml:base="https://sunullptr.github.io/blog/2020/09/05/english-reading/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#heading-text-1&quot; id=&quot;markdown-toc-heading-text-1&quot;&gt;text 1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;heading-text-1&quot;&gt;text 1&lt;/h2&gt;</content><author><name>sunullptr(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研英语" /><category term="阅读理解" /></entry><entry><title type="html">【考研英语】 2008年阅读理解重点单词、短语</title><link href="https://sunullptr.github.io/blog/2020/09/01/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2008年阅读理解重点单词、短语" /><published>2020-09-01T00:00:00+08:00</published><updated>2020-09-01T00:00:00+08:00</updated><id>https://sunullptr.github.io/blog/2020/09/01/english-reading</id><content type="html" xml:base="https://sunullptr.github.io/blog/2020/09/01/english-reading/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#heading-text-1&quot; id=&quot;markdown-toc-heading-text-1&quot;&gt;text 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#heading-text-2&quot; id=&quot;markdown-toc-heading-text-2&quot;&gt;text 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#heading-text-3&quot; id=&quot;markdown-toc-heading-text-3&quot;&gt;text 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;heading-text-1&quot;&gt;text 1&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;interpersonal [adj.]人际关系的&lt;/li&gt;
+  &lt;li&gt;wear-and-tear [n.]折损；磨损&lt;/li&gt;
+  &lt;li&gt;devastating [adj.]毁灭性的；破坏性极大的&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;paycheck [n.]薪金；付薪水的支票&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;I lived from paycheck to paycheck.&lt;/p&gt;
+
+      &lt;p&gt;我的收入勉强能够养家糊口&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;trivial [adj.]不重要的；琐碎的；微不足道的&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;heading-text-2&quot;&gt;text 2&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;restrict&lt;/strong&gt; [vt.]限制；妨碍；约束&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;heading-text-3&quot;&gt;text 3&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;obscure&lt;/li&gt;
+  &lt;li&gt;anthropologist&lt;/li&gt;
+  &lt;li&gt;bipedal&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>sunullptr(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研英语" /><category term="阅读理解" /></entry><entry><title type="html">【考研英语】 2007年阅读理解重点单词、短语</title><link href="https://sunullptr.github.io/blog/2020/08/21/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2007年阅读理解重点单词、短语" /><published>2020-08-21T00:00:00+08:00</published><updated>2020-08-21T00:00:00+08:00</updated><id>https://sunullptr.github.io/blog/2020/08/21/english-reading</id><content type="html" xml:base="https://sunullptr.github.io/blog/2020/08/21/english-reading/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#heading-text-1&quot; id=&quot;markdown-toc-heading-text-1&quot;&gt;text 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#heading-text-2&quot; id=&quot;markdown-toc-heading-text-2&quot;&gt;text 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#heading-text-3&quot; id=&quot;markdown-toc-heading-text-3&quot;&gt;text 3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#heading-text-4&quot; id=&quot;markdown-toc-heading-text-4&quot;&gt;text 4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;heading-text-1&quot;&gt;text 1&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;feed the World Cup&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;professional ranks （体育）职业联赛&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;the European national youth teams that feed the World Cup and professional ranks&lt;/p&gt;
+
+      &lt;p&gt;为世界杯和职业球队输送队员的欧洲国家青年队&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;pronounced [adj.]明显的；显著的；表达明确的&lt;/li&gt;
+  &lt;li&gt;astrological sign 星座&lt;/li&gt;
+  &lt;li&gt;stamina [n.]耐力；体力；持久力&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;pursuit&lt;/strong&gt; [n.]事业；爱好；追求；追赶&lt;/li&gt;
+  &lt;li&gt;couple with 加上&lt;/li&gt;
+  &lt;li&gt;take to doing 开始从事；喜欢上；养成…的习惯&lt;/li&gt;
+  &lt;li&gt;put another way 换句话说&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;heading-text-2&quot;&gt;text 2&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;envision [vt.]想象；展望&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;deduce&lt;/strong&gt; [vt.]推断；演绎；推论&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;field&lt;/strong&gt; [vt.]处理，应付（问题） [n.]田；场地；领域&lt;/li&gt;
+  &lt;li&gt;encompass [vt.]包括；包围&lt;/li&gt;
+  &lt;li&gt;impartial [adj.]中立的&lt;/li&gt;
+  &lt;li&gt;computational procedures 计算过程&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;heading-text-3&quot;&gt;text 3&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a pink slip 一张解雇通知单&lt;/li&gt;
+  &lt;li&gt;of all stripes 各领域的；形形色色的&lt;/li&gt;
+  &lt;li&gt;paycheck [n.]工资&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;parachute&lt;/strong&gt; [n.]降落伞 [v.]跳伞&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;weather&lt;/strong&gt; [vt.]&lt;strong&gt;渡过（困难）&lt;/strong&gt; [n.]天气&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;weather bad times  渡过困难时期&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;outlive [vt.]（在…结束或消失后）继续存在&lt;/li&gt;
+  &lt;li&gt;retirees [n.]退休人员&lt;/li&gt;
+  &lt;li&gt;deductible [n.]自付额；免赔额&lt;/li&gt;
+  &lt;li&gt;eightfold [adv.]八倍地 [adj.]八倍的&lt;/li&gt;
+  &lt;li&gt;demographics [n.]人口统计数据&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;attendant&lt;/strong&gt; [adj.]&lt;strong&gt;随之而来的&lt;/strong&gt; [n.]服务员&lt;/li&gt;
+  &lt;li&gt;odds [n.][pl.]概率；机会&lt;/li&gt;
+  &lt;li&gt;wholesale [adj.]大规模的；大批的&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;shift…onto… 把…转移到…&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;From the middle class family perspective, much of this，understandably, looks far less like an opportunity to exercise more financial responsibility, and (&lt;strong&gt;looks&lt;/strong&gt;(补充)) a good deal more like a frightening acceleration of the wholesale &lt;strong&gt;shift&lt;/strong&gt; of financial risk &lt;strong&gt;onto&lt;/strong&gt; their already overburdened shoulders.&lt;/p&gt;
+
+      &lt;p&gt;从中产阶级家庭的角度来看，这些（情况、政策）看上去远不像是履行更多经济责任的机会，而更像是以骇人的速度把经济风险大规模地转嫁到他们已经不堪重负的肩上。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;outweigh [v.]重于；大于；超过&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;heading-text-4&quot;&gt;text 4&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>sunullptr(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研英语" /><category term="阅读理解" /></entry><entry><title type="html">【考研英语】 2006年阅读理解重点单词、短语</title><link href="https://sunullptr.github.io/blog/2020/08/17/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2006年阅读理解重点单词、短语" /><published>2020-08-17T00:00:00+08:00</published><updated>2020-08-17T00:00:00+08:00</updated><id>https://sunullptr.github.io/blog/2020/08/17/english-reading</id><content type="html" xml:base="https://sunullptr.github.io/blog/2020/08/17/english-reading/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#heading-text-1&quot; id=&quot;markdown-toc-heading-text-1&quot;&gt;text 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#heading-text-2&quot; id=&quot;markdown-toc-heading-text-2&quot;&gt;text 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#heading-text-3&quot; id=&quot;markdown-toc-heading-text-3&quot;&gt;text 3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#heading-text-4&quot; id=&quot;markdown-toc-heading-text-4&quot;&gt;text 4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;heading-text-1&quot;&gt;text 1&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;assimilate [v.]透彻理解；消化；吸收；（使）同化；使接受（想法、态度等）&lt;/li&gt;
+  &lt;li&gt;owe…to… 欠…（某物）；应该感谢；把…归功于&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;emergence [n.]出现；兴起&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;The stores owed its emergence to the culture of consumption.&lt;/p&gt;
+
+      &lt;p&gt;这些商店因消费文化而出现。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;homogenize [v.]使同类；使均匀&lt;/li&gt;
+  &lt;li&gt;democratize [v.]大众化；民主化&lt;/li&gt;
+  &lt;li&gt;uniformity [n.]统一性；一致&lt;/li&gt;
+  &lt;li&gt;discourse [n.]谈话 [v.]讲述&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;deference [n.]尊重；听从&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;the democratizing uniformity of dress and discourse  衣着和谈吐的民主化统一&lt;/p&gt;
+
+      &lt;p&gt;the casualness and the absence of deference  随心所欲与不拘礼节&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;unprecedented [adj.]空前的；前所未有的&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;indices&lt;/strong&gt; [n.] [pl.]指标&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;ownership&lt;/strong&gt; [n.]所有权；产权&lt;/li&gt;
+  &lt;li&gt;intermarriage [n.]异族通婚&lt;/li&gt;
+  &lt;li&gt;pocket [n.]&lt;strong&gt;（孤立的）一小群&lt;/strong&gt;；布袋 [vt.]放入衣袋&lt;/li&gt;
+  &lt;li&gt;seething [adj.]愤怒的；火热的&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;heading-text-2&quot;&gt;text 2&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;live off 依赖…生活&lt;/li&gt;
+  &lt;li&gt;sandal [n.]凉鞋&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;contend&lt;/strong&gt; [vt.]声称；主张&lt;/li&gt;
+  &lt;li&gt;bring in 引入；赚得；推行&lt;/li&gt;
+  &lt;li&gt;playgoer [n.]常看戏的人&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;subsidy&lt;/strong&gt; [n.]补贴；补助金&lt;/li&gt;
+  &lt;li&gt;in a row 连续几次地；连续几天地&lt;/li&gt;
+  &lt;li&gt;clientele [n.]顾客（总称）；客户&lt;/li&gt;
+  &lt;li&gt;lean [adj.]瘦的；贫乏的 [v.]倾斜；靠着&lt;/li&gt;
+  &lt;li&gt;pointed [adj.]尖的；直截了当的&lt;/li&gt;
+  &lt;li&gt;dedicated [adj.]献身的；专心致志的；专用的 [v.]把…奉献给；（在书、音乐或作品的前部）题献词；为（建筑物等）举行落成典礼&lt;/li&gt;
+  &lt;li&gt;bun [n.]小圆甜蛋糕；小圆甜饼；圆面包；圆发髻&lt;/li&gt;
+  &lt;li&gt;bed down 在…过夜&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;flagstone [n.]石板&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;They all seem to look alike (though they come from all over)-lean, pointed, dedicated faces, wearing jeans and sandals, eating their buns and bedding down for the night on the flagstones outside the theatre to buy the 20 seats and 80 standing-room tickets held for the sleepers and sold to them when the box office opens at 10:30 a.m.&lt;/p&gt;
+
+      &lt;p&gt;这些游客（尽管他们来自四面八方）看上去都差不多——身材瘦削，棱角分明，神情专注，穿着牛仔裤和凉鞋，吃着小圆面包，在剧院外的石板上过夜，只为了在第二天10:30开始售票时，买上一张专门为他们预留出售的20张坐票和80张站席票。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;heading-text-3&quot;&gt;text 3&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;biomass [n.]生物量&lt;/li&gt;
+  &lt;li&gt;predator [n.]捕食性动物；掠夺者&lt;/li&gt;
+  &lt;li&gt;fishery [n.]渔场&lt;/li&gt;
+  &lt;li&gt;longline [n.]延绳钓，多钩长线&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;crop&lt;/strong&gt; [v.]收获；有收成 [n.]庄稼；产量&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;heading-text-4&quot;&gt;text 4&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;phony [adj.]虚伪的；假冒的 [n.]冒牌货&lt;/li&gt;
+  &lt;li&gt;daffodil [n.]水仙花 [adj.]水仙花色的&lt;/li&gt;
+  &lt;li&gt;be dedicated to doing sth 致力于做某事&lt;/li&gt;
+  &lt;li&gt;emergence [n.]兴起；出现&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;ideology&lt;/strong&gt; [n.]意识形态&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;The raise of anti-happy art almost exactly tracks the emergence of mass media, and with it, a commercial culture in which happiness is not just an ideal but an ideology.&lt;/p&gt;
+
+      &lt;p&gt;反快乐艺术几乎是完全随着大众传媒的兴起而出现的，随之产生的还有一种商业文化，在这种文化中快乐不仅是一种理想，还是一种意识形态。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;bummer [n.]（非正式）令人不快的事&lt;/li&gt;
+  &lt;li&gt;beaming [adj.]笑容满面的；耀眼的&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;agenda&lt;/strong&gt; [n.]&lt;strong&gt;目的&lt;/strong&gt;；议程表&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;command&lt;/strong&gt; [v.]指示；命令&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;&quot;Celebrate!&quot; commanded the ads.&lt;/p&gt;
+
+      &lt;p&gt;“欢庆吧！”广告这样召唤道。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;arthritis [n.]关节炎&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>sunullptr(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研英语" /><category term="阅读理解" /></entry><entry><title type="html">【数据结构】 第五章、树（树、二叉树、森林及相关应用）</title><link href="https://sunullptr.github.io/blog/2020/08/16/ds-tree/" rel="alternate" type="text/html" title="【数据结构】 第五章、树（树、二叉树、森林及相关应用）" /><published>2020-08-16T00:00:00+08:00</published><updated>2020-08-16T00:00:00+08:00</updated><id>https://sunullptr.github.io/blog/2020/08/16/ds-tree</id><content type="html" xml:base="https://sunullptr.github.io/blog/2020/08/16/ds-tree/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#heading-树的性质&quot; id=&quot;markdown-toc-heading-树的性质&quot;&gt;树的性质&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#heading-二叉树&quot; id=&quot;markdown-toc-heading-二叉树&quot;&gt;二叉树&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#heading-二叉树的基本概念和性质&quot; id=&quot;markdown-toc-heading-二叉树的基本概念和性质&quot;&gt;二叉树的基本概念和性质&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#heading-基本概念&quot; id=&quot;markdown-toc-heading-基本概念&quot;&gt;基本概念&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#heading-性质&quot; id=&quot;markdown-toc-heading-性质&quot;&gt;性质&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#heading-二叉树的存储结构&quot; id=&quot;markdown-toc-heading-二叉树的存储结构&quot;&gt;二叉树的存储结构&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#heading-二叉树的遍历&quot; id=&quot;markdown-toc-heading-二叉树的遍历&quot;&gt;二叉树的遍历&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#heading-线索二叉树&quot; id=&quot;markdown-toc-heading-线索二叉树&quot;&gt;线索二叉树&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;基本的概念这里就不写了，主要列一下相关性质和一些应用。&lt;/p&gt;
+
+&lt;h2 id=&quot;heading-树的性质&quot;&gt;树的性质&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;树中的结点数等于所有结点度数之和加$1$&lt;/li&gt;
+  &lt;li&gt;度为$m$的树中第$i$层上最多有$m^{i-1}$个结点（$i \ge 1$）&lt;/li&gt;
+  &lt;li&gt;高度为$h$的$m$叉树最多有$\frac{m^h - 1}{m-1}$个结点（等比数列求和）&lt;/li&gt;
+  &lt;li&gt;具有$n$个结点的$m$叉树的最小高度为$\left \lceil log_m(n(m-1)+1) \right \rceil$（用上一条反解一下）&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;heading-二叉树&quot;&gt;二叉树&lt;/h2&gt;
+
+&lt;h3 id=&quot;heading-二叉树的基本概念和性质&quot;&gt;二叉树的基本概念和性质&lt;/h3&gt;
+
+&lt;h4 id=&quot;heading-基本概念&quot;&gt;基本概念&lt;/h4&gt;
+
+&lt;h4 id=&quot;heading-性质&quot;&gt;性质&lt;/h4&gt;
+
+&lt;h3 id=&quot;heading-二叉树的存储结构&quot;&gt;二叉树的存储结构&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;顺序存储（适用于满二叉树和完全二叉树，且最好从下标为1的数据单元开始存储，方便计算孩子的位置）&lt;/li&gt;
+  &lt;li&gt;链式存储（通常都用链式）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;heading-二叉树的遍历&quot;&gt;二叉树的遍历&lt;/h3&gt;
+
+&lt;h3 id=&quot;heading-线索二叉树&quot;&gt;线索二叉树&lt;/h3&gt;</content><author><name>sunullptr(sun)</name><email>hitsyw2017@163.com</email></author><category term="数据结构" /><category term="数据结构" /><category term="408" /><category term="二叉树" /><category term="哈夫曼树与哈夫曼编码" /></entry><entry><title type="html">【数据结构/算法】 KMP算法（第四章、串）</title><link href="https://sunullptr.github.io/blog/2020/08/14/ds-kmp/" rel="alternate" type="text/html" title="【数据结构/算法】 KMP算法（第四章、串）" /><published>2020-08-14T00:00:00+08:00</published><updated>2020-08-14T00:00:00+08:00</updated><id>https://sunullptr.github.io/blog/2020/08/14/ds-kmp</id><content type="html" xml:base="https://sunullptr.github.io/blog/2020/08/14/ds-kmp/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-相关概念&quot; id=&quot;markdown-toc-heading-相关概念&quot;&gt;相关概念&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-next数组的含义&quot; id=&quot;markdown-toc-heading-next数组的含义&quot;&gt;Next数组的含义&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-求-next-数组的方法&quot; id=&quot;markdown-toc-heading-求-next-数组的方法&quot;&gt;求 Next 数组的方法&lt;/a&gt;&lt;/li&gt;
@@ -7,7 +277,7 @@
   &lt;li&gt;&lt;a href=&quot;#heading-kmp算法较之bf算法的优势&quot; id=&quot;markdown-toc-heading-kmp算法较之bf算法的优势&quot;&gt;KMP算法较之BF算法的优势&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;…佛了，KMP每次用的时候都要看一遍，每次学完下次就忘了，得记录一下。&lt;/p&gt;
+&lt;p&gt;因为KMP每次用的时候都要看一遍，应该还是没有透彻理解，所以这里记录一下。&lt;/p&gt;
 
 &lt;p&gt;数据结构不听课，考研流下两行泪。&lt;/p&gt;
 
@@ -90,8 +360,9 @@
 
     &lt;p&gt;发生不匹配时，模式串向后移动move位后与主串的当前位继续比较。&lt;/p&gt;
 
-    &lt;p&gt;&lt;br /&gt;
-  &lt;strong&gt;关于部分匹配值，可以这么理解，模式字符串向后移动的时候保留多少位已经匹配过的字符，显然如果部分匹配值为0，就直接把模式字符串的头移动到不匹配的地方然后继续匹配就行，不用保留任何字符。如果部分匹配值为1，说明模式字符串最后一个字符和第一个字符相同，下一轮比较的时候&lt;em&gt;保留一位&lt;/em&gt;，把模式字符串的第一个字符和这一位对齐后，因为这一位已经相等了，就可以跳过这一位了，直接从后一位继续比较。部分匹配值为其余值时同理。&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;关于部分匹配值，可以这么理解，模式字符串向后移动的时候保留多少位已经匹配过的字符，显然如果部分匹配值为0，就直接把模式字符串的头移动到不匹配的地方然后继续匹配就行，不用保留任何字符。如果部分匹配值为1，说明模式字符串最后一个字符和第一个字符相同，下一轮比较的时候&lt;em&gt;保留一位&lt;/em&gt;，把模式字符串的第一个字符和这一位对齐后，因为这一位已经相等了，就可以跳过这一位了，直接从后一位继续比较。部分匹配值为其余值时同理。&lt;/strong&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -268,7 +539,7 @@ next[j]=
   &lt;li&gt;KMP算法中主串的工作指针不需要回溯&lt;/li&gt;
   &lt;li&gt;KMP算法只需要考虑模式串&lt;/li&gt;
   &lt;li&gt;KMP算法中主串指针不需回溯意味着对于规模较大的外存中的字符串的匹配操作可以分段进行，先读入一部分到内存然后完成匹配后写回外存，可以保证发生不匹配时不需要将之前写回外存的部分再次读入，减少了I/O操作，提高了效率。&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><category term="数据结构" /><category term="算法" /><category term="数据结构" /><category term="408" /><category term="算法" /><category term="KMP算法" /><category term="模式匹配" /></entry><entry><title type="html">【考研英语】 2005年阅读理解重点单词、短语</title><link href="https://c0d3r-s.github.io/blog/2020/08/12/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2005年阅读理解重点单词、短语" /><published>2020-08-12T00:00:00+08:00</published><updated>2020-08-12T00:00:00+08:00</updated><id>https://c0d3r-s.github.io/blog/2020/08/12/english-reading</id><content type="html" xml:base="https://c0d3r-s.github.io/blog/2020/08/12/english-reading/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+&lt;/ul&gt;</content><author><name>sunullptr(sun)</name><email>hitsyw2017@163.com</email></author><category term="数据结构" /><category term="算法" /><category term="数据结构" /><category term="408" /><category term="算法" /><category term="KMP算法" /><category term="模式匹配" /></entry><entry><title type="html">【考研英语】 2005年阅读理解重点单词、短语</title><link href="https://sunullptr.github.io/blog/2020/08/12/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2005年阅读理解重点单词、短语" /><published>2020-08-12T00:00:00+08:00</published><updated>2020-08-12T00:00:00+08:00</updated><id>https://sunullptr.github.io/blog/2020/08/12/english-reading</id><content type="html" xml:base="https://sunullptr.github.io/blog/2020/08/12/english-reading/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-2005&quot; id=&quot;markdown-toc-heading-2005&quot;&gt;2005&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-text-1&quot; id=&quot;markdown-toc-heading-text-1&quot;&gt;text 1&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-text-2&quot; id=&quot;markdown-toc-heading-text-2&quot;&gt;text 2&lt;/a&gt;&lt;/li&gt;
@@ -358,7 +629,7 @@ next[j]=
   &lt;li&gt;elevated [adj.]高尚的；高雅的&lt;/li&gt;
   &lt;li&gt;spontaneity [n.]自然行为；即兴发挥&lt;/li&gt;
   &lt;li&gt;think straight 清楚地思考；思路清晰&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研英语" /><category term="阅读理解" /></entry><entry><title type="html">【数据结构】 第三章、栈和队列</title><link href="https://c0d3r-s.github.io/blog/2020/08/11/ds-stack-queue/" rel="alternate" type="text/html" title="【数据结构】 第三章、栈和队列" /><published>2020-08-11T00:00:00+08:00</published><updated>2020-08-11T00:00:00+08:00</updated><id>https://c0d3r-s.github.io/blog/2020/08/11/ds-stack-queue</id><content type="html" xml:base="https://c0d3r-s.github.io/blog/2020/08/11/ds-stack-queue/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+&lt;/ul&gt;</content><author><name>sunullptr(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研英语" /><category term="阅读理解" /></entry><entry><title type="html">【数据结构】 第三章、栈和队列</title><link href="https://sunullptr.github.io/blog/2020/08/11/ds-stack-queue/" rel="alternate" type="text/html" title="【数据结构】 第三章、栈和队列" /><published>2020-08-11T00:00:00+08:00</published><updated>2020-08-11T00:00:00+08:00</updated><id>https://sunullptr.github.io/blog/2020/08/11/ds-stack-queue</id><content type="html" xml:base="https://sunullptr.github.io/blog/2020/08/11/ds-stack-queue/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-栈&quot; id=&quot;markdown-toc-heading-栈&quot;&gt;栈&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-队列&quot; id=&quot;markdown-toc-heading-队列&quot;&gt;队列&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-应用&quot; id=&quot;markdown-toc-heading-应用&quot;&gt;应用&lt;/a&gt;    &lt;ul&gt;
@@ -431,7 +702,7 @@ next[j]=
 &lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><category term="数据结构" /><category term="数据结构" /><category term="408" /><category term="栈" /><category term="队列" /></entry><entry><title type="html">【考研英语】 2004年阅读理解重点单词、短语</title><link href="https://c0d3r-s.github.io/blog/2020/08/09/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2004年阅读理解重点单词、短语" /><published>2020-08-09T00:00:00+08:00</published><updated>2020-08-09T00:00:00+08:00</updated><id>https://c0d3r-s.github.io/blog/2020/08/09/english-reading</id><content type="html" xml:base="https://c0d3r-s.github.io/blog/2020/08/09/english-reading/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+&lt;/ul&gt;</content><author><name>sunullptr(sun)</name><email>hitsyw2017@163.com</email></author><category term="数据结构" /><category term="数据结构" /><category term="408" /><category term="栈" /><category term="队列" /></entry><entry><title type="html">【考研英语】 2004年阅读理解重点单词、短语</title><link href="https://sunullptr.github.io/blog/2020/08/09/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2004年阅读理解重点单词、短语" /><published>2020-08-09T00:00:00+08:00</published><updated>2020-08-09T00:00:00+08:00</updated><id>https://sunullptr.github.io/blog/2020/08/09/english-reading</id><content type="html" xml:base="https://sunullptr.github.io/blog/2020/08/09/english-reading/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-2004&quot; id=&quot;markdown-toc-heading-2004&quot;&gt;2004&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-text-1&quot; id=&quot;markdown-toc-heading-text-1&quot;&gt;text 1&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-text-2&quot; id=&quot;markdown-toc-heading-text-2&quot;&gt;text 2&lt;/a&gt;&lt;/li&gt;
@@ -519,7 +790,7 @@ next[j]=
   &lt;li&gt;innate [adj.]天生的；先天的&lt;/li&gt;
   &lt;li&gt;militantly [adv.]好战地；强硬地；霸气十足地&lt;/li&gt;
   &lt;li&gt;identify with 认为…等同于；觉得与…有联系（牵连）；支持；同情（某人）；和…有同感&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研英语" /><category term="阅读理解" /></entry><entry><title type="html">【考研英语】 2001-2003年阅读理解重点单词、短语</title><link href="https://c0d3r-s.github.io/blog/2020/08/07/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2001-2003年阅读理解重点单词、短语" /><published>2020-08-07T00:00:00+08:00</published><updated>2020-08-07T00:00:00+08:00</updated><id>https://c0d3r-s.github.io/blog/2020/08/07/english-reading</id><content type="html" xml:base="https://c0d3r-s.github.io/blog/2020/08/07/english-reading/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
+&lt;/ul&gt;</content><author><name>sunullptr(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研英语" /><category term="阅读理解" /></entry><entry><title type="html">【考研英语】 2001-2003年阅读理解重点单词、短语</title><link href="https://sunullptr.github.io/blog/2020/08/07/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2001-2003年阅读理解重点单词、短语" /><published>2020-08-07T00:00:00+08:00</published><updated>2020-08-07T00:00:00+08:00</updated><id>https://sunullptr.github.io/blog/2020/08/07/english-reading</id><content type="html" xml:base="https://sunullptr.github.io/blog/2020/08/07/english-reading/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#heading-2001&quot; id=&quot;markdown-toc-heading-2001&quot;&gt;2001&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-text-1&quot; id=&quot;markdown-toc-heading-text-1&quot;&gt;text 1&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#heading-text-2&quot; id=&quot;markdown-toc-heading-text-2&quot;&gt;text 2&lt;/a&gt;&lt;/li&gt;
@@ -766,920 +1037,4 @@ next[j]=
   &lt;li&gt;start-up [n.]新兴公司 [adj.]起始阶段的&lt;/li&gt;
   &lt;li&gt;living proof 活生生的例子&lt;/li&gt;
   &lt;li&gt;overfund [vt.]为…提供资金过多&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研英语" /><category term="阅读理解" /></entry><entry><title type="html">【数据结构】 第二章、线性表</title><link href="https://c0d3r-s.github.io/blog/2020/08/03/ds-linear-list/" rel="alternate" type="text/html" title="【数据结构】 第二章、线性表" /><published>2020-08-03T00:00:00+08:00</published><updated>2020-08-03T00:00:00+08:00</updated><id>https://c0d3r-s.github.io/blog/2020/08/03/ds-linear-list</id><content type="html" xml:base="https://c0d3r-s.github.io/blog/2020/08/03/ds-linear-list/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#heading-顺序表&quot; id=&quot;markdown-toc-heading-顺序表&quot;&gt;顺序表&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;heading-顺序表&quot;&gt;顺序表&lt;/h2&gt;</content><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><category term="数据结构" /><category term="数据结构" /><category term="408" /><category term="链表" /><category term="顺序表" /></entry><entry><title type="html">【信息内容安全】 复习重点</title><link href="https://c0d3r-s.github.io/blog/2020/07/22/content-security-review/" rel="alternate" type="text/html" title="【信息内容安全】 复习重点" /><published>2020-07-22T00:00:00+08:00</published><updated>2020-07-22T00:00:00+08:00</updated><id>https://c0d3r-s.github.io/blog/2020/07/22/content-security-review</id><content type="html" xml:base="https://c0d3r-s.github.io/blog/2020/07/22/content-security-review/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#heading-重点&quot; id=&quot;markdown-toc-heading-重点&quot;&gt;重点&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#heading-pagerank算法暂时只写alpha--0的情况考试只考alpha0&quot; id=&quot;markdown-toc-heading-pagerank算法暂时只写alpha--0的情况考试只考alpha0&quot;&gt;PageRank算法（暂时只写$\alpha = 0$的情况，考试只考$\alpha=0$）&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#heading-kmp算法&quot; id=&quot;markdown-toc-heading-kmp算法&quot;&gt;KMP算法&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#heading-爬虫&quot; id=&quot;markdown-toc-heading-爬虫&quot;&gt;爬虫&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#heading-搜索引擎结构&quot; id=&quot;markdown-toc-heading-搜索引擎结构&quot;&gt;搜索引擎结构&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#heading-网络爬虫技术&quot; id=&quot;markdown-toc-heading-网络爬虫技术&quot;&gt;网络爬虫技术&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#heading-信息检索模型&quot; id=&quot;markdown-toc-heading-信息检索模型&quot;&gt;信息检索模型&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#heading-非重点bushi&quot; id=&quot;markdown-toc-heading-非重点bushi&quot;&gt;非重点（bushi&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#heading-第二章&quot; id=&quot;markdown-toc-heading-第二章&quot;&gt;第二章&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#heading-网络文化现状&quot; id=&quot;markdown-toc-heading-网络文化现状&quot;&gt;网络文化现状&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#heading-网络信息内容分类&quot; id=&quot;markdown-toc-heading-网络信息内容分类&quot;&gt;网络信息内容分类&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#heading-信息内容安全技术概述&quot; id=&quot;markdown-toc-heading-信息内容安全技术概述&quot;&gt;信息内容安全技术概述&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#heading-信息安全技术及产品&quot; id=&quot;markdown-toc-heading-信息安全技术及产品&quot;&gt;信息安全技术及产品&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#heading-社交网络分析&quot; id=&quot;markdown-toc-heading-社交网络分析&quot;&gt;社交网络分析&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#heading-社交网络研究意义&quot; id=&quot;markdown-toc-heading-社交网络研究意义&quot;&gt;社交网络研究意义&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#heading-社交网络研究现状&quot; id=&quot;markdown-toc-heading-社交网络研究现状&quot;&gt;社交网络研究现状&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#heading-社交网络科学问题&quot; id=&quot;markdown-toc-heading-社交网络科学问题&quot;&gt;社交网络科学问题&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#heading-社交网络研究内容&quot; id=&quot;markdown-toc-heading-社交网络研究内容&quot;&gt;社交网络研究内容&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;heading-重点&quot;&gt;重点&lt;/h2&gt;
-
-&lt;h3 id=&quot;heading-pagerank算法暂时只写alpha--0的情况考试只考alpha0&quot;&gt;PageRank算法（暂时只写$\alpha = 0$的情况，考试只考$\alpha=0$）&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;核心思想
-    &lt;ul&gt;
-      &lt;li&gt;如果一个网页&lt;strong&gt;被很多其他网页&lt;/strong&gt;链接到则说明该网页比较重要，即$PageRank$值相对较高&lt;/li&gt;
-      &lt;li&gt;如果一个&lt;strong&gt;$PageRank$值很高的网页链接到一个其他的网页&lt;/strong&gt;，则被链接的网页的$PageRank$值也相应提高&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;PageRank算法原理
-    &lt;ul&gt;
-      &lt;li&gt;PR值的物理意义是一个网页被访问的概率，因此可设每个网页的$PR$初值为 $\frac{1}{N}$ ，其中$N$为网页总数（其实最后收敛结果与初值无关，是马尔可夫过程）。&lt;strong&gt;通常情况下$\sum_{i=1}^n PR(i)=1$&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;迭代计算：页面 $i$ 的 $PR$ 值计算公式为 $PR(i)=\sum_{j=1}^m \frac{PR(j)}{L(j)}$ ，其中 $j$ 为链入页面 $i$ 的页面，$L(j)$ 为页面 $j$ 的出度，之所以要除以 $L(j)$ 是因为从 $j$ 指向 $i$ 的概率被分散了，只有 $\frac{1}{L(j)}$ 的概率&lt;/li&gt;
-      &lt;li&gt;经过几次迭代后，$PR$ 值收敛稳定&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;排名泄露问题&lt;/strong&gt;（简答题）&lt;br /&gt;
-产生原因：如果存在某个网页没有出度，对其他网页没有 $PR$ 值贡献，则会产生排名泄露问题，经过多次迭代后，所有网页的 $PR$ 值都趋向于0&lt;br /&gt;
-解决方案：为了满足Markov链的收敛性，设定其对所有网页（&lt;strong&gt;包括自身&lt;/strong&gt;）都有出链，即该网页 $L=N$&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;排名下沉问题&lt;/strong&gt;（简答题）&lt;br /&gt;
-产生原因：如果存在某个网页没有入度，则会产生排名下沉现象，经过多次迭代后，该页面的 $PR$ 值趋向于0&lt;br /&gt;
-解决方案：引入概率系数 $\alpha$ （先略了）&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;排名上升问题&lt;/strong&gt;（简答题）&lt;br /&gt;
-产生原因：某几个网页之间存在闭合回路，迭代后这几个网页 $PR$ 值上升，其余网页 $PR$ 值趋向于0&lt;br /&gt;
-解决方案：引入概率系数 $\alpha$&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;$PR$ 值计算方法&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;幂迭代法&lt;br /&gt;
-$P_{n+1}=AP_n$ ，$A$ 矩阵为状态转移矩阵（随机、不可约、非周期），一般一列一列看，每列元素之和为1，一直迭代直到 $|P_{n+1}-P_{n}&amp;lt;\epsilon|$&lt;/li&gt;
-      &lt;li&gt;特征值法&lt;br /&gt;
-当Markov链收敛时，有 $\lambda p=Ap$ ，且 $\lambda=1$，即 $p=Ap$，$p$ 为状态转移矩阵 $A$ 的特征值$1$对应的特征向量，求出 $p$ 后对 $p$ 进行归一化即得到结果 $\beta$&lt;/li&gt;
-      &lt;li&gt;代数法&lt;br /&gt;
-代公式，要算逆矩阵，开销比较大（。&lt;/li&gt;
-    &lt;/ol&gt;
-
-    &lt;p&gt;话不多说，上个例题（考试就这样，不出要引入$\alpha$ 的题目）：&lt;br /&gt;
-&lt;img src=&quot;https://c0d3r-s.github.io/assets/images/md/image-20200722125312095.png&quot; alt=&quot;image-20200722125312095&quot; style=&quot;zoom:67%;&quot; /&gt;&lt;/p&gt;
-
-    &lt;p&gt;$PR_{A}= \frac{1}{2} PR_{B}+\frac {1}{2} PR_{D}$ &lt;br /&gt;
-$PR_{B}=\frac{1}{3} PR_{A}+\frac{1}{2} PR_D$ &lt;br /&gt;
-$PR_{C}=\frac{1}{3} PR_{A}+ \frac{1}{2} PR_{B}$ &lt;br /&gt;
-$PR_{D}=\frac{1}{3} PR_{A}+ PR_{C}$ &lt;br /&gt;
-构造状态转移矩阵：&lt;br /&gt;
-\(A= \begin{pmatrix} 0 &amp;amp; \frac{1}{2} &amp;amp; 0 &amp;amp; \frac{1}{2} \\ \frac{1}{3} &amp;amp; 0 &amp;amp; 0 &amp;amp; \frac{1}{2} \\ \frac{1}{3} &amp;amp; \frac{1}{2} &amp;amp; 0 &amp;amp; 0 \\ \frac{1}{3} &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \end{pmatrix}\)   ，初始状态 \(P_{1}=\begin{pmatrix} \frac{1}{4} \\ \frac{1}{4} \\ \frac{1}{4} \\ \frac{1}{4} \end{pmatrix}\)&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;迭代法： $P_{n+1}=AP_{n}$，…&lt;/li&gt;
-      &lt;li&gt;特征值法：$\lambda=1$ 代入 $(\lambda E-A)p=0$ 即 $(E-A)p=0$ &lt;br /&gt;
-\(E-A = \begin{pmatrix} 1 &amp;amp; -\frac{1}{2} &amp;amp; 0 &amp;amp; -\frac{1}{2} \\ -\frac{1}{3} &amp;amp; 1 &amp;amp; 0 &amp;amp; -\frac{1}{2} \\ -\frac{1}{3} &amp;amp; -\frac{1}{2} &amp;amp; 1 &amp;amp; 0 \\ -\frac{1}{3} &amp;amp; 0 &amp;amp; -1 &amp;amp; 1 \end{pmatrix}\) ，化成行最简得&lt;br /&gt;
-\(\begin{pmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; -\frac{9}{10} \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; -\frac{4}{5} \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; -\frac{7}{10} \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \end{pmatrix}\) ，得特征向量 \(p = \begin{pmatrix} \frac{9}{10} \\ \frac{4}{5} \\ \frac{7}{10} \\ 1 \end{pmatrix}\)   ，归一化后得 \(\beta = \begin{pmatrix} \frac{9}{34} \\ \frac{4}{17} \\ \frac{7}{34} \\ \frac{5}{17} \end{pmatrix}\) 。&lt;/li&gt;
-      &lt;li&gt;代数法：$\alpha$ 有点迷…先放着&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;heading-kmp算法&quot;&gt;KMP算法&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;求Next数组，略&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;heading-爬虫&quot;&gt;爬虫&lt;/h3&gt;
-
-&lt;h4 id=&quot;heading-搜索引擎结构&quot;&gt;搜索引擎结构&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;爬取页面得到原始页面数据库
-    &lt;ul&gt;
-      &lt;li&gt;深度优先&lt;/li&gt;
-      &lt;li&gt;广度优先&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;预处理
-    &lt;ul&gt;
-      &lt;li&gt;中文分词&lt;/li&gt;
-      &lt;li&gt;去重&lt;/li&gt;
-      &lt;li&gt;消除噪声&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;建立索引得到索引数据库
-    &lt;ul&gt;
-      &lt;li&gt;正向索引&lt;br /&gt;
-以文档为索引&lt;/li&gt;
-      &lt;li&gt;倒排索引&lt;br /&gt;
-以关键词作为索引（关键词i包含在哪些文档里，然后取交集）&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;用户搜索词处理
-    &lt;ul&gt;
-      &lt;li&gt;中文分词&lt;/li&gt;
-      &lt;li&gt;去停止词&lt;/li&gt;
-      &lt;li&gt;指令处理&lt;/li&gt;
-      &lt;li&gt;拼写纠正&lt;/li&gt;
-      &lt;li&gt;整合搜索触发&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;排名
-    &lt;ul&gt;
-      &lt;li&gt;初始集合选择&lt;/li&gt;
-      &lt;li&gt;相关性计算/PageRank&lt;/li&gt;
-      &lt;li&gt;排名过滤与调整（这一步中有个重点是施加惩罚对排名调整（某度竞价排名就是在此阶段））&lt;/li&gt;
-      &lt;li&gt;排名显示&lt;/li&gt;
-      &lt;li&gt;搜索缓存&lt;/li&gt;
-      &lt;li&gt;查询日志（记录用户主要点击结果的那个链接，属于正反馈技术）&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;heading-网络爬虫技术&quot;&gt;网络爬虫技术&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;系统框图&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;略先&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Web规模扩大带来的问题&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;网络带宽利用率&lt;/li&gt;
-      &lt;li&gt;分布式存储&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;爬取器陷阱&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;每次爬取一定要将已经爬取到的内容储存到数据库中并记录爬取到了哪里，不要每次重头再来，否则可能被对方服务器认定为恶意攻击（增量式采集）&lt;/li&gt;
-      &lt;li&gt;检查URL长度&lt;/li&gt;
-      &lt;li&gt;定期收集查看爬虫数据&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;同步异步、阻塞非阻塞&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;同步：线性执行程序，面向过程编程。发起一个请求，直到请求返回结果之后，才进行下一步操作&lt;/li&gt;
-      &lt;li&gt;异步：将多个任务加到消息循环队列，不需要等待某操作的返回结果就可以发出下一个操作请求&lt;/li&gt;
-      &lt;li&gt;阻塞：调用结果返回之前，当前线程被挂起。调用线程只有在得到结果之后才会被唤醒执行后续的操作&lt;/li&gt;
-      &lt;li&gt;非阻塞：在结果没有返回之前，其他请求调用不会阻塞住当前线程&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;附并发、并行：&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;并发：当有多个线程在操作时，如果系统只有一个CPU，操作系统只能把CPU运行时间划分成若干个时间段,再将时间段分配给各个线程执行，在一个时间段的快速的切换不同的线程代码运行&lt;/li&gt;
-      &lt;li&gt;并行：当系统有多个CPU时，可以存在当一个CPU执行一个线程时，另一个CPU可以执行另一个线程，两个线程互不抢占CPU资源，可以同时进行。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;heading-信息检索模型&quot;&gt;信息检索模型&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;四元组 $[D, Q, F, R(q_i,d_j)]$
-    &lt;ul&gt;
-      &lt;li&gt;$D$ 文档集的机内表示&lt;/li&gt;
-      &lt;li&gt;$Q$ 用户需求的机内表示&lt;/li&gt;
-      &lt;li&gt;$F$ 文档表示、查询表示和它们之间的关系模型框架（检索函数）&lt;/li&gt;
-      &lt;li&gt;$R(q_i,d_j)$ 排序函数&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;布尔模型&lt;/p&gt;
-
-    &lt;p&gt;不支持部分匹配、难以控制被检索的文档数量、难以对输出进行排序、难以进行自动的相关反馈&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;$D$ 文档集的机内表示——关键词的&lt;strong&gt;集合&lt;/strong&gt;（集合是无重复元素的）&lt;/li&gt;
-      &lt;li&gt;$Q$ 用户需求的机内表示——关键词用与或非连接起来&lt;/li&gt;
-      &lt;li&gt;$F$ 文档表示、查询表示和它们之间的关系模型框架（检索函数）——基于二值判定标准，满足布尔查询式时文档被检索出来&lt;/li&gt;
-      &lt;li&gt;$R(q_i,d_j)$ 排序函数&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;正排索引：&lt;br /&gt;
-对doc操作，如若建模如下，1表示 $key_i$ 关键词在此文档中出现，0相反：&lt;br /&gt;
-docA=0110001100&lt;br /&gt;
-docB=1101001110&lt;br /&gt;
-docC=0101011101&lt;br /&gt;
-docD=1001001111&lt;br /&gt;
-docS=0001000010&lt;br /&gt;
-检索S过程：&lt;br /&gt;
-docA &amp;amp; docS != docS&lt;br /&gt;
-docB &amp;amp; docS = docS
-docC &amp;amp; docS != docS
-docD &amp;amp; docS = docS&lt;br /&gt;
-文档B和文档D符合要求&lt;/p&gt;
-
-    &lt;p&gt;倒排索引：&lt;br /&gt;
-对key操作，如若建模如下，1表示关键词在文档i中出现，0相反：&lt;br /&gt;
-key1=0101&lt;br /&gt;
-key2=1110&lt;br /&gt;
-…&lt;br /&gt;
-key9=0101&lt;br /&gt;
-key10=0011&lt;br /&gt;
-检索S过程，若要求key4和key9出现且key6不出现，只需要：&lt;br /&gt;
-key4 &amp;amp; key9 &amp;amp; ~key6 = 0101&lt;br /&gt;
-第二位和第四位为1即文档B和文档D符合要求&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;本体论&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;本体论模型（略先）&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;本体构造要点（略先）&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;基于本体的检索引擎搜索过程（略先）&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;heading-非重点bushi&quot;&gt;非重点（bushi&lt;/h2&gt;
-
-&lt;h3 id=&quot;heading-第二章&quot;&gt;第二章&lt;/h3&gt;
-
-&lt;h4 id=&quot;heading-网络文化现状&quot;&gt;网络文化现状&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;互联网是现在社会主要的信息媒介
-    &lt;ul&gt;
-      &lt;li&gt;网民规模大，普及率高，增长空间大，网络文化软实力强&lt;/li&gt;
-      &lt;li&gt;手机网民数量多，占网民数量的99%&lt;/li&gt;
-      &lt;li&gt;互联网接入设备多样&lt;/li&gt;
-      &lt;li&gt;人均上网时长长&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;互联网不良信息泛滥
-    &lt;ul&gt;
-      &lt;li&gt;淫秽色情&lt;br /&gt;
-直播平台&lt;/li&gt;
-      &lt;li&gt;网络赌博&lt;/li&gt;
-      &lt;li&gt;网络诈骗&lt;br /&gt;
-针对老年人等特殊群体，虚假招工信息，虚拟中奖诈骗，网络兼职诈骗，钓鱼网站&lt;/li&gt;
-      &lt;li&gt;其他&lt;br /&gt;
-个人信息泄露，账号密码泄露，邪教&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;国家级掌控措施
-    &lt;ul&gt;
-      &lt;li&gt;群众举报&lt;/li&gt;
-      &lt;li&gt;搜索平台&lt;br /&gt;
-谷歌（…）、百度、中搜&lt;/li&gt;
-      &lt;li&gt;人工关注相关社区&lt;br /&gt;
-天涯舆情、各种论坛&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;heading-网络信息内容分类&quot;&gt;网络信息内容分类&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;网络信息存在形式
-    &lt;ul&gt;
-      &lt;li&gt;从服务特性角度分类
-        &lt;ul&gt;
-          &lt;li&gt;一阶&lt;br /&gt;
-文件形式&lt;br /&gt;
-超文本/超媒体&lt;br /&gt;
-网站网页&lt;/li&gt;
-          &lt;li&gt;二阶&lt;br /&gt;
-主题目录&lt;br /&gt;
-搜索引擎&lt;br /&gt;
-虚拟图书馆&lt;/li&gt;
-          &lt;li&gt;三阶&lt;br /&gt;
-元搜索引擎（调用其他搜索引擎汇聚结果）&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;从传输角度分类
-        &lt;ul&gt;
-          &lt;li&gt;有线传输：光信号、电信号&lt;/li&gt;
-          &lt;li&gt;无线传输&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;网络信息文化标准分类
-    &lt;ul&gt;
-      &lt;li&gt;网络违法犯罪案件
-        &lt;ul&gt;
-          &lt;li&gt;利用互联网进行违法案件&lt;br /&gt;
-邪教，如此次疫情中的韩国&lt;br /&gt;
-散布谣言扰乱社会秩序（老八角了&lt;br /&gt;
-利用互联网进行颜色革命（老洪博培了&lt;br /&gt;
-传播淫秽色情信息，虐待动物，暴力事件&lt;br /&gt;
-敲诈勒索&lt;br /&gt;
-诽谤他人，网络暴力&lt;br /&gt;
-窃取篡改他人电子信息&lt;/li&gt;
-          &lt;li&gt;危害互联网运行安全的违法案例&lt;br /&gt;
-国人DNA信息&lt;br /&gt;
-网络入侵与破坏&lt;br /&gt;
-制作传播计算机病毒木马&lt;/li&gt;
-          &lt;li&gt;重大互联网运行安全重大事件&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;网络违法信息&lt;br /&gt;
-违反宪法基本原则（泄密）&lt;br /&gt;
-损害国家利益、煽动民族仇恨等&lt;br /&gt;
-宣扬邪教&lt;br /&gt;
-散布谣言，扰乱社会秩序&lt;br /&gt;
-侮辱或诽谤他人，侵犯他人合法权益&lt;/li&gt;
-      &lt;li&gt;网络不良信息&lt;br /&gt;
-balabala&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;heading-信息内容安全技术概述&quot;&gt;信息内容安全技术概述&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;内容安全分析模型
-    &lt;ul&gt;
-      &lt;li&gt;网络信息获取&lt;br /&gt;
-旁路监听网关数据流、主动采集（爬虫）&lt;/li&gt;
-      &lt;li&gt;有效信息提取&lt;br /&gt;
-网络协议解析、有效信息提取、媒体信息分离、数据缓冲存储&lt;/li&gt;
-      &lt;li&gt;违规信息判断&lt;br /&gt;
-文本识别、图像识别、视频识别&lt;/li&gt;
-      &lt;li&gt;海量信息展示&lt;br /&gt;
-分级展示、融合计算&lt;/li&gt;
-      &lt;li&gt;违规信息管控&lt;br /&gt;
-分析、预警、阻断（若没有权限可用其余信息淹没等）&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;其他关键技术&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;heading-信息安全技术及产品&quot;&gt;信息安全技术及产品&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;传输安全&lt;br /&gt;
-防窃听、防阻塞、防篡改、防盗用&lt;br /&gt;
-加密认证&lt;br /&gt;
-VPN、专网&lt;/li&gt;
-  &lt;li&gt;网络安全&lt;br /&gt;
-可控可靠&lt;br /&gt;
-访问控制、认证、审计、入侵检测&lt;br /&gt;
-防火墙、VPN&lt;/li&gt;
-  &lt;li&gt;应用安全&lt;br /&gt;
-机密性、完整性、抗否认性、可用性&lt;br /&gt;
-加密、验证、签名、备份&lt;br /&gt;
-保密网关、加密卡&lt;/li&gt;
-  &lt;li&gt;内容安全&lt;br /&gt;
-净化内容、保护涉密信息&lt;br /&gt;
-密级管理、搜索&lt;br /&gt;
-检察系统、涉密检查&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;heading-社交网络分析&quot;&gt;社交网络分析&lt;/h3&gt;
-
-&lt;h4 id=&quot;heading-社交网络研究意义&quot;&gt;社交网络研究意义&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;社交网络改变人们的生活方式（政治、教育、购物、文化、暴力、谣言、欺诈、色情）&lt;/li&gt;
-  &lt;li&gt;社交网络的根本在于能够影响人们的思想（认识观、世界观、价值观、人生观）并迅速推动社会舆论，有害舆情给社会稳定带来巨大影响&lt;/li&gt;
-  &lt;li&gt;社交网络为社会突发事件推波助澜（颜色革命）&lt;/li&gt;
-  &lt;li&gt;国家与社会安全需求&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;heading-社交网络研究现状&quot;&gt;社交网络研究现状&lt;/h4&gt;
-
-&lt;h4 id=&quot;heading-社交网络科学问题&quot;&gt;社交网络科学问题&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;结构与演化
-    &lt;ul&gt;
-      &lt;li&gt;社交网络结构建模与特性分析&lt;/li&gt;
-      &lt;li&gt;虚拟社区发现和社交网络演化规律&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;群体互动
-    &lt;ul&gt;
-      &lt;li&gt;社交网络群体行为特征与情感分析及建模&lt;/li&gt;
-      &lt;li&gt;社交网络群体聚集机理及演化规律&lt;/li&gt;
-      &lt;li&gt;社交网络群体影响力建模及互动规律&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;信息与传播
-    &lt;ul&gt;
-      &lt;li&gt;社交网络信息内容和的表示和计算&lt;/li&gt;
-      &lt;li&gt;社交网络中信息传播模型和演化规律&lt;/li&gt;
-      &lt;li&gt;社交网络舆情信息的引导与溯源方法&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;heading-社交网络研究内容&quot;&gt;社交网络研究内容&lt;/h4&gt;</content><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><category term="信息内容安全" /><category term="信息内容安全" /><category term="PageRank" /><category term="搜索引擎" /></entry><entry><title type="html">【数据结构】 第一章、绪论</title><link href="https://c0d3r-s.github.io/blog/2020/07/10/ds-introduction/" rel="alternate" type="text/html" title="【数据结构】 第一章、绪论" /><published>2020-07-10T00:00:00+08:00</published><updated>2020-07-10T00:00:00+08:00</updated><id>https://c0d3r-s.github.io/blog/2020/07/10/ds-introduction</id><content type="html" xml:base="https://c0d3r-s.github.io/blog/2020/07/10/ds-introduction/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#heading-数据结构的基本概念&quot; id=&quot;markdown-toc-heading-数据结构的基本概念&quot;&gt;数据结构的基本概念&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#heading-算法的基本概念&quot; id=&quot;markdown-toc-heading-算法的基本概念&quot;&gt;算法的基本概念&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#heading-算法的特性&quot; id=&quot;markdown-toc-heading-算法的特性&quot;&gt;算法的特性&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#heading-算法的设计目标&quot; id=&quot;markdown-toc-heading-算法的设计目标&quot;&gt;算法的设计目标&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#heading-算法效率分析&quot; id=&quot;markdown-toc-heading-算法效率分析&quot;&gt;算法效率分析&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#heading-时间复杂度&quot; id=&quot;markdown-toc-heading-时间复杂度&quot;&gt;时间复杂度&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#heading-空间复杂度&quot; id=&quot;markdown-toc-heading-空间复杂度&quot;&gt;空间复杂度&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;heading-数据结构的基本概念&quot;&gt;数据结构的基本概念&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;数据&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;数据元素&lt;/p&gt;
-
-    &lt;p&gt;是数据的基本单位，由若干数据项组成&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;数据对象&lt;/p&gt;
-
-    &lt;p&gt;是数据元素的集合&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;数据结构&lt;/p&gt;
-
-    &lt;p&gt;是&lt;strong&gt;数据元素&lt;/strong&gt;的集合，包括&lt;strong&gt;逻辑结构、存储结构、对数据的运算&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;数据的逻辑结构&lt;/p&gt;
-
-    &lt;p&gt;与存储结构无关，同一种逻辑结构可以有多种存储结构&lt;/p&gt;
-
-    &lt;p&gt;逻辑结构分为线性结构和非线性结构&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;数据的物理结构（存储结构）&lt;/p&gt;
-
-    &lt;p&gt;是逻辑结构在计算机中的表示（又称为映像），分为顺序映像和非顺序映像&lt;/p&gt;
-
-    &lt;p&gt;四种常用存储方法&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;顺序存储方法&lt;/p&gt;
-
-        &lt;p&gt;逻辑上相邻的结点物理位置也相邻&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;链式存储方法&lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;索引存储方法&lt;/p&gt;
-
-        &lt;p&gt;建立附加索引表&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;散列存储方法&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;heading-算法的基本概念&quot;&gt;算法的基本概念&lt;/h2&gt;
-
-&lt;h3 id=&quot;heading-算法的特性&quot;&gt;算法的特性&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;有穷性&lt;/li&gt;
-  &lt;li&gt;确定性&lt;/li&gt;
-  &lt;li&gt;输入（0或多个）&lt;/li&gt;
-  &lt;li&gt;输出（1或多个）&lt;/li&gt;
-  &lt;li&gt;可行性&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;heading-算法的设计目标&quot;&gt;算法的设计目标&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;正确性&lt;/li&gt;
-  &lt;li&gt;可读性&lt;/li&gt;
-  &lt;li&gt;健壮性&lt;/li&gt;
-  &lt;li&gt;算法效率&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;heading-算法效率分析&quot;&gt;算法效率分析&lt;/h2&gt;
-
-&lt;h3 id=&quot;heading-时间复杂度&quot;&gt;时间复杂度&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;算法中基本操作的执行次数是算法时间复杂度的度量&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;就这么算就行了，遇到递归啥的先设一下k次结束然后代回去解出表达式然后算&lt;/p&gt;
-
-&lt;h3 id=&quot;heading-空间复杂度&quot;&gt;空间复杂度&lt;/h3&gt;</content><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><category term="数据结构" /><category term="数据结构" /><category term="408" /></entry><entry><title type="html">【计算机系统安全】 S/Key协议的实现</title><link href="https://c0d3r-s.github.io/blog/2020/06/25/system-security-skey/" rel="alternate" type="text/html" title="【计算机系统安全】 S/Key协议的实现" /><published>2020-06-25T00:00:00+08:00</published><updated>2020-06-25T00:00:00+08:00</updated><id>https://c0d3r-s.github.io/blog/2020/06/25/system-security-skey</id><content type="html" xml:base="https://c0d3r-s.github.io/blog/2020/06/25/system-security-skey/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#heading-skey协议原理&quot; id=&quot;markdown-toc-heading-skey协议原理&quot;&gt;S/Key协议原理&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#heading-程序设计&quot; id=&quot;markdown-toc-heading-程序设计&quot;&gt;程序设计&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#heading-源码&quot; id=&quot;markdown-toc-heading-源码&quot;&gt;源码&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;heading-skey协议原理&quot;&gt;S/Key协议原理&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;初始化&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;用户输入密码password（长度大于8个字符）&lt;/li&gt;
-      &lt;li&gt;服务器产生一个8个字节的随机字符序列salt（加盐）&lt;/li&gt;
-      &lt;li&gt;预处理：将password和salt拼接后做MD4散列操作 ，将32字节的输出结果分为左右两部分，每部分16个字节，两部分做异或运算，结果记为S&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;生成口令序列&lt;/p&gt;
-
-    &lt;p&gt;对S做N次散列得到第一个口令，做N-1次散列，得到第二个口令，以此类推，做1次散列，得到第N个口令&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;使用口令&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;第1个口令发送给服务器端保存&lt;/li&gt;
-      &lt;li&gt;客户端每次登陆时顺序使用第2~N个口令&lt;/li&gt;
-      &lt;li&gt;服务器收到口令后，将收到的值进行一次散列，与当前存储的hash值比较，若相同，则验证通过，同时更新存储的hash值供下次使用&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;heading-程序设计&quot;&gt;程序设计&lt;/h2&gt;
-
-&lt;p&gt;主要需要实现以下函数：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;generate_salt()，用于生成随机的8字节字符串，在S/Key初始化时用到&lt;/li&gt;
-  &lt;li&gt;hash_md4(s)和hash_md5(s)，用于进行md4和md5散列操作，依赖库pycryptodome实现&lt;/li&gt;
-  &lt;li&gt;get_time()，用于取得当前时间，在记录日志的时候用到，返回“%Y.%m.%d-%H:%M:%S”形式的时间&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;s_key_run()，是最核心的函数，实现了所有主要功能。具体实现步骤如下：&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Step1.输出菜单界面，用户选择注册或登录或退出&lt;/li&gt;
-      &lt;li&gt;Step2.读取log.txt，user.txt，N.txt，salt.txt文件，并根据user.txt，N.txt，salt.txt文件中的内容创建字典，给字典赋值。user.txt中存储的是username和S值，N.txt中存储username和n值，salt.txt中存储username和salt(seed)值。若用户选择注册，则跳转至Step3，若用户选择登录，则跳转至Step4，若用户选择退出，则跳转至Step7，若用户输入非法，跳Step1。&lt;/li&gt;
-      &lt;li&gt;Step3.让其输入用户名、密码，然后判断用户名是否已经被注册，若已经被注册，则提示“用户已存在，请直接登陆”，记录日志并跳转至Step1。若没有被注册，则进行初始化操作和生成动态口令序列操作并更新对应字典的值然后写入文件，提示“注册成功”，记录日志，跳转至Step1。&lt;/li&gt;
-      &lt;li&gt;Step4.让其输入用户名、密码，若用户名在字典的Key中存在，跳Step5，若不存在，跳Step6。&lt;/li&gt;
-      &lt;li&gt;Step5.根据N_dic中的值进行对应次数的散列，记为S，再进行一次散列，记为S_1，若S_1与user_dic中的s值相同，则通过验证，提示“登录成功”并记录日志。然后判断n是否等于N，若等于（即口令序列使用完毕），则协商一个新的口令序列供下次登录使用，跳Step1。若不相同，则提示“用户名或密码错误”，日志里保存原因“密码错误”，跳Step1。&lt;/li&gt;
-      &lt;li&gt;Step6. 提示“用户名或密码错误”，日志里保存原因“用户不存在”，跳Step1。&lt;/li&gt;
-      &lt;li&gt;Step7.结束，记录退出日志。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;heading-源码&quot;&gt;源码&lt;/h2&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;s&quot;&gt;'''
-N = 100
-设计身份认证系统的功能、主要界面、主要软件模块，以及采用的认证技术路线和方法。
-（1）支持用户名/口令/验证码机制的身份认证
-（2）满足动态口令的技术要求
-（3）当前口令序列使用完毕后能够继续协商
-（4）记录用户登录日志，支持日志查看
----------------------------------------
- N.txt
- username N
----------------------------------------
- user.txt
- username hash_n
----------------------------------------
- salt.txt
- username salt
-'''&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Crypto.Hash&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MD4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MD5&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;random&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;datetime&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;time&lt;/span&gt;
-
-
-&lt;span class=&quot;c1&quot;&gt;# 生成随机8位字符串
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;generate_salt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&amp;amp;*()_+=-&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;choice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;salt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salt&lt;/span&gt;
-
-
-&lt;span class=&quot;c1&quot;&gt;# MD4散列
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;hash_md4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MD4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hexdigest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-
-&lt;span class=&quot;c1&quot;&gt;# MD5散列
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;hash_md5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MD5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hexdigest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-
-&lt;span class=&quot;c1&quot;&gt;# 取得当前时间
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;get_time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;time_stamp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time_stamp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'%Y.%m.%d-%H:%M:%S'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;
-
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;s_key_run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;system&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;cls&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;*--欢迎使用S/KEY协议身份认证系统--*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;*-------------------------------*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;* 1.注册&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;* 2.登录&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;* 3.退出&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;*-------------------------------*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;choice&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;* 请输入操作选项:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;dir_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dirname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;realpath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__file__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 获得当前文件所在目录的绝对路径
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;fp_log&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dir_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;log.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;a+&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 保存日志的文本文件
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;fp_user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dir_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;user.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;r&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 读取保存用户信息的文本文件
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;fp_N&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dir_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;N.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;r&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 读取保存每个用户N值的文件
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;fp_salt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dir_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;salt.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;r&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 读取保存每个用户salt值的文件
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;user_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fp_user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readlines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;N_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fp_N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readlines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;salt_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fp_salt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readlines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;fp_user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;fp_N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;fp_salt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-        &lt;span class=&quot;c1&quot;&gt;# 清除空项
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;user_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;N_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;salt_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salt_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;# 创建字典
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;N_dic&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;user_dic&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;salt_dic&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;# 给字典赋值
-&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;N_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;user_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salt_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;salt_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;# 注册
-&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;choice&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;* 请输入用户名:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;password&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;* 请输入密码:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;# 看这个用户名是不是已经被注册了
-&lt;/span&gt;            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'  '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'注册失败，用户已存在&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;fp_log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;fp_log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'* 该用户已注册，请直接登陆'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;salt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;generate_salt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;md4_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hash_md4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;password&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'utf-8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;# print(salt, ' ', password, ' ', md4_str)
-&lt;/span&gt;            &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;md4_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;md4_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;17&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 前16个字节与后16个字节异或
-&lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;# print(salt, ' ', S)
-&lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;# 对S做100次安全散列
-&lt;/span&gt;            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hash_md5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'utf-8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-                &lt;span class=&quot;c1&quot;&gt;# print(S)
-&lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;# 保存S、N
-&lt;/span&gt;            &lt;span class=&quot;n&quot;&gt;user_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;N_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'2'&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;salt_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salt&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;fp_salt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dir_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;salt.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;w+&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 读取保存用户salt值的文本文件
-&lt;/span&gt;            &lt;span class=&quot;n&quot;&gt;fp_user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dir_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;user.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;w+&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 读取保存用户信息的文本文件
-&lt;/span&gt;            &lt;span class=&quot;n&quot;&gt;fp_N&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dir_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;N.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;w+&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 读取保存每个用户N值的文件
-&lt;/span&gt;            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# ****第二个空格是为了防止换行符干扰value*****
-&lt;/span&gt;                &lt;span class=&quot;n&quot;&gt;fp_user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;fp_N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salt_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;fp_salt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;fp_user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;fp_N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;fp_salt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;# 写入日志
-&lt;/span&gt;            &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'  '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'注册成功&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;fp_log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;fp_log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'* 注册成功，即将返回登录界面'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;# 登录
-&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;choice&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;* 请输入用户名:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;password&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;* 请输入密码:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;salt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salt_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;md4_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hash_md4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;password&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'utf-8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;md4_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;md4_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;17&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 前16个字节与后16个字节异或
-&lt;/span&gt;                &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;N_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# N-n次得到第n+1个口令
-&lt;/span&gt;                    &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hash_md5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'utf-8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;S_1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hash_md5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'utf-8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-                &lt;span class=&quot;c1&quot;&gt;# 密码正确
-&lt;/span&gt;                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;N_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 已经用完了N个动态口令序列，重新协商
-&lt;/span&gt;                        &lt;span class=&quot;n&quot;&gt;salt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;generate_salt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-                        &lt;span class=&quot;n&quot;&gt;md4_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hash_md4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;password&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'utf-8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-                        &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;md4_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;md4_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;17&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 前16个字节与后16个字节异或
-&lt;/span&gt;                        &lt;span class=&quot;c1&quot;&gt;# 对S做100次安全散列
-&lt;/span&gt;                        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-                            &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hash_md5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'utf-8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-                        &lt;span class=&quot;c1&quot;&gt;# 保存S、N
-&lt;/span&gt;                        &lt;span class=&quot;n&quot;&gt;user_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;
-                        &lt;span class=&quot;n&quot;&gt;N_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'2'&lt;/span&gt;
-                        &lt;span class=&quot;n&quot;&gt;salt_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salt&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-                        &lt;span class=&quot;n&quot;&gt;user_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;
-                        &lt;span class=&quot;n&quot;&gt;N_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;N_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-                    &lt;span class=&quot;n&quot;&gt;fp_user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dir_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;user.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;w+&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 读取保存用户信息的文本文件
-&lt;/span&gt;                    &lt;span class=&quot;n&quot;&gt;fp_N&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dir_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;N.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;w+&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 读取保存每个用户N值的文件
-&lt;/span&gt;                    &lt;span class=&quot;n&quot;&gt;fp_salt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dir_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;salt.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;w+&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 读取保存用户salt值的文本文件
-&lt;/span&gt;                    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-                        &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# ****第二个空格是为了防止换行干扰value*****
-&lt;/span&gt;                        &lt;span class=&quot;n&quot;&gt;fp_user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-                        &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;
-                        &lt;span class=&quot;n&quot;&gt;fp_N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salt_dic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-                        &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;
-                        &lt;span class=&quot;n&quot;&gt;fp_salt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;fp_user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;fp_N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;fp_salt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-                    &lt;span class=&quot;c1&quot;&gt;# 写入日志
-&lt;/span&gt;                    &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'  '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'登录成功&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;fp_log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;fp_log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'* 登录成功'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'  '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'登录失败，密码错误&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;fp_log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;fp_log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'* 用户名或密码错误，登录失败'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'  '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'登录失败，用户不存在&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;fp_log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;fp_log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'* 用户名或密码错误，登录失败'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;choice&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'  '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'退出系统&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;fp_log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;fp_log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'* 谢谢使用，即将退出'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'输入的操作选项非法，请重新输入&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
-
-
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__main__'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s_key_run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><category term="计算机系统安全" /><category term="S/key" /><category term="计算机系统安全" /></entry><entry><title type="html">【Python】 正则表达式</title><link href="https://c0d3r-s.github.io/blog/2020/06/14/python-re/" rel="alternate" type="text/html" title="【Python】 正则表达式" /><published>2020-06-14T00:00:00+08:00</published><updated>2020-06-14T00:00:00+08:00</updated><id>https://c0d3r-s.github.io/blog/2020/06/14/python-re</id><content type="html" xml:base="https://c0d3r-s.github.io/blog/2020/06/14/python-re/">&lt;ul class=&quot;toc&quot; id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#heading-单字符匹配&quot; id=&quot;markdown-toc-heading-单字符匹配&quot;&gt;单字符匹配&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#heading-多字符匹配&quot; id=&quot;markdown-toc-heading-多字符匹配&quot;&gt;多字符匹配&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#heading-匹配字符串开头结尾&quot; id=&quot;markdown-toc-heading-匹配字符串开头结尾&quot;&gt;匹配字符串开头、结尾&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#heading-匹配分组&quot; id=&quot;markdown-toc-heading-匹配分组&quot;&gt;匹配分组&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;heading-单字符匹配&quot;&gt;单字符匹配&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\d&lt;/code&gt;——匹配数字&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0-9&lt;/code&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;re.match(&quot;Harry Potter \d&quot;,&quot;Harry Potter 111&quot;).group()&lt;/code&gt;&lt;/p&gt;
-
-    &lt;p&gt;匹配&lt;strong&gt;单个&lt;/strong&gt;数字（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0-9&lt;/code&gt;），符合要求后即停止匹配，上例结果为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Harry Potter 1&lt;/code&gt; 。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[]——匹配[]中列举的字符&lt;/p&gt;
-
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;re.match(&quot;Harry Potter [12345678],&quot;Harry Potter 9&quot;).group()&lt;/code&gt;&lt;/p&gt;
-
-    &lt;p&gt;规定匹配&lt;strong&gt;单个&lt;/strong&gt;字符范围为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1-8&lt;/code&gt;，上例返回&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NoneType&lt;/code&gt;，即匹配失败。&lt;/p&gt;
-
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[12345678]&lt;/code&gt;也可以写为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[1-8]&lt;/code&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[123678]&lt;/code&gt;也可以写为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[1-36-8]&lt;/code&gt;&lt;/p&gt;
-
-    &lt;p&gt;如下写法也是可以的：
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[1-8a-e]&lt;/code&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[1-8a-zA-Z]&lt;/code&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[^a]&lt;/code&gt;表示除了&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt;的所有字符都可以匹配&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\w&lt;/code&gt;——匹配&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a-z&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A-Z&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0-9&lt;/code&gt;、_&lt;/p&gt;
-
-    &lt;p&gt;中文以及其他语言的符号也可以…慎用&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\s&lt;/code&gt;——匹配空白字符（空格、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\t&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\n&lt;/code&gt;）&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\D&lt;/code&gt;——与&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\d&lt;/code&gt;相反，匹配非数字字符&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\W&lt;/code&gt;——与&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\w&lt;/code&gt;相反，匹配非单词字符&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\S&lt;/code&gt;——与&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\s&lt;/code&gt;相反，匹配非空白字符&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.&lt;/code&gt;——除了&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\n&lt;/code&gt;的所有字符&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;heading-多字符匹配&quot;&gt;多字符匹配&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{m,n}&lt;/code&gt;——前一个字符出现m到n次&lt;/p&gt;
-
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;re.match(&quot;Harry Potter \d{1,2}&quot;,&quot;Harry Potter 1&quot;).group()&lt;/code&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{1,2}&lt;/code&gt;表示匹配一位或两位数字都可以，约束的是前面的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\d&lt;/code&gt;的个数&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{m}&lt;/code&gt;——前一个字符出现m次&lt;/p&gt;
-
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;re.match(&quot;\d{11}&quot;,&quot;17861091186&quot;).group()	# 必须是11位连续的数字&lt;/code&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;re.match(&quot;\d{11}&quot;,&quot;1786109a186&quot;).group()	# 匹配失败&lt;/code&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;?&lt;/code&gt;——前一个字符可以有1个或者没有&lt;/p&gt;
-
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;re.match(&quot;\d{3,4}-?\d{7,8}&quot;,&quot;0518-88824433&quot;)&lt;/code&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt;——前一个字符出现0次到无数次&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt;——前一个字符出现1次到无数次&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;heading-匹配字符串开头结尾&quot;&gt;匹配字符串开头、结尾&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;^&lt;/code&gt;——匹配字符串开头&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$&lt;/code&gt;匹配字符串结尾&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;如果匹配时用到一些普通字符如&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;?&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 等，在前面加上反斜杠进行转义&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;heading-匹配分组&quot;&gt;匹配分组&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;|&lt;/code&gt;——匹配左右任意一个表达式&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(ab)&lt;/code&gt;——将括号中的表达式作为一个分组&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>c0d3r-s(sun)</name><email>hitsyw2017@163.com</email></author><category term="Python" /><category term="Python" /><category term="正则表达式" /></entry></feed>
+&lt;/ul&gt;</content><author><name>sunullptr(sun)</name><email>hitsyw2017@163.com</email></author><category term="考研英语" /><category term="阅读理解" /></entry></feed>
