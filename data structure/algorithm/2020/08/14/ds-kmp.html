@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>【数据结构/算法】 KMP算法（第四章、串） | 为者常成，行者常至</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="【数据结构/算法】 KMP算法（第四章、串）" />
+<meta property="og:locale" content="zh" />
+<meta name="description" content="因为KMP每次用的时候都要看一遍，还是没有透彻理解，所以这里记录一下。" />
+<meta property="og:description" content="因为KMP每次用的时候都要看一遍，还是没有透彻理解，所以这里记录一下。" />
+<link rel="canonical" href="http://localhost:4000/data%20structure/algorithm/2020/08/14/ds-kmp.html" />
+<meta property="og:url" content="http://localhost:4000/data%20structure/algorithm/2020/08/14/ds-kmp.html" />
+<meta property="og:site_name" content="为者常成，行者常至" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-08-14T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="【数据结构/算法】 KMP算法（第四章、串）" />
+<meta name="twitter:site" content="@" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/data%20structure/algorithm/2020/08/14/ds-kmp.html"},"url":"http://localhost:4000/data%20structure/algorithm/2020/08/14/ds-kmp.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.jpg"}},"description":"因为KMP每次用的时候都要看一遍，还是没有透彻理解，所以这里记录一下。","headline":"【数据结构/算法】 KMP算法（第四章、串）","dateModified":"2020-08-14T00:00:00+08:00","datePublished":"2020-08-14T00:00:00+08:00","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="为者常成，行者常至" />
+
+
+
+
+  <!--script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script-->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open%20Sans|Roboto|Roboto%20Slab|Inconsolata|Dancing%20Script|Noto%20Sans%20SC|Noto%20Sans%20TC|Noto%20Serif%20SC|Noto%20Serif%20TC|Ma%20Shan%20Zheng">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/skin.css">
+
+<!-- Begin selecting skin -->
+
+<!-- End selecting skin -->
+
+<script async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+
+
+  </head>
+
+  <body>
+    <div class="site-container">
+      <header class="site-header">
+        <div class="wrapper">
+  <script>
+    function clickSidebarButton() {
+      const elem = document.getElementById("site-sidebar")
+      if (elem.style.display == "none" || elem.style.display == "") {
+        elem.style.display = "block";
+      } else {
+        elem.style.display = "none";
+      }
+    }
+  </script>
+  <a class="site-sidebar-button" onclick="clickSidebarButton()"><i class="far fa-user"></i>
+  </a>
+
+  <a class="site-title" rel="author" href="/">为者常成，行者常至</a>
+
+  
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger" title="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+          </svg>
+        </span>
+      </label>
+
+      <ul class="trigger">
+              <li><a class="" href="/about/">About</a></li>
+            
+              <li><a class="" href="/years/">Years</a></li>
+            
+              <li><a class="" href="/categories/">Categories</a></li>
+            
+              <li><a class="" href="/tags/">Tags</a></li>
+            
+              <li class="dropdown" href="#">
+                <a href="javascript:void(0)" class="dropbtn">More</a>
+                <div class="dropdown-content">
+                    <a class="" href="/faq/">FAQ</a>
+                    <a class="" href="/docs/">Docs</a>
+                </div>
+              </li>
+            </ul>
+    </nav>
+  
+</div>
+
+      </header>
+      
+      <div class="site-body wrapper">
+        <aside class="site-sidebar" id="site-sidebar">
+          
+            <h3 class="toc-title">Table of Contents</h3>
+<nav class="toc-nav">
+  <ul class="toc">
+  <li><a href="#相关概念">相关概念</a></li>
+  <li><a href="#next数组的含义">Next数组的含义</a></li>
+  <li><a href="#求-next-数组的方法">求 Next 数组的方法</a></li>
+  <li><a href="#求-next-数组改进版算法">求 Next 数组改进版算法</a></li>
+  <li><a href="#kmp完整版应用代码改进版本">KMP完整版应用代码（改进版本）</a></li>
+  <li><a href="#kmp算法较之bf算法的优势">KMP算法较之BF算法的优势</a></li>
+</ul>
+
+</nav>
+
+          
+        </aside>
+        <main class="site-main" id="site-main" aria-label="Content">
+          <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+
+    <h1 class="post-title p-name" itemprop="name headline">【数据结构/算法】 KMP算法（第四章、串）</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2020-08-14T00:00:00+08:00" itemprop="datePublished">
+        Aug 14, 2020
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">YW Sun</span></span></p>
+
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>因为KMP每次用的时候都要看一遍，还是没有透彻理解，所以这里记录一下。</p>
+
+<p>数据结构统考中一般只以选择题形式出现，考查Next数组的计算。</p>
+
+<h2 id="相关概念">相关概念</h2>
+
+<ul>
+  <li>
+    <p>前缀</p>
+
+    <p>除了最后一个字符以外，该字符串的所有头部子串</p>
+  </li>
+  <li>
+    <p>后缀</p>
+
+    <p>除了第一个字符以外，该字符串的所有尾部子串</p>
+  </li>
+  <li>
+    <p>部分匹配值</p>
+
+    <p>部分匹配值是一个字符串的前缀和后缀的最长的共有元素的长度，即最长公共前后缀的长度。</p>
+
+    <p><br /></p>
+
+    <p>如：字符串 “$ ABCDABD $”</p>
+
+    <ul>
+      <li>”$ A $” ：前缀后缀都为空集，部分匹配值为 $ 0 $</li>
+      <li>”$ AB $” ：前缀为 $ \lbrace A \rbrace $ ，后缀为 $ \lbrace B \rbrace $ ，部分匹配值为 $ 0 $</li>
+      <li>”$ ABC $” ：前缀为 $ \lbrace A,AB \rbrace $ ，后缀为 $ \lbrace BC,B \rbrace $ ，部分匹配值为 $ 0 $</li>
+      <li>”$ ABCD $” ：前缀为 $ \lbrace A,AB,ABC \rbrace $ ，后缀为 $ \lbrace BCD,BC,B \rbrace $ ，部分匹配值为 $ 0 $</li>
+      <li>”$ ABCDA $” ：前缀为 $ \lbrace A,AB,ABC,ABCD \rbrace $ ，后缀为 $ \lbrace BCDA,CDA,DA,A \rbrace $ ，部分匹配值为 $ 1 $</li>
+      <li>”$ ABCDAB $” ：前缀为 $ \lbrace A,AB,ABC,ABCD,ABCDA \rbrace $ ，后缀为 $ \lbrace BCDAB,CDAB,DAB,AB,B \rbrace$” ，部分匹配值为 $ 2 $</li>
+      <li>”$ ABCDABD $” ：前缀为 $ \lbrace A,AB,ABC,ABCD,ABCDA,ABCDAB \rbrace $ ，后缀为 $ \lbrace BCDABD,CDABD,DAB,AB,B \rbrace $ ，部分匹配值为 $ 0 $</li>
+    </ul>
+
+    <p><br /></p>
+
+    <p>虽然部分匹配值是相对于一个串的概念，为了后面方便计算，这里将各个部分匹配值记为每一位字符的部分匹配值，列成表格如下：</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th> </th>
+          <th>A</th>
+          <th>B</th>
+          <th>C</th>
+          <th>D</th>
+          <th>A</th>
+          <th>B</th>
+          <th>D</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>部分匹配值</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+          <td>2</td>
+          <td>0</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><br /></p>
+
+    <p>部分匹配值的意义在于，当模式串的第 $i$ 个字符与主串不匹配时，咱们已经知道模式串前 $(i-1)$ 个字符的信息，KMP算法就是利用这个已知的信息避免主串的工作指针回退，只改变模式串的工作指针，从而提高算法效率，KMP算法的时间复杂度是 $O(m+n)$ 。</p>
+
+    <p>模式串的第 $i$ 个字符不匹配时，根据最后一个匹配的字符（第 $(i-1)$ 个字符）的部分匹配值可以算出模式串向后移动的位数：</p>
+
+    <p>记第 $i$ 个字符对应的部分匹配值为 $f(i)$ ，移动位数为 $move$，则有</p>
+
+\[move = (i-1)- f(i-1)\]
+
+    <p>即 <strong>移动位数=已匹配的字符数-最后一个匹配的字符对应的部分匹配值</strong></p>
+
+    <p>发生不匹配时，模式串向后移动move位后与主串的当前位继续比较。</p>
+
+    <p><br /></p>
+
+    <p><strong>关于部分匹配值，可以这么理解，模式字符串向后移动的时候保留多少位已经匹配过的字符，显然如果部分匹配值为0，就直接把模式字符串的头移动到不匹配的地方然后继续匹配就行，不用保留任何字符。如果部分匹配值为1，说明模式字符串最后一个字符和第一个字符相同，下一轮比较的时候<em>保留一位</em>，把模式字符串的第一个字符和这一位对齐后，因为这一位已经相等了，就可以跳过这一位了，直接从后一位继续比较。部分匹配值为其余值时同理。</strong></p>
+  </li>
+</ul>
+
+<h2 id="next数组的含义">Next数组的含义</h2>
+
+<p>前面为了便于理解，前面一直在说模式字符串怎么怎么<strong>移动</strong>，但是在实际程序中，模式字符串在内存里是不会动的，咱们改变的只是它的工作指针。</p>
+
+<p>KMP算法的高效之处就在于比较过程中，主串的工作指针 <code class="language-plaintext highlighter-rouge">i</code> （<code class="language-plaintext highlighter-rouge">i</code>指向主串的第 $i$ 个字符）一直 <code class="language-plaintext highlighter-rouge">i++</code> （匹配）或不变（不匹配），不会发生BF中的回溯情况，模式字符串的工作指针 <code class="language-plaintext highlighter-rouge">j</code> （<code class="language-plaintext highlighter-rouge">j</code>指向主串的第 $j$ 个字符）根据当前位的比较结果进行 <code class="language-plaintext highlighter-rouge">j++</code> （匹配）或跳转 <code class="language-plaintext highlighter-rouge">j=next[j]</code> （不匹配）。Next数组就是指示模式字符串的工作指针在不匹配时如何进行跳转的数组。</p>
+
+<p><code class="language-plaintext highlighter-rouge">next[j]=k</code>的含义：</p>
+
+<p>模式串中第 $j$ 个字符与主串中第 $i$ 个字符不匹配时，模式串的工作指针需要跳转到的位置，和主串的第 $i$ 个字符继续比较。</p>
+
+<p><br /></p>
+
+<p>从前面可以知道：</p>
+
+<ul>
+  <li>当模式串的第 $1$ 个字符不匹配时，进行操作<code class="language-plaintext highlighter-rouge">j=next[1]=0</code>，然后进入下一轮循环，判断<code class="language-plaintext highlighter-rouge">j==0</code>后对应的操作是主串的工作指针<code class="language-plaintext highlighter-rouge">++</code>、模式串的工作指针<code class="language-plaintext highlighter-rouge">++</code>，这样就指向第 $1$ 位，然后进入下一轮循环和主串的当前位比较。将 <code class="language-plaintext highlighter-rouge">next[1]</code> 赋值为0是KMP迭代的基础，表示头一个字符就不匹配的情况。这里结合最后的应用代码的KMP函数就比较好理解了。</li>
+  <li>当模式串的第 $j(j \ge 2)$ 个字符不匹配时，对应的操作是主串工作指针不变，模式串的工作指针跳转到第 <code class="language-plaintext highlighter-rouge">next[j]</code> 个字符处，然后继续比较。这里 <code class="language-plaintext highlighter-rouge">next[j]</code> 显然就是前 $(j-1)$ 个字符组成的字符串的最长公共前后缀的长度 $+1$ 。同时易得 <code class="language-plaintext highlighter-rouge">next[2]=1</code> ，因为单个字符的部分匹配值为 $0$ ， $0+1=1$ ，没有公共前后缀的时候 <code class="language-plaintext highlighter-rouge">next[j]</code> 也为 $1$ 。</li>
+</ul>
+
+<p><br /></p>
+
+<p>记 $ f(j) = $ 前 $(j-1)$ 个字符的最大公共前后缀长度，字符串下标从 $1$ 开始计算，则有：</p>
+
+\[\begin{equation}
+next[j]=\left\{
+\begin{array}{rcl}
+0 &amp; &amp; {j = 1}\\
+f(j) &amp; &amp; {j \ge 2}
+\end{array} \right.
+\end{equation}\]
+
+<h2 id="求-next-数组的方法">求 Next 数组的方法</h2>
+
+<p>考试的时候直接比划比划就出来了，还是比较简单的，408统考的话应该不会考代码。</p>
+
+<p>KMP算法的时间复杂度是 $O(m+n)$。（主串长度n，模式串长度m）</p>
+
+<p>下面上代码（<strong>下标从 0 开始</strong>，只要理解了原理不管从 0 开始还是从 1 开始都很好理解）</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+next的计算思想如前所述
+不过这里字符串数组下标从0开始计算
+上面的讲述以及严奶奶教材里是从1开始的，所以本代码的next公式为：
+next[j]=
+        max{k|j之前的串的最长共同前后缀的长度} //因为从0开始算，直接取最长的长度即可，不用+1
+        -1，j=0  表示j=0时候，j之前肯定是空串。
+*/</span>
+<span class="kt">void</span> <span class="nf">get_next</span><span class="p">(</span><span class="n">SString</span> <span class="n">T</span><span class="p">,</span><span class="kt">int</span> <span class="n">next</span><span class="p">[])</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">k</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>   <span class="c1">// j=0时k=-1，表示j之前不存在最长的前后缀串，即next[0]=-1</span>
+    <span class="n">next</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span> <span class="c1">// 这种情况下表示一开始就匹配不上，对应上面讲的第一种情况，对应操作是i后移，j指向模式串头</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">j</span><span class="o">&lt;</span><span class="n">strlen</span><span class="p">(</span><span class="n">T</span><span class="p">))</span>  <span class="c1">// 这段是精华啊精华</span>
+    <span class="p">{</span>
+        <span class="c1">// T[0]...T[j]的next值都求完了</span>
+        <span class="c1">// 如果上一轮刚得到next值，这里的k是T[j]的next值，即前j个的字符组成的串的最长公共前后缀长度</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">k</span><span class="o">==-</span><span class="mi">1</span><span class="o">||</span><span class="n">T</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="n">T</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="c1">// T[j]==T[k]的意思就是，因为要求next[j+1]，那么考查的是前j+1个字符，T[j]就是第j+1个字符，那么显然T[k]是前j个字符组成的串的最长公共前后缀的那个前缀的后面一个字符，T[j]是那个后缀的后一个字符，如果这俩相等，那么next[j+1]=k+1</span>
+        <span class="p">{</span>
+            <span class="n">next</span><span class="p">[</span><span class="o">++</span><span class="n">j</span><span class="p">]</span><span class="o">=++</span><span class="n">k</span><span class="p">;</span>  <span class="c1">// j++,k++,next[j]=k;</span>
+            <span class="c1">// 在next[j]=k的情况下,如果T[j]==T[k],则next[j+1]=k+1</span>
+            <span class="c1">// 或者k=-1时，next[j+1]=0，表示j&gt;0时候不存在相同的最长前后缀串，++k后k=0</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="n">k</span><span class="o">=</span><span class="n">next</span><span class="p">[</span><span class="n">k</span><span class="p">];</span> <span class="c1">// 如果T[j]!=T[k]，k跳转到next[k]继续循环匹配。</span>
+                        <span class="c1">// 这里的思想是用前缀T[0]...T[k](看成模式串)与后缀T[j-k+1]...T[j](看成主串)进行模式匹配，将前缀向右迭代滑动直到找到某个更短的前缀满足T[0]...T[k']==T[j-k'+1]...T[j]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="求-next-数组改进版算法">求 Next 数组改进版算法</h2>
+
+<p>考虑下面这种情况：</p>
+
+<p><code class="language-plaintext highlighter-rouge">S = "aaabaaabaaabaaabaaab"</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">P = "aaaab"</code></p>
+
+<p>改进前：<code class="language-plaintext highlighter-rouge">next[j]=-1 0 1 2 3</code>（下标从0开始），<code class="language-plaintext highlighter-rouge">S[3]</code>与<code class="language-plaintext highlighter-rouge">P[3]</code>不匹配时，按照之前的next值，下一次<code class="language-plaintext highlighter-rouge">S[3]</code>和<code class="language-plaintext highlighter-rouge">P[2]</code>比较，不匹配，下下次<code class="language-plaintext highlighter-rouge">s[3]</code>和<code class="language-plaintext highlighter-rouge">P[1]</code>比较，不匹配，后面还要再比较2次，而这几次<code class="language-plaintext highlighter-rouge">S[3]</code>一直都是和’a’比较，显然咱们第一次就知道<code class="language-plaintext highlighter-rouge">S[3]</code>和’a’不等，这样重复的比较是没有意义的。</p>
+
+<p>出现这种现象的原因就是：若有<code class="language-plaintext highlighter-rouge">P[j]=P[next[j]]</code>，即模式串当前失配字符与模式串根据next数组找到的下一个要被匹配的字符相同，那么显然会继续失配，由此提出KMP算法的改进版本。</p>
+
+<p>如果出现上面的情况，则一直将<code class="language-plaintext highlighter-rouge">next[j]</code>修正为<code class="language-plaintext highlighter-rouge">next[next[j]]</code>，直到两者不相等，通常将此种改进版的next数组更名为nextval。</p>
+
+<p>优化后：<code class="language-plaintext highlighter-rouge">nextval[j]=-1 -1 -1 -1 3</code></p>
+
+<p>改进版求next数组代码如下：</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 计算next值的优化算法，下标从0开始计算</span>
+<span class="kt">void</span> <span class="nf">get_nextval</span><span class="p">(</span><span class="n">SString</span> <span class="n">T</span><span class="p">,</span><span class="kt">int</span> <span class="n">next</span><span class="p">[])</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">k</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>  <span class="c1">// </span>
+    <span class="n">next</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span> <span class="c1">// 表示一开始就匹配不上，是迭代计算next值的基础</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">j</span><span class="o">&lt;</span><span class="n">strlen</span><span class="p">(</span><span class="n">T</span><span class="p">))</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">k</span><span class="o">==-</span><span class="mi">1</span><span class="o">||</span><span class="n">T</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="n">T</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+        <span class="p">{</span>
+            <span class="n">j</span><span class="o">++</span><span class="p">,</span><span class="n">k</span><span class="o">++</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">!=</span><span class="n">T</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+                <span class="n">next</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">k</span><span class="p">;</span>
+            <span class="k">else</span>
+                <span class="n">next</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">next</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+            <span class="n">k</span><span class="o">=</span><span class="n">next</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>  <span class="c1">//如果T[j]!=T[k]，k跳转到next[k]继续循环匹配</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<h2 id="kmp完整版应用代码改进版本">KMP完整版应用代码（改进版本）</h2>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include&lt;iostream&gt;
+#include&lt;string.h&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="kt">char</span> <span class="n">SString</span><span class="p">[</span><span class="mi">255</span><span class="p">];</span><span class="c1">//定义字符串类型SString</span>
+
+<span class="kt">void</span> <span class="nf">get_nextval</span><span class="p">(</span><span class="n">SString</span> <span class="n">T</span><span class="p">,</span><span class="kt">int</span> <span class="n">next</span><span class="p">[])</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">k</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>  <span class="c1">// </span>
+    <span class="n">next</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span> <span class="c1">// 表示一开始就匹配不上，是迭代计算next值的基础</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">j</span><span class="o">&lt;</span><span class="n">strlen</span><span class="p">(</span><span class="n">T</span><span class="p">))</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">k</span><span class="o">==-</span><span class="mi">1</span><span class="o">||</span><span class="n">T</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="n">T</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+        <span class="p">{</span>
+            <span class="n">j</span><span class="o">++</span><span class="p">,</span><span class="n">k</span><span class="o">++</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">!=</span><span class="n">T</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+                <span class="n">next</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">k</span><span class="p">;</span>
+            <span class="k">else</span>
+                <span class="n">next</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">next</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+            <span class="n">k</span><span class="o">=</span><span class="n">next</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>  <span class="c1">//如果T[j]!=T[k]，k跳转到next[k]继续循环匹配</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">KMP</span><span class="p">(</span><span class="n">SString</span> <span class="n">A</span><span class="p">,</span><span class="n">SString</span> <span class="n">B</span><span class="p">,</span><span class="kt">int</span> <span class="n">Pos</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">Pos</span><span class="p">,</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">next</span><span class="p">[</span><span class="n">strlen</span><span class="p">(</span><span class="n">B</span><span class="p">)];</span>  <span class="c1">// 定义next数组</span>
+    <span class="n">get_nextval</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">next</span><span class="p">);</span>  <span class="c1">// 改进版计算next数组的值</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">m</span><span class="o">&lt;</span><span class="n">strlen</span><span class="p">(</span><span class="n">B</span><span class="p">);</span><span class="n">m</span><span class="o">++</span><span class="p">)</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">next</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="s">" "</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">strlen</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">strlen</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">j</span><span class="o">==-</span><span class="mi">1</span><span class="o">||</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">B</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+        <span class="p">{</span>
+            <span class="n">i</span><span class="o">++</span><span class="p">,</span><span class="n">j</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+            <span class="n">j</span><span class="o">=</span><span class="n">next</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">j</span><span class="o">==</span><span class="n">strlen</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">i</span><span class="o">-</span><span class="n">j</span><span class="p">;</span>
+    <span class="k">else</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">SString</span> <span class="n">S</span><span class="p">,</span><span class="n">T</span><span class="p">;</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"Input mainstring S:"</span><span class="p">;</span>
+    <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">S</span><span class="p">;</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"Intput substring T:"</span><span class="p">;</span>
+    <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">T</span><span class="p">;</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"The match position = "</span><span class="o">&lt;&lt;</span><span class="n">KMP</span><span class="p">(</span><span class="n">S</span><span class="p">,</span><span class="n">T</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="kmp算法较之bf算法的优势">KMP算法较之BF算法的优势</h2>
+
+<ul>
+  <li>KMP算法的时间复杂度为$O(m+n)$，BF算法的时间复杂度为$O(m*n)$</li>
+  <li>KMP算法中主串的工作指针不需要回溯</li>
+  <li>KMP算法只需要考虑模式串</li>
+  <li>KMP算法中主串指针不需回溯意味着对于规模较大的外存中的字符串的匹配操作可以分段进行，先读入一部分到内存然后完成匹配后写回外存，可以保证发生不匹配时不需要将之前写回外存的部分再次读入，减少了I/O操作，提高了效率。</li>
+</ul>
+
+  </div>
+
+  <footer class="post-footer">
+    
+      <div class="post-meta">
+        <i class="fas fa-folder"></i>
+        <ul class="post-taxonomies post-categories">
+          
+          
+            <li class="post-category">
+              
+              <a href="/categories/#algorithm">Algorithm</a>
+            </li>
+          
+            <li class="post-category">
+              
+              <a href="/categories/#data-structure">Data Structure</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+
+    
+      <div class="post-meta">
+        <i class="fas fa-tags"></i>
+        <ul class="post-taxonomies post-tags">
+          
+          
+            <li class="post-tag">
+              
+              <a href="/tags/#408">408</a>
+            </li>
+          
+            <li class="post-tag">
+              
+              <a href="/tags/#kmp%E7%AE%97%E6%B3%95">kmp算法</a>
+            </li>
+          
+            <li class="post-tag">
+              
+              <a href="/tags/#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">数据结构</a>
+            </li>
+          
+            <li class="post-tag">
+              
+              <a href="/tags/#%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D">模式匹配</a>
+            </li>
+          
+            <li class="post-tag">
+              
+              <a href="/tags/#%E7%AE%97%E6%B3%95">算法</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+
+    <nav class="post-pagination" role="navigation">
+      
+        <a class="post-previous" href="/english/2020/08/12/english-reading.html">
+          <h4 class="post-pagination-label">Prev</h4>
+          <span class="post-pagination-title">
+            <i class="fas fa-arrow-left"></i> 【考研英语】 2005年阅读理解重点单词、短语
+
+          </span>
+        </a>
+      
+
+      
+        <a class="post-next" href="/data%20structure/2020/08/16/ds-tree.html">
+          <h4 class="post-pagination-label">Next</h4>
+          <span class="post-pagination-title">
+            【数据结构】 第五章、树（树、二叉树、森林及相关应用）
+ <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+      
+    </nav>
+  </footer>
+
+  
+  
+</article>
+
+          <footer class="site-footer">
+            <div class="footer-col-wrapper">
+
+  <div class="footer-col">
+    <div class="copyright">
+      
+      
+      
+      
+      <p>Copyright © 2019&nbsp;-&nbsp;2020 sun; All rights reserved.</p>
+      
+    </div>
+    <p>
+      Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://github.com/ngzhio/jekyll-theme-hamilton">Hamilton</a>
+    </p>
+  </div>
+
+  <div class="footer-col">
+    <p>学习记录+日常叭叭</p>
+  </div>
+</div>
+
+          </footer>
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>
