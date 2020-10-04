@@ -13,8 +13,6 @@
 <meta property="og:locale" content="zh" />
 <meta name="description" content="8086的编程结构、工作模式、引脚功能、操作和时序以及存储器组织相关知识" />
 <meta property="og:description" content="8086的编程结构、工作模式、引脚功能、操作和时序以及存储器组织相关知识" />
-<link rel="canonical" href="http://localhost:4000/assembly%20and%20interface/2019/12/14/assembly-8086.html" />
-<meta property="og:url" content="http://localhost:4000/assembly%20and%20interface/2019/12/14/assembly-8086.html" />
 <meta property="og:site_name" content="为者常成，行者常至" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-12-14T00:00:00+08:00" />
@@ -22,11 +20,11 @@
 <meta property="twitter:title" content="【汇编与接口】 8086CPU结构" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/assembly%20and%20interface/2019/12/14/assembly-8086.html"},"url":"http://localhost:4000/assembly%20and%20interface/2019/12/14/assembly-8086.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.jpg"}},"description":"8086的编程结构、工作模式、引脚功能、操作和时序以及存储器组织相关知识","headline":"【汇编与接口】 8086CPU结构","dateModified":"2019-12-14T00:00:00+08:00","datePublished":"2019-12-14T00:00:00+08:00","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"/assembly%20and%20interface/2019/12/14/assembly-8086.html"},"url":"/assembly%20and%20interface/2019/12/14/assembly-8086.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/logo.jpg"}},"description":"8086的编程结构、工作模式、引脚功能、操作和时序以及存储器组织相关知识","headline":"【汇编与接口】 8086CPU结构","dateModified":"2019-12-14T00:00:00+08:00","datePublished":"2019-12-14T00:00:00+08:00","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="为者常成，行者常至" />
+<link type="application/atom+xml" rel="alternate" href="/feed.xml" title="为者常成，行者常至" />
 
 
 
@@ -58,6 +56,8 @@
 <script async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
 
 
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=" />
 
 
   </head>
@@ -93,16 +93,16 @@
       </label>
 
       <ul class="trigger">
-              <li><a class="" href="/about/">About</a></li>
+              <li><a class="" href="/about/">关于</a></li>
             
-              <li><a class="" href="/years/">Years</a></li>
+              <li><a class="" href="/years/">归档</a></li>
             
-              <li><a class="" href="/categories/">Categories</a></li>
+              <li><a class="" href="/categories/">分类</a></li>
             
-              <li><a class="" href="/tags/">Tags</a></li>
+              <li><a class="" href="/tags/">标签</a></li>
             
               <li class="dropdown" href="#">
-                <a href="javascript:void(0)" class="dropbtn">More</a>
+                <a href="javascript:void(0)" class="dropbtn">更多</a>
                 <div class="dropdown-content">
                     <a class="" href="/faq/">FAQ</a>
                     <a class="" href="/docs/">Docs</a>
@@ -147,7 +147,9 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h2 id="21-8086cpu的编程结构">2.1 8086CPU的编程结构</h2>
+    <p>8086的编程结构、工作模式、引脚功能、操作和时序以及存储器组织相关知识。</p>
+
+<h2 id="21-8086cpu的编程结构">2.1 8086CPU的编程结构</h2>
 
 <ul>
   <li>
@@ -156,7 +158,7 @@
   <li>
     <p>8086分为总线接口单元(BIU)和执行单元(EU)</p>
 
-    <p><img src="http://localhost:4000/assets/images/md/assembly/8086_structure.png" style="zoom:80%;" /></p>
+    <p><img src="/assets/images/md/assembly/8086_structure.png" style="zoom:80%;" /></p>
 
     <p>执行单元包括：</p>
 
@@ -425,7 +427,7 @@
   <li>
     <p>引脚功能</p>
 
-    <p><img src="http://localhost:4000/assets/images/md/assembly/8086yinjiao.png" style="zoom:67%;" /></p>
+    <p><img src="/assets/images/md/assembly/8086yinjiao.png" style="zoom:67%;" /></p>
 
     <p>注： /分时复用   (最大模式/最小模式)</p>
 
@@ -459,7 +461,7 @@
 
         <p>至少维持4个时钟周期的高电平才有效，复位后各寄存器状态如下图所示：</p>
 
-        <p><img src="http://localhost:4000/assets/images/md/assembly/RESET.png" style="zoom:80%;" /></p>
+        <p><img src="/assets/images/md/assembly/RESET.png" style="zoom:80%;" /></p>
 
         <p><strong>注意CS寄存器复位后的值是0FFFFH</strong></p>
 
@@ -538,7 +540,7 @@
   <li>
     <p>存储器和I/O端口的读写控制信号逻辑</p>
 
-    <p><img src="http://localhost:4000/assets/images/md/assembly/CPU%E5%92%8C%E5%A4%96%E8%AE%BE%E7%9A%84%E8%AF%BB%E5%86%99%E6%8E%A7%E5%88%B6%E4%BF%A1%E5%8F%B7.png" style="zoom:50%;" /></p>
+    <p><img src="/assets/images/md/assembly/CPU%E5%92%8C%E5%A4%96%E8%AE%BE%E7%9A%84%E8%AF%BB%E5%86%99%E6%8E%A7%E5%88%B6%E4%BF%A1%E5%8F%B7.png" style="zoom:50%;" /></p>
 
     <table>
       <thead>
@@ -596,7 +598,7 @@
   <li>
     <p>8086的总线周期</p>
 
-    <p><img src="http://localhost:4000/assets/images/md/assembly/t.png" style="zoom:80%;" /></p>
+    <p><img src="/assets/images/md/assembly/t.png" style="zoom:80%;" /></p>
 
     <p>缓冲：撤销地址信息，地址信息进地址锁存器</p>
 
@@ -620,33 +622,33 @@
           <li>
             <p>总线读操作</p>
 
-            <p><img src="http://localhost:4000/assets/images/md/assembly/read.png" style="zoom:80%;" /></p>
+            <p><img src="/assets/images/md/assembly/read.png" style="zoom:80%;" /></p>
           </li>
           <li>
             <p>总线写操作</p>
 
-            <p><img src="http://localhost:4000/assets/images/md/assembly/write.png" style="zoom:80%;" /></p>
+            <p><img src="/assets/images/md/assembly/write.png" style="zoom:80%;" /></p>
           </li>
         </ol>
       </li>
       <li>
         <p>中断响应操作</p>
 
-        <p><img src="http://localhost:4000/assets/images/md/assembly/%E4%B8%AD%E6%96%AD%E5%93%8D%E5%BA%94.png" style="zoom:80%;" /></p>
+        <p><img src="/assets/images/md/assembly/%E4%B8%AD%E6%96%AD%E5%93%8D%E5%BA%94.png" style="zoom:80%;" /></p>
 
         <p>响应中断时CPU执行两个中断周期，第一个周期的$T_2 \sim T_4$时，$\overline{INTA}$为低电平，这里作为对中断请求设备的响应；第二个周期的$T_2 \sim T_4$时，$\overline{INTA}$为低电平，这里用于通知中断请求设备（通过中断控制器）把中断类型号（决定了中断服务程序入口地址）送到数据线低八位（$AD_7 \sim AD_0$）。在8086中，2个周期之间有3个空闲周期$T_i$</p>
       </li>
       <li>
         <p>总线保持与响应操作</p>
 
-        <p><img src="http://localhost:4000/assets/images/md/assembly/keep_response.png" style="zoom:80%;" /></p>
+        <p><img src="/assets/images/md/assembly/keep_response.png" style="zoom:80%;" /></p>
 
         <p>其他系统总线主设备向8086请求总线，发送HOLD请求信号，CPU接收到HOLD信号后，在<strong>当前总线周期$T_4$或空闲周期$T_i$的后沿</strong>输出保持响应信号HLDA，然后从下一个时钟开始让出总线控制权。外设的DMA传输结束后，使HOLD信号变为低电平，则<strong>下一个时钟的下降沿</strong>HLDA信号变为低电平（无效）           [<em>HOLD信号由外设驱动</em>]</p>
       </li>
       <li>
         <p>复位和启动操作</p>
 
-        <p><img src="http://localhost:4000/assets/images/md/assembly/reset_restart.png" style="zoom:80%;" /></p>
+        <p><img src="/assets/images/md/assembly/reset_restart.png" style="zoom:80%;" /></p>
 
         <p>复位后的系统状态见<a href="#reset">RESET信号</a></p>
       </li>
@@ -669,7 +671,7 @@
   <li>
     <p>8086通过低八位数据总线访问偶地址存储单元/IO端口，通过高八位数据总线访问奇地址存储单元/IO端口</p>
 
-    <p><img src="http://localhost:4000/assets/images/md/assembly/ji_ou.png" style="zoom:60%;" /></p>
+    <p><img src="/assets/images/md/assembly/ji_ou.png" style="zoom:60%;" /></p>
 
     <p>从偶地址单元开始读/写一个字，需要<strong>一个</strong>总线周期</p>
 

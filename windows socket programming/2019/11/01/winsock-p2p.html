@@ -13,8 +13,6 @@
 <meta property="og:locale" content="zh" />
 <meta name="description" content="Windows网络编程 P2P打洞源代码分析" />
 <meta property="og:description" content="Windows网络编程 P2P打洞源代码分析" />
-<link rel="canonical" href="http://localhost:4000/windows%20socket%20programming/2019/11/01/winsock-p2p.html" />
-<meta property="og:url" content="http://localhost:4000/windows%20socket%20programming/2019/11/01/winsock-p2p.html" />
 <meta property="og:site_name" content="为者常成，行者常至" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-11-01T00:00:00+08:00" />
@@ -22,11 +20,11 @@
 <meta property="twitter:title" content="【Windows网络编程】 P2P打洞源代码分析" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/windows%20socket%20programming/2019/11/01/winsock-p2p.html"},"url":"http://localhost:4000/windows%20socket%20programming/2019/11/01/winsock-p2p.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.jpg"}},"description":"Windows网络编程 P2P打洞源代码分析","headline":"【Windows网络编程】 P2P打洞源代码分析","dateModified":"2019-11-01T00:00:00+08:00","datePublished":"2019-11-01T00:00:00+08:00","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"/windows%20socket%20programming/2019/11/01/winsock-p2p.html"},"url":"/windows%20socket%20programming/2019/11/01/winsock-p2p.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/logo.jpg"}},"description":"Windows网络编程 P2P打洞源代码分析","headline":"【Windows网络编程】 P2P打洞源代码分析","dateModified":"2019-11-01T00:00:00+08:00","datePublished":"2019-11-01T00:00:00+08:00","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="为者常成，行者常至" />
+<link type="application/atom+xml" rel="alternate" href="/feed.xml" title="为者常成，行者常至" />
 
 
 
@@ -45,6 +43,8 @@
 <script async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
 
 
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=" />
 
 
   </head>
@@ -80,16 +80,16 @@
       </label>
 
       <ul class="trigger">
-              <li><a class="" href="/about/">About</a></li>
+              <li><a class="" href="/about/">关于</a></li>
             
-              <li><a class="" href="/years/">Years</a></li>
+              <li><a class="" href="/years/">归档</a></li>
             
-              <li><a class="" href="/categories/">Categories</a></li>
+              <li><a class="" href="/categories/">分类</a></li>
             
-              <li><a class="" href="/tags/">Tags</a></li>
+              <li><a class="" href="/tags/">标签</a></li>
             
               <li class="dropdown" href="#">
-                <a href="javascript:void(0)" class="dropbtn">More</a>
+                <a href="javascript:void(0)" class="dropbtn">更多</a>
                 <div class="dropdown-content">
                     <a class="" href="/faq/">FAQ</a>
                     <a class="" href="/docs/">Docs</a>
@@ -131,19 +131,21 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h2 id="服务器端">服务器端</h2>
+    <p>Windows网络编程之P2P打洞源代码分析。</p>
 
-<p><img src="http://localhost:4000/assets/images/md/winsock/001.jpg" alt="" /></p>
+<h2 id="服务器端">服务器端</h2>
+
+<p><img src="/assets/images/md/winsock/001.jpg" alt="" /></p>
 
 <p>创建服务器套接字，类型是数据报套接字，WSA_FLAG_OVERLAPPED标志用来创建具有OVERLAPPED属性的socket ，具有OVERLAPPED属性的socket能够使用WSASend、WSARecv、WSAIoctl等函数。</p>
 
 <p>创建套接字后绑定端口信息，端口SERVER_PORT定义在自定义的头文件comm.h中。若绑定出错，返回错误号。</p>
 
-<p><img src="http://localhost:4000/assets/images/md/winsock/002.jpg" alt="" /></p>
+<p><img src="/assets/images/md/winsock/002.jpg" alt="" /></p>
 
 <p>调用gethostname()函数获取本地主机的标准主机名，然后调用gethostbyname()函数，之前获取的本地主机的标准主机名作为参数，函数返回对应于给定主机名的包含主机名字和地址信息的hostent结构的指针。因为可能对应多个IP，所以需要循环输出每个IP地址。</p>
 
-<p><img src="http://localhost:4000/assets/images/md/winsock/Snipaste_05_10-29-57.png" alt="" /></p>
+<p><img src="/assets/images/md/winsock/Snipaste_05_10-29-57.png" alt="" /></p>
 
 <p>第一个语句初始化一个临界资源对象，单进程的各个线程可以使用临界资源对象来解决同步互斥问题；第二句话创建一个线程。开启服务。</p>
 
@@ -151,11 +153,11 @@
 
 <p>在IOThreadProc()函数中定义了一个接收缓冲区buff和远端用户的ip地址。自定义通信消息格式的结构体如下：</p>
 
-<p><img src="http://localhost:4000/assets/images/md/winsock/Snipaste_05_10-30-46.png" alt="" /></p>
+<p><img src="/assets/images/md/winsock/Snipaste_05_10-30-46.png" alt="" /></p>
 
 <p>以下循环处理消息：</p>
 
-<p><img src="http://localhost:4000/assets/images/md/winsock/Snipaste_05_10-31-13.png" alt="" /></p>
+<p><img src="/assets/images/md/winsock/Snipaste_05_10-31-13.png" alt="" /></p>
 
 <p>调用recvfrom()函数接收缓冲区中的数据，若接受失败则返回错误提示然后继续处理消息。不过其中<code class="language-plaintext highlighter-rouge">pMsg-&gt;peer.szUserName[MAX_USERNAME] = '\0'</code> 个人认为会越界，应该是<code class="language-plaintext highlighter-rouge">pMsg-&gt;peer.szUserName[MAX_USERNAME-1] = '\0'</code></p>
 
@@ -163,37 +165,37 @@
 
 <p>（1）用户登录</p>
 
-<p><img src="http://localhost:4000/assets/images/md/winsock/Snipaste_05_10-32-13.png" alt="" /></p>
+<p><img src="/assets/images/md/winsock/Snipaste_05_10-32-13.png" alt="" /></p>
 
 <p>有用户登录时，记录下用户的公共终端信息，注意字节序的转换。然后将该用户的信息添加到PeerList中（因为PeerList属于临界资源，使用前后要加解锁）。若添加成功，则给该用户发送其公共IP和端口号。</p>
 
 <p>（2）用户登出</p>
 
-<p><img src="http://localhost:4000/assets/images/md/winsock/Snipaste_05_10-33-07.png" alt="" /></p>
+<p><img src="/assets/images/md/winsock/Snipaste_05_10-33-07.png" alt="" /></p>
 
 <p>若是用户登出的情况，则从节点链表中删除该对等方并且释放当前线程对临界资源的所有权，同时在屏幕输出用户登出的信息。</p>
 
 <p>（3）用户请求当前在线的用户列表</p>
 
-<p><img src="http://localhost:4000/assets/images/md/winsock/Snipaste_05_10-33-39.png" alt="" /></p>
+<p><img src="/assets/images/md/winsock/Snipaste_05_10-33-39.png" alt="" /></p>
 
 <p>创建一个通信消息对象，消息对象的消息类型为GETUSERLIST，将当前在线的用户信息（用户名、公共地址）发送给请求的用户。然后发送结束封包。</p>
 
 <p>（4）另一用户请求连接当前用户发送消息</p>
 
-<p><img src="http://localhost:4000/assets/images/md/winsock/Snipaste_05_10-34-01.png" alt="" /></p>
+<p><img src="/assets/images/md/winsock/Snipaste_05_10-34-01.png" alt="" /></p>
 
 <p>解析出发送方用户名及接收方用户名，并且根据接收方用户名获取其相关地址信息。若接收方用户存在，则将信息分发给接收方。</p>
 
 <p>（5）用户对服务器探测存活消息的应答</p>
 
-<p><img src="http://localhost:4000/assets/images/md/winsock/Snipaste_05_10-34-30.png" alt="" /></p>
+<p><img src="/assets/images/md/winsock/Snipaste_05_10-34-30.png" alt="" /></p>
 
 <p>服务器每隔一段间隔就要对客户端进行存活探测，若用户存活，则更新其最后存活时间。</p>
 
 <p>回到main()函数，在main()函数中服务器每隔一段时间对用户列表遍历进行存活探测并且删除无响应的用户。</p>
 
-<p><img src="http://localhost:4000/assets/images/md/winsock/Snipaste_05_10-35-02.png" alt="" /></p>
+<p><img src="/assets/images/md/winsock/Snipaste_05_10-35-02.png" alt="" /></p>
 
 <p>最后要销毁PeerList，关闭线程、关闭套接字。</p>
 
@@ -205,23 +207,23 @@
 
 <p>输入服务器的IP地址和自身的用户名。</p>
 
-<p><img src="http://localhost:4000/assets/images/md/winsock/Snipaste_05_10-36-22.png" alt="" /></p>
+<p><img src="/assets/images/md/winsock/Snipaste_05_10-36-22.png" alt="" /></p>
 
 <p>连接服务器成功后，首次连接会自动刷新用户列表，调用CP2PClient中的GetUserList()函数，GetUserList()函数如下：</p>
 
-<p><img src="http://localhost:4000/assets/images/md/winsock/Snipaste_05_10-37-03.png" alt="" /></p>
+<p><img src="/assets/images/md/winsock/Snipaste_05_10-37-03.png" alt="" /></p>
 
 <p>构建查询包</p>
 
-<p><img src="http://localhost:4000/assets/images/md/winsock/Snipaste_05_10-37-28.png" alt="" /></p>
+<p><img src="/assets/images/md/winsock/Snipaste_05_10-37-28.png" alt="" /></p>
 
 <p>删除当前列表中所有结点，注意对临界资源加解锁</p>
 
-<p><img src="http://localhost:4000/assets/images/md/winsock/Snipaste_05_10-37-51.png" alt="" /></p>
+<p><img src="/assets/images/md/winsock/Snipaste_05_10-37-51.png" alt="" /></p>
 
 <p>向服务器发送查询包，m_bUserlistCmp是用户列表是否传输的标识，一直循环到服务器发完列表结束。</p>
 
-<p><img src="http://localhost:4000/assets/images/md/winsock/Snipaste_05_10-38-12.png" alt="" /></p>
+<p><img src="/assets/images/md/winsock/Snipaste_05_10-38-12.png" alt="" /></p>
 
 <p>客户端用户有3个可用命令，分别是getu（刷新用户列表并在屏幕输出当前在线用户信息）、send（给其余用户发送信息）、exit（断开连接退出客户端）。</p>
 
@@ -229,11 +231,11 @@
 
 <p>（1）用户输入的是getu命令，基本操作与用户刚登录时的操作相同，调用GetUserList()方法，若调用成功则逐个接收每个在线用户的地址信息并在屏幕输出，若调用失败则输出错误提示。</p>
 
-<p><img src="http://localhost:4000/assets/images/md/winsock/Snipaste_05_10-38-45.png" alt="" /></p>
+<p><img src="/assets/images/md/winsock/Snipaste_05_10-38-45.png" alt="" /></p>
 
 <p>（2）用户输入的是send命令，send命令用于给指定用户发送信息，send命令的使用格式为send [recvUsername] [message]，用户输入命令后，程序先解析出前四个单元是send后，然后从数组的第六个单元（下标i为5）开始读取直到遇到空格，读取出的字符串即为对方用户名，然后从下标为i+1的单元继续读取直到结束，这一段是要发送的消息，封装好之后调用SendText()发送消息。发送成功则输出成功提示，发送失败则输出发送失败提示。</p>
 
-<p><img src="http://localhost:4000/assets/images/md/winsock/Snipaste_05_10-39-09.png" alt="" /></p>
+<p><img src="/assets/images/md/winsock/Snipaste_05_10-39-09.png" alt="" /></p>
 
 <p>（3）用户输入的是exit命令，退出循环，断开连接。</p>
 
