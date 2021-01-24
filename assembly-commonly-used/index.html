@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>关于 – 今天又刷了什么水题 – 为者常成，行者常至</title>
+  <title>【汇编与接口】 常用知识汇总 – 今天又刷了什么水题 – 为者常成，行者常至</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,14 +9,136 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="为者常成，行者常至">
-    <meta property="og:description" content="为者常成，行者常至" />
+    <meta name="description" content="汇编与接口的一些常用知识（更）。
+
+常用中断类型码
+
+21H中断
+
+
+  
+    4CH号功能：结束程序
+
+    MOV  AX, 4C00H
+  
+  
+    02H号功能：在屏幕上显示字符
+
+    MOV  DL, 'A'
+MOV  AH, 02H   
+    
+  
+  
+    01H号功能：由键盘输入一个字符
+  
+  
+    0A号功能：由键盘输入字符串
+
+    调用之前先设置好缓冲区，第一个字节事先填入最多允许接受的字符个数（包括0DH），第二个字节留空，本功能自动回填实际输入的字符个数（不包括回车符），第三个字节起存放实际的字符串，用户按回车结束，从而最后一个字符是0DH，若用户输入字符超过设置，不予响应
+
+    
+      
+        调用参数：DS:DX=缓冲区首地址  DS:[DX]=缓冲区最大容量
+      
+      
+        返回参数：DS:[DX+1]=实际输入字符数  DS:DX+2=字符串首地址
+
+        LEA        SI
+        
+      
+    
+  
+
+
+常用ASCII码
+
+
+  回车  0DH
+  换行  0AH
+  终结符  ‘$’
+  ‘A’ = ‘9’ + 7
+
+
+常用伪指令
+
+
+  ORG
+
+
+做题时注意事项
+
+
+  用到字符串操作指令时注意先设置DF
+
+" />
+    <meta property="og:description" content="汇编与接口的一些常用知识（更）。
+
+常用中断类型码
+
+21H中断
+
+
+  
+    4CH号功能：结束程序
+
+    MOV  AX, 4C00H
+  
+  
+    02H号功能：在屏幕上显示字符
+
+    MOV  DL, 'A'
+MOV  AH, 02H   
+    
+  
+  
+    01H号功能：由键盘输入一个字符
+  
+  
+    0A号功能：由键盘输入字符串
+
+    调用之前先设置好缓冲区，第一个字节事先填入最多允许接受的字符个数（包括0DH），第二个字节留空，本功能自动回填实际输入的字符个数（不包括回车符），第三个字节起存放实际的字符串，用户按回车结束，从而最后一个字符是0DH，若用户输入字符超过设置，不予响应
+
+    
+      
+        调用参数：DS:DX=缓冲区首地址  DS:[DX]=缓冲区最大容量
+      
+      
+        返回参数：DS:[DX+1]=实际输入字符数  DS:DX+2=字符串首地址
+
+        LEA        SI
+        
+      
+    
+  
+
+
+常用ASCII码
+
+
+  回车  0DH
+  换行  0AH
+  终结符  ‘$’
+  ‘A’ = ‘9’ + 7
+
+
+常用伪指令
+
+
+  ORG
+
+
+做题时注意事项
+
+
+  用到字符串操作指令时注意先设置DF
+
+" />
     
     <meta name="author" content="今天又刷了什么水题" />
 
     
-    <meta property="og:title" content="关于" />
-    <meta property="twitter:title" content="关于" />
+    <meta property="og:title" content="【汇编与接口】 常用知识汇总" />
+    <meta property="twitter:title" content="【汇编与接口】 常用知识汇总" />
     
   <!-- Async font loading -->
 <script>
@@ -161,19 +283,145 @@
 </div>
 
     
+      <aside class="toc">
+        <ul>
+  <li><a href="#">【汇编与接口】 常用知识汇总</a>
+    <ul>
+      <li><a href="#常用中断类型码">常用中断类型码</a>
+        <ul>
+          <li><a href="#21h中断">21H中断</a></li>
+        </ul>
+      </li>
+      <li><a href="#常用ascii码">常用ASCII码</a></li>
+      <li><a href="#常用伪指令">常用伪指令</a></li>
+      <li><a href="#做题时注意事项">做题时注意事项</a></li>
+    </ul>
+  </li>
+</ul>
+      </aside>
+    
 
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
-        <article class="page">
+        <article class="posts">
+  <h1>【汇编与接口】 常用知识汇总</h1>
 
-  <h1>关于</h1>
+  <div clsss="meta">
+    <span class="author">
+      Sun
+    </span>
+
+    <span class="date">
+      2019-12-19
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="/tags#汇编与接口">
+          汇编与接口
+        </a>
+      </li>
+      
+    </ul>
+  </div>
 
   <div class="entry">
-    <p>Github: <a href="https://github.com/suniven">suniven</a></p>
+    <p>汇编与接口的一些常用知识（更）。</p>
+
+<h2 id="常用中断类型码">常用中断类型码</h2>
+
+<h3 id="21h中断">21H中断</h3>
+
+<ul>
+  <li>
+    <p>4CH号功能：结束程序</p>
+
+    <p>MOV  AX, 4C00H</p>
+  </li>
+  <li>
+    <p>02H号功能：在屏幕上显示字符</p>
+
+    <div class="language-nasm highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">MOV</span>  <span class="nb">DL</span><span class="p">,</span> <span class="s">'A'</span>
+<span class="nf">MOV</span>  <span class="nb">AH</span><span class="p">,</span> <span class="mh">02H</span>   
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>01H号功能：由键盘输入一个字符</p>
+  </li>
+  <li>
+    <p>0A号功能：由键盘输入字符串</p>
+
+    <p>调用之前先设置好缓冲区，第一个字节事先填入最多允许接受的字符个数（包括0DH），第二个字节留空，本功能自动回填实际输入的字符个数（不包括回车符），第三个字节起存放实际的字符串，用户按回车结束，从而最后一个字符是0DH，若用户输入字符超过设置，不予响应</p>
+
+    <ul>
+      <li>
+        <p>调用参数：DS:DX=缓冲区首地址  DS:[DX]=缓冲区最大容量</p>
+      </li>
+      <li>
+        <p>返回参数：DS:[DX+1]=实际输入字符数  DS:DX+2=字符串首地址</p>
+
+        <div class="language-nasm highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">LEA</span>        <span class="nb">SI</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="常用ascii码">常用ASCII码</h2>
+
+<ul>
+  <li>回车  0DH</li>
+  <li>换行  0AH</li>
+  <li>终结符  ‘$’</li>
+  <li>‘A’ = ‘9’ + 7</li>
+</ul>
+
+<h2 id="常用伪指令">常用伪指令</h2>
+
+<ul>
+  <li>ORG</li>
+</ul>
+
+<h2 id="做题时注意事项">做题时注意事项</h2>
+
+<ul>
+  <li>用到字符串操作指令时注意先设置DF</li>
+</ul>
 
   </div>
+
+  
+  
+<script src="https://utteranc.es/client.js"
+        repo=""
+        issue-term="issue-term"
+        label="utteranc"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+  
 </article>
 
+<div class="pagination">
+  
+    <span class="prev" >
+      <a href="/assembly-instruction/">
+        ← 上一篇
+      </a>
+    </span>
+  
+  
+    <span class="next" >
+      <a href="/compiler-keynote/">
+        下一篇 →
+      </a>
+    </span>
+  
+</div>
       </div>
     </div>
 
@@ -181,6 +429,10 @@
 
   </body>
 
+  
+  <script>
+    document.getElementById("main").classList.add("withtoc");
+  </script>
   
 
   <div class="wrapper-footer-mobile">

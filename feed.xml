@@ -1,4 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" hreflang="zh" /><updated>2020-10-04T19:51:38+08:00</updated><id>/feed.xml</id><title type="html">为者常成，行者常至</title><subtitle>学习记录+日常叭叭</subtitle><author><name>Sun</name></author><entry><title type="html">【考研英语】 2012年考研英语一词组、单词</title><link href="/english/2020/10/04/english-2012.html" rel="alternate" type="text/html" title="【考研英语】 2012年考研英语一词组、单词" /><published>2020-10-04T00:00:00+08:00</published><updated>2020-10-04T00:00:00+08:00</updated><id>/english/2020/10/04/english-2012</id><content type="html" xml:base="/english/2020/10/04/english-2012.html">&lt;p&gt;2012年考研英语真题里个人记忆模糊的单词、词组。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-01-24T22:14:10+08:00</updated><id>/feed.xml</id><title type="html">今天又刷了什么水题</title><subtitle>为者常成，行者常至</subtitle><entry><title type="html">【Web前端/毕设日记】.resize()</title><link href="/fly-cmp/" rel="alternate" type="text/html" title="【Web前端/毕设日记】.resize()" /><published>2021-01-24T00:00:00+08:00</published><updated>2021-01-24T00:00:00+08:00</updated><id>/fly-cmp</id><content type="html" xml:base="/fly-cmp/">&lt;p&gt;令人智熄的前端，脑子：嗯这段写出来效果应该是这样的，代码：不你不是。
+关于echarts图表放div里面之后奇形怪状的问题。&lt;/p&gt;
+
+&lt;p&gt;##&lt;/p&gt;</content><author><name>[&quot;Sun&quot;]</name></author><category term="Web前端" /><category term="毕设日记" /><category term="Web前端" /><category term="javascript" /><category term="毕设" /><summary type="html">令人智熄的前端，脑子：嗯这段写出来效果应该是这样的，代码：不你不是。 关于echarts图表放div里面之后奇形怪状的问题。 ##</summary></entry><entry><title type="html">【算法笔记/PAT】3.1-简单模拟</title><link href="/pat/" rel="alternate" type="text/html" title="【算法笔记/PAT】3.1-简单模拟" /><published>2021-01-24T00:00:00+08:00</published><updated>2021-01-24T00:00:00+08:00</updated><id>/pat</id><content type="html" xml:base="/pat/">&lt;p&gt;PAT B1001、B1011、B1016、B1026&lt;/p&gt;
+
+&lt;p&gt;##&lt;/p&gt;</content><author><name>[&quot;Sun&quot;]</name></author><category term="PAT" /><category term="PAT" /><category term="算法" /><summary type="html">PAT B1001、B1011、B1016、B1026 ##</summary></entry><entry><title type="html">【Web前端/毕设日记】echarts的使用</title><link href="/fly-cmp/" rel="alternate" type="text/html" title="【Web前端/毕设日记】echarts的使用" /><published>2021-01-20T00:00:00+08:00</published><updated>2021-01-20T00:00:00+08:00</updated><id>/fly-cmp</id><content type="html" xml:base="/fly-cmp/">&lt;p&gt;今天Mentor让我修复项目的几个小问题，其中用到了echarts，在这里记录一下&lt;/p&gt;
+
+&lt;p&gt;##&lt;/p&gt;</content><author><name>[&quot;Sun&quot;]</name></author><category term="Web前端" /><category term="毕设日记" /><category term="Web前端" /><category term="javascript" /><category term="毕设" /><category term="echarts" /><summary type="html">今天Mentor让我修复项目的几个小问题，其中用到了echarts，在这里记录一下 ##</summary></entry><entry><title type="html">【考研英语】 2012年考研英语一词组、单词</title><link href="/english-2012/" rel="alternate" type="text/html" title="【考研英语】 2012年考研英语一词组、单词" /><published>2020-10-04T00:00:00+08:00</published><updated>2020-10-04T00:00:00+08:00</updated><id>/english-2012</id><content type="html" xml:base="/english-2012/">&lt;p&gt;2012年考研英语真题里个人记忆模糊的单词、词组。&lt;/p&gt;
 
 &lt;h2 id=&quot;完形填空&quot;&gt;完形填空&lt;/h2&gt;
 
@@ -81,7 +88,7 @@
 &lt;ul&gt;
   &lt;li&gt;prudent [adj.] 谨慎的&lt;/li&gt;
   &lt;li&gt;clamp down 取缔；压制；管制；镇压&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>[&quot;YW Sun&quot;]</name></author><category term="English" /><category term="阅读理解" /><category term="完形填空" /><summary type="html">2012年考研英语真题里个人记忆模糊的单词、词组。</summary></entry><entry><title type="html">【考研英语】 2011年考研英语一词组、单词</title><link href="/english/2020/09/30/english-2011.html" rel="alternate" type="text/html" title="【考研英语】 2011年考研英语一词组、单词" /><published>2020-09-30T00:00:00+08:00</published><updated>2020-09-30T00:00:00+08:00</updated><id>/english/2020/09/30/english-2011</id><content type="html" xml:base="/english/2020/09/30/english-2011.html">&lt;p&gt;2011年考研英语真题里个人记忆模糊的单词、词组。&lt;/p&gt;</content><author><name>[&quot;YW Sun&quot;]</name></author><category term="English" /><category term="阅读理解" /><category term="完形填空" /><summary type="html">2011年考研英语真题里个人记忆模糊的单词、词组。</summary></entry><entry><title type="html">【考研英语】 2010年考研英语一词组、单词</title><link href="/english/2020/09/29/english-2010.html" rel="alternate" type="text/html" title="【考研英语】 2010年考研英语一词组、单词" /><published>2020-09-29T00:00:00+08:00</published><updated>2020-09-29T00:00:00+08:00</updated><id>/english/2020/09/29/english-2010</id><content type="html" xml:base="/english/2020/09/29/english-2010.html">&lt;p&gt;2010年考研英语真题里个人记忆模糊的单词、短语。&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>[&quot;Sun&quot;]</name></author><category term="英语" /><category term="阅读理解" /><summary type="html">2012年考研英语真题里个人记忆模糊的单词、词组。 完形填空 restore [v.] 恢复；修复 be bound by 受…约束 be subject to 使服从，受…管制 ethics code 道德规范（code：法律；法规） framer [n.] 制定者；创作者；成帧器 envision [v.] 展望；想象 cultivate [v.] 耕作；种植；栽培；培育；建立（友谊）；结交（朋友）；获得（支持） dismiss [v.] 不予考虑；去除；消除；解雇；开除 the code of conduct 行为准则 accountable [adj.] （对自己的行为、决定）负有责任 be accountable to sb. 对某人负责 be accountable to the laws/the code of conduct 遵守法律/行为准则 be accountable for sth. 对（做过的）某事负责 阅读理解 Text1 supplement [n.] 增补(物)；补充(物)；添加物；(报纸的)增刊；(书籍的)补编，补遗，附录 [v.] 增补；补充 undesirable [adj.] 不想要的；不得人心的；易惹麻烦的；不良的 [n.] 不受欢迎的人；不良分子 Text2 renege on 背弃；违背 condemn 谴责 reaffirm 重申 dishonor [v.] 违背；使蒙羞 [n.] 不名誉；拒付；丢脸 secure [v.] 获得；实现；栓牢；保护 [adj.] 安心的；有把握的；可靠的；稳固的 Text3 inspection [n.] 视察；检查；查看；审视 Text4 prudent [adj.] 谨慎的 clamp down 取缔；压制；管制；镇压</summary></entry><entry><title type="html">【考研英语】 2011年考研英语一词组、单词</title><link href="/english-2011/" rel="alternate" type="text/html" title="【考研英语】 2011年考研英语一词组、单词" /><published>2020-09-30T00:00:00+08:00</published><updated>2020-09-30T00:00:00+08:00</updated><id>/english-2011</id><content type="html" xml:base="/english-2011/">&lt;p&gt;2011年考研英语真题里个人记忆模糊的单词、词组。&lt;/p&gt;</content><author><name>[&quot;Sun&quot;]</name></author><category term="英语" /><category term="阅读理解" /><summary type="html">2011年考研英语真题里个人记忆模糊的单词、词组。</summary></entry><entry><title type="html">【考研英语】 2010年考研英语一词组、单词</title><link href="/english-2010/" rel="alternate" type="text/html" title="【考研英语】 2010年考研英语一词组、单词" /><published>2020-09-29T00:00:00+08:00</published><updated>2020-09-29T00:00:00+08:00</updated><id>/english-2010</id><content type="html" xml:base="/english-2010/">&lt;p&gt;2010年考研英语真题里个人记忆模糊的单词、短语。&lt;/p&gt;
 
 &lt;h2 id=&quot;完形填空&quot;&gt;完形填空&lt;/h2&gt;
 
@@ -91,9 +98,9 @@
   &lt;li&gt;as far as&lt;/li&gt;
   &lt;li&gt;be subjected to 使经受；使遭受&lt;/li&gt;
   &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>[&quot;YW Sun&quot;]</name></author><category term="English" /><category term="阅读理解" /><category term="完形填空" /><summary type="html">2010年考研英语真题里个人记忆模糊的单词、短语。</summary></entry><entry><title type="html">【考研英语】 2009年阅读理解重点单词、短语</title><link href="/english/2020/09/05/english-reading.html" rel="alternate" type="text/html" title="【考研英语】 2009年阅读理解重点单词、短语" /><published>2020-09-05T00:00:00+08:00</published><updated>2020-09-05T00:00:00+08:00</updated><id>/english/2020/09/05/english-reading</id><content type="html" xml:base="/english/2020/09/05/english-reading.html">&lt;p&gt;2009年考研英语阅读理解个人记忆模糊的单词、短语。&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>[&quot;Sun&quot;]</name></author><category term="英语" /><category term="阅读理解" /><summary type="html">2010年考研英语真题里个人记忆模糊的单词、短语。 完形填空 end up doing sth 以…告终 so long as as far as be subjected to 使经受；使遭受</summary></entry><entry><title type="html">【考研英语】 2009年阅读理解重点单词、短语</title><link href="/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2009年阅读理解重点单词、短语" /><published>2020-09-05T00:00:00+08:00</published><updated>2020-09-05T00:00:00+08:00</updated><id>/english-reading</id><content type="html" xml:base="/english-reading/">&lt;p&gt;2009年考研英语阅读理解个人记忆模糊的单词、短语。&lt;/p&gt;
 
-&lt;h2 id=&quot;text-1&quot;&gt;text 1&lt;/h2&gt;</content><author><name>[&quot;YW Sun&quot;]</name></author><category term="English" /><category term="阅读理解" /><summary type="html">2009年考研英语阅读理解个人记忆模糊的单词、短语。</summary></entry><entry><title type="html">【考研英语】 2008年阅读理解重点单词、短语</title><link href="/english/2020/09/01/english-reading.html" rel="alternate" type="text/html" title="【考研英语】 2008年阅读理解重点单词、短语" /><published>2020-09-01T00:00:00+08:00</published><updated>2020-09-01T00:00:00+08:00</updated><id>/english/2020/09/01/english-reading</id><content type="html" xml:base="/english/2020/09/01/english-reading.html">&lt;p&gt;2008年考研英语阅读理解个人记忆模糊的单词、短语。&lt;/p&gt;
+&lt;h2 id=&quot;text-1&quot;&gt;text 1&lt;/h2&gt;</content><author><name>[&quot;Sun&quot;]</name></author><category term="英语" /><category term="阅读理解" /><summary type="html">2009年考研英语阅读理解个人记忆模糊的单词、短语。 text 1</summary></entry><entry><title type="html">【考研英语】 2008年阅读理解重点单词、短语</title><link href="/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2008年阅读理解重点单词、短语" /><published>2020-09-01T00:00:00+08:00</published><updated>2020-09-01T00:00:00+08:00</updated><id>/english-reading</id><content type="html" xml:base="/english-reading/">&lt;p&gt;2008年考研英语阅读理解个人记忆模糊的单词、短语。&lt;/p&gt;
 
 &lt;h2 id=&quot;text-1&quot;&gt;text 1&lt;/h2&gt;
 
@@ -126,7 +133,7 @@
   &lt;li&gt;anthropologist&lt;/li&gt;
   &lt;li&gt;bipedal&lt;/li&gt;
   &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>[&quot;YW Sun&quot;]</name></author><category term="English" /><category term="阅读理解" /><summary type="html">2008年考研英语阅读理解个人记忆模糊的单词、短语。</summary></entry><entry><title type="html">【考研英语】 2007年阅读理解重点单词、短语</title><link href="/english/2020/08/21/english-reading.html" rel="alternate" type="text/html" title="【考研英语】 2007年阅读理解重点单词、短语" /><published>2020-08-21T00:00:00+08:00</published><updated>2020-08-21T00:00:00+08:00</updated><id>/english/2020/08/21/english-reading</id><content type="html" xml:base="/english/2020/08/21/english-reading.html">&lt;p&gt;2007年考研英语阅读理解个人记忆模糊的单词、短语&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>[&quot;Sun&quot;]</name></author><category term="英语" /><category term="阅读理解" /><summary type="html">2008年考研英语阅读理解个人记忆模糊的单词、短语。 text 1 interpersonal [adj.]人际关系的 wear-and-tear [n.]折损；磨损 devastating [adj.]毁灭性的；破坏性极大的 paycheck [n.]薪金；付薪水的支票 I lived from paycheck to paycheck. 我的收入勉强能够养家糊口 trivial [adj.]不重要的；琐碎的；微不足道的 text 2 restrict [vt.]限制；妨碍；约束 text 3 obscure anthropologist bipedal</summary></entry><entry><title type="html">【考研英语】 2007年阅读理解重点单词、短语</title><link href="/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2007年阅读理解重点单词、短语" /><published>2020-08-21T00:00:00+08:00</published><updated>2020-08-21T00:00:00+08:00</updated><id>/english-reading</id><content type="html" xml:base="/english-reading/">&lt;p&gt;2007年考研英语阅读理解个人记忆模糊的单词、短语&lt;/p&gt;
 
 &lt;h2 id=&quot;text-1&quot;&gt;text 1&lt;/h2&gt;
 
@@ -199,7 +206,7 @@
 
 &lt;ul&gt;
   &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>[&quot;YW Sun&quot;]</name></author><category term="English" /><category term="阅读理解" /><summary type="html">2007年考研英语阅读理解个人记忆模糊的单词、短语</summary></entry><entry><title type="html">【考研英语】 2006年阅读理解重点单词、短语</title><link href="/english/2020/08/17/english-reading.html" rel="alternate" type="text/html" title="【考研英语】 2006年阅读理解重点单词、短语" /><published>2020-08-17T00:00:00+08:00</published><updated>2020-08-17T00:00:00+08:00</updated><id>/english/2020/08/17/english-reading</id><content type="html" xml:base="/english/2020/08/17/english-reading.html">&lt;p&gt;2006年考研英语阅读理解个人记忆模糊的单词、短语。&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>[&quot;Sun&quot;]</name></author><category term="英语" /><category term="阅读理解" /><summary type="html">2007年考研英语阅读理解个人记忆模糊的单词、短语 text 1 feed the World Cup professional ranks （体育）职业联赛 the European national youth teams that feed the World Cup and professional ranks 为世界杯和职业球队输送队员的欧洲国家青年队 pronounced [adj.]明显的；显著的；表达明确的 astrological sign 星座 stamina [n.]耐力；体力；持久力 pursuit [n.]事业；爱好；追求；追赶 couple with 加上 take to doing 开始从事；喜欢上；养成…的习惯 put another way 换句话说 text 2 envision [vt.]想象；展望 deduce [vt.]推断；演绎；推论 field [vt.]处理，应付（问题） [n.]田；场地；领域 encompass [vt.]包括；包围 impartial [adj.]中立的 computational procedures 计算过程 text 3 a pink slip 一张解雇通知单 of all stripes 各领域的；形形色色的 paycheck [n.]工资 parachute [n.]降落伞 [v.]跳伞 weather [vt.]渡过（困难） [n.]天气 weather bad times 渡过困难时期 outlive [vt.]（在…结束或消失后）继续存在 retirees [n.]退休人员 deductible [n.]自付额；免赔额 eightfold [adv.]八倍地 [adj.]八倍的 demographics [n.]人口统计数据 attendant [adj.]随之而来的 [n.]服务员 odds [n.][pl.]概率；机会 wholesale [adj.]大规模的；大批的 shift…onto… 把…转移到… From the middle class family perspective, much of this，understandably, looks far less like an opportunity to exercise more financial responsibility, and (looks(补充)) a good deal more like a frightening acceleration of the wholesale shift of financial risk onto their already overburdened shoulders. 从中产阶级家庭的角度来看，这些（情况、政策）看上去远不像是履行更多经济责任的机会，而更像是以骇人的速度把经济风险大规模地转嫁到他们已经不堪重负的肩上。 outweigh [v.]重于；大于；超过 text 4</summary></entry><entry><title type="html">【考研英语】 2006年阅读理解重点单词、短语</title><link href="/english-reading/" rel="alternate" type="text/html" title="【考研英语】 2006年阅读理解重点单词、短语" /><published>2020-08-17T00:00:00+08:00</published><updated>2020-08-17T00:00:00+08:00</updated><id>/english-reading</id><content type="html" xml:base="/english-reading/">&lt;p&gt;2006年考研英语阅读理解个人记忆模糊的单词、短语。&lt;/p&gt;
 
 &lt;h2 id=&quot;text-1&quot;&gt;text 1&lt;/h2&gt;
 
@@ -302,374 +309,4 @@
     &lt;/blockquote&gt;
   &lt;/li&gt;
   &lt;li&gt;arthritis [n.]关节炎&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>[&quot;YW Sun&quot;]</name></author><category term="English" /><category term="阅读理解" /><summary type="html">2006年考研英语阅读理解个人记忆模糊的单词、短语。</summary></entry><entry><title type="html">【数据结构】 第五章、树（树、二叉树、森林及相关应用）</title><link href="/data%20structure/2020/08/16/ds-tree.html" rel="alternate" type="text/html" title="【数据结构】 第五章、树（树、二叉树、森林及相关应用）" /><published>2020-08-16T00:00:00+08:00</published><updated>2020-08-16T00:00:00+08:00</updated><id>/data%20structure/2020/08/16/ds-tree</id><content type="html" xml:base="/data%20structure/2020/08/16/ds-tree.html">&lt;p&gt;树、二叉树、哈夫曼树等相关。&lt;/p&gt;
-
-&lt;p&gt;基本的概念这里就不写了，主要列一下相关性质和一些应用。&lt;/p&gt;
-
-&lt;h2 id=&quot;树的性质&quot;&gt;树的性质&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;树中的结点数等于所有结点度数之和加$1$&lt;/li&gt;
-  &lt;li&gt;度为$m$的树中第$i$层上最多有$m^{i-1}$个结点（$i \ge 1$）&lt;/li&gt;
-  &lt;li&gt;高度为$h$的$m$叉树最多有$\frac{m^h - 1}{m-1}$个结点（等比数列求和）&lt;/li&gt;
-  &lt;li&gt;具有$n$个结点的$m$叉树的最小高度为$\left \lceil log_m(n(m-1)+1) \right \rceil$（用上一条反解一下）&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;二叉树&quot;&gt;二叉树&lt;/h2&gt;
-
-&lt;h3 id=&quot;二叉树的基本概念和性质&quot;&gt;二叉树的基本概念和性质&lt;/h3&gt;
-
-&lt;h4 id=&quot;基本概念&quot;&gt;基本概念&lt;/h4&gt;
-
-&lt;h4 id=&quot;性质&quot;&gt;性质&lt;/h4&gt;
-
-&lt;h3 id=&quot;二叉树的存储结构&quot;&gt;二叉树的存储结构&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;顺序存储（适用于满二叉树和完全二叉树，且最好从下标为1的数据单元开始存储，方便计算孩子的位置）&lt;/li&gt;
-  &lt;li&gt;链式存储（通常都用链式）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;二叉树的遍历&quot;&gt;二叉树的遍历&lt;/h3&gt;
-
-&lt;h3 id=&quot;线索二叉树&quot;&gt;线索二叉树&lt;/h3&gt;</content><author><name>Sun</name></author><category term="Data Structure" /><category term="数据结构" /><category term="408" /><category term="二叉树" /><category term="哈夫曼树与哈夫曼编码" /><summary type="html">树、二叉树、哈夫曼树等相关。</summary></entry><entry><title type="html">【数据结构/算法】 KMP算法（第四章、串）</title><link href="/data%20structure/algorithm/2020/08/14/ds-kmp.html" rel="alternate" type="text/html" title="【数据结构/算法】 KMP算法（第四章、串）" /><published>2020-08-14T00:00:00+08:00</published><updated>2020-08-14T00:00:00+08:00</updated><id>/data%20structure/algorithm/2020/08/14/ds-kmp</id><content type="html" xml:base="/data%20structure/algorithm/2020/08/14/ds-kmp.html">&lt;p&gt;因为KMP每次用的时候都要看一遍，还是没有透彻理解，所以这里记录一下。数据结构统考中一般只以选择题形式出现，考查Next数组的计算，会手推即可。&lt;/p&gt;
-
-&lt;h2 id=&quot;相关概念&quot;&gt;相关概念&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;前缀&lt;/p&gt;
-
-    &lt;p&gt;除了最后一个字符以外，该字符串的所有头部子串&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;后缀&lt;/p&gt;
-
-    &lt;p&gt;除了第一个字符以外，该字符串的所有尾部子串&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;部分匹配值&lt;/p&gt;
-
-    &lt;p&gt;部分匹配值是一个字符串的前缀和后缀的最长的共有元素的长度，即最长公共前后缀的长度。&lt;/p&gt;
-
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;如：字符串 “$ ABCDABD $”&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;”$ A $” ：前缀后缀都为空集，部分匹配值为 $ 0 $&lt;/li&gt;
-      &lt;li&gt;”$ AB $” ：前缀为 $ \lbrace A \rbrace $ ，后缀为 $ \lbrace B \rbrace $ ，部分匹配值为 $ 0 $&lt;/li&gt;
-      &lt;li&gt;”$ ABC $” ：前缀为 $ \lbrace A,AB \rbrace $ ，后缀为 $ \lbrace BC,B \rbrace $ ，部分匹配值为 $ 0 $&lt;/li&gt;
-      &lt;li&gt;”$ ABCD $” ：前缀为 $ \lbrace A,AB,ABC \rbrace $ ，后缀为 $ \lbrace BCD,BC,B \rbrace $ ，部分匹配值为 $ 0 $&lt;/li&gt;
-      &lt;li&gt;”$ ABCDA $” ：前缀为 $ \lbrace A,AB,ABC,ABCD \rbrace $ ，后缀为 $ \lbrace BCDA,CDA,DA,A \rbrace $ ，部分匹配值为 $ 1 $&lt;/li&gt;
-      &lt;li&gt;”$ ABCDAB $” ：前缀为 $ \lbrace A,AB,ABC,ABCD,ABCDA \rbrace $ ，后缀为 $ \lbrace BCDAB,CDAB,DAB,AB,B \rbrace$” ，部分匹配值为 $ 2 $&lt;/li&gt;
-      &lt;li&gt;”$ ABCDABD $” ：前缀为 $ \lbrace A,AB,ABC,ABCD,ABCDA,ABCDAB \rbrace $ ，后缀为 $ \lbrace BCDABD,CDABD,DAB,AB,B \rbrace $ ，部分匹配值为 $ 0 $&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;虽然部分匹配值是相对于一个串的概念，为了后面方便计算，这里将各个部分匹配值记为每一位字符的部分匹配值，列成表格如下：&lt;/p&gt;
-
-    &lt;table&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;
-          &lt;th&gt; &lt;/th&gt;
-          &lt;th&gt;A&lt;/th&gt;
-          &lt;th&gt;B&lt;/th&gt;
-          &lt;th&gt;C&lt;/th&gt;
-          &lt;th&gt;D&lt;/th&gt;
-          &lt;th&gt;A&lt;/th&gt;
-          &lt;th&gt;B&lt;/th&gt;
-          &lt;th&gt;D&lt;/th&gt;
-        &lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;部分匹配值&lt;/td&gt;
-          &lt;td&gt;0&lt;/td&gt;
-          &lt;td&gt;0&lt;/td&gt;
-          &lt;td&gt;0&lt;/td&gt;
-          &lt;td&gt;0&lt;/td&gt;
-          &lt;td&gt;1&lt;/td&gt;
-          &lt;td&gt;2&lt;/td&gt;
-          &lt;td&gt;0&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;部分匹配值的意义在于，当模式串的第 $i$ 个字符与主串不匹配时，咱们已经知道模式串前 $(i-1)$ 个字符的信息，KMP算法就是利用这个已知的信息避免主串的工作指针回退，只改变模式串的工作指针，从而提高算法效率，KMP算法的时间复杂度是 $O(m+n)$ 。&lt;/p&gt;
-
-    &lt;p&gt;模式串的第 $i$ 个字符不匹配时，根据最后一个匹配的字符（第 $(i-1)$ 个字符）的部分匹配值可以算出模式串向后移动的位数：&lt;/p&gt;
-
-    &lt;p&gt;记第 $i$ 个字符对应的部分匹配值为 $f(i)$ ，移动位数为 $move$，则有&lt;/p&gt;
-
-\[move = (i-1)- f(i-1)\]
-
-    &lt;p&gt;即 &lt;strong&gt;移动位数=已匹配的字符数-最后一个匹配的字符对应的部分匹配值&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;发生不匹配时，模式串向后移动move位后与主串的当前位继续比较。&lt;/p&gt;
-
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;关于部分匹配值，可以这么理解，模式字符串向后移动的时候保留多少位已经匹配过的字符，显然如果部分匹配值为0，就直接把模式字符串的头移动到不匹配的地方然后继续匹配就行，不用保留任何字符。如果部分匹配值为1，说明模式字符串最后一个字符和第一个字符相同，下一轮比较的时候&lt;em&gt;保留一位&lt;/em&gt;，把模式字符串的第一个字符和这一位对齐后，因为这一位已经相等了，就可以跳过这一位了，直接从后一位继续比较。部分匹配值为其余值时同理。&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;next数组的含义&quot;&gt;Next数组的含义&lt;/h2&gt;
-
-&lt;p&gt;前面为了便于理解，前面一直在说模式字符串怎么怎么&lt;strong&gt;移动&lt;/strong&gt;，但是在实际程序中，模式字符串在内存里是不会动的，咱们改变的只是它的工作指针。&lt;/p&gt;
-
-&lt;p&gt;KMP算法的高效之处就在于比较过程中，主串的工作指针 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt; （&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt;指向主串的第 $i$ 个字符）一直 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i++&lt;/code&gt; （匹配）或不变（不匹配），不会发生BF中的回溯情况，模式字符串的工作指针 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;j&lt;/code&gt; （&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;j&lt;/code&gt;指向主串的第 $j$ 个字符）根据当前位的比较结果进行 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;j++&lt;/code&gt; （匹配）或跳转 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;j=next[j]&lt;/code&gt; （不匹配）。Next数组就是指示模式字符串的工作指针在不匹配时如何进行跳转的数组。&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next[j]=k&lt;/code&gt;的含义：&lt;/p&gt;
-
-&lt;p&gt;模式串中第 $j$ 个字符与主串中第 $i$ 个字符不匹配时，模式串的工作指针需要跳转到的位置，和主串的第 $i$ 个字符继续比较。&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;从前面可以知道：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;当模式串的第 $1$ 个字符不匹配时，进行操作&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;j=next[1]=0&lt;/code&gt;，然后进入下一轮循环，判断&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;j==0&lt;/code&gt;后对应的操作是主串的工作指针&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;++&lt;/code&gt;、模式串的工作指针&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;++&lt;/code&gt;，这样就指向第 $1$ 位，然后进入下一轮循环和主串的当前位比较。将 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next[1]&lt;/code&gt; 赋值为0是KMP迭代的基础，表示头一个字符就不匹配的情况。这里结合最后的应用代码的KMP函数就比较好理解了。&lt;/li&gt;
-  &lt;li&gt;当模式串的第 $j(j \ge 2)$ 个字符不匹配时，对应的操作是主串工作指针不变，模式串的工作指针跳转到第 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next[j]&lt;/code&gt; 个字符处，然后继续比较。这里 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next[j]&lt;/code&gt; 显然就是前 $(j-1)$ 个字符组成的字符串的最长公共前后缀的长度 $+1$ 。同时易得 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next[2]=1&lt;/code&gt; ，因为单个字符的部分匹配值为 $0$ ， $0+1=1$ ，没有公共前后缀的时候 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next[j]&lt;/code&gt; 也为 $1$ 。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;记 $ f(j) = $ 前 $(j-1)$ 个字符的最大公共前后缀长度，字符串下标从 $1$ 开始计算，则有：&lt;/p&gt;
-
-\[\begin{equation}
-next[j]=\left\{
-\begin{array}{rcl}
-0 &amp;amp; &amp;amp; {j = 1}\\
-f(j) &amp;amp; &amp;amp; {j \ge 2}
-\end{array} \right.
-\end{equation}\]
-
-&lt;h2 id=&quot;求-next-数组的方法&quot;&gt;求 Next 数组的方法&lt;/h2&gt;
-
-&lt;p&gt;考试的时候直接比划比划就出来了，还是比较简单的，408统考的话应该不会考代码。&lt;/p&gt;
-
-&lt;p&gt;KMP算法的时间复杂度是 $O(m+n)$。（主串长度n，模式串长度m）&lt;/p&gt;
-
-&lt;p&gt;下面上代码（&lt;strong&gt;下标从 0 开始&lt;/strong&gt;，只要理解了原理不管从 0 开始还是从 1 开始都很好理解）&lt;/p&gt;
-
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/*
-next的计算思想如前所述
-不过这里字符串数组下标从0开始计算
-上面的讲述以及严奶奶教材里是从1开始的，所以本代码的next公式为：
-next[j]=
-        max{k|j之前的串的最长共同前后缀的长度} //因为从0开始算，直接取最长的长度即可，不用+1
-        -1，j=0  表示j=0时候，j之前肯定是空串。
-*/&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;get_next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SString&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// j=0时k=-1，表示j之前不存在最长的前后缀串，即next[0]=-1&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 这种情况下表示一开始就匹配不上，对应上面讲的第一种情况，对应操作是i后移，j指向模式串头&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strlen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// 这段是精华啊精华&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// T[0]...T[j]的next值都求完了&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// 如果上一轮刚得到next值，这里的k是T[j]的next值，即前j个的字符组成的串的最长公共前后缀长度&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// T[j]==T[k]的意思就是，因为要求next[j+1]，那么考查的是前j+1个字符，T[j]就是第j+1个字符，那么显然T[k]是前j个字符组成的串的最长公共前后缀的那个前缀的后面一个字符，T[j]是那个后缀的后一个字符，如果这俩相等，那么next[j+1]=k+1&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// j++,k++,next[j]=k;&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;// 在next[j]=k的情况下,如果T[j]==T[k],则next[j+1]=k+1&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;// 或者k=-1时，next[j+1]=0，表示j&amp;gt;0时候不存在相同的最长前后缀串，++k后k=0&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 如果T[j]!=T[k]，k跳转到next[k]继续循环匹配。&lt;/span&gt;
-                        &lt;span class=&quot;c1&quot;&gt;// 这里的思想是用前缀T[0]...T[k](看成模式串)与后缀T[j-k+1]...T[j](看成主串)进行模式匹配，将前缀向右迭代滑动直到找到某个更短的前缀满足T[0]...T[k']==T[j-k'+1]...T[j]&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;求-next-数组改进版算法&quot;&gt;求 Next 数组改进版算法&lt;/h2&gt;
-
-&lt;p&gt;考虑下面这种情况：&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;S = &quot;aaabaaabaaabaaabaaab&quot;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;P = &quot;aaaab&quot;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;改进前：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next[j]=-1 0 1 2 3&lt;/code&gt;（下标从0开始），&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;S[3]&lt;/code&gt;与&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;P[3]&lt;/code&gt;不匹配时，按照之前的next值，下一次&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;S[3]&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;P[2]&lt;/code&gt;比较，不匹配，下下次&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;s[3]&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;P[1]&lt;/code&gt;比较，不匹配，后面还要再比较2次，而这几次&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;S[3]&lt;/code&gt;一直都是和’a’比较，显然咱们第一次就知道&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;S[3]&lt;/code&gt;和’a’不等，这样重复的比较是没有意义的。&lt;/p&gt;
-
-&lt;p&gt;出现这种现象的原因就是：若有&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;P[j]=P[next[j]]&lt;/code&gt;，即模式串当前失配字符与模式串根据next数组找到的下一个要被匹配的字符相同，那么显然会继续失配，由此提出KMP算法的改进版本。&lt;/p&gt;
-
-&lt;p&gt;如果出现上面的情况，则一直将&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next[j]&lt;/code&gt;修正为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next[next[j]]&lt;/code&gt;，直到两者不相等，通常将此种改进版的next数组更名为nextval。&lt;/p&gt;
-
-&lt;p&gt;优化后：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nextval[j]=-1 -1 -1 -1 3&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;改进版求next数组代码如下：&lt;/p&gt;
-
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 计算next值的优化算法，下标从0开始计算&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;get_nextval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SString&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// &lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 表示一开始就匹配不上，是迭代计算next值的基础&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strlen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//如果T[j]!=T[k]，k跳转到next[k]继续循环匹配&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;kmp完整版应用代码改进版本&quot;&gt;KMP完整版应用代码（改进版本）&lt;/h2&gt;
-
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include&amp;lt;iostream&amp;gt;
-#include&amp;lt;string.h&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//定义字符串类型SString&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;get_nextval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SString&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// &lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 表示一开始就匹配不上，是迭代计算next值的基础&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strlen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//如果T[j]!=T[k]，k跳转到next[k]继续循环匹配&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;KMP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SString&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SString&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Pos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Pos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strlen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)];&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// 定义next数组&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;get_nextval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// 改进版计算next数组的值&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strlen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strlen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strlen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strlen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;SString&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Input mainstring S:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Intput substring T:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;The match position = &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KMP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;kmp算法较之bf算法的优势&quot;&gt;KMP算法较之BF算法的优势&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;KMP算法的时间复杂度为$O(m+n)$，BF算法的时间复杂度为$O(m*n)$&lt;/li&gt;
-  &lt;li&gt;KMP算法中主串的工作指针不需要回溯&lt;/li&gt;
-  &lt;li&gt;KMP算法只需要考虑模式串&lt;/li&gt;
-  &lt;li&gt;KMP算法中主串指针不需回溯意味着对于规模较大的外存中的字符串的匹配操作可以分段进行，先读入一部分到内存然后完成匹配后写回外存，可以保证发生不匹配时不需要将之前写回外存的部分再次读入，减少了I/O操作，提高了效率。&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>[&quot;YW Sun&quot;]</name></author><category term="Data Structure" /><category term="Algorithm" /><category term="数据结构" /><category term="408" /><category term="算法" /><category term="KMP算法" /><category term="模式匹配" /><summary type="html">因为KMP每次用的时候都要看一遍，还是没有透彻理解，所以这里记录一下。数据结构统考中一般只以选择题形式出现，考查Next数组的计算，会手推即可。</summary></entry><entry><title type="html">【考研英语】 2005年阅读理解重点单词、短语</title><link href="/english/2020/08/12/english-reading.html" rel="alternate" type="text/html" title="【考研英语】 2005年阅读理解重点单词、短语" /><published>2020-08-12T00:00:00+08:00</published><updated>2020-08-12T00:00:00+08:00</updated><id>/english/2020/08/12/english-reading</id><content type="html" xml:base="/english/2020/08/12/english-reading.html">&lt;p&gt;2005年考研英语阅读理解个人记忆模糊的单词、短语。&lt;/p&gt;
-
-&lt;h2 id=&quot;2005&quot;&gt;2005&lt;/h2&gt;
-
-&lt;h3 id=&quot;text-1&quot;&gt;text 1&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;contrast与comparison&lt;/p&gt;
-
-    &lt;p&gt;comparison是类比的相同点，而contrast是类比的不du同点&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;fat&lt;/strong&gt; [adj.]大量的；之前的；肥胖的 [n.]脂肪&lt;/li&gt;
-  &lt;li&gt;pay rise （英式）加薪&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;vanish&lt;/strong&gt; [vi.]消失；不复存在&lt;/li&gt;
-  &lt;li&gt;slack [vi.]偷懒；怠惰 [adj.]懈怠的；松弛的&lt;/li&gt;
-  &lt;li&gt;“all too human” 人之常情&lt;/li&gt;
-  &lt;li&gt;grievance [n.]不满；不平的事&lt;/li&gt;
-  &lt;li&gt;good-natured [adj.]性情温和的&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;token&lt;/strong&gt; [n.]代用币；标志&lt;/li&gt;
-  &lt;li&gt;markedly [adv.]明显地；显著地&lt;/li&gt;
-  &lt;li&gt;induce [vt.]劝说；诱使；引起；导致；引产；催生&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;species&lt;/strong&gt; [n.]物种&lt;/li&gt;
-  &lt;li&gt;rightous [adj.]正义的；正当的&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;indignation&lt;/strong&gt; [n.]义愤；愤慨&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;preserve&lt;/strong&gt; [n.]&lt;strong&gt;专门领域&lt;/strong&gt; [vt.]维护；保存&lt;/li&gt;
-  &lt;li&gt;abundantly [adv.]&lt;strong&gt;十分清楚地&lt;/strong&gt;；大量地&lt;/li&gt;
-  &lt;li&gt;stem from 起源于&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;text-2&quot;&gt;text 2&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;preface&lt;/strong&gt; [n.]前言&lt;/li&gt;
-  &lt;li&gt;quarter [n.]某团体；四分之一&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;prudent&lt;/strong&gt; [adj.]谨慎的；慎重的&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;paralysis&lt;/strong&gt; [n.]瘫痪；麻痹&lt;/li&gt;
-  &lt;li&gt;press for 不断要求&lt;/li&gt;
-  &lt;li&gt;inadequate [adj.]不够的；缺乏信心的&lt;/li&gt;
-  &lt;li&gt;take the initiative 采取主动权&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;fashion&lt;/strong&gt; [vt.]使形成；制成 [n.]时尚&lt;/li&gt;
-  &lt;li&gt;aggravate [v.] 使严重；使恶化；（尤指故意地）激怒，惹恼&lt;/li&gt;
-  &lt;li&gt;be out to do sth. 试图做某事&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;panel&lt;/strong&gt; [n.]专家咨询组；仪表盘&lt;/li&gt;
-  &lt;li&gt;enlist [vt.]征募；争取&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;text-3&quot;&gt;text 3&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;disguised [adj.]伪装的&lt;/li&gt;
-  &lt;li&gt;limbic [adj.]边缘的；边的&lt;/li&gt;
-  &lt;li&gt;prefrontal [adj.]前额的；额前叶部的&lt;/li&gt;
-  &lt;li&gt;work through 解决；使逐渐通过&lt;/li&gt;
-  &lt;li&gt;visualize [vt.]设想；构思；想象&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;course&lt;/strong&gt; [n.]进展；课程；一道菜&lt;/li&gt;
-  &lt;li&gt;at the end of the day 归根结底；总的来说&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;text-4&quot;&gt;text 4&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;contempt [n.]蔑视；轻蔑；鄙视；（对规则、危险等的）藐视，不顾&lt;/li&gt;
-  &lt;li&gt;degradation [n.]退化；恶化；堕落&lt;/li&gt;
-  &lt;li&gt;controversialist [n.]善辩者&lt;/li&gt;
-  &lt;li&gt;controversial [adj.]引起争议的&lt;/li&gt;
-  &lt;li&gt;counter-culture [n.]反主流文化&lt;/li&gt;
-  &lt;li&gt;modesty [n.]谦虚；庄重；朴素；贤淑；不突出；有限&lt;/li&gt;
-  &lt;li&gt;permissive [adj.]放纵的；允许的&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;cult [n.]狂热崇拜；异教团体&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;the cult of the authentic and the personal&lt;/p&gt;
-
-      &lt;p&gt;对真实化和个性化的狂热推崇&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;spell&lt;/strong&gt; [vt.]&lt;strong&gt;招致&lt;/strong&gt;；拼成 [v.]拼写&lt;/li&gt;
-  &lt;li&gt;elevated [adj.]高尚的；高雅的&lt;/li&gt;
-  &lt;li&gt;spontaneity [n.]自然行为；即兴发挥&lt;/li&gt;
-  &lt;li&gt;think straight 清楚地思考；思路清晰&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>[&quot;YW Sun&quot;]</name></author><category term="English" /><category term="阅读理解" /><summary type="html">2005年考研英语阅读理解个人记忆模糊的单词、短语。</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>[&quot;Sun&quot;]</name></author><category term="英语" /><category term="阅读理解" /><summary type="html">2006年考研英语阅读理解个人记忆模糊的单词、短语。 text 1 assimilate [v.]透彻理解；消化；吸收；（使）同化；使接受（想法、态度等） owe…to… 欠…（某物）；应该感谢；把…归功于 emergence [n.]出现；兴起 The stores owed its emergence to the culture of consumption. 这些商店因消费文化而出现。 homogenize [v.]使同类；使均匀 democratize [v.]大众化；民主化 uniformity [n.]统一性；一致 discourse [n.]谈话 [v.]讲述 deference [n.]尊重；听从 the democratizing uniformity of dress and discourse 衣着和谈吐的民主化统一 the casualness and the absence of deference 随心所欲与不拘礼节 unprecedented [adj.]空前的；前所未有的 indices [n.] [pl.]指标 ownership [n.]所有权；产权 intermarriage [n.]异族通婚 pocket [n.]（孤立的）一小群；布袋 [vt.]放入衣袋 seething [adj.]愤怒的；火热的 text 2 live off 依赖…生活 sandal [n.]凉鞋 contend [vt.]声称；主张 bring in 引入；赚得；推行 playgoer [n.]常看戏的人 subsidy [n.]补贴；补助金 in a row 连续几次地；连续几天地 clientele [n.]顾客（总称）；客户 lean [adj.]瘦的；贫乏的 [v.]倾斜；靠着 pointed [adj.]尖的；直截了当的 dedicated [adj.]献身的；专心致志的；专用的 [v.]把…奉献给；（在书、音乐或作品的前部）题献词；为（建筑物等）举行落成典礼 bun [n.]小圆甜蛋糕；小圆甜饼；圆面包；圆发髻 bed down 在…过夜 flagstone [n.]石板 They all seem to look alike (though they come from all over)-lean, pointed, dedicated faces, wearing jeans and sandals, eating their buns and bedding down for the night on the flagstones outside the theatre to buy the 20 seats and 80 standing-room tickets held for the sleepers and sold to them when the box office opens at 10:30 a.m. 这些游客（尽管他们来自四面八方）看上去都差不多——身材瘦削，棱角分明，神情专注，穿着牛仔裤和凉鞋，吃着小圆面包，在剧院外的石板上过夜，只为了在第二天10:30开始售票时，买上一张专门为他们预留出售的20张坐票和80张站席票。 text 3 biomass [n.]生物量 predator [n.]捕食性动物；掠夺者 fishery [n.]渔场 longline [n.]延绳钓，多钩长线 crop [v.]收获；有收成 [n.]庄稼；产量 text 4 phony [adj.]虚伪的；假冒的 [n.]冒牌货 daffodil [n.]水仙花 [adj.]水仙花色的 be dedicated to doing sth 致力于做某事 emergence [n.]兴起；出现 ideology [n.]意识形态 The raise of anti-happy art almost exactly tracks the emergence of mass media, and with it, a commercial culture in which happiness is not just an ideal but an ideology. 反快乐艺术几乎是完全随着大众传媒的兴起而出现的，随之产生的还有一种商业文化，在这种文化中快乐不仅是一种理想，还是一种意识形态。 bummer [n.]（非正式）令人不快的事 beaming [adj.]笑容满面的；耀眼的 agenda [n.]目的；议程表 command [v.]指示；命令 “Celebrate!” commanded the ads. “欢庆吧！”广告这样召唤道。 arthritis [n.]关节炎</summary></entry></feed>

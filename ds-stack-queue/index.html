@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>关于 – 今天又刷了什么水题 – 为者常成，行者常至</title>
+  <title>【数据结构】 第三章、栈和队列 – 今天又刷了什么水题 – 为者常成，行者常至</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,14 +9,142 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="为者常成，行者常至">
-    <meta property="og:description" content="为者常成，行者常至" />
+    <meta name="description" content="数据结构第三章复习之栈和队列。
+
+栈
+
+队列
+
+应用
+
+栈的应用
+
+概述
+
+
+  
+    栈的主要应用场景
+
+    
+      括号匹配
+      后缀表达式（逆波兰表达式）求值
+      中缀表达式转后缀表达式
+      递归
+      进制转换
+    
+  
+  
+    队列的主要应用场景
+
+    
+      层次遍历
+      缓冲区（解决主机与外设速度不匹配的问题）
+      等待队列（解决多用户引起的资源竞争问题）
+    
+  
+
+
+示例
+
+
+  中缀表达式转后缀表达式
+
+
+
+  
+    算法描述
+
+    算法用到两个栈，一个结果栈用于存放结果，一个临时栈用于临时存放操作符。中缀表达式的扫描顺序是从左至右。
+  
+  step1. 从中缀表达式中取出一个字符，若该字符为操作数，直接压入结果栈；若该字符为操作符，转step2；若中缀表达式是空的，将临时栈中的操作符依次出栈后入栈到结果栈中，结束。
+
+    step2. 若临时栈为空或栈顶元素为”(“，该操作符直接入临时栈。
+
+    若临时栈不为空，若该元素是”)”，则将临时栈中的操作符依次出栈并入栈到结果栈（”)”不用入临时栈，”(“弹栈后不用入结果栈）；若该元素不是”)”，则将该操作符与栈顶元素比较，若该操作符优先级高于栈顶操作符，则将该元素入栈，若该元素优先级低于栈顶操作符，则将栈顶操作符弹栈后入结果栈，然后该元素入临时栈。
+
+    转step1。
+  
+  
+    代码实现
+
+      #include &lt;cstdio&gt;
+
+    
+  
+
+
+" />
+    <meta property="og:description" content="数据结构第三章复习之栈和队列。
+
+栈
+
+队列
+
+应用
+
+栈的应用
+
+概述
+
+
+  
+    栈的主要应用场景
+
+    
+      括号匹配
+      后缀表达式（逆波兰表达式）求值
+      中缀表达式转后缀表达式
+      递归
+      进制转换
+    
+  
+  
+    队列的主要应用场景
+
+    
+      层次遍历
+      缓冲区（解决主机与外设速度不匹配的问题）
+      等待队列（解决多用户引起的资源竞争问题）
+    
+  
+
+
+示例
+
+
+  中缀表达式转后缀表达式
+
+
+
+  
+    算法描述
+
+    算法用到两个栈，一个结果栈用于存放结果，一个临时栈用于临时存放操作符。中缀表达式的扫描顺序是从左至右。
+  
+  step1. 从中缀表达式中取出一个字符，若该字符为操作数，直接压入结果栈；若该字符为操作符，转step2；若中缀表达式是空的，将临时栈中的操作符依次出栈后入栈到结果栈中，结束。
+
+    step2. 若临时栈为空或栈顶元素为”(“，该操作符直接入临时栈。
+
+    若临时栈不为空，若该元素是”)”，则将临时栈中的操作符依次出栈并入栈到结果栈（”)”不用入临时栈，”(“弹栈后不用入结果栈）；若该元素不是”)”，则将该操作符与栈顶元素比较，若该操作符优先级高于栈顶操作符，则将该元素入栈，若该元素优先级低于栈顶操作符，则将栈顶操作符弹栈后入结果栈，然后该元素入临时栈。
+
+    转step1。
+  
+  
+    代码实现
+
+      #include &lt;cstdio&gt;
+
+    
+  
+
+
+" />
     
     <meta name="author" content="今天又刷了什么水题" />
 
     
-    <meta property="og:title" content="关于" />
-    <meta property="twitter:title" content="关于" />
+    <meta property="og:title" content="【数据结构】 第三章、栈和队列" />
+    <meta property="twitter:title" content="【数据结构】 第三章、栈和队列" />
     
   <!-- Async font loading -->
 <script>
@@ -161,19 +289,170 @@
 </div>
 
     
+      <aside class="toc">
+        <ul>
+  <li><a href="#">【数据结构】 第三章、栈和队列</a>
+    <ul>
+      <li><a href="#栈">栈</a></li>
+      <li><a href="#队列">队列</a></li>
+      <li><a href="#应用">应用</a>
+        <ul>
+          <li><a href="#栈的应用">栈的应用</a>
+            <ul>
+              <li><a href="#概述">概述</a></li>
+              <li><a href="#示例">示例</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+      </aside>
+    
 
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
-        <article class="page">
+        <article class="posts">
+  <h1>【数据结构】 第三章、栈和队列</h1>
 
-  <h1>关于</h1>
+  <div clsss="meta">
+    <span class="author">
+      Sun
+    </span>
+
+    <span class="date">
+      2020-08-11
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="/tags#数据结构">
+          数据结构
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags#408">
+          408
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags#栈">
+          栈
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags#队列">
+          队列
+        </a>
+      </li>
+      
+    </ul>
+  </div>
 
   <div class="entry">
-    <p>Github: <a href="https://github.com/suniven">suniven</a></p>
+    <p>数据结构第三章复习之栈和队列。</p>
+
+<h2 id="栈">栈</h2>
+
+<h2 id="队列">队列</h2>
+
+<h2 id="应用">应用</h2>
+
+<h3 id="栈的应用">栈的应用</h3>
+
+<h4 id="概述">概述</h4>
+
+<ul>
+  <li>
+    <p>栈的主要应用场景</p>
+
+    <ul>
+      <li>括号匹配</li>
+      <li>后缀表达式（逆波兰表达式）求值</li>
+      <li>中缀表达式转后缀表达式</li>
+      <li>递归</li>
+      <li>进制转换</li>
+    </ul>
+  </li>
+  <li>
+    <p>队列的主要应用场景</p>
+
+    <ul>
+      <li>层次遍历</li>
+      <li>缓冲区（解决主机与外设速度不匹配的问题）</li>
+      <li>等待队列（解决多用户引起的资源竞争问题）</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="示例">示例</h4>
+
+<ol>
+  <li>中缀表达式转后缀表达式</li>
+</ol>
+
+<ul>
+  <li>
+    <p>算法描述</p>
+
+    <p>算法用到两个栈，一个结果栈用于存放结果，一个临时栈用于临时存放操作符。中缀表达式的扫描顺序是从左至右。
+  <br /><br />
+  step1. 从中缀表达式中取出一个字符，若该字符为操作数，直接压入结果栈；若该字符为操作符，转step2；若中缀表达式是空的，将临时栈中的操作符依次出栈后入栈到结果栈中，结束。</p>
+
+    <p>step2. 若临时栈为空或栈顶元素为”(“，该操作符直接入临时栈。</p>
+
+    <p>若临时栈不为空，若该元素是”)”，则将临时栈中的操作符依次出栈并入栈到结果栈（”)”不用入临时栈，”(“弹栈后不用入结果栈）；若该元素不是”)”，则将该操作符与栈顶元素比较，若该操作符优先级高于栈顶操作符，则将该元素入栈，若该元素优先级低于栈顶操作符，则将栈顶操作符弹栈后入结果栈，然后该元素入临时栈。</p>
+
+    <p>转step1。</p>
+  </li>
+  <li>
+    <p>代码实现</p>
+
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="cp">#include &lt;cstdio&gt;
+</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
 
   </div>
+
+  
+  
+<script src="https://utteranc.es/client.js"
+        repo=""
+        issue-term="issue-term"
+        label="utteranc"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+  
 </article>
 
+<div class="pagination">
+  
+    <span class="prev" >
+      <a href="/english-reading/">
+        ← 上一篇
+      </a>
+    </span>
+  
+  
+    <span class="next" >
+      <a href="/english-reading/">
+        下一篇 →
+      </a>
+    </span>
+  
+</div>
       </div>
     </div>
 
@@ -181,6 +460,10 @@
 
   </body>
 
+  
+  <script>
+    document.getElementById("main").classList.add("withtoc");
+  </script>
   
 
   <div class="wrapper-footer-mobile">

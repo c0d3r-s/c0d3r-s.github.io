@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>【计算机系统安全】 S/Key协议的实现 – 今天又刷了什么水题 – 为者常成，行者常至</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="系统安全实验一，S/Key协议的实现。
+
+S/Key协议原理
+
+
+  
+    初始化
+
+    
+      用户输入密码password（长度大于8个字符）
+      服务器产生一个8个字节的随机字符序列salt（加盐）
+      预处理：将password和salt拼接后做MD4散列操作 ，将32字节的输出结果分为左右两部分，每部分16个字节，两部分做异或运算，结果记为S
+    
+  
+  
+    生成口令序列
+
+    对S做N次散列得到第一个口令，做N-1次散列，得到第二个口令，以此类推，做1次散列，得到第N个口令
+  
+  
+    使用口令
+
+    
+      第1个口令发送给服务器端保存
+      客户端每次登陆时顺序使用第2~N个口令
+      服务器收到口令后，将收到的值进行一次散列，与当前存储的hash值比较，若相同，则验证通过，同时更新存储的hash值供下次使用
+    
+  
+
+
+程序设计
+
+主要需要实现以下函数：
+
+
+  generate_salt()，用于生成随机的8字节字符串，在S/Key初始化时用到
+  hash_md4(s)和hash_md5(s)，用于进行md4和md5散列操作，依赖库pycryptodome实现
+  get_time()，用于取得当前时间，在记录日志的时候用到，返回“%Y.%m.%d-%H:%M:%S”形式的时间
+  
+    s_key_run()，是最核心的函数，实现了所有主要功能。具体实现步骤如下：
+
+    
+      Step1.输出菜单界面，用户选择注册或登录或退出
+      Step2.读取log.txt，user.txt，N.txt，salt.txt文件，并根据user.txt，N.txt，salt.txt文件中的内容创建字典，给字典赋值。user.txt中存储的是username和S值，N.txt中存储username和n值，salt.txt中存储username和salt(seed)值。若用户选择注册，则跳转至Step3，若用户选择登录，则跳转至Step4，若用户选择退出，则跳转至Step7，若用户输入非法，跳Step1。
+      Step3.让其输入用户名、密码，然后判断用户名是否已经被注册，若已经被注册，则提示“用户已存在，请直接登陆”，记录日志并跳转至Step1。若没有被注册，则进行初始化操作和生成动态口令序列操作并更新对应字典的值然后写入文件，提示“注册成功”，记录日志，跳转至Step1。
+      Step4.让其输入用户名、密码，若用户名在字典的Key中存在，跳Step5，若不存在，跳Step6。
+      Step5.根据N_dic中的值进行对应次数的散列，记为S，再进行一次散列，记为S_1，若S_1与user_dic中的s值相同，则通过验证，提示“登录成功”并记录日志。然后判断n是否等于N，若等于（即口令序列使用完毕），则协商一个新的口令序列供下次登录使用，跳Step1。若不相同，则提示“用户名或密码错误”，日志里保存原因“密码错误”，跳Step1。
+      Step6. 提示“用户名或密码错误”，日志里保存原因“用户不存在”，跳Step1。
+      Step7.结束，记录退出日志。
+    
+  
+
+
+源码
+
+'''
+N = 100
+设计身份认证系统的功能、主要界面、主要软件模块，以及采用的认证技术路线和方法。
+（1）支持用户名/口令/验证码机制的身份认证
+（2）满足动态口令的技术要求
+（3）当前口令序列使用完毕后能够继续协商
+（4）记录用户登录日志，支持日志查看
+---------------------------------------
+ N.txt
+ username N
+---------------------------------------
+ user.txt
+ username hash_n
+---------------------------------------
+ salt.txt
+ username salt
+'''
+
+from Crypto.Hash import MD4, MD5
+import os
+import random
+import datetime
+import time
+
+
+# 生成随机8位字符串
+def generate_salt():
+    seed = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&amp;*()_+=-"
+    s = []
+    for i in range(8):
+        s.append(random.choice(seed))
+    salt = ''.join(s)
+    return salt
+
+
+# MD4散列
+def hash_md4(s):
+    obj = MD4.new()
+    obj.update(s)
+    return obj.hexdigest()
+
+
+# MD5散列
+def hash_md5(s):
+    obj = MD5.new()
+    obj.update(s)
+    return obj.hexdigest()
+
+
+# 取得当前时间
+def get_time():
+    time_stamp = datetime.datetime.now()
+    time = time_stamp.strftime('%Y.%m.%d-%H:%M:%S')
+    return time
+
+
+def s_key_run():
+    while True:
+        os.system("cls")
+        print("*--欢迎使用S/KEY协议身份认证系统--*")
+        print("*-------------------------------*")
+        print("* 1.注册")
+        print("* 2.登录")
+        print("* 3.退出")
+        print("*-------------------------------*")
+        choice = input("* 请输入操作选项:")
+
+        dir_path = os.path.dirname(os.path.realpath(__file__))  # 获得当前文件所在目录的绝对路径
+        fp_log = open(os.path.join(dir_path, "log.txt"), "a+")  # 保存日志的文本文件
+        fp_user = open(os.path.join(dir_path, "user.txt"), "r")  # 读取保存用户信息的文本文件
+        fp_N = open(os.path.join(dir_path, "N.txt"), "r")  # 读取保存每个用户N值的文件
+        fp_salt = open(os.path.join(dir_path, "salt.txt"), "r")  # 读取保存每个用户salt值的文件
+        user_list = fp_user.readlines()
+        N_list = fp_N.readlines()
+        salt_list = fp_salt.readlines()
+        fp_user.close()
+        fp_N.close()
+        fp_salt.close()
+
+        # 清除空项
+        user_list = list(filter(None, user_list))
+        N_list = list(filter(None, N_list))
+        salt_list = list(filter(None, salt_list))
+        # 创建字典
+        N_dic = dict()
+        user_dic = dict()
+        salt_dic = dict()
+        # 给字典赋值
+        for i in N_list:
+            item = i.split(' ')
+            N_dic[item[0]] = item[1]
+        for i in user_list:
+            item = i.split(' ')
+            user_dic[item[0]] = item[1]
+        for i in salt_list:
+            item = i.split(' ')
+            salt_dic[item[0]] = item[1]
+        # 注册
+        if choice == "1":
+            username = input("* 请输入用户名:")
+            password = input("* 请输入密码:")
+            # 看这个用户名是不是已经被注册了
+            if username in user_dic.keys():
+                t = get_time()
+                log = t + '  ' + username + '注册失败，用户已存在\n'
+                fp_log.write(log)
+                fp_log.close()
+                print('* 该用户已注册，请直接登陆')
+                time.sleep(2)
+                continue
+            salt = generate_salt()
+            md4_str = hash_md4((password + salt).encode('utf-8'))
+            # print(salt, ' ', password, ' ', md4_str)
+            S = str(int(md4_str[0:16], 16) ^ int(md4_str[17:], 16))  # 前16个字节与后16个字节异或
+            # print(salt, ' ', S)
+            # 对S做100次安全散列
+            for i in range(0, 100):
+                S = hash_md5(S.encode('utf-8'))
+                # print(S)
+            # 保存S、N
+            user_dic[username] = S
+            N_dic[username] = '2'
+            salt_dic[username] = salt
+            fp_salt = open(os.path.join(dir_path, "salt.txt"), "w+")  # 读取保存用户salt值的文本文件
+            fp_user = open(os.path.join(dir_path, "user.txt"), "w+")  # 读取保存用户信息的文本文件
+            fp_N = open(os.path.join(dir_path, "N.txt"), "w+")  # 读取保存每个用户N值的文件
+            for key, value in user_dic.items():
+                i = key + ' ' + value + ' ' + '\n'  # ****第二个空格是为了防止换行符干扰value*****
+                fp_user.write(i)
+            for key, value in N_dic.items():
+                i = key + ' ' + value + ' ' + '\n'
+                fp_N.write(i)
+            for key, value in salt_dic.items():
+                i = key + ' ' + value + ' ' + '\n'
+                fp_salt.write(i)
+            fp_user.close()
+            fp_N.close()
+            fp_salt.close()
+            # 写入日志
+            t = get_time()
+            log = t + '  ' + username + '注册成功\n'
+            fp_log.write(log)
+            fp_log.close()
+            print('* 注册成功，即将返回登录界面')
+            time.sleep(2)
+            pass
+        # 登录
+        elif choice == "2":
+            username = input("* 请输入用户名:")
+            password = input("* 请输入密码:")
+            if username in user_dic.keys():
+                salt = salt_dic[username]
+                md4_str = hash_md4((password + salt).encode('utf-8'))
+                S = str(int(md4_str[0:16], 16) ^ int(md4_str[17:], 16))  # 前16个字节与后16个字节异或
+                for i in range(100 - int(N_dic[username]) + 1):  # N-n次得到第n+1个口令
+                    S = hash_md5(S.encode('utf-8'))
+                S_1 = hash_md5(S.encode('utf-8'))
+                # 密码正确
+                if (user_dic[username] == S_1):
+                    if (int(N_dic[username]) == 100):  # 已经用完了N个动态口令序列，重新协商
+                        salt = generate_salt()
+                        md4_str = hash_md4((password + salt).encode('utf-8'))
+                        S = str(int(md4_str[0:16], 16) ^ int(md4_str[17:], 16))  # 前16个字节与后16个字节异或
+                        # 对S做100次安全散列
+                        for i in range(0, 100):
+                            S = hash_md5(S.encode('utf-8'))
+                        # 保存S、N
+                        user_dic[username] = S
+                        N_dic[username] = '2'
+                        salt_dic[username] = salt
+                    else:
+                        user_dic[username] = S
+                        N_dic[username] = str(int(N_dic[username]) + 1)
+
+                    fp_user = open(os.path.join(dir_path, "user.txt"), "w+")  # 读取保存用户信息的文本文件
+                    fp_N = open(os.path.join(dir_path, "N.txt"), "w+")  # 读取保存每个用户N值的文件
+                    fp_salt = open(os.path.join(dir_path, "salt.txt"), "w+")  # 读取保存用户salt值的文本文件
+                    for key, value in user_dic.items():
+                        i = key + ' ' + value + ' ' + '\n'  # ****第二个空格是为了防止换行干扰value*****
+                        fp_user.write(i)
+                    for key, value in N_dic.items():
+                        i = key + ' ' + value + ' ' + '\n'
+                        fp_N.write(i)
+                    for key, value in salt_dic.items():
+                        i = key + ' ' + value + ' ' + '\n'
+                        fp_salt.write(i)
+                    fp_user.close()
+                    fp_N.close()
+                    fp_salt.close()
+                    # 写入日志
+                    t = get_time()
+                    log = t + '  ' + username + '登录成功\n'
+                    fp_log.write(log)
+                    fp_log.close()
+                    print('* 登录成功')
+                    time.sleep(2)
+                else:
+                    t = get_time()
+                    log = t + '  ' + username + '登录失败，密码错误\n'
+                    fp_log.write(log)
+                    fp_log.close()
+                    print('* 用户名或密码错误，登录失败')
+                    time.sleep(2)
+                pass
+            else:
+                t = get_time()
+                log = t + '  ' + username + '登录失败，用户不存在\n'
+                fp_log.write(log)
+                fp_log.close()
+                print('* 用户名或密码错误，登录失败')
+                time.sleep(2)
+                pass
+        elif choice == "3":
+            t = get_time()
+            log = t + '  ' + '退出系统\n'
+            fp_log.write(log)
+            fp_log.close()
+            print('* 谢谢使用，即将退出')
+            time.sleep(2)
+            return
+        else:
+            print('输入的操作选项非法，请重新输入\n')
+            time.sleep(2)
+            pass
+
+
+if __name__ == '__main__':
+    s_key_run()
+
+" />
+    <meta property="og:description" content="系统安全实验一，S/Key协议的实现。
+
+S/Key协议原理
+
+
+  
+    初始化
+
+    
+      用户输入密码password（长度大于8个字符）
+      服务器产生一个8个字节的随机字符序列salt（加盐）
+      预处理：将password和salt拼接后做MD4散列操作 ，将32字节的输出结果分为左右两部分，每部分16个字节，两部分做异或运算，结果记为S
+    
+  
+  
+    生成口令序列
+
+    对S做N次散列得到第一个口令，做N-1次散列，得到第二个口令，以此类推，做1次散列，得到第N个口令
+  
+  
+    使用口令
+
+    
+      第1个口令发送给服务器端保存
+      客户端每次登陆时顺序使用第2~N个口令
+      服务器收到口令后，将收到的值进行一次散列，与当前存储的hash值比较，若相同，则验证通过，同时更新存储的hash值供下次使用
+    
+  
+
+
+程序设计
+
+主要需要实现以下函数：
+
+
+  generate_salt()，用于生成随机的8字节字符串，在S/Key初始化时用到
+  hash_md4(s)和hash_md5(s)，用于进行md4和md5散列操作，依赖库pycryptodome实现
+  get_time()，用于取得当前时间，在记录日志的时候用到，返回“%Y.%m.%d-%H:%M:%S”形式的时间
+  
+    s_key_run()，是最核心的函数，实现了所有主要功能。具体实现步骤如下：
+
+    
+      Step1.输出菜单界面，用户选择注册或登录或退出
+      Step2.读取log.txt，user.txt，N.txt，salt.txt文件，并根据user.txt，N.txt，salt.txt文件中的内容创建字典，给字典赋值。user.txt中存储的是username和S值，N.txt中存储username和n值，salt.txt中存储username和salt(seed)值。若用户选择注册，则跳转至Step3，若用户选择登录，则跳转至Step4，若用户选择退出，则跳转至Step7，若用户输入非法，跳Step1。
+      Step3.让其输入用户名、密码，然后判断用户名是否已经被注册，若已经被注册，则提示“用户已存在，请直接登陆”，记录日志并跳转至Step1。若没有被注册，则进行初始化操作和生成动态口令序列操作并更新对应字典的值然后写入文件，提示“注册成功”，记录日志，跳转至Step1。
+      Step4.让其输入用户名、密码，若用户名在字典的Key中存在，跳Step5，若不存在，跳Step6。
+      Step5.根据N_dic中的值进行对应次数的散列，记为S，再进行一次散列，记为S_1，若S_1与user_dic中的s值相同，则通过验证，提示“登录成功”并记录日志。然后判断n是否等于N，若等于（即口令序列使用完毕），则协商一个新的口令序列供下次登录使用，跳Step1。若不相同，则提示“用户名或密码错误”，日志里保存原因“密码错误”，跳Step1。
+      Step6. 提示“用户名或密码错误”，日志里保存原因“用户不存在”，跳Step1。
+      Step7.结束，记录退出日志。
+    
+  
+
+
+源码
+
+'''
+N = 100
+设计身份认证系统的功能、主要界面、主要软件模块，以及采用的认证技术路线和方法。
+（1）支持用户名/口令/验证码机制的身份认证
+（2）满足动态口令的技术要求
+（3）当前口令序列使用完毕后能够继续协商
+（4）记录用户登录日志，支持日志查看
+---------------------------------------
+ N.txt
+ username N
+---------------------------------------
+ user.txt
+ username hash_n
+---------------------------------------
+ salt.txt
+ username salt
+'''
+
+from Crypto.Hash import MD4, MD5
+import os
+import random
+import datetime
+import time
+
+
+# 生成随机8位字符串
+def generate_salt():
+    seed = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&amp;*()_+=-"
+    s = []
+    for i in range(8):
+        s.append(random.choice(seed))
+    salt = ''.join(s)
+    return salt
+
+
+# MD4散列
+def hash_md4(s):
+    obj = MD4.new()
+    obj.update(s)
+    return obj.hexdigest()
+
+
+# MD5散列
+def hash_md5(s):
+    obj = MD5.new()
+    obj.update(s)
+    return obj.hexdigest()
+
+
+# 取得当前时间
+def get_time():
+    time_stamp = datetime.datetime.now()
+    time = time_stamp.strftime('%Y.%m.%d-%H:%M:%S')
+    return time
+
+
+def s_key_run():
+    while True:
+        os.system("cls")
+        print("*--欢迎使用S/KEY协议身份认证系统--*")
+        print("*-------------------------------*")
+        print("* 1.注册")
+        print("* 2.登录")
+        print("* 3.退出")
+        print("*-------------------------------*")
+        choice = input("* 请输入操作选项:")
+
+        dir_path = os.path.dirname(os.path.realpath(__file__))  # 获得当前文件所在目录的绝对路径
+        fp_log = open(os.path.join(dir_path, "log.txt"), "a+")  # 保存日志的文本文件
+        fp_user = open(os.path.join(dir_path, "user.txt"), "r")  # 读取保存用户信息的文本文件
+        fp_N = open(os.path.join(dir_path, "N.txt"), "r")  # 读取保存每个用户N值的文件
+        fp_salt = open(os.path.join(dir_path, "salt.txt"), "r")  # 读取保存每个用户salt值的文件
+        user_list = fp_user.readlines()
+        N_list = fp_N.readlines()
+        salt_list = fp_salt.readlines()
+        fp_user.close()
+        fp_N.close()
+        fp_salt.close()
+
+        # 清除空项
+        user_list = list(filter(None, user_list))
+        N_list = list(filter(None, N_list))
+        salt_list = list(filter(None, salt_list))
+        # 创建字典
+        N_dic = dict()
+        user_dic = dict()
+        salt_dic = dict()
+        # 给字典赋值
+        for i in N_list:
+            item = i.split(' ')
+            N_dic[item[0]] = item[1]
+        for i in user_list:
+            item = i.split(' ')
+            user_dic[item[0]] = item[1]
+        for i in salt_list:
+            item = i.split(' ')
+            salt_dic[item[0]] = item[1]
+        # 注册
+        if choice == "1":
+            username = input("* 请输入用户名:")
+            password = input("* 请输入密码:")
+            # 看这个用户名是不是已经被注册了
+            if username in user_dic.keys():
+                t = get_time()
+                log = t + '  ' + username + '注册失败，用户已存在\n'
+                fp_log.write(log)
+                fp_log.close()
+                print('* 该用户已注册，请直接登陆')
+                time.sleep(2)
+                continue
+            salt = generate_salt()
+            md4_str = hash_md4((password + salt).encode('utf-8'))
+            # print(salt, ' ', password, ' ', md4_str)
+            S = str(int(md4_str[0:16], 16) ^ int(md4_str[17:], 16))  # 前16个字节与后16个字节异或
+            # print(salt, ' ', S)
+            # 对S做100次安全散列
+            for i in range(0, 100):
+                S = hash_md5(S.encode('utf-8'))
+                # print(S)
+            # 保存S、N
+            user_dic[username] = S
+            N_dic[username] = '2'
+            salt_dic[username] = salt
+            fp_salt = open(os.path.join(dir_path, "salt.txt"), "w+")  # 读取保存用户salt值的文本文件
+            fp_user = open(os.path.join(dir_path, "user.txt"), "w+")  # 读取保存用户信息的文本文件
+            fp_N = open(os.path.join(dir_path, "N.txt"), "w+")  # 读取保存每个用户N值的文件
+            for key, value in user_dic.items():
+                i = key + ' ' + value + ' ' + '\n'  # ****第二个空格是为了防止换行符干扰value*****
+                fp_user.write(i)
+            for key, value in N_dic.items():
+                i = key + ' ' + value + ' ' + '\n'
+                fp_N.write(i)
+            for key, value in salt_dic.items():
+                i = key + ' ' + value + ' ' + '\n'
+                fp_salt.write(i)
+            fp_user.close()
+            fp_N.close()
+            fp_salt.close()
+            # 写入日志
+            t = get_time()
+            log = t + '  ' + username + '注册成功\n'
+            fp_log.write(log)
+            fp_log.close()
+            print('* 注册成功，即将返回登录界面')
+            time.sleep(2)
+            pass
+        # 登录
+        elif choice == "2":
+            username = input("* 请输入用户名:")
+            password = input("* 请输入密码:")
+            if username in user_dic.keys():
+                salt = salt_dic[username]
+                md4_str = hash_md4((password + salt).encode('utf-8'))
+                S = str(int(md4_str[0:16], 16) ^ int(md4_str[17:], 16))  # 前16个字节与后16个字节异或
+                for i in range(100 - int(N_dic[username]) + 1):  # N-n次得到第n+1个口令
+                    S = hash_md5(S.encode('utf-8'))
+                S_1 = hash_md5(S.encode('utf-8'))
+                # 密码正确
+                if (user_dic[username] == S_1):
+                    if (int(N_dic[username]) == 100):  # 已经用完了N个动态口令序列，重新协商
+                        salt = generate_salt()
+                        md4_str = hash_md4((password + salt).encode('utf-8'))
+                        S = str(int(md4_str[0:16], 16) ^ int(md4_str[17:], 16))  # 前16个字节与后16个字节异或
+                        # 对S做100次安全散列
+                        for i in range(0, 100):
+                            S = hash_md5(S.encode('utf-8'))
+                        # 保存S、N
+                        user_dic[username] = S
+                        N_dic[username] = '2'
+                        salt_dic[username] = salt
+                    else:
+                        user_dic[username] = S
+                        N_dic[username] = str(int(N_dic[username]) + 1)
+
+                    fp_user = open(os.path.join(dir_path, "user.txt"), "w+")  # 读取保存用户信息的文本文件
+                    fp_N = open(os.path.join(dir_path, "N.txt"), "w+")  # 读取保存每个用户N值的文件
+                    fp_salt = open(os.path.join(dir_path, "salt.txt"), "w+")  # 读取保存用户salt值的文本文件
+                    for key, value in user_dic.items():
+                        i = key + ' ' + value + ' ' + '\n'  # ****第二个空格是为了防止换行干扰value*****
+                        fp_user.write(i)
+                    for key, value in N_dic.items():
+                        i = key + ' ' + value + ' ' + '\n'
+                        fp_N.write(i)
+                    for key, value in salt_dic.items():
+                        i = key + ' ' + value + ' ' + '\n'
+                        fp_salt.write(i)
+                    fp_user.close()
+                    fp_N.close()
+                    fp_salt.close()
+                    # 写入日志
+                    t = get_time()
+                    log = t + '  ' + username + '登录成功\n'
+                    fp_log.write(log)
+                    fp_log.close()
+                    print('* 登录成功')
+                    time.sleep(2)
+                else:
+                    t = get_time()
+                    log = t + '  ' + username + '登录失败，密码错误\n'
+                    fp_log.write(log)
+                    fp_log.close()
+                    print('* 用户名或密码错误，登录失败')
+                    time.sleep(2)
+                pass
+            else:
+                t = get_time()
+                log = t + '  ' + username + '登录失败，用户不存在\n'
+                fp_log.write(log)
+                fp_log.close()
+                print('* 用户名或密码错误，登录失败')
+                time.sleep(2)
+                pass
+        elif choice == "3":
+            t = get_time()
+            log = t + '  ' + '退出系统\n'
+            fp_log.write(log)
+            fp_log.close()
+            print('* 谢谢使用，即将退出')
+            time.sleep(2)
+            return
+        else:
+            print('输入的操作选项非法，请重新输入\n')
+            time.sleep(2)
+            pass
+
+
+if __name__ == '__main__':
+    s_key_run()
+
+" />
+    
+    <meta name="author" content="今天又刷了什么水题" />
+
+    
+    <meta property="og:title" content="【计算机系统安全】 S/Key协议的实现" />
+    <meta property="twitter:title" content="【计算机系统安全】 S/Key协议的实现" />
+    
+  <!-- Async font loading -->
+<script>
+  window.WebFontConfig = {
+      custom: {
+          families: ['Spoqa Han Sans:100,300,400,700'],
+          urls: ['https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css']
+      },
+      timeout: 60000
+  };
+  (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+      s.parentNode.insertBefore(wf, s);
+  })(document);
+</script>
+
+<!--adobe fonts-->
+<script>
+    (function(d) {
+      var config = {
+        kitId: 'vbt3gjx',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+</script> 
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="今天又刷了什么水题 - 为者常成，行者常至" href="/feed.xml" />
+  <link rel="shortcut icon" href="/favicon.ico">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+
+  <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+
+</head>
+
+  <body>
+    <div class="wrapper-sidebar">
+  <header class="sidebar clearfix">
+    <div class="site-info">
+      
+        <a href="/" class="site-avatar"><img src="/logo.jpg" /></a>
+       
+      <h1 class="site-name"><a href="/">今天又刷了什么水题</a></h1>
+      <p class="site-description">为者常成，行者常至</p>
+    </div>
+  </header>
+
+  <div class="navlist">
+    <nav>
+      
+      
+      <a href="/">首页</a>
+      
+      
+      
+      <a href="/about">关于</a>
+      
+      
+      
+      <a href="/archive">归档</a>
+      
+      
+      
+      <a href="/tags">标签</a>
+      
+      
+      
+      <a href="/categories">分类</a>
+      
+      
+    </nav>
+  </div>
+
+  <div class="wrapper-footer-desktop">
+    <footer class="footer">
+      <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+  
+  
+
+  
+
+  
+  <li><a href="mailto:hiter_sun@163.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/suniven" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM112 416c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm157.533 0h-34.335c-6.011 0-11.051-4.636-11.442-10.634-5.214-80.05-69.243-143.92-149.123-149.123-5.997-.39-10.633-5.431-10.633-11.441v-34.335c0-6.535 5.468-11.777 11.994-11.425 110.546 5.974 198.997 94.536 204.964 204.964.352 6.526-4.89 11.994-11.425 11.994zm103.027 0h-34.334c-6.161 0-11.175-4.882-11.427-11.038-5.598-136.535-115.204-246.161-251.76-251.76C68.882 152.949 64 147.935 64 141.774V107.44c0-6.454 5.338-11.664 11.787-11.432 167.83 6.025 302.21 141.191 308.205 308.205.232 6.449-4.978 11.787-11.432 11.787z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+
+
+<p>Copyright (c) 2019-2021 From Gotei13 12th Div.</p>
+
+    </footer>
+  </div>
+</div>
+
+    
+      <aside class="toc">
+        <ul>
+  <li><a href="#">【计算机系统安全】 S/Key协议的实现</a>
+    <ul>
+      <li><a href="#skey协议原理">S/Key协议原理</a></li>
+      <li><a href="#程序设计">程序设计</a></li>
+      <li><a href="#源码">源码</a></li>
+    </ul>
+  </li>
+</ul>
+      </aside>
+    
+
+    <div id="main" role="main" class="wrapper-content">
+      <div class="container">
+        <article class="posts">
+  <h1>【计算机系统安全】 S/Key协议的实现</h1>
+
+  <div clsss="meta">
+    <span class="author">
+      Sun
+    </span>
+
+    <span class="date">
+      2020-06-25
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="/tags#S/key协议">
+          S/key协议
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags#计算机系统安全">
+          计算机系统安全
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <p>系统安全实验一，S/Key协议的实现。</p>
+
+<h2 id="skey协议原理">S/Key协议原理</h2>
+
+<ol>
+  <li>
+    <p>初始化</p>
+
+    <ul>
+      <li>用户输入密码password（长度大于8个字符）</li>
+      <li>服务器产生一个8个字节的随机字符序列salt（加盐）</li>
+      <li>预处理：将password和salt拼接后做MD4散列操作 ，将32字节的输出结果分为左右两部分，每部分16个字节，两部分做异或运算，结果记为S</li>
+    </ul>
+  </li>
+  <li>
+    <p>生成口令序列</p>
+
+    <p>对S做N次散列得到第一个口令，做N-1次散列，得到第二个口令，以此类推，做1次散列，得到第N个口令</p>
+  </li>
+  <li>
+    <p>使用口令</p>
+
+    <ul>
+      <li>第1个口令发送给服务器端保存</li>
+      <li>客户端每次登陆时顺序使用第2~N个口令</li>
+      <li>服务器收到口令后，将收到的值进行一次散列，与当前存储的hash值比较，若相同，则验证通过，同时更新存储的hash值供下次使用</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="程序设计">程序设计</h2>
+
+<p>主要需要实现以下函数：</p>
+
+<ul>
+  <li>generate_salt()，用于生成随机的8字节字符串，在S/Key初始化时用到</li>
+  <li>hash_md4(s)和hash_md5(s)，用于进行md4和md5散列操作，依赖库pycryptodome实现</li>
+  <li>get_time()，用于取得当前时间，在记录日志的时候用到，返回“%Y.%m.%d-%H:%M:%S”形式的时间</li>
+  <li>
+    <p>s_key_run()，是最核心的函数，实现了所有主要功能。具体实现步骤如下：</p>
+
+    <ul>
+      <li>Step1.输出菜单界面，用户选择注册或登录或退出</li>
+      <li>Step2.读取log.txt，user.txt，N.txt，salt.txt文件，并根据user.txt，N.txt，salt.txt文件中的内容创建字典，给字典赋值。user.txt中存储的是username和S值，N.txt中存储username和n值，salt.txt中存储username和salt(seed)值。若用户选择注册，则跳转至Step3，若用户选择登录，则跳转至Step4，若用户选择退出，则跳转至Step7，若用户输入非法，跳Step1。</li>
+      <li>Step3.让其输入用户名、密码，然后判断用户名是否已经被注册，若已经被注册，则提示“用户已存在，请直接登陆”，记录日志并跳转至Step1。若没有被注册，则进行初始化操作和生成动态口令序列操作并更新对应字典的值然后写入文件，提示“注册成功”，记录日志，跳转至Step1。</li>
+      <li>Step4.让其输入用户名、密码，若用户名在字典的Key中存在，跳Step5，若不存在，跳Step6。</li>
+      <li>Step5.根据N_dic中的值进行对应次数的散列，记为S，再进行一次散列，记为S_1，若S_1与user_dic中的s值相同，则通过验证，提示“登录成功”并记录日志。然后判断n是否等于N，若等于（即口令序列使用完毕），则协商一个新的口令序列供下次登录使用，跳Step1。若不相同，则提示“用户名或密码错误”，日志里保存原因“密码错误”，跳Step1。</li>
+      <li>Step6. 提示“用户名或密码错误”，日志里保存原因“用户不存在”，跳Step1。</li>
+      <li>Step7.结束，记录退出日志。</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="源码">源码</h2>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="s">'''
+N = 100
+设计身份认证系统的功能、主要界面、主要软件模块，以及采用的认证技术路线和方法。
+（1）支持用户名/口令/验证码机制的身份认证
+（2）满足动态口令的技术要求
+（3）当前口令序列使用完毕后能够继续协商
+（4）记录用户登录日志，支持日志查看
+---------------------------------------
+ N.txt
+ username N
+---------------------------------------
+ user.txt
+ username hash_n
+---------------------------------------
+ salt.txt
+ username salt
+'''</span>
+
+<span class="kn">from</span> <span class="nn">Crypto.Hash</span> <span class="kn">import</span> <span class="n">MD4</span><span class="p">,</span> <span class="n">MD5</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+
+<span class="c1"># 生成随机8位字符串
+</span><span class="k">def</span> <span class="nf">generate_salt</span><span class="p">():</span>
+    <span class="n">seed</span> <span class="o">=</span> <span class="s">"1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&amp;*()_+=-"</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+        <span class="n">s</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span><span class="n">seed</span><span class="p">))</span>
+    <span class="n">salt</span> <span class="o">=</span> <span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">salt</span>
+
+
+<span class="c1"># MD4散列
+</span><span class="k">def</span> <span class="nf">hash_md4</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">MD4</span><span class="p">.</span><span class="n">new</span><span class="p">()</span>
+    <span class="n">obj</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">obj</span><span class="p">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+
+<span class="c1"># MD5散列
+</span><span class="k">def</span> <span class="nf">hash_md5</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">MD5</span><span class="p">.</span><span class="n">new</span><span class="p">()</span>
+    <span class="n">obj</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">obj</span><span class="p">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+
+<span class="c1"># 取得当前时间
+</span><span class="k">def</span> <span class="nf">get_time</span><span class="p">():</span>
+    <span class="n">time_stamp</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">.</span><span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
+    <span class="n">time</span> <span class="o">=</span> <span class="n">time_stamp</span><span class="p">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">'%Y.%m.%d-%H:%M:%S'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">time</span>
+
+
+<span class="k">def</span> <span class="nf">s_key_run</span><span class="p">():</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">os</span><span class="p">.</span><span class="n">system</span><span class="p">(</span><span class="s">"cls"</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"*--欢迎使用S/KEY协议身份认证系统--*"</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"*-------------------------------*"</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"* 1.注册"</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"* 2.登录"</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"* 3.退出"</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"*-------------------------------*"</span><span class="p">)</span>
+        <span class="n">choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"* 请输入操作选项:"</span><span class="p">)</span>
+
+        <span class="n">dir_path</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">__file__</span><span class="p">))</span>  <span class="c1"># 获得当前文件所在目录的绝对路径
+</span>        <span class="n">fp_log</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir_path</span><span class="p">,</span> <span class="s">"log.txt"</span><span class="p">),</span> <span class="s">"a+"</span><span class="p">)</span>  <span class="c1"># 保存日志的文本文件
+</span>        <span class="n">fp_user</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir_path</span><span class="p">,</span> <span class="s">"user.txt"</span><span class="p">),</span> <span class="s">"r"</span><span class="p">)</span>  <span class="c1"># 读取保存用户信息的文本文件
+</span>        <span class="n">fp_N</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir_path</span><span class="p">,</span> <span class="s">"N.txt"</span><span class="p">),</span> <span class="s">"r"</span><span class="p">)</span>  <span class="c1"># 读取保存每个用户N值的文件
+</span>        <span class="n">fp_salt</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir_path</span><span class="p">,</span> <span class="s">"salt.txt"</span><span class="p">),</span> <span class="s">"r"</span><span class="p">)</span>  <span class="c1"># 读取保存每个用户salt值的文件
+</span>        <span class="n">user_list</span> <span class="o">=</span> <span class="n">fp_user</span><span class="p">.</span><span class="n">readlines</span><span class="p">()</span>
+        <span class="n">N_list</span> <span class="o">=</span> <span class="n">fp_N</span><span class="p">.</span><span class="n">readlines</span><span class="p">()</span>
+        <span class="n">salt_list</span> <span class="o">=</span> <span class="n">fp_salt</span><span class="p">.</span><span class="n">readlines</span><span class="p">()</span>
+        <span class="n">fp_user</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">fp_N</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">fp_salt</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="c1"># 清除空项
+</span>        <span class="n">user_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">user_list</span><span class="p">))</span>
+        <span class="n">N_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">N_list</span><span class="p">))</span>
+        <span class="n">salt_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">salt_list</span><span class="p">))</span>
+        <span class="c1"># 创建字典
+</span>        <span class="n">N_dic</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="n">user_dic</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="n">salt_dic</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="c1"># 给字典赋值
+</span>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">N_list</span><span class="p">:</span>
+            <span class="n">item</span> <span class="o">=</span> <span class="n">i</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)</span>
+            <span class="n">N_dic</span><span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">user_list</span><span class="p">:</span>
+            <span class="n">item</span> <span class="o">=</span> <span class="n">i</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)</span>
+            <span class="n">user_dic</span><span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">salt_list</span><span class="p">:</span>
+            <span class="n">item</span> <span class="o">=</span> <span class="n">i</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)</span>
+            <span class="n">salt_dic</span><span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="c1"># 注册
+</span>        <span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s">"1"</span><span class="p">:</span>
+            <span class="n">username</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"* 请输入用户名:"</span><span class="p">)</span>
+            <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"* 请输入密码:"</span><span class="p">)</span>
+            <span class="c1"># 看这个用户名是不是已经被注册了
+</span>            <span class="k">if</span> <span class="n">username</span> <span class="ow">in</span> <span class="n">user_dic</span><span class="p">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="n">t</span> <span class="o">=</span> <span class="n">get_time</span><span class="p">()</span>
+                <span class="n">log</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="s">'  '</span> <span class="o">+</span> <span class="n">username</span> <span class="o">+</span> <span class="s">'注册失败，用户已存在</span><span class="se">\n</span><span class="s">'</span>
+                <span class="n">fp_log</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+                <span class="n">fp_log</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">'* 该用户已注册，请直接登陆'</span><span class="p">)</span>
+                <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+                <span class="k">continue</span>
+            <span class="n">salt</span> <span class="o">=</span> <span class="n">generate_salt</span><span class="p">()</span>
+            <span class="n">md4_str</span> <span class="o">=</span> <span class="n">hash_md4</span><span class="p">((</span><span class="n">password</span> <span class="o">+</span> <span class="n">salt</span><span class="p">).</span><span class="n">encode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">))</span>
+            <span class="c1"># print(salt, ' ', password, ' ', md4_str)
+</span>            <span class="n">S</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">md4_str</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">16</span><span class="p">],</span> <span class="mi">16</span><span class="p">)</span> <span class="o">^</span> <span class="nb">int</span><span class="p">(</span><span class="n">md4_str</span><span class="p">[</span><span class="mi">17</span><span class="p">:],</span> <span class="mi">16</span><span class="p">))</span>  <span class="c1"># 前16个字节与后16个字节异或
+</span>            <span class="c1"># print(salt, ' ', S)
+</span>            <span class="c1"># 对S做100次安全散列
+</span>            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">):</span>
+                <span class="n">S</span> <span class="o">=</span> <span class="n">hash_md5</span><span class="p">(</span><span class="n">S</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">))</span>
+                <span class="c1"># print(S)
+</span>            <span class="c1"># 保存S、N
+</span>            <span class="n">user_dic</span><span class="p">[</span><span class="n">username</span><span class="p">]</span> <span class="o">=</span> <span class="n">S</span>
+            <span class="n">N_dic</span><span class="p">[</span><span class="n">username</span><span class="p">]</span> <span class="o">=</span> <span class="s">'2'</span>
+            <span class="n">salt_dic</span><span class="p">[</span><span class="n">username</span><span class="p">]</span> <span class="o">=</span> <span class="n">salt</span>
+            <span class="n">fp_salt</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir_path</span><span class="p">,</span> <span class="s">"salt.txt"</span><span class="p">),</span> <span class="s">"w+"</span><span class="p">)</span>  <span class="c1"># 读取保存用户salt值的文本文件
+</span>            <span class="n">fp_user</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir_path</span><span class="p">,</span> <span class="s">"user.txt"</span><span class="p">),</span> <span class="s">"w+"</span><span class="p">)</span>  <span class="c1"># 读取保存用户信息的文本文件
+</span>            <span class="n">fp_N</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir_path</span><span class="p">,</span> <span class="s">"N.txt"</span><span class="p">),</span> <span class="s">"w+"</span><span class="p">)</span>  <span class="c1"># 读取保存每个用户N值的文件
+</span>            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">user_dic</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">i</span> <span class="o">=</span> <span class="n">key</span> <span class="o">+</span> <span class="s">' '</span> <span class="o">+</span> <span class="n">value</span> <span class="o">+</span> <span class="s">' '</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span>  <span class="c1"># ****第二个空格是为了防止换行符干扰value*****
+</span>                <span class="n">fp_user</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">N_dic</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">i</span> <span class="o">=</span> <span class="n">key</span> <span class="o">+</span> <span class="s">' '</span> <span class="o">+</span> <span class="n">value</span> <span class="o">+</span> <span class="s">' '</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span>
+                <span class="n">fp_N</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">salt_dic</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">i</span> <span class="o">=</span> <span class="n">key</span> <span class="o">+</span> <span class="s">' '</span> <span class="o">+</span> <span class="n">value</span> <span class="o">+</span> <span class="s">' '</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span>
+                <span class="n">fp_salt</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="n">fp_user</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="n">fp_N</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="n">fp_salt</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="c1"># 写入日志
+</span>            <span class="n">t</span> <span class="o">=</span> <span class="n">get_time</span><span class="p">()</span>
+            <span class="n">log</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="s">'  '</span> <span class="o">+</span> <span class="n">username</span> <span class="o">+</span> <span class="s">'注册成功</span><span class="se">\n</span><span class="s">'</span>
+            <span class="n">fp_log</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+            <span class="n">fp_log</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">'* 注册成功，即将返回登录界面'</span><span class="p">)</span>
+            <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+            <span class="k">pass</span>
+        <span class="c1"># 登录
+</span>        <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s">"2"</span><span class="p">:</span>
+            <span class="n">username</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"* 请输入用户名:"</span><span class="p">)</span>
+            <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"* 请输入密码:"</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">username</span> <span class="ow">in</span> <span class="n">user_dic</span><span class="p">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="n">salt</span> <span class="o">=</span> <span class="n">salt_dic</span><span class="p">[</span><span class="n">username</span><span class="p">]</span>
+                <span class="n">md4_str</span> <span class="o">=</span> <span class="n">hash_md4</span><span class="p">((</span><span class="n">password</span> <span class="o">+</span> <span class="n">salt</span><span class="p">).</span><span class="n">encode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">))</span>
+                <span class="n">S</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">md4_str</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">16</span><span class="p">],</span> <span class="mi">16</span><span class="p">)</span> <span class="o">^</span> <span class="nb">int</span><span class="p">(</span><span class="n">md4_str</span><span class="p">[</span><span class="mi">17</span><span class="p">:],</span> <span class="mi">16</span><span class="p">))</span>  <span class="c1"># 前16个字节与后16个字节异或
+</span>                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">N_dic</span><span class="p">[</span><span class="n">username</span><span class="p">])</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>  <span class="c1"># N-n次得到第n+1个口令
+</span>                    <span class="n">S</span> <span class="o">=</span> <span class="n">hash_md5</span><span class="p">(</span><span class="n">S</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">))</span>
+                <span class="n">S_1</span> <span class="o">=</span> <span class="n">hash_md5</span><span class="p">(</span><span class="n">S</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">))</span>
+                <span class="c1"># 密码正确
+</span>                <span class="k">if</span> <span class="p">(</span><span class="n">user_dic</span><span class="p">[</span><span class="n">username</span><span class="p">]</span> <span class="o">==</span> <span class="n">S_1</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">N_dic</span><span class="p">[</span><span class="n">username</span><span class="p">])</span> <span class="o">==</span> <span class="mi">100</span><span class="p">):</span>  <span class="c1"># 已经用完了N个动态口令序列，重新协商
+</span>                        <span class="n">salt</span> <span class="o">=</span> <span class="n">generate_salt</span><span class="p">()</span>
+                        <span class="n">md4_str</span> <span class="o">=</span> <span class="n">hash_md4</span><span class="p">((</span><span class="n">password</span> <span class="o">+</span> <span class="n">salt</span><span class="p">).</span><span class="n">encode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">))</span>
+                        <span class="n">S</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">md4_str</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">16</span><span class="p">],</span> <span class="mi">16</span><span class="p">)</span> <span class="o">^</span> <span class="nb">int</span><span class="p">(</span><span class="n">md4_str</span><span class="p">[</span><span class="mi">17</span><span class="p">:],</span> <span class="mi">16</span><span class="p">))</span>  <span class="c1"># 前16个字节与后16个字节异或
+</span>                        <span class="c1"># 对S做100次安全散列
+</span>                        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">):</span>
+                            <span class="n">S</span> <span class="o">=</span> <span class="n">hash_md5</span><span class="p">(</span><span class="n">S</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">))</span>
+                        <span class="c1"># 保存S、N
+</span>                        <span class="n">user_dic</span><span class="p">[</span><span class="n">username</span><span class="p">]</span> <span class="o">=</span> <span class="n">S</span>
+                        <span class="n">N_dic</span><span class="p">[</span><span class="n">username</span><span class="p">]</span> <span class="o">=</span> <span class="s">'2'</span>
+                        <span class="n">salt_dic</span><span class="p">[</span><span class="n">username</span><span class="p">]</span> <span class="o">=</span> <span class="n">salt</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">user_dic</span><span class="p">[</span><span class="n">username</span><span class="p">]</span> <span class="o">=</span> <span class="n">S</span>
+                        <span class="n">N_dic</span><span class="p">[</span><span class="n">username</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">N_dic</span><span class="p">[</span><span class="n">username</span><span class="p">])</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+                    <span class="n">fp_user</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir_path</span><span class="p">,</span> <span class="s">"user.txt"</span><span class="p">),</span> <span class="s">"w+"</span><span class="p">)</span>  <span class="c1"># 读取保存用户信息的文本文件
+</span>                    <span class="n">fp_N</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir_path</span><span class="p">,</span> <span class="s">"N.txt"</span><span class="p">),</span> <span class="s">"w+"</span><span class="p">)</span>  <span class="c1"># 读取保存每个用户N值的文件
+</span>                    <span class="n">fp_salt</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir_path</span><span class="p">,</span> <span class="s">"salt.txt"</span><span class="p">),</span> <span class="s">"w+"</span><span class="p">)</span>  <span class="c1"># 读取保存用户salt值的文本文件
+</span>                    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">user_dic</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+                        <span class="n">i</span> <span class="o">=</span> <span class="n">key</span> <span class="o">+</span> <span class="s">' '</span> <span class="o">+</span> <span class="n">value</span> <span class="o">+</span> <span class="s">' '</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span>  <span class="c1"># ****第二个空格是为了防止换行干扰value*****
+</span>                        <span class="n">fp_user</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">N_dic</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+                        <span class="n">i</span> <span class="o">=</span> <span class="n">key</span> <span class="o">+</span> <span class="s">' '</span> <span class="o">+</span> <span class="n">value</span> <span class="o">+</span> <span class="s">' '</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span>
+                        <span class="n">fp_N</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">salt_dic</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+                        <span class="n">i</span> <span class="o">=</span> <span class="n">key</span> <span class="o">+</span> <span class="s">' '</span> <span class="o">+</span> <span class="n">value</span> <span class="o">+</span> <span class="s">' '</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span>
+                        <span class="n">fp_salt</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                    <span class="n">fp_user</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+                    <span class="n">fp_N</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+                    <span class="n">fp_salt</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+                    <span class="c1"># 写入日志
+</span>                    <span class="n">t</span> <span class="o">=</span> <span class="n">get_time</span><span class="p">()</span>
+                    <span class="n">log</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="s">'  '</span> <span class="o">+</span> <span class="n">username</span> <span class="o">+</span> <span class="s">'登录成功</span><span class="se">\n</span><span class="s">'</span>
+                    <span class="n">fp_log</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+                    <span class="n">fp_log</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+                    <span class="k">print</span><span class="p">(</span><span class="s">'* 登录成功'</span><span class="p">)</span>
+                    <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">t</span> <span class="o">=</span> <span class="n">get_time</span><span class="p">()</span>
+                    <span class="n">log</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="s">'  '</span> <span class="o">+</span> <span class="n">username</span> <span class="o">+</span> <span class="s">'登录失败，密码错误</span><span class="se">\n</span><span class="s">'</span>
+                    <span class="n">fp_log</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+                    <span class="n">fp_log</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+                    <span class="k">print</span><span class="p">(</span><span class="s">'* 用户名或密码错误，登录失败'</span><span class="p">)</span>
+                    <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+                <span class="k">pass</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">t</span> <span class="o">=</span> <span class="n">get_time</span><span class="p">()</span>
+                <span class="n">log</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="s">'  '</span> <span class="o">+</span> <span class="n">username</span> <span class="o">+</span> <span class="s">'登录失败，用户不存在</span><span class="se">\n</span><span class="s">'</span>
+                <span class="n">fp_log</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+                <span class="n">fp_log</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">'* 用户名或密码错误，登录失败'</span><span class="p">)</span>
+                <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+                <span class="k">pass</span>
+        <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s">"3"</span><span class="p">:</span>
+            <span class="n">t</span> <span class="o">=</span> <span class="n">get_time</span><span class="p">()</span>
+            <span class="n">log</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="s">'  '</span> <span class="o">+</span> <span class="s">'退出系统</span><span class="se">\n</span><span class="s">'</span>
+            <span class="n">fp_log</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+            <span class="n">fp_log</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">'* 谢谢使用，即将退出'</span><span class="p">)</span>
+            <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">'输入的操作选项非法，请重新输入</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+            <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+            <span class="k">pass</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">s_key_run</span><span class="p">()</span></code></pre></figure>
+
+
+  </div>
+
+  
+  
+<script src="https://utteranc.es/client.js"
+        repo=""
+        issue-term="issue-term"
+        label="utteranc"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+  
+</article>
+
+<div class="pagination">
+  
+    <span class="prev" >
+      <a href="/python-re/">
+        ← 上一篇
+      </a>
+    </span>
+  
+  
+    <span class="next" >
+      <a href="/ds-introduction/">
+        下一篇 →
+      </a>
+    </span>
+  
+</div>
+      </div>
+    </div>
+
+    
+
+  </body>
+
+  
+  <script>
+    document.getElementById("main").classList.add("withtoc");
+  </script>
+  
+
+  <div class="wrapper-footer-mobile">
+    <footer class="footer">
+      <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+  
+  
+
+  
+
+  
+  <li><a href="mailto:hiter_sun@163.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/suniven" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM112 416c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm157.533 0h-34.335c-6.011 0-11.051-4.636-11.442-10.634-5.214-80.05-69.243-143.92-149.123-149.123-5.997-.39-10.633-5.431-10.633-11.441v-34.335c0-6.535 5.468-11.777 11.994-11.425 110.546 5.974 198.997 94.536 204.964 204.964.352 6.526-4.89 11.994-11.425 11.994zm103.027 0h-34.334c-6.161 0-11.175-4.882-11.427-11.038-5.598-136.535-115.204-246.161-251.76-251.76C68.882 152.949 64 147.935 64 141.774V107.44c0-6.454 5.338-11.664 11.787-11.432 167.83 6.025 302.21 141.191 308.205 308.205.232 6.449-4.978 11.787-11.432 11.787z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+
+
+<p>Copyright (c) 2019-2021 From Gotei13 12th Div.</p>
+
+    </footer>
+
+
+</html>
