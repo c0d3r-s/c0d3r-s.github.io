@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"suniven.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="编译原理复习指南 for 我带的同学。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编译原理复习重点">
+<meta property="og:url" content="https://suniven.github.io/posts/fda22d77/index.html">
+<meta property="og:site_name" content="整点薯条">
+<meta property="og:description" content="编译原理复习指南 for 我带的同学。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-01-04T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-07-29T11:47:06.692Z">
+<meta property="article:author" content="Suniven">
+<meta property="article:tag" content="编译原理">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://suniven.github.io/posts/fda22d77/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>编译原理复习重点 | 整点薯条</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">整点薯条</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">前有鸽子，所以整点薯条。</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/suniven" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://suniven.github.io/posts/fda22d77/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Suniven">
+      <meta itemprop="description" content="牢骚太盛防肠断，风物长宜放眼量。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="整点薯条">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          编译原理复习重点
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-05 00:00:00" itemprop="dateCreated datePublished" datetime="2020-01-05T00:00:00+08:00">2020-01-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-07-29 19:47:06" itemprop="dateModified" datetime="2022-07-29T19:47:06+08:00">2022-07-29</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">编译原理</span></a>
+                </span>
+            </span>
+
+          
+            <div class="post-description">编译原理复习指南 for 我带的同学。</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="编译原理重点"><a href="#编译原理重点" class="headerlink" title="编译原理重点"></a>编译原理重点</h1><h2 id="Chapter4-语法分析"><a href="#Chapter4-语法分析" class="headerlink" title="Chapter4 语法分析"></a>Chapter4 语法分析</h2><h3 id="自顶向下语法分析"><a href="#自顶向下语法分析" class="headerlink" title="自顶向下语法分析"></a>自顶向下语法分析</h3><ul>
+<li><p>First 集<br>First 集即一个文法符号串可能推导出的串的第一个终结符的集合（包括空字符$\epsilon$）</p>
+<ol>
+<li><p>单个终结符的 First 集</p>
+<p>单个终结符的 First 集就是它自己。<br>First(X)&#x3D;{X}</p>
+</li>
+<li><p>单个非终结符的 First 集</p>
+<ol>
+<li><p>$A\rightarrow a…$</p>
+<p>产生式右部以终结符开头，$a\in First(A)$</p>
+</li>
+<li><p>$A\rightarrow B…$</p>
+<p>产生式右部以非终结符开头，$First(B)\subseteq First(A)$</p>
+</li>
+</ol>
+</li>
+<li><p>多个符号形成的符号串的 First 集</p>
+<p>$A\rightarrow B_1B_2…B_n$ ，$B_i$是第一个$\epsilon \notin First(B_i)$的字符，则$First(A)&#x3D;First(B_1) \cup First(B_2) \cup …\cup First(B_i)-{ \epsilon }$</p>
+<p>若$B_1, B_2, …, B_n$均能推出空串，则$First(A)&#x3D;First(B_1) \cup First(B_2) \cup …\cup First(B_n) \cup {\epsilon}$</p>
+</li>
+</ol>
+</li>
+<li><p>Follow 集</p>
+<p>Follow 集即一个文法符号后面可能跟随的终结符号的集合(<strong>不包括空字符</strong>)</p>
+<ol>
+<li><p>$Follow(S)&#x3D; {@}$</p>
+</li>
+<li><p>欲求的非终结符后跟终结符</p>
+<p>$A\rightarrow \alpha Bx\beta$（$x$是终结符），则 $a\in Follow(B)$</p>
+</li>
+<li><p>欲求的非终结符后跟非终结符</p>
+<p>$A\rightarrow \alpha B\beta$，则 $First(\beta ) \subseteq Follow(B)$，若$\epsilon \in First(\beta )$，因为空字符不包括在 Follow 集中，因此 B 后面跟的内容就是 A 后面的内容了，则这种情况下还要加上 $Follow(A)\subseteq Follow(B)$</p>
+</li>
+<li><p>欲求的非终结符在产生式结尾</p>
+<p>$A\rightarrow \alpha B$，则$Follow(A)\subseteq Follow(B)$</p>
+</li>
+</ol>
+</li>
+<li><p>判断某文法是不是 LL(1)文法</p>
+<p>一个文法是 LL(1)的，当且仅当 G 的任意两个不同的产生式$A\rightarrow \alpha |\beta$满足下面的条件：</p>
+<ol>
+<li><p>$First(\alpha)\cap First(\beta)&#x3D;\phi$</p>
+</li>
+<li><p>当$\epsilon \in First(\beta)时，Follow(A) \cap First(\alpha)&#x3D;\phi$</p>
+</li>
+</ol>
+</li>
+<li><p>构造 LL(1)分析表</p>
+<p>对文法 G 的每个产生式$A\rightarrow \alpha$做如下处理：</p>
+<ol>
+<li><p>对于$First(\alpha)$中的每个终结符号$a$，将$A\rightarrow \alpha$加入到$M[A,a]$中</p>
+</li>
+<li><p>若$\epsilon \in First(\alpha)$，则对于每个终结符号$b\in Follow(A)$，将$A \rightarrow \alpha$加入到$M[A,b]$中；若$\epsilon \in First(\alpha)$且 $$\in Follow(A)$，则将$A\rightarrow \alpha$也加入到$M[A,@]$中</p>
+</li>
+<li><p>完成上面的操作后，空白条目即 error</p>
+</li>
+</ol>
+</li>
+<li><p>预测分析算法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//ip为输入指针，栈的初始状态为S$</span><br><span class="line">令X=栈顶符号while(X!=$)&#123;</span><br><span class="line">    if(X=ip指向的字符a)</span><br><span class="line">      弹栈，ip+1</span><br><span class="line">  else if(X是终结符) error</span><br><span class="line">  else if(M[X,a]=error) error    </span><br><span class="line">  else if(M[X,a]=X-&gt;Y1Y2...Yk)&#123;    </span><br><span class="line">      输出产生式    </span><br><span class="line">      弹出栈顶符号    </span><br><span class="line">      Yk...Y2Y1入栈，Y1在栈顶    </span><br><span class="line">      ip+1    </span><br><span class="line">  &#125;        </span><br><span class="line">  X=栈顶符号</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>分析栈的作用：保存当前句型</p>
+</li>
+<li><p>消除左递归</p>
+<p>$$<br>A \rightarrow A\alpha_1 |A\alpha_2 |…|A\alpha_n |\beta_1 |\beta_2 |…|\beta_m\<br>\Rightarrow A\rightarrow \beta_1 A’|\beta_2 A’|…|\beta_m A’\<br>A’ \rightarrow \alpha_1 A’|\alpha_2 A’|…|\epsilon<br>$$</p>
+</li>
+</ul>
+<h3 id="自底向上语法分析"><a href="#自底向上语法分析" class="headerlink" title="自底向上语法分析"></a>自底向上语法分析</h3><ul>
+<li><p>构造 LR(0)规范项集族</p>
+<ul>
+<li><p>内核项</p>
+<p>$S\rightarrow ·S’$ 以及所有点不在最左端的项</p>
+</li>
+<li><p>非内核项</p>
+<p>除了$S\rightarrow ·S’$ 之外的所有点在最左端的项，非内核项可以通过闭包运算重新生成</p>
+<ol>
+<li>增广文法</li>
+</ol>
+<p>在文法 G 中加上一个新的开始符号 S’和产生式$S\rightarrow S’$，目的是使句柄的中止状态只有一个</p>
+<ol start="2">
+<li>CLOUSURE 计算</li>
+</ol>
+<p>设 I 是文法 G 的一个项集，则 CLOUSURE(I)根据以下规则计算得到：</p>
+<ul>
+<li>将 I 中的各项加入到 CLOUSURE(I)中</li>
+<li>若$A\rightarrow \alpha ·B \beta$在 CLOUSURE(I)中，$B\rightarrow \gamma$是一个产生式，并且$B\rightarrow ·\gamma$不在 CLOUSURE(I)中，则将其加入。不断应用该规则直到无新项加入（其实就是相同状态的集合，这两个状态都是准备识别 B 的状态）</li>
+</ul>
+<ol start="3">
+<li><p>GOTO 函数</p>
+<p>反正就这么个意思。</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>构造 GOTO 图</p>
+</li>
+<li><p>构造 LR 分析表</p>
+<p>$si$表示移入并将状态$i$压栈</p>
+<p>$rj$表示按照编号为$j$的产生式进行归约</p>
+<ol>
+<li><p>构造增广文法 G’的规范项集族$C&#x3D;{ I_0,I_1,…,I_n}$</p>
+</li>
+<li><p>根据$I_i$构造得到状态$i$，状态$i$的语法分析动作如下决定：</p>
+<ul>
+<li><p>若$[A\rightarrow \alpha ·a\beta]$在$I_i$中且$GOTO(I_i,a)&#x3D;I_j$，则将$ACTION[i,a]$设置为$sj$，$a$必须是终结符</p>
+</li>
+<li><p>若$[A\rightarrow \alpha·]$在$I_i$中，则对于所有的$a\in Follow(A)$，将$ACTION[i,a]$设置为$rj$，这里$j$为产生式$A\rightarrow \alpha$的编号，$A\ne S’$</p>
+</li>
+<li><p>若$[S’\rightarrow S·]$在$I_i$中，则将$ACTION[i,@]$设置为 acc（接受）</p>
+</li>
+</ul>
+</li>
+<li><p>状态$i$对于各个<strong>非终结符号 A</strong>的 GOTO 转换根据下面的规则得到：若$GOTO(I_i,A)&#x3D;I_j$，则$GOTO[i,A]&#x3D;j$</p>
+</li>
+<li><p>前两条没定义的项设置为 err</p>
+</li>
+<li><p>语法分析器的初始状态是根据$[S\rightarrow S’]$所在项集构造得到的状态</p>
+</li>
+</ol>
+</li>
+</ul>
+<p><strong>问题</strong>：ACTION 表中有错误信息，GOTO 表中有吗？<br>答：GOTO 表中没有错误信息，因为 GOTO 表中是归约后的变化</p>
+<ul>
+<li><p>LR 语法分析器的行为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">  a=w$的第一个符号while(1)&#123;        </span><br><span class="line">  令s为栈顶的状态       </span><br><span class="line">  if(ACTION[s,a]=移入t)&#123;                </span><br><span class="line">      将t压栈                </span><br><span class="line">    令a为下一个输入的符号        </span><br><span class="line">    &#125;else if(ACTION[s,a]=归约A-&gt;B)&#123;                </span><br><span class="line">        从栈中弹出|B|个符号                </span><br><span class="line">        令t为当前栈顶状态                </span><br><span class="line">        将GOTO[t,A]压栈                </span><br><span class="line">        输出产生式A-&gt;B                </span><br><span class="line">    &#125;else if(ACTION[s,a]=acc) break;        </span><br><span class="line">    else error();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>判断某文法是否是 SLR 文法</p>
+<p>若在构造语法分析表时有任何冲突动作产生，则该文法不是 SLR(1)文法</p>
+</li>
+</ul>
+<h2 id="Chapter6-中间代码生成"><a href="#Chapter6-中间代码生成" class="headerlink" title="Chapter6 中间代码生成"></a>Chapter6 中间代码生成</h2><ul>
+<li>翻译语句生成中间代码</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" rel="tag"># 编译原理</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/42ebdf66/" rel="prev" title="汇编与接口 汇编常用知识">
+      <i class="fa fa-chevron-left"></i> 汇编与接口 汇编常用知识
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/5d91338e/" rel="next" title="汇编与接口 汇编复习建议">
+      汇编与接口 汇编复习建议 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E9%87%8D%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">编译原理重点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter4-%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90"><span class="nav-number">1.1.</span> <span class="nav-text">Chapter4 语法分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90"><span class="nav-number">1.1.1.</span> <span class="nav-text">自顶向下语法分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%BA%95%E5%90%91%E4%B8%8A%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90"><span class="nav-number">1.1.2.</span> <span class="nav-text">自底向上语法分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter6-%E4%B8%AD%E9%97%B4%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90"><span class="nav-number">1.2.</span> <span class="nav-text">Chapter6 中间代码生成</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Suniven"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Suniven</p>
+  <div class="site-description" itemprop="description">牢骚太盛防肠断，风物长宜放眼量。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/suniven" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;suniven" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:hitsyw2017@163.com" title="E-Mail → mailto:hitsyw2017@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Suniven</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

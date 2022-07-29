@@ -1,45 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>/posts/0/</url>
-    <content><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/posts/0/</url>
-    <content><![CDATA[<h1 id="汇编常用知识"><a href="#汇编常用知识" class="headerlink" title="汇编常用知识"></a>汇编常用知识</h1><h2 id="常用中断类型码"><a href="#常用中断类型码" class="headerlink" title="常用中断类型码"></a>常用中断类型码</h2><h3 id="21H中断"><a href="#21H中断" class="headerlink" title="21H中断"></a>21H中断</h3><ul>
-<li><p>4CH号功能：结束程序</p>
-<p>MOV  AX, 4C00H</p>
+    <title>汇编与接口 汇编常用知识</title>
+    <url>/posts/42ebdf66/</url>
+    <content><![CDATA[<h2 id="常用中断类型码"><a href="#常用中断类型码" class="headerlink" title="常用中断类型码"></a>常用中断类型码</h2><h3 id="21H-中断"><a href="#21H-中断" class="headerlink" title="21H 中断"></a>21H 中断</h3><ul>
+<li><p>4CH 号功能：结束程序</p>
+<p>MOV AX, 4C00H</p>
 </li>
-<li><p>02H号功能：在屏幕上显示字符</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">MOV  DL, &#x27;A&#x27;</span><br><span class="line">MOV  AH, 02H   </span><br></pre></td></tr></table></figure>
+<li><p>02H 号功能：在屏幕上显示字符</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">MOV  DL, &#x27;A&#x27;</span><br><span class="line">MOV  AH, 02H</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>01H号功能：由键盘输入一个字符</p>
+<li><p>01H 号功能：由键盘输入一个字符</p>
 </li>
-<li><p>0A号功能：由键盘输入字符串</p>
-<p>  调用之前先设置好缓冲区，第一个字节事先填入最多允许接受的字符个数（包括0DH），第二个字节留空，本功能自动回填实际输入的字符个数（不包括回车符），第三个字节起存放实际的字符串，用户按回车结束，从而最后一个字符是0DH，若用户输入字符超过设置，不予响应</p>
+<li><p>0A 号功能：由键盘输入字符串</p>
+<p>调用之前先设置好缓冲区，第一个字节事先填入最多允许接受的字符个数（包括 0DH），第二个字节留空，本功能自动回填实际输入的字符个数（不包括回车符），第三个字节起存放实际的字符串，用户按回车结束，从而最后一个字符是 0DH，若用户输入字符超过设置，不予响应</p>
 <ul>
-<li><p>调用参数：DS:DX&#x3D;缓冲区首地址  DS:[DX]&#x3D;缓冲区最大容量</p>
+<li><p>调用参数：DS:DX&#x3D;缓冲区首地址 DS:[DX]&#x3D;缓冲区最大容量</p>
 </li>
-<li><p>返回参数：DS:[DX+1]&#x3D;实际输入字符数  DS:DX+2&#x3D;字符串首地址</p>
+<li><p>返回参数：DS:[DX+1]&#x3D;实际输入字符数 DS:DX+2&#x3D;字符串首地址</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">LEA        SI</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>
-<h2 id="常用ASCII码"><a href="#常用ASCII码" class="headerlink" title="常用ASCII码"></a>常用ASCII码</h2><ul>
-<li>回车  0DH</li>
-<li>换行  0AH</li>
-<li>终结符  ‘$’</li>
+<h2 id="常用-ASCII-码"><a href="#常用-ASCII-码" class="headerlink" title="常用 ASCII 码"></a>常用 ASCII 码</h2><ul>
+<li>回车 0DH</li>
+<li>换行 0AH</li>
+<li>终结符 ‘$’</li>
 <li>‘A’ &#x3D; ‘9’ + 7</li>
 </ul>
 <h2 id="常用伪指令"><a href="#常用伪指令" class="headerlink" title="常用伪指令"></a>常用伪指令</h2><ul>
 <li>ORG</li>
 </ul>
 <h2 id="做题时注意事项"><a href="#做题时注意事项" class="headerlink" title="做题时注意事项"></a>做题时注意事项</h2><ul>
-<li>用到字符串操作指令时注意先设置DF</li>
+<li>用到字符串操作指令时注意先设置 DF</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>汇编与接口</category>
+      </categories>
+      <tags>
+        <tag>汇编与接口</tag>
+        <tag>汇编语言</tag>
+      </tags>
   </entry>
   <entry>
     <title>汇编与接口 Chapter2笔记</title>
@@ -136,19 +138,19 @@
 <ol>
 <li><p>状态位</p>
 <p>(1) CF (Carry Flag)</p>
-<p>进位标志，反应算术运算后最高位（字节操作 D<del>7</del>，字操作 D<del>15</del>）是否出现进位&#x2F;借位，有进位则为<strong>1</strong>。</p>
+<p>进位标志，反应算术运算后最高位（字节操作 $D_7$，字操作 $D_{15}$）是否出现进位&#x2F;借位，有进位则为<strong>1</strong>。</p>
 <p>主要用于加减法，移位和环移指令也会改变 CF</p>
 <p>(2) PF (Parity Flag)</p>
 <p>奇偶标志，<strong>1</strong>表示结果中有偶数个 1，<strong>0</strong>表示结果中有奇数个 1</p>
 <p>(3) AF (Auxiliary Carry Flag)</p>
-<p>辅助进位标志，<strong>1</strong>表示 D<del>3</del>向 D<del>4</del>进位&#x2F;借位，<strong>0</strong>表示没有</p>
+<p>辅助进位标志，<strong>1</strong>表示 $D_3$向 $D_4$进位&#x2F;借位，<strong>0</strong>表示没有</p>
 <p>用于 BCD 码算术运算指令</p>
 <p>(4) ZF (Zero Flag)</p>
 <p>零标志，<strong>1</strong>标志运算结果<strong>为 0</strong></p>
 <p>(5) SF (Sign Flag)</p>
-<p>符号标志，与带符号运算的结果符号位（D<del>7</del>&#x2F;D<del>15</del>）一致，<strong>1</strong>表示结果为负数</p>
+<p>符号标志，与带符号运算的结果符号位（$D_7&#x2F;D_{15}$）一致，<strong>1</strong>表示结果为负数</p>
 <p>(6) OF (Overflow Flag)</p>
-<p>溢出标志，带符号数（补码）运算结果是否超过机器能表示的范围（-128<del>127 &#x2F; -32768</del>32767），<strong>1</strong>表示溢出</p>
+<p>溢出标志，带符号数（补码）运算结果是否超过机器能表示的范围（$-128\sim 127 &#x2F; -32768\sim 32767$），<strong>1</strong>表示溢出</p>
 </li>
 <li><p>控制位</p>
 <p>(1) DF (Direction Flag)</p>
@@ -223,28 +225,26 @@
 <li><p>工作模式（略）</p>
 </li>
 <li><p>引脚功能</p>
-<img src="image/8086%E5%BC%95%E8%84%9A.png" style="zoom:67%;" />
-
+<p><img src="/images/8086_yinjiao.png"></p>
 <p>注： &#x2F;分时复用 (最大模式&#x2F;最小模式)</p>
 <p>最小模式：</p>
 <ul>
-<li><p>$AD_0~AD_15$：地址&#x2F;数据分时复用（双向、三态）</p>
-<p>T<del>1</del>时用作地址总线的低 16 位，其余时间用作数据总线进行数据传输</p>
+<li><p>$AD_0~AD_{15}$：地址&#x2F;数据分时复用（双向、三态）</p>
+<p>$T_1$时用作地址总线的低 16 位，其余时间用作数据总线进行数据传输</p>
 </li>
-<li><p>AD<del>16</del>&#x2F;S<del>3~~AD</del>19<del>&#x2F;S</del>6~：地址总线高 4 位&#x2F;状态总线（输出、三态）</p>
-<p>T<del>1</del>时用作地址总线的高 4 位（I&#x2F;O 操作中置<strong>0</strong>），其余时间表示 CPU 的状态信息</p>
-<p>S<del>6</del>恒为低电平，S<del>5</del>反映 IF 的值，S<del>4</del>和 S<del>3</del>表示正在使用的段寄存器</p>
+<li><p>$AD_{16}&#x2F;S_3 \sim AD_{19}&#x2F;S_6$：地址总线高 4 位&#x2F;状态总线（输出、三态）</p>
+<p>$T_1$时用作地址总线的高 4 位（I&#x2F;O 操作中置<strong>0</strong>），其余时间表示 CPU 的状态信息</p>
+<p>$S_6$恒为低电平，$S_5$反映 IF 的值，$S_4$和 $S_3$表示正在使用的段寄存器</p>
 </li>
-<li><p>$\overline{BHE}$&#x2F;S<del>7</del>：高 8 位数据总线允许&#x2F;状态信号（输出）</p>
-<p>T<del>1</del>时作为总线高半部分允许信号，低电平有效，其余时间输出状态信号 S<del>7</del>；DMA 方式下为高阻态</p>
-<p><strong>与 A<del>0</del>结合决定高字节工作还是低字节工作</strong>（见奇地址存储与偶地址存储，估计大概率考）</p>
+<li><p>$\overline{BHE}&#x2F;S_7$：高 8 位数据总线允许&#x2F;状态信号（输出）</p>
+<p>$T_1$时作为总线高半部分允许信号，低电平有效，其余时间输出状态信号 $S_7$；DMA 方式下为高阻态</p>
+<p><strong>与 $A_0$结合决定高字节工作还是低字节工作</strong>（见奇地址存储与偶地址存储，估计大概率考）</p>
 </li>
 <li><p>CLK：系统时钟信号（输入）</p>
 </li>
 <li><p><span id="reset">RESET</span>：复位信号（输入）</p>
 <p>至少维持 4 个时钟周期的高电平才有效，复位后各寄存器状态如下图所示：</p>
-<img src="image/RESET%E5%90%8E%E5%AF%84%E5%AD%98%E5%99%A8%E7%8A%B6%E6%80%81.png" style="zoom:80%;" />
-
+<p><img src="/images/RESET%E5%90%8E%E5%AF%84%E5%AD%98%E5%99%A8%E7%8A%B6%E6%80%81.png"></p>
 <p><strong>注意 CS 寄存器复位后的值是 0FFFFH</strong></p>
 <p><strong>IF 也被清零辽，系统关中断</strong></p>
 <p>当复位信号变为低电平时，CPU 从 FFFF0H 处开始执行程序，该处通常存放一条 JMP 指令，以转移到系统程序的实际开始处。复位时地址总线浮空，直到 cpu 脱离复位状态；其他控制信号先变高一段时间，然后浮空；ALE、HLDA 信号变为无效</p>
@@ -270,7 +270,7 @@
 <li><p>M&#x2F;$\overline{IO}$：存储器&#x2F;IO 访问控制信号（输出）</p>
 </li>
 <li><p>ALE：地址锁存允许信号（输出）</p>
-<p>高电平有效，总线周期的第一个时钟周期内发出正脉冲信号，其下降沿将 AD<del>0~~AD</del>15<del>以及 AD</del>16<del>&#x2F;S</del>3~~AD<del>19</del>&#x2F;S<del>6</del>上的地址信息锁存进地址锁存器</p>
+<p>高电平有效，总线周期的第一个时钟周期内发出正脉冲信号，其下降沿将 $AD_0\sim AD_{15}$ 以及 $AD_{16}&#x2F;S_3\sim AD_{19}&#x2F;S_6$上的地址信息锁存进地址锁存器</p>
 </li>
 <li><p>$\overline{DEN}$：数据允许信号（输出、三态）</p>
 <p>用作总线收发器的允许控制信号，在 CPU 访存或 I&#x2F;O 的总线周期的后一段时间内有效</p>
@@ -292,8 +292,7 @@
 </ul>
 </li>
 <li><p>存储器和 I&#x2F;O 端口的读写控制信号逻辑</p>
-<img src="image/CPU%E5%92%8C%E5%A4%96%E8%AE%BE%E7%9A%84%E8%AF%BB%E5%86%99%E6%8E%A7%E5%88%B6%E4%BF%A1%E5%8F%B7.png" style="zoom:50%;" />
-
+<p><img src="/images/CPU%E5%92%8C%E5%A4%96%E8%AE%BE%E7%9A%84%E8%AF%BB%E5%86%99%E6%8E%A7%E5%88%B6%E4%BF%A1%E5%8F%B7.png"></p>
 <table>
 <thead>
 <tr>
@@ -331,15 +330,14 @@
 <p><em>注意与后面的 8237A 比较，8237A 作为主片时是同时读内存写外设&#x2F;写内存读外设</em></p>
 </li>
 </ul>
-<h2 id="2-3-8086-的操作和时序"><a href="#2-3-8086-的操作和时序" class="headerlink" title="2.3 8086 的操作和时序"></a>2.3 8086 的操作和时序</h2><ul>
+<h2 id="2-3-8086CPU-的操作和时序"><a href="#2-3-8086CPU-的操作和时序" class="headerlink" title="2.3 8086CPU 的操作和时序"></a>2.3 8086CPU 的操作和时序</h2><ul>
 <li><p>基本概念</p>
 <p>机器周期：与主频相关，又叫时钟周期</p>
 <p>指令周期：CPU 执行一条指令需要的时间，以机器周期为单位</p>
 <p>总线周期：CPU 通过<strong>总线访问</strong>存储器或 I&#x2F;O 设备的时间周期，以机器周期为单位</p>
 </li>
 <li><p>8086 的总线周期</p>
-<img src="image/%E5%9F%BA%E6%9C%AC%E6%80%BB%E7%BA%BF%E5%91%A8%E6%9C%9F.png" style="zoom:80%;" />
-
+<p><img src="/images/%E5%9F%BA%E6%9C%AC%E6%80%BB%E7%BA%BF%E5%91%A8%E6%9C%9F.png"></p>
 <p>缓冲：撤销地址信息，地址信息进地址锁存器</p>
 <p>数据传输：允许插入若干个等待周期</p>
 </li>
@@ -352,31 +350,29 @@
 <li><p>总线操作</p>
 <ol>
 <li><p>总线读操作</p>
-<img src="image/%E6%80%BB%E7%BA%BF%E8%AF%BB.png" style="zoom:80%;" />
+<p><img src="/images/%E6%80%BB%E7%BA%BF%E8%AF%BB.png"></p>
 </li>
 <li><p>总线写操作</p>
-<img src="image/%E6%80%BB%E7%BA%BF%E5%86%99.png" style="zoom:80%;" /></li>
+<p><img src="/images/%E6%80%BB%E7%BA%BF%E5%86%99.png"></p>
+</li>
 </ol>
 </li>
 <li><p>中断响应操作</p>
-<img src="image/%E4%B8%AD%E6%96%AD%E5%93%8D%E5%BA%94.png" style="zoom:80%;" />
-
-<p>响应中断时 CPU 执行两个中断周期，第一个周期的 T<del>2~~T</del>4<del>时$\overline{INTA}$为低电平，这里作为对中断请求设备的响应；第二个周期的 T</del>2<del>T<del>4</del>时$\overline{INTA}$为低电平，这里用于通知中断请求设备（通过中断控制器）把中断类型号（决定了中断服务程序入口地址）送到数据线低八位（AD~7</del>AD<del>0</del>）。在 8086 中，2 个周期之间有 3 个空闲周期 T<del>i</del></p>
+<p><img src="/images/%E4%B8%AD%E6%96%AD%E5%93%8D%E5%BA%94.png"></p>
+<p>响应中断时 CPU 执行两个中断周期，第一个周期的 $T_2\sim T_4$ 时 $\overline{INTA}$为低电平，这里作为对中断请求设备的响应；第二个周期的 $T_2\sim T_4$ 时$\overline{INTA}$为低电平，这里用于通知中断请求设备（通过中断控制器）把中断类型号（决定了中断服务程序入口地址）送到数据线低八位（$AD_7\sim AD_0$）。在 8086 中，2 个周期之间有 3 个空闲周期 $T_I$</p>
 </li>
 <li><p>总线保持与响应操作</p>
-<img src="image/%E6%80%BB%E7%BA%BF%E4%BF%9D%E6%8C%81%E4%B8%8E%E5%93%8D%E5%BA%94.png" style="zoom:80%;" />
-
-<p>其他系统总线主设备向 8086 请求总线，发送 HOLD 请求信号，CPU 接收到 HOLD 信号后，在<strong>当前总线周期 T<del>4</del>或空闲周期 T<del>i</del>的后沿</strong>输出保持响应信号 HLDA，然后从下一个时钟开始让出总线控制权。外设的 DMA 传输结束后，使 HOLD 信号变为低电平，则<strong>下一个时钟的下降沿</strong>HLDA 信号变为低电平（无效） [<em>HOLD 信号由外设驱动</em>]</p>
+<p><img src="/images/%E6%80%BB%E7%BA%BF%E4%BF%9D%E6%8C%81%E4%B8%8E%E5%93%8D%E5%BA%94.png"></p>
+<p>其他系统总线主设备向 8086 请求总线，发送 HOLD 请求信号，CPU 接收到 HOLD 信号后，在<strong>当前总线周期 $T_4$或空闲周期 $T_I$的后沿</strong>输出保持响应信号 HLDA，然后从下一个时钟开始让出总线控制权。外设的 DMA 传输结束后，使 HOLD 信号变为低电平，则<strong>下一个时钟的下降沿</strong>HLDA 信号变为低电平（无效） [<em>HOLD 信号由外设驱动</em>]</p>
 </li>
 <li><p>复位和启动操作</p>
-<img src="image/%E5%A4%8D%E4%BD%8D%E4%B8%8E%E5%90%AF%E5%8A%A8.png" style="zoom:80%;" />
-
+<p><img src="/images/%E5%A4%8D%E4%BD%8D%E4%B8%8E%E5%90%AF%E5%8A%A8.png"></p>
 <p>复位后的系统状态见<a href="#reset">RESET 信号</a></p>
 </li>
 </ul>
 </li>
 </ul>
-<h2 id="2-4-8086-系统的存储器组织"><a href="#2-4-8086-系统的存储器组织" class="headerlink" title="2.4 8086 系统的存储器组织"></a>2.4 8086 系统的存储器组织</h2><ul>
+<h2 id="2-4-8086CPU-系统的存储器组织"><a href="#2-4-8086CPU-系统的存储器组织" class="headerlink" title="2.4 8086CPU 系统的存储器组织"></a>2.4 8086CPU 系统的存储器组织</h2><ul>
 <li><p>小端存储，低字节在低地址单元，高字节在高地址单元</p>
 </li>
 <li><p>存储单元按字节组织，地址范围 00000H~FFFFFH</p>
@@ -384,14 +380,13 @@
 <li><p>存储字（两个字节）采取<strong>边界对准（低字节存放在偶地址单元，高字节存放在奇地址单元）</strong>的规则存放</p>
 </li>
 <li><p>8086 通过低八位数据总线访问偶地址存储单元&#x2F;IO 端口，通过高八位数据总线访问奇地址存储单元&#x2F;IO 端口</p>
-<img src="image/%E5%A5%87%E5%9C%B0%E5%9D%80%E5%81%B6%E5%9C%B0%E5%9D%80.png" style="zoom:60%;" />
-
+<p><img src="/images/%E5%A5%87%E5%9C%B0%E5%9D%80%E5%81%B6%E5%9C%B0%E5%9D%80.png"></p>
 <p>从偶地址单元开始读&#x2F;写一个字，需要<strong>一个</strong>总线周期</p>
 <table>
 <thead>
 <tr>
 <th align="center">$\overline{BHE}$</th>
-<th align="center">A<del>0</del></th>
+<th align="center">$A_0$</th>
 <th align="center">操作</th>
 <th align="center">所用数据线</th>
 </tr>
@@ -400,19 +395,19 @@
 <td align="center">0</td>
 <td align="center">0</td>
 <td align="center">从偶地址单元读&#x2F;写两个字节</td>
-<td align="center">D<del>0~~D</del>15~</td>
+<td align="center">$D_0\sim D_{15}$</td>
 </tr>
 <tr>
 <td align="center">1</td>
 <td align="center">0</td>
 <td align="center">从偶地址单元读&#x2F;写一个字节</td>
-<td align="center">D<del>0~~D</del>7~</td>
+<td align="center">$D_0\sim D_7$</td>
 </tr>
 <tr>
 <td align="center">0</td>
 <td align="center">1</td>
 <td align="center">从奇地址单元读&#x2F;写一个字节</td>
-<td align="center">D<del>8~~D</del>15~</td>
+<td align="center">$D_8\sim D_{15}$</td>
 </tr>
 </tbody></table>
 <p>从奇地址单元开始读&#x2F;写一个字，需要<strong>两个</strong>总线周期</p>
@@ -420,7 +415,7 @@
 <thead>
 <tr>
 <th align="center">$\overline{BHE}$</th>
-<th align="center">A0</th>
+<th align="center">$A_0$</th>
 <th align="center">操作</th>
 <th align="center">所用数据线</th>
 </tr>
@@ -429,13 +424,13 @@
 <td align="center">0</td>
 <td align="center">1</td>
 <td align="center">第一步：从奇地址单元读&#x2F;写一个字节</td>
-<td align="center">D<del>8~~D</del>15~</td>
+<td align="center">$D_8\sim D_{15}$</td>
 </tr>
 <tr>
 <td align="center">1</td>
 <td align="center">0</td>
 <td align="center">第二步：从偶地址单元读&#x2F;写一个字节</td>
-<td align="center">D<del>0~~D</del>7~</td>
+<td align="center">$D_0\sim D_7$</td>
 </tr>
 </tbody></table>
 </li>
@@ -486,5 +481,1832 @@
 </li>
 </ol>
 ]]></content>
+      <categories>
+        <category>汇编与接口</category>
+      </categories>
+      <tags>
+        <tag>汇编与接口</tag>
+        <tag>8086CPU</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>汇编与接口 汇编复习建议</title>
+    <url>/posts/5d91338e/</url>
+    <content><![CDATA[<h2 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h2><ul>
+<li><p>第一章看一看 PPT 过一遍即可，一些概念性的记一下，可能出个填空题啥的</p>
+</li>
+<li><p>第二章看书+PPT</p>
+</li>
+<li><p>汇编部分第三章 PPT+书一起看，PPT 上有一些题目看一下，然后就是书上有一些伪指令是 PPT 里没有的可以看看</p>
+</li>
+<li><p>第四章内存部分应该会考一个硬件分析让你写出地址空间啥的，这块看看 PPT 然后书上再选两题看看，书里都有解析，还有前年试卷的分析题也是这种类型，今年期末考也考了</p>
+</li>
+<li><p>接口部分 PPT 的章节和书的章节是不一样的，根据 PPT 里的芯片名字去目录里找对应的章节看，咱们学习的是 8259,8255,0832,0809,8237,8255,8251,8253 这几个芯片，还有这一块 PPT 里有个中断的部分，也要看一下</p>
+</li>
+<li><p>有不懂的地方可以去找慕课看一下，也可以随时问我</p>
+</li>
+</ul>
+<h2 id="考试重点"><a href="#考试重点" class="headerlink" title="考试重点"></a>考试重点</h2><p>不知道题型与期末考一不一样，但是重点应该是一样的，选择题、填空题、判断题、简答题这种也没法预测，只能自己看 PPT 和书的时候多注意一下，这几种题型<strong>可以看看何燕平老师的 2017 复习 PPT</strong>，大概整体复习完一遍后，去做一做前年的试题</p>
+<ul>
+<li><p>选择题（举例）</p>
+<ul>
+<li><p>PC 里放的是啥</p>
+</li>
+<li><p>中断向量、中断向量表、中断入口程序地址</p>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+</li>
+<li><p>填空题（举例）</p>
+<ul>
+<li><p>给你一条指令，问寻址方式</p>
+</li>
+<li><p>中断的分类</p>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+</li>
+<li><p>判断题</p>
+</li>
+<li><p>简答题（举例）</p>
+<p>这个也不太好说他会出什么，说不定 ppt 里不在意的地方他就出了…，比如接口的功能、中断的分类…</p>
+<ul>
+<li><p>字节对齐问题</p>
+<p><code>MOV AX,[2000H]</code> 与 <code>MOV AX,[2001H]</code>的区别</p>
+</li>
+<li><p>8086 采用的编址方式，这种编址方式有什么优点&#x2F;缺点</p>
+</li>
+<li><p>结合 8259 内部结构，描述中断源如何向 8259 提出申请，8259 如何判优等等类似的问你一个芯片的工作过程这样</p>
+</li>
+<li><p>给一段汇编伪指令，画出内存空间（课本第三章那块有）</p>
+</li>
+<li><p>中断响应过程</p>
+</li>
+<li><p>搞个宏展开</p>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+</li>
+<li><p>计算题</p>
+<ul>
+<li><p><strong>波特率的计算</strong>（<strong>应该必考</strong>）</p>
+<ol>
+<li><p>注意一帧要包括起始位、有效位、奇偶校验位、停止位，题目可能只告诉你几位有效位、几位停止位，采用奇校验还是偶校验，计算的时候要记得加上 1 位起始位。</p>
+</li>
+<li><p>波特率、波特率因子与发送&#x2F;接收时钟频率的关系</p>
+<p>$发送&#x2F;接收时钟频率(Hz) &#x3D; 波特率(bps)*波特率因子$</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>分析题</p>
+<ul>
+<li><p>硬件分析</p>
+<ul>
+<li><p><strong>存储器扩展</strong> [例题见第四章 PPT 第 17 页、前年考卷分析题]（<strong>应该必考</strong>）</p>
+<p>给你一个图，让你写出内存地址范围，问是否存在地址重叠</p>
+</li>
+</ul>
+</li>
+<li><p>软件分析</p>
+<p>给你一段代码，问你运行结果、各存储器的变化之类的，这里要注意隐含的变化，比如出栈入栈时 SP 的变化、串操作指令中 SI、DI 的变化、各个指令对标志位的影响等等</p>
+</li>
+</ul>
+</li>
+<li><p>设计题</p>
+<ul>
+<li><p>汇编编程部分（难度应该和实验难度差不多）</p>
+<ul>
+<li><p>写出程序的一部分&#x2F;子程序</p>
+<ol>
+<li><p>跳转、循环、排序、比较、递归、累加、阶乘…</p>
+</li>
+<li><p>显示 16 进制数&#x2F;字符&#x2F;字符串&#x2F;…</p>
+</li>
+<li><p>从键盘键入字符串（21H 各号功能）</p>
+<p>从键盘接受一个 16 位&#x2F;10 位的数…</p>
+</li>
+</ol>
+</li>
+<li><p>写出一个完整的汇编程序</p>
+</li>
+</ul>
+<p><strong>注意：</strong></p>
+<ul>
+<li><p>子程序要有 ret</p>
+</li>
+<li><p>对于某些指令注意指明操作数的位数，如<code>MOV BYTE PTR [DI],0FFH</code></p>
+</li>
+<li><p>注意题目要求，要的是字还是字节操作</p>
+</li>
+<li><p>若要编写完整程序，要注意伪指令的完整结构，包括常用的伪指令、段的定义、程序开始和结束（4C00H）等</p>
+</li>
+<li><p>对于字符串处理指令，用之前别忘了设置 DF</p>
+</li>
+</ul>
+</li>
+<li><p>接口</p>
+<ul>
+<li><p><strong>8255</strong>重点，接数码管&#x2F;小键盘，可以看看书上（我记得好像是有代码的）、实验代码，顺便一般都是方式 0 工作</p>
+<p><strong>注意</strong>就算到时候写不出来，也不要空着，至少要能写出 A 口、B 口、C 口、控制口的端口地址，控制字初始化也得会写，设置内存起始地址啊之类的，总之能写多少就写多少</p>
+</li>
+<li><p>0809&#x2F;0832 可能会考一个，这两个看看 PPT，一步一步写，至少写出端口、通道地址</p>
+</li>
+<li><p><strong>8259</strong>重点，同样的，就算写不出来，也要能写多少写多少，至少会写端口地址、控制字的初始化</p>
+<ul>
+<li><p>8259 也可能出成简答之类，问你只有两个端口，那它是怎么初始化的，怎么知道是写哪个命令字啊</p>
+<p>[奇偶地址、顺序、特征位]</p>
+</li>
+<li><p>也可能让你算个中断向量啊啥的</p>
+</li>
+</ul>
+</li>
+<li><p>8251 一般放计算题里考波特率计算</p>
+</li>
+<li><p>8253，这个它的工作模式确实有点多…其实我自己也记不住，不过期末考的时候考了，能看看记记就记记… …</p>
+</li>
+<li><p>8237</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="汇编常用"><a href="#汇编常用" class="headerlink" title="汇编常用"></a>汇编常用</h2><h3 id="21H-中断"><a href="#21H-中断" class="headerlink" title="21H 中断"></a>21H 中断</h3><ul>
+<li><p>4CH 号功能：结束程序</p>
+<p>MOV AX, 4C00H</p>
+</li>
+<li><p>02H 号功能：在屏幕上显示字符</p>
+<p>MOV DL, ‘A’<br> MOV AH, 02H</p>
+</li>
+<li><p>01H 号功能：由键盘输入一个字符</p>
+</li>
+<li><p>0A 号功能：由键盘输入字符串</p>
+<p>调用之前先设置好缓冲区，第一个字节事先填入最多允许接受的字符个数（包括 0DH），第二个字节留空，本功能自动回填实际输入的字符个数（不包括回车符），第三个字节起存放实际的字符串，用户按回车结束，从而最后一个字符是 0DH，若用户输入字符超过设置，不予响应</p>
+<ul>
+<li><p>调用参数：DS:DX&#x3D;缓冲区首地址 DS:[DX]&#x3D;缓冲区最大容量</p>
+</li>
+<li><p>返回参数：DS:[DX+1]&#x3D;实际输入字符数 DS:DX+2&#x3D;字符串首地址</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="常用-ASCII-码"><a href="#常用-ASCII-码" class="headerlink" title="常用 ASCII 码"></a>常用 ASCII 码</h3><ul>
+<li><p>回车 0DH</p>
+</li>
+<li><p>换行 0AH</p>
+</li>
+<li><p>终结符 ‘$’</p>
+</li>
+</ul>
+<h3 id="编程框架"><a href="#编程框架" class="headerlink" title="编程框架"></a>编程框架</h3><ul>
+<li><p>框架（简略模式）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">        ;采用简化版的段定义伪指令，下一个段的开始即表示上一个段的结束</span><br><span class="line">        .model small</span><br><span class="line">        .stack    [常量(大小为常量个字节)默认1KB]</span><br><span class="line">        .data</span><br><span class="line">; ...定义的数据</span><br><span class="line">; [变量名]    DB    操作数列表</span><br><span class="line">; DB(define word)</span><br><span class="line">; DD(define double word)</span><br><span class="line">; DQ</span><br><span class="line">; DT</span><br><span class="line">; PORTA    EQU    20H  符号常量也可用=定义</span><br><span class="line">; PTR 类型属性操作符 转换类型    类型 PTR 变量名/含变量名的表达式</span><br><span class="line">        .code    [段名]</span><br><span class="line">start:  mov    ax, @data     ; @data表示代码段名</span><br><span class="line">        mov    ds, ax        ; 装载数据段</span><br><span class="line"></span><br><span class="line">        ; ....一些操作</span><br><span class="line"></span><br><span class="line">        mov    ax,4c00h</span><br><span class="line">        int    21h           ; 调用21号中断结束汇编</span><br><span class="line">        end    start</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>框架（非简略模式）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SSTACK    SEGMEN    STACK</span><br><span class="line">    DB     200     DUP(0)</span><br><span class="line">SSTACK     ENDS</span><br><span class="line">DATA    SEGMENT</span><br><span class="line">; ORG     3000H ; ORG规定起始地址</span><br><span class="line">; ARY     DB 100,98,-1,-2,-4,7,0,100,32,1</span><br><span class="line">; ARRY    DQ DUP(?) ; DUP复制操作符,?表示只分配存储空间</span><br><span class="line">DATA    ENDS</span><br><span class="line">CODE    SEGMENT</span><br><span class="line">        ASSUME CS:CODE,DS:DATA,SS:SSTACK</span><br><span class="line">START:  MOV     AX,DATA</span><br><span class="line">        MOV     DS,AX</span><br><span class="line">        MOV     AX,STACK</span><br><span class="line">        MOV     SS,AX</span><br><span class="line">        ; CS不需要送段寄存器</span><br><span class="line">        ; ...一些操作</span><br><span class="line">        MOV     AX,4C00H</span><br><span class="line">        INT     21H ; 调用21号中断结束汇编</span><br><span class="line">CODE    ENDS</span><br><span class="line">        END        START</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><ul>
+<li><p>标志寄存器 <strong><em>（记）</em></strong></p>
+<p>16 位（9 位有效，7 位空闲）</p>
+<p><em>CF、DF、IF、TF 可由指令设置，其余 5 个由 EU 设置</em></p>
+<table>
+<thead>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th align="center">1</th>
+<th>0</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>OF</td>
+<td>DF</td>
+<td>IF</td>
+<td>TF</td>
+<td>SF</td>
+<td>ZF</td>
+<td></td>
+<td>AF</td>
+<td></td>
+<td>PF</td>
+<td align="center"></td>
+<td>CF</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>复位后寄存器状态</p>
+<p><img src="/images/RESET.png"></p>
+<p><strong>注意 CS 复位后值为 0FFFFH</strong></p>
+</li>
+<li><p>关于字节对齐问题</p>
+<p><img src="/images/2020-02-05-13-10-51-image.png"></p>
+<p>从偶地址单元开始读&#x2F;写一个字，需要<strong>一个</strong>总线周期</p>
+<table>
+<thead>
+<tr>
+<th align="center">$\overline{BHE}$</th>
+<th align="center">$A_0$</th>
+<th align="center">操作</th>
+<th align="center">所用数据线</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">从偶地址单元读&#x2F;写两个字节</td>
+<td align="center">$D_0$~ $D_{15}$</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">从偶地址单元读&#x2F;写一个字节</td>
+<td align="center">$D_0$~$D_{7}$</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">从奇地址单元读&#x2F;写一个字节</td>
+<td align="center">$D_8$~$D_{15}$</td>
+</tr>
+</tbody></table>
+<p>从奇地址单元开始读&#x2F;写一个字，需要<strong>两个</strong>总线周期</p>
+<table>
+<thead>
+<tr>
+<th align="center">$\overline{BHE}$</th>
+<th align="center">$A_0$</th>
+<th align="center">操作</th>
+<th align="center">所用数据线</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">第一步：从奇地址单元读&#x2F;写一个字节</td>
+<td align="center">$D_8$~$D_{15}$</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">第二步：从偶地址单元读&#x2F;写一个字节</td>
+<td align="center">$D_0$~$D_{7}$</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>关于 IP、CS 的出栈入栈顺序</p>
+<p>可以这么记，栈是向下生长的（地址由大到小），在栈中，保存段地址的地址总是大于保存段内偏移地址的地址</p>
+</li>
+<li><p>OFFSET 和 LEA 的区别</p>
+<p>OFFSET 是在编译的时候就计算出偏移结果，实际运行程序的时候已经被替换为一个数值了，而 LEA 是在运行的时候才执行</p>
+</li>
+</ul>
+<hr>
+<p>暂时想到这些，以后想到再补充吧</p>
+]]></content>
+      <categories>
+        <category>汇编与接口</category>
+      </categories>
+      <tags>
+        <tag>汇编与接口</tag>
+        <tag>汇编语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>编译原理复习重点</title>
+    <url>/posts/fda22d77/</url>
+    <content><![CDATA[<h1 id="编译原理重点"><a href="#编译原理重点" class="headerlink" title="编译原理重点"></a>编译原理重点</h1><h2 id="Chapter4-语法分析"><a href="#Chapter4-语法分析" class="headerlink" title="Chapter4 语法分析"></a>Chapter4 语法分析</h2><h3 id="自顶向下语法分析"><a href="#自顶向下语法分析" class="headerlink" title="自顶向下语法分析"></a>自顶向下语法分析</h3><ul>
+<li><p>First 集<br>First 集即一个文法符号串可能推导出的串的第一个终结符的集合（包括空字符$\epsilon$）</p>
+<ol>
+<li><p>单个终结符的 First 集</p>
+<p>单个终结符的 First 集就是它自己。<br>First(X)&#x3D;{X}</p>
+</li>
+<li><p>单个非终结符的 First 集</p>
+<ol>
+<li><p>$A\rightarrow a…$</p>
+<p>产生式右部以终结符开头，$a\in First(A)$</p>
+</li>
+<li><p>$A\rightarrow B…$</p>
+<p>产生式右部以非终结符开头，$First(B)\subseteq First(A)$</p>
+</li>
+</ol>
+</li>
+<li><p>多个符号形成的符号串的 First 集</p>
+<p>$A\rightarrow B_1B_2…B_n$ ，$B_i$是第一个$\epsilon \notin First(B_i)$的字符，则$First(A)&#x3D;First(B_1) \cup First(B_2) \cup …\cup First(B_i)-{ \epsilon }$</p>
+<p>若$B_1, B_2, …, B_n$均能推出空串，则$First(A)&#x3D;First(B_1) \cup First(B_2) \cup …\cup First(B_n) \cup {\epsilon}$</p>
+</li>
+</ol>
+</li>
+<li><p>Follow 集</p>
+<p>Follow 集即一个文法符号后面可能跟随的终结符号的集合(<strong>不包括空字符</strong>)</p>
+<ol>
+<li><p>$Follow(S)&#x3D; {@}$</p>
+</li>
+<li><p>欲求的非终结符后跟终结符</p>
+<p>$A\rightarrow \alpha Bx\beta$（$x$是终结符），则 $a\in Follow(B)$</p>
+</li>
+<li><p>欲求的非终结符后跟非终结符</p>
+<p>$A\rightarrow \alpha B\beta$，则 $First(\beta ) \subseteq Follow(B)$，若$\epsilon \in First(\beta )$，因为空字符不包括在 Follow 集中，因此 B 后面跟的内容就是 A 后面的内容了，则这种情况下还要加上 $Follow(A)\subseteq Follow(B)$</p>
+</li>
+<li><p>欲求的非终结符在产生式结尾</p>
+<p>$A\rightarrow \alpha B$，则$Follow(A)\subseteq Follow(B)$</p>
+</li>
+</ol>
+</li>
+<li><p>判断某文法是不是 LL(1)文法</p>
+<p>一个文法是 LL(1)的，当且仅当 G 的任意两个不同的产生式$A\rightarrow \alpha |\beta$满足下面的条件：</p>
+<ol>
+<li><p>$First(\alpha)\cap First(\beta)&#x3D;\phi$</p>
+</li>
+<li><p>当$\epsilon \in First(\beta)时，Follow(A) \cap First(\alpha)&#x3D;\phi$</p>
+</li>
+</ol>
+</li>
+<li><p>构造 LL(1)分析表</p>
+<p>对文法 G 的每个产生式$A\rightarrow \alpha$做如下处理：</p>
+<ol>
+<li><p>对于$First(\alpha)$中的每个终结符号$a$，将$A\rightarrow \alpha$加入到$M[A,a]$中</p>
+</li>
+<li><p>若$\epsilon \in First(\alpha)$，则对于每个终结符号$b\in Follow(A)$，将$A \rightarrow \alpha$加入到$M[A,b]$中；若$\epsilon \in First(\alpha)$且 $$\in Follow(A)$，则将$A\rightarrow \alpha$也加入到$M[A,@]$中</p>
+</li>
+<li><p>完成上面的操作后，空白条目即 error</p>
+</li>
+</ol>
+</li>
+<li><p>预测分析算法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//ip为输入指针，栈的初始状态为S$</span><br><span class="line">令X=栈顶符号while(X!=$)&#123;</span><br><span class="line">    if(X=ip指向的字符a)</span><br><span class="line">      弹栈，ip+1</span><br><span class="line">  else if(X是终结符) error</span><br><span class="line">  else if(M[X,a]=error) error    </span><br><span class="line">  else if(M[X,a]=X-&gt;Y1Y2...Yk)&#123;    </span><br><span class="line">      输出产生式    </span><br><span class="line">      弹出栈顶符号    </span><br><span class="line">      Yk...Y2Y1入栈，Y1在栈顶    </span><br><span class="line">      ip+1    </span><br><span class="line">  &#125;        </span><br><span class="line">  X=栈顶符号</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>分析栈的作用：保存当前句型</p>
+</li>
+<li><p>消除左递归</p>
+<p>$$<br>A \rightarrow A\alpha_1 |A\alpha_2 |…|A\alpha_n |\beta_1 |\beta_2 |…|\beta_m\<br>\Rightarrow A\rightarrow \beta_1 A’|\beta_2 A’|…|\beta_m A’\<br>A’ \rightarrow \alpha_1 A’|\alpha_2 A’|…|\epsilon<br>$$</p>
+</li>
+</ul>
+<h3 id="自底向上语法分析"><a href="#自底向上语法分析" class="headerlink" title="自底向上语法分析"></a>自底向上语法分析</h3><ul>
+<li><p>构造 LR(0)规范项集族</p>
+<ul>
+<li><p>内核项</p>
+<p>$S\rightarrow ·S’$ 以及所有点不在最左端的项</p>
+</li>
+<li><p>非内核项</p>
+<p>除了$S\rightarrow ·S’$ 之外的所有点在最左端的项，非内核项可以通过闭包运算重新生成</p>
+<ol>
+<li>增广文法</li>
+</ol>
+<p>在文法 G 中加上一个新的开始符号 S’和产生式$S\rightarrow S’$，目的是使句柄的中止状态只有一个</p>
+<ol start="2">
+<li>CLOUSURE 计算</li>
+</ol>
+<p>设 I 是文法 G 的一个项集，则 CLOUSURE(I)根据以下规则计算得到：</p>
+<ul>
+<li>将 I 中的各项加入到 CLOUSURE(I)中</li>
+<li>若$A\rightarrow \alpha ·B \beta$在 CLOUSURE(I)中，$B\rightarrow \gamma$是一个产生式，并且$B\rightarrow ·\gamma$不在 CLOUSURE(I)中，则将其加入。不断应用该规则直到无新项加入（其实就是相同状态的集合，这两个状态都是准备识别 B 的状态）</li>
+</ul>
+<ol start="3">
+<li><p>GOTO 函数</p>
+<p>反正就这么个意思。</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>构造 GOTO 图</p>
+</li>
+<li><p>构造 LR 分析表</p>
+<p>$si$表示移入并将状态$i$压栈</p>
+<p>$rj$表示按照编号为$j$的产生式进行归约</p>
+<ol>
+<li><p>构造增广文法 G’的规范项集族$C&#x3D;{ I_0,I_1,…,I_n}$</p>
+</li>
+<li><p>根据$I_i$构造得到状态$i$，状态$i$的语法分析动作如下决定：</p>
+<ul>
+<li><p>若$[A\rightarrow \alpha ·a\beta]$在$I_i$中且$GOTO(I_i,a)&#x3D;I_j$，则将$ACTION[i,a]$设置为$sj$，$a$必须是终结符</p>
+</li>
+<li><p>若$[A\rightarrow \alpha·]$在$I_i$中，则对于所有的$a\in Follow(A)$，将$ACTION[i,a]$设置为$rj$，这里$j$为产生式$A\rightarrow \alpha$的编号，$A\ne S’$</p>
+</li>
+<li><p>若$[S’\rightarrow S·]$在$I_i$中，则将$ACTION[i,@]$设置为 acc（接受）</p>
+</li>
+</ul>
+</li>
+<li><p>状态$i$对于各个<strong>非终结符号 A</strong>的 GOTO 转换根据下面的规则得到：若$GOTO(I_i,A)&#x3D;I_j$，则$GOTO[i,A]&#x3D;j$</p>
+</li>
+<li><p>前两条没定义的项设置为 err</p>
+</li>
+<li><p>语法分析器的初始状态是根据$[S\rightarrow S’]$所在项集构造得到的状态</p>
+</li>
+</ol>
+</li>
+</ul>
+<p><strong>问题</strong>：ACTION 表中有错误信息，GOTO 表中有吗？<br>答：GOTO 表中没有错误信息，因为 GOTO 表中是归约后的变化</p>
+<ul>
+<li><p>LR 语法分析器的行为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">  a=w$的第一个符号while(1)&#123;        </span><br><span class="line">  令s为栈顶的状态       </span><br><span class="line">  if(ACTION[s,a]=移入t)&#123;                </span><br><span class="line">      将t压栈                </span><br><span class="line">    令a为下一个输入的符号        </span><br><span class="line">    &#125;else if(ACTION[s,a]=归约A-&gt;B)&#123;                </span><br><span class="line">        从栈中弹出|B|个符号                </span><br><span class="line">        令t为当前栈顶状态                </span><br><span class="line">        将GOTO[t,A]压栈                </span><br><span class="line">        输出产生式A-&gt;B                </span><br><span class="line">    &#125;else if(ACTION[s,a]=acc) break;        </span><br><span class="line">    else error();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>判断某文法是否是 SLR 文法</p>
+<p>若在构造语法分析表时有任何冲突动作产生，则该文法不是 SLR(1)文法</p>
+</li>
+</ul>
+<h2 id="Chapter6-中间代码生成"><a href="#Chapter6-中间代码生成" class="headerlink" title="Chapter6 中间代码生成"></a>Chapter6 中间代码生成</h2><ul>
+<li>翻译语句生成中间代码</li>
+</ul>
+]]></content>
+      <categories>
+        <category>编译原理</category>
+      </categories>
+      <tags>
+        <tag>编译原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>信息内容安全复习</title>
+    <url>/posts/4c50cc81/</url>
+    <content><![CDATA[<h2 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h2><h3 id="PageRank-算法（暂时只写-alpha-x3D-0-的情况，考试只考-alpha-x3D-0-）"><a href="#PageRank-算法（暂时只写-alpha-x3D-0-的情况，考试只考-alpha-x3D-0-）" class="headerlink" title="PageRank 算法（暂时只写$\alpha &#x3D; 0$的情况，考试只考$\alpha&#x3D;0$）"></a>PageRank 算法（暂时只写$\alpha &#x3D; 0$的情况，考试只考$\alpha&#x3D;0$）</h3><ol>
+<li><p>核心思想</p>
+<ul>
+<li>如果一个网页<strong>被很多其他网页</strong>链接到则说明该网页比较重要，即$PageRank$值相对较高</li>
+<li>如果一个**$PageRank$值很高的网页链接到一个其他的网页**，则被链接的网页的$PageRank$值也相应提高</li>
+</ul>
+</li>
+<li><p>PageRank 算法原理</p>
+<ul>
+<li>PR 值的物理意义是一个网页被访问的概率，因此可设每个网页的$PR$初值为 $\frac{1}{N}$ ，其中$N$为网页总数（其实最后收敛结果与初值无关，是马尔可夫过程）。<strong>通常情况下$\sum_{i&#x3D;1}^n PR(i)&#x3D;1$</strong></li>
+<li>迭代计算：页面 $i$ 的 $PR$ 值计算公式为 $PR(i)&#x3D;\sum_{j&#x3D;1}^m \frac{PR(j)}{L(j)}$ ，其中 $j$ 为链入页面 $i$ 的页面，$L(j)$ 为页面 $j$ 的出度，之所以要除以 $L(j)$ 是因为从 $j$ 指向 $i$ 的概率被分散了，只有 $\frac{1}{L(j)}$ 的概率</li>
+<li>经过几次迭代后，$PR$ 值收敛稳定</li>
+</ul>
+</li>
+<li><p><strong>排名泄露问题</strong>（简答题）<br>产生原因：如果存在某个网页没有出度，对其他网页没有 $PR$ 值贡献，则会产生排名泄露问题，经过多次迭代后，所有网页的 $PR$ 值都趋向于 0<br>解决方案：为了满足 Markov 链的收敛性，设定其对所有网页（<strong>包括自身</strong>）都有出链，即该网页 $L&#x3D;N$</p>
+</li>
+<li><p><strong>排名下沉问题</strong>（简答题）<br>产生原因：如果存在某个网页没有入度，则会产生排名下沉现象，经过多次迭代后，该页面的 $PR$ 值趋向于 0<br>解决方案：引入概率系数 $\alpha$ （先略了）</p>
+</li>
+<li><p><strong>排名上升问题</strong>（简答题）<br>产生原因：某几个网页之间存在闭合回路，迭代后这几个网页 $PR$ 值上升，其余网页 $PR$ 值趋向于 0<br>解决方案：引入概率系数 $\alpha$</p>
+</li>
+<li><p>$PR$ 值计算方法</p>
+<ol>
+<li>幂迭代法<br>$P_{n+1}&#x3D;AP_n$ ，$A$ 矩阵为状态转移矩阵（随机、不可约、非周期），一般一列一列看，每列元素之和为 1，一直迭代直到 $|P_{n+1}-P_{n}&lt;\epsilon|$</li>
+<li>特征值法<br>当 Markov 链收敛时，有 $\lambda p&#x3D;Ap$ ，且 $\lambda&#x3D;1$，即 $p&#x3D;Ap$，$p$ 为状态转移矩阵 $A$ 的特征值$1$对应的特征向量，求出 $p$ 后对 $p$ 进行归一化即得到结果 $\beta$</li>
+<li>代数法<br>代公式，要算逆矩阵，开销比较大（。</li>
+</ol>
+<p>话不多说，上个例题（考试就这样，不出要引入$\alpha$ 的情况）：<br><img src="/images/image-20200722125312095.png"></p>
+<p>$PR_{A}&#x3D; \frac{1}{2} PR_{B}+\frac {1}{2} PR_{D}$<br>$PR_{B}&#x3D;\frac{1}{3} PR_{A}+\frac{1}{2} PR_D$<br>$PR_{C}&#x3D;\frac{1}{3} PR_{A}+ \frac{1}{2} PR_{B}$<br>$PR_{D}&#x3D;\frac{1}{3} PR_{A}+ PR_{C}$</p>
+<p>构造状态转移矩阵：</p>
+<p>$$<br>A&#x3D;<br>    \begin{pmatrix}<br>        0 &amp; \frac{1}{2} &amp; 0 &amp; \frac{1}{2} \\<br>        \frac{1}{3} &amp; 0 &amp; 0 &amp; \frac{1}{2} \\<br>        \frac{1}{3} &amp; \frac{1}{2} &amp; 0 &amp; 0 \\<br>        \frac{1}{3} &amp; 0 &amp; 1 &amp; 0<br>    \end{pmatrix}<br>$$</p>
+<p>初始状态 $P_{1}&#x3D;\begin{pmatrix} \frac{1}{4} \\ \frac{1}{4} \\ \frac{1}{4} \\ \frac{1}{4} \end{pmatrix}$</p>
+<ul>
+<li>迭代法： $P_{n+1}&#x3D;AP_{n}$，…</li>
+<li>特征值法：$\lambda&#x3D;1$ 代入 $(\lambda E-A)p&#x3D;0$ 即 $(E-A)p&#x3D;0$<br>$E-A &#x3D; \begin{pmatrix} 1 &amp; -\frac{1}{2} &amp; 0 &amp; -\frac{1}{2} \\ -\frac{1}{3} &amp; 1 &amp; 0 &amp; -\frac{1}{2} \\ -\frac{1}{3} &amp; -\frac{1}{2} &amp; 1 &amp; 0 \\ -\frac{1}{3} &amp; 0 &amp; -1 &amp; 1 \end{pmatrix}$ ，化成行最简得<br>$ \begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; -\frac{9}{10} \\ 0 &amp; 1 &amp; 0 &amp; -\frac{4}{5} \\ 0 &amp; 0 &amp; 1 &amp; -\frac{7}{10} \\ 0 &amp; 0 &amp; 0 &amp; 0 \end{pmatrix} $ ，得特征向量 $p &#x3D; \begin{pmatrix} \frac{9}{10} \\ \frac{4}{5} \\ \frac{7}{10} \\ 1 \end{pmatrix}$ ，归一化后得 $\beta &#x3D; \begin{pmatrix} \frac{9}{34} \\ \frac{4}{17} \\ \frac{7}{34} \\ \frac{5}{17} \end{pmatrix}$ 。</li>
+<li>代数法：$\alpha$ 有点迷…先放着</li>
+</ul>
+</li>
+</ol>
+<h3 id="KMP-算法"><a href="#KMP-算法" class="headerlink" title="KMP 算法"></a>KMP 算法</h3><ul>
+<li>求 Next 数组</li>
+</ul>
+<h3 id="爬虫"><a href="#爬虫" class="headerlink" title="爬虫"></a>爬虫</h3><h4 id="搜索引擎结构"><a href="#搜索引擎结构" class="headerlink" title="搜索引擎结构"></a>搜索引擎结构</h4><ul>
+<li>爬取页面得到原始页面数据库<ul>
+<li>深度优先</li>
+<li>广度优先</li>
+</ul>
+</li>
+<li>预处理<ul>
+<li>中文分词</li>
+<li>去重</li>
+<li>消除噪声</li>
+</ul>
+</li>
+<li>建立索引得到索引数据库<ul>
+<li>正向索引<br>以文档为索引</li>
+<li>倒排索引<br>以关键词作为索引（关键词 i 包含在哪些文档里，然后取交集）</li>
+</ul>
+</li>
+<li>用户搜索词处理<ul>
+<li>中文分词</li>
+<li>去停止词</li>
+<li>指令处理</li>
+<li>拼写纠正</li>
+<li>整合搜索触发</li>
+</ul>
+</li>
+<li>排名<ul>
+<li>初始集合选择</li>
+<li>相关性计算&#x2F;PageRank</li>
+<li>排名过滤与调整（这一步中有个重点是施加惩罚对排名调整（某度竞价排名就是在此阶段））</li>
+<li>排名显示</li>
+<li>搜索缓存</li>
+<li>查询日志（记录用户主要点击结果的那个链接，属于正反馈技术）</li>
+</ul>
+</li>
+</ul>
+<h4 id="网络爬虫技术"><a href="#网络爬虫技术" class="headerlink" title="网络爬虫技术"></a>网络爬虫技术</h4><ul>
+<li><p><strong>系统框图</strong></p>
+<img src="F:/Apache24/htdocs/eizeit.github.io/assets/images/md/image-20200722180559422.png" alt="image-20200722180559422" style="zoom:67%;" />
+</li>
+<li><p>Web 规模扩大带来的问题</p>
+<ul>
+<li>网络带宽利用率</li>
+<li>分布式存储</li>
+</ul>
+</li>
+<li><p>爬取器陷阱</p>
+<ul>
+<li>每次爬取一定要将已经爬取到的内容储存到数据库中并记录爬取到了哪里，不要每次重头再来，否则可能被对方服务器认定为恶意攻击（增量式采集）</li>
+<li>检查 URL 长度</li>
+<li>定期收集查看爬虫数据</li>
+</ul>
+</li>
+<li><p>同步异步、阻塞非阻塞</p>
+<ul>
+<li>同步：线性执行程序，面向过程编程。发起一个请求，直到请求返回结果之后，才进行下一步操作</li>
+<li>异步：将多个任务加到消息循环队列，不需要等待某操作的返回结果就可以发出下一个操作请求</li>
+<li>阻塞：调用结果返回之前，当前线程被挂起。调用线程只有在得到结果之后才会被唤醒执行后续的操作</li>
+<li>非阻塞：在结果没有返回之前，其他请求调用不会阻塞住当前线程</li>
+</ul>
+<p>附并发、并行：</p>
+<ul>
+<li>并发：当有多个线程在操作时，如果系统只有一个 CPU，操作系统只能把 CPU 运行时间划分成若干个时间段,再将时间段分配给各个线程执行，在一个时间段的快速的切换不同的线程代码运行</li>
+<li>并行：当系统有多个 CPU 时，可以存在当一个 CPU 执行一个线程时，另一个 CPU 可以执行另一个线程，两个线程互不抢占 CPU 资源，可以同时进行。</li>
+</ul>
+</li>
+</ul>
+<h3 id="信息检索模型"><a href="#信息检索模型" class="headerlink" title="信息检索模型"></a>信息检索模型</h3><ul>
+<li><p>四元组 $[D, Q, F, R(q_i,d_j)]$</p>
+<ul>
+<li>$D$ 文档集的机内表示</li>
+<li>$Q$ 用户需求的机内表示</li>
+<li>$F$ 文档表示、查询表示和它们之间的关系模型框架（检索函数）</li>
+<li>$R(q_i,d_j)$ 排序函数</li>
+</ul>
+</li>
+<li><p>布尔模型</p>
+<p>不支持部分匹配、难以控制被检索的文档数量、难以对输出进行排序、难以进行自动的相关反馈</p>
+<ul>
+<li>$D$ 文档集的机内表示——关键词的<strong>集合</strong>（集合是无重复元素的）</li>
+<li>$Q$ 用户需求的机内表示——关键词用与或非连接起来</li>
+<li>$F$ 文档表示、查询表示和它们之间的关系模型框架（检索函数）——基于二值判定标准，满足布尔查询式时文档被检索出来</li>
+<li>$R(q_i,d_j)$ 排序函数</li>
+</ul>
+<p>正排索引：<br><img src="F:/Apache24/htdocs/eizeit.github.io/assets/images/md/image-20200722204201235.png" alt="image-20200722204201235" style="zoom:50%;" /></p>
+<p>倒排索引：<br><img src="F:/Apache24/htdocs/eizeit.github.io/assets/images/md/image-20200722204347737.png" alt="image-20200722204347737" style="zoom:50%;" /><br><img src="F:/Apache24/htdocs/eizeit.github.io/assets/images/md/image-20200722204426799.png" alt="image-20200722204426799" style="zoom:50%;" /></p>
+</li>
+<li><p>本体论</p>
+<ul>
+<li><p>本体论模型</p>
+<img src="F:/Apache24/htdocs/eizeit.github.io/assets/images/md/image-20200722214626912.png" alt="image-20200722214626912" style="zoom:67%;" />
+</li>
+<li><p>本体构造要点</p>
+<img src="F:/Apache24/htdocs/eizeit.github.io/assets/images/md/image-20200722215129541.png" alt="image-20200722215129541" style="zoom:67%;" />
+</li>
+<li><p>基于本体的检索引擎搜索过程</p>
+<img src="F:/Apache24/htdocs/eizeit.github.io/assets/images/md/image-20200722215314632.png" alt="image-20200722215314632" style="zoom:67%;" /></li>
+</ul>
+</li>
+</ul>
+<h2 id="非重点（bushi"><a href="#非重点（bushi" class="headerlink" title="非重点（bushi"></a>非重点（bushi</h2><h3 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h3><h4 id="网络文化现状"><a href="#网络文化现状" class="headerlink" title="网络文化现状"></a>网络文化现状</h4><ul>
+<li>互联网是现在社会主要的信息媒介<ul>
+<li>网民规模大，普及率高，增长空间大，网络文化软实力强</li>
+<li>手机网民数量多，占网民数量的 99%</li>
+<li>互联网接入设备多样</li>
+<li>人均上网时长长</li>
+</ul>
+</li>
+<li>互联网不良信息泛滥<ul>
+<li>淫秽色情<br>直播平台</li>
+<li>网络赌博</li>
+<li>网络诈骗<br>针对老年人等特殊群体，拼多多营销策略，虚假招工信息，虚拟中奖诈骗，网络兼职诈骗，钓鱼网站</li>
+<li>其他<br>个人信息泄露，账号密码泄露，邪教</li>
+</ul>
+</li>
+<li>国家级掌控措施<ul>
+<li>群众举报</li>
+<li>搜索平台<br>谷歌（居心叵测，8.8.8.8）、百度、中搜</li>
+<li>人工关注相关社区<br>天涯舆情、各种论坛</li>
+</ul>
+</li>
+</ul>
+<h4 id="网络信息内容分类"><a href="#网络信息内容分类" class="headerlink" title="网络信息内容分类"></a>网络信息内容分类</h4><ul>
+<li>网络信息存在形式<ul>
+<li>从服务特性角度分类<ul>
+<li>一阶<br>文件形式<br>超文本&#x2F;超媒体<br>网站网页</li>
+<li>二阶<br>主题目录<br>搜索引擎<br>虚拟图书馆</li>
+<li>三阶<br>元搜索引擎（调用其他搜索引擎汇聚结果）</li>
+</ul>
+</li>
+<li>从传输角度分类<ul>
+<li>有线传输：光信号、电信号</li>
+<li>无线传输</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>网络信息文化标准分类<ul>
+<li>网络违法犯罪案件<ul>
+<li>利用互联网进行违法案件<br>邪教，如此次疫情中的韩国<br>散布谣言扰乱社会秩序，老八角了<br>利用互联网进行颜色革命，老洪博培了<br>传播淫秽色情信息，虐待动物，暴力事件<br>敲诈勒索<br>诽谤他人，网络暴力<br>窃取篡改他人电子信息</li>
+<li>危害互联网运行安全的违法案例<br>国人 DNA 信息<br>网络入侵与破坏<br>制作传播计算机病毒木马</li>
+<li>重大互联网运行安全重大事件</li>
+</ul>
+</li>
+<li>网络违法信息<br>违反宪法基本原则（泄密）<br>损害国家利益、煽动民族仇恨（疆独藏独）等<br>宣扬邪教<br>散布谣言，扰乱社会秩序<br>侮辱或诽谤他人，侵犯他人合法权益</li>
+<li>网络不良信息<br>balabala</li>
+</ul>
+</li>
+</ul>
+<h4 id="信息内容安全技术概述"><a href="#信息内容安全技术概述" class="headerlink" title="信息内容安全技术概述"></a>信息内容安全技术概述</h4><ul>
+<li>内容安全分析模型<ul>
+<li>网络信息获取<br>旁路监听网关数据流、主动采集（爬虫）</li>
+<li>有效信息提取<br>网络协议解析、有效信息提取、媒体信息分离、数据缓冲存储</li>
+<li>违规信息判断<br>文本识别、图像识别、视频识别</li>
+<li>海量信息展示<br>分级展示、融合计算</li>
+<li>违规信息管控<br>分析、预警、阻断（若没有权限可用其余信息淹没等）</li>
+</ul>
+</li>
+<li>其他关键技术</li>
+</ul>
+<h4 id="信息安全技术及产品"><a href="#信息安全技术及产品" class="headerlink" title="信息安全技术及产品"></a>信息安全技术及产品</h4><ul>
+<li>传输安全<br>防窃听、防阻塞、防篡改、防盗用<br>加密认证<br>VPN、专网</li>
+<li>网络安全<br>可控可靠<br>访问控制、认证、审计、入侵检测<br>防火墙、VPN</li>
+<li>应用安全<br>机密性、完整性、抗否认性、可用性<br>加密、验证、签名、备份<br>保密网关、加密卡</li>
+<li>内容安全<br>净化内容、保护涉密信息<br>密级管理、搜索<br>检察系统、涉密检查</li>
+</ul>
+<h3 id="社交网络分析"><a href="#社交网络分析" class="headerlink" title="社交网络分析"></a>社交网络分析</h3><h4 id="社交网络研究意义"><a href="#社交网络研究意义" class="headerlink" title="社交网络研究意义"></a>社交网络研究意义</h4><ul>
+<li>社交网络改变人们的生活方式（政治、教育、购物、文化、暴力、谣言、欺诈、色情）</li>
+<li>社交网络的根本在于能够影响人们的思想（认识观、世界观、价值观、人生观）并迅速推动社会舆论，有害舆情给社会稳定带来巨大影响</li>
+<li>社交网络为社会突发事件推波助澜（颜色革命）</li>
+<li>国家与社会安全需求</li>
+</ul>
+<h4 id="社交网络研究现状"><a href="#社交网络研究现状" class="headerlink" title="社交网络研究现状"></a>社交网络研究现状</h4><h4 id="社交网络科学问题"><a href="#社交网络科学问题" class="headerlink" title="社交网络科学问题"></a>社交网络科学问题</h4><ul>
+<li>结构与演化<ul>
+<li>社交网络结构建模与特性分析</li>
+<li>虚拟社区发现和社交网络演化规律</li>
+</ul>
+</li>
+<li>群体互动<ul>
+<li>社交网络群体行为特征与情感分析及建模</li>
+<li>社交网络群体聚集机理及演化规律</li>
+<li>社交网络群体影响力建模及互动规律</li>
+</ul>
+</li>
+<li>信息与传播<ul>
+<li>社交网络信息内容和的表示和计算</li>
+<li>社交网络中信息传播模型和演化规律</li>
+<li>社交网络舆情信息的引导与溯源方法</li>
+</ul>
+</li>
+</ul>
+<h4 id="社交网络研究内容"><a href="#社交网络研究内容" class="headerlink" title="社交网络研究内容"></a>社交网络研究内容</h4>]]></content>
+      <categories>
+        <category>信息内容安全</category>
+      </categories>
+      <tags>
+        <tag>信息内容安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>汇编与接口 Chapter3笔记</title>
+    <url>/posts/f35960f3/</url>
+    <content><![CDATA[<h2 id="3-1-8086-指令系统"><a href="#3-1-8086-指令系统" class="headerlink" title="3.1 8086 指令系统"></a>3.1 8086 指令系统</h2><h3 id="3-1-1-寻址方式"><a href="#3-1-1-寻址方式" class="headerlink" title="3.1.1 寻址方式"></a>3.1.1 寻址方式</h3><p>指令的寻址方式就是指令中操作数的表示方式，8086 的寻址方式有立即寻址、寄存器寻址、存储器寻址、串操作寻址、外设 I&#x2F;O 端口寻址、程序转移操作寻址</p>
+<ul>
+<li><p>与数据有关的寻址方式</p>
+<ol>
+<li><p>立即寻址</p>
+<p>指令直接给出操作数的数值</p>
+<p><strong>立即数只能作为源操作数</strong>，若十六进制以字母开头，要在前面加 0，如<strong>0FFH</strong></p>
+<p>操作位数由<strong>目的操作数</strong>决定</p>
+<p>eg. <code>MOV AX,0FFFH</code></p>
+</li>
+<li><p>寄存器寻址</p>
+<p>操作数存放在寄存器中，地址码为寄存器的符号</p>
+<p>由于寄存器在微处理器内部，所有操作都在内部进行，<strong>不执行访问内存的周期，执行速度最快</strong></p>
+<p>可用于源&#x2F;目的操作数</p>
+<p>eg. <code>MOV DS,AX</code>、<code>MOV AL,31H</code></p>
+</li>
+<li><p>存储器寻址</p>
+<p>操作数存储在主存中，BIU 根据 EU 传送来的偏移地址（操作数的有效地址 EA）算出物理地址后执行存取该操作数的总线周期</p>
+<ul>
+<li><p>直接寻址</p>
+<p>指令直接给出操作数的偏移地址即 EA，eg. <code>MOV AX,[2002H]</code>，<code>INC BYTE PTR[05A2H]</code></p>
+<p>操作数的地址也可以用符号变量表示（之前定义在数据段中的变量）</p>
+<p>默认段地址为 DS 中的地址，可通过<strong>段跨越前缀</strong>进行更改，eg. <code>MOV AX, ES:VALUE</code></p>
+<p><strong><em>规定 8086 的双操作数指令至少有一个操作数采用寄存器寻址或立即寻址，即两个操作数不能同时采用与存储器有关的寻址方式</em></strong></p>
+</li>
+<li><p>寄存器间接寻址</p>
+<p>操作数的 EA 在<strong>BX 或 SI&#x2F;DI&#x2F;BP</strong>中，eg. <code>MOV AX,[BX]</code></p>
+<p><strong>BX&#x2F;SI&#x2F;DI，段地址由 DS 指明</strong></p>
+<p><strong>BP，段地址由 SS 指明</strong></p>
+<p>可通过段跨越前缀更改</p>
+</li>
+<li><p>寄存器相对寻址</p>
+<p>操作数的 EA 为寄存器的内容和一个<strong>带符号</strong>的 8 位&#x2F;16 位的位移量之和</p>
+<p><strong>只有 BX&#x2F;BP&#x2F;SI&#x2F;DI 可用于寄存器相对寻址</strong></p>
+<p><strong>BX&#x2F;SI&#x2F;DI，段地址由 DS 指明</strong></p>
+<p><strong>BP 段地址由 SS 指明</strong></p>
+<p>可通过段跨越前缀更改</p>
+<p>eg. <code>MOV AX,[SI+06H]</code>、<code>MOV AX,COUNT[BX] ;COUNT为常量/变量</code>、<code>MOV AX,[COUNT+BX] ;COUNT为常量</code>、<code>MOV DL,ES:STRING[SI]</code></p>
+</li>
+<li><p>基址变址寻址</p>
+<p>操作数的 EA 为基址寄存器（BX&#x2F;BP）的内容与变址寄存器（SI&#x2F;DI）的和</p>
+<p>eg. <code>MOV AX,[BX+SI]</code>、<code>MOV AX,[BX][SI]</code></p>
+<p><strong>BX，段地址由 DS 指明</strong></p>
+<p><strong>BP，段地址由 SS 指明</strong></p>
+<p>可添加段跨越前缀更改</p>
+</li>
+<li><p>相对基址变址寻址</p>
+<p>操作数的 EA 为基址寄存器（BX&#x2F;BP）、变址寄存器（SI&#x2F;DI）的内容以及一个<strong>带符号</strong>的 8 位&#x2F;16 位偏移量的和</p>
+<p><strong>BX，段地址由 DS 指明</strong></p>
+<p><strong>BP，段地址由 SS 指明</strong></p>
+<p>可添加段跨越前缀更改</p>
+<p>eg. <code>MOV AX,[BX+DI+08H]</code>、**<code>MOV AX,MASK[BX][SI]</code>**、<code>MOV,[MASK+BX+SI]</code></p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>与转移地址有关的寻址方式（程序转移寻址）</p>
+</li>
+</ul>
+<h3 id="3-1-2-数据传送类指令"><a href="#3-1-2-数据传送类指令" class="headerlink" title="3.1.2 数据传送类指令"></a>3.1.2 数据传送类指令</h3><ul>
+<li><p>MOV DST, SRC（字&#x2F;字节操作，不影响标志位）</p>
+<p><strong>注意：</strong></p>
+<ul>
+<li><p>目的操作数不能是立即数</p>
+</li>
+<li><p>两个操作数的寻址方式不能同时为存储器寻址</p>
+</li>
+<li><p>两个操作数位数必须一致</p>
+<p>eg. <code>MOV BYTE PTR[BX],255</code>是对的，<code>MOV [BX],255</code>是错的</p>
+</li>
+<li><p>CS 不能作为目的操作数</p>
+</li>
+<li><p>源和目的不能同时为段寄存器</p>
+</li>
+<li><p>立即数不能直接送段寄存器，一般要以 AX 为中介</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">MOV    AX,2000H</span><br><span class="line">MOV    DS, AX</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>堆栈操作指令</p>
+<ul>
+<li><p>PUSH SRC（<strong>字操作</strong>，不影响标志位）</p>
+<p>首先将 SP 减 2，然后将 SRC 的低字节存入(SP)，高字节存入(SP+1)</p>
+<p><strong>注意：</strong></p>
+<ul>
+<li><p>不能用立即寻址（操作数不能是立即数）</p>
+</li>
+<li><p>必须是字操作</p>
+</li>
+</ul>
+</li>
+<li><p>POP DST（<strong>字操作</strong>，不影响标志位）</p>
+<p>首先将(SP)中的字节数据存入 DST 的低八位，(SP+1)的字节数据存入 DST 的高八位，然后将 SP 加 2</p>
+<p><strong>注意：</strong></p>
+<ul>
+<li><p>不能用立即寻址（操作数不能是立即数）</p>
+</li>
+<li><p>必须是字操作</p>
+</li>
+<li><p>不能使用 CS 寄存器</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>地址传送指令</p>
+<ul>
+<li><p>LEA REG, SRC（字操作，不影响标志位）</p>
+<p>将 SRC 的<strong>有效地址</strong>存入指定寄存器</p>
+<ul>
+<li>必须用存储器寻址</li>
+</ul>
+</li>
+<li><p>LDS REG, SRC（字操作，不影响标志位）</p>
+<p>将 SRC 指明的<strong>字</strong>存储单元的内容送 REG，将地址为 SRC+2 的<strong>字</strong>存储单元的内容送 DS</p>
+<ul>
+<li>必须用存储器寻址</li>
+</ul>
+</li>
+<li><p>LES REG, SRC（字操作，不影响标志位）</p>
+<p>将 SRC 指明的<strong>字</strong>存储单元的内容送 REG，将地址为 SRC+2 的<strong>字</strong>存储单元的内容送 ES</p>
+<ul>
+<li>必须用存储器寻址</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>零地址指令</p>
+<ul>
+<li><p>LAHF（Load AH with Flags，不影响标志位，隐含操作数为 FR 的低八位）</p>
+<p>将 FR 的低八位送 AH</p>
+</li>
+<li><p>SAHF（Store AH into Flags，影响标志位)</p>
+<p>将 AH 的内容送 FR 的低八位</p>
+</li>
+<li><p>PUSHF（Push Flags，不影响标志位）</p>
+</li>
+<li><p>POPF （Pop Flags，影响标志位）</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>XCHG DST,SRC（字&#x2F;字节操作，不影响标志位）</p>
+<p>交换 DST 和 SRT 的数据</p>
+<p><strong>注意：</strong></p>
+<ul>
+<li><p>两操作数均不能为立即数</p>
+</li>
+<li><p>两操作数均不能用段寄存器</p>
+</li>
+<li><p>两操作数不能同时采用与存储器有关的寻址方式</p>
+</li>
+</ul>
+<p>eg. <code>MOV AX,VAR</code></p>
+</li>
+</ul>
+<hr>
+<p>换码指令</p>
+<ul>
+<li><p>XLAT（字节操作，不影响标志位）</p>
+<p>将地址为[BX]+[AL]（AL 高位补零）的内存单元当中的字节数据送至 AL</p>
+<p><img src="/images/3/XLAT.png"></p>
+</li>
+</ul>
+<h3 id="3-1-3-位操作类指令"><a href="#3-1-3-位操作类指令" class="headerlink" title="3.1.3 位操作类指令"></a>3.1.3 位操作类指令</h3><p>位操作运算指令分为逻辑运算指令和移位指令<br><strong><em>要注意每一条位操作指令如何影响标志位</em></strong></p>
+<ul>
+<li><p>AND&#x2F;OR&#x2F;XOR DST, SRC（字、字节操作）</p>
+<p>将 DST 和 SRT 指明的操作数安位与&#x2F;或&#x2F;非，结果存在 DST</p>
+<p><strong>注意：</strong></p>
+<ul>
+<li><p>DST 不能是立即数</p>
+</li>
+<li><p><strong>对标志位的影响</strong>：CF&#x3D;OF&#x3D;0，SF、ZF、PF 看结果，AF 不确定</p>
+</li>
+</ul>
+<p>eg. ASCII 码大小写互换：第 6 位取反，其余位不变（和 0 异或不变，和 1 异或相当于取反），<code>XOR AL,00100000B</code> [注]：这里期末考用到了</p>
+</li>
+<li><p>TEST DST,SRC（字&#x2F;字节操作）</p>
+<p>将 DST 指明的操作数与 SRC 指明的操作数按位与，只做运算，不存结果，即只影响 FR</p>
+<p><strong>对标志位的影响</strong>：CF&#x3D;OF&#x3D;0，SF、ZF、PF 看结果，AF 不确定</p>
+</li>
+<li><p>NOT OPR（字&#x2F;字节操作）</p>
+<p>对 OPR 指明的操作数按位取反，结果仍存 OPR</p>
+<ul>
+<li><p>不能是立即数</p>
+</li>
+<li><p><strong>不影响任何标志位</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>移位指令</p>
+<p>（个人实验供参考）<strong>关于移位大于 1 次时对 OF 位的影响</strong>：与 PPT 上说的不一样，事实上根据实验得到结论</p>
+<blockquote>
+<p>指令 SHL 对 OF 的影响：若<strong>移位完成后的符号位与未移位时的符号位</strong>相同，则 OF 为 0，否则为 1</p>
+<p>指令 SHR&#x2F;ROL&#x2F;ROR&#x2F;RCL&#x2F;RCR 对 OF 的影响：若<strong>移位完成后的符号位与最后一次移位完成之前的符号位</strong>相同，则 OF 为 0，否则为 1</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">        .MODEL SMALL</span><br><span class="line">        .DATA</span><br><span class="line">        .CODE</span><br><span class="line">START:  MOV			AL,10101010b</span><br><span class="line">        MOV			CL,2</span><br><span class="line">        ;SHL        AL,CL</span><br><span class="line">        ;SHR        AL,CL</span><br><span class="line">        ;ROL        AL,CL</span><br><span class="line">        ;ROR        AL,CL</span><br><span class="line">        ;RCL        AL,CL</span><br><span class="line">        ;RCR        AL,CL</span><br><span class="line">OVER:   MOV     	AX, 4C00H</span><br><span class="line">        INT     	21H</span><br><span class="line">        END        	START</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>逻辑移位指令</p>
+<ul>
+<li><p>SHL OPR,1&#x2F;CL（字&#x2F;字节操作）</p>
+<p>将 OPR 指明的操作数逻辑左移，空位补零，移出来的位进 CF</p>
+<ul>
+<li><p>OPR 不能是立即寻址</p>
+</li>
+<li><p>SF&#x2F;ZF&#x2F;PF 根据结果设置，AF 不确定</p>
+<p><strong>OF</strong>：事实上根据测试，不是只在移位次数为 1 时影响；而是若移位后的符号位与未移位时的符号位不同，则 OF&#x3D;1，否则 OF&#x3D;0</p>
+</li>
+</ul>
+</li>
+<li><p>SHR OPR,1&#x2F;CL（字&#x2F;字节操作）</p>
+<p>将 OPR 指明的操作数逻辑右移，空位补零，移出来的位进 CF</p>
+<ul>
+<li><p>OPR 不能是立即寻址</p>
+</li>
+<li><p>SF&#x2F;ZF&#x2F;PF 根据结果设置，AF 不确定</p>
+<p>OF：最后一次移位后的符号位与最后一次的前一次移位后的符号位不同，OF&#x3D;1，事实上只有移位次数为 1 的时候才有可能改变，因为大于一次时高位都补零了</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>算术移位指令</p>
+<ul>
+<li><p>SAL OPR,1&#x2F;CL（字&#x2F;字节操作）</p>
+<p>将 OPR 指明的操作数算数左移，低位补零，移出去的位进 CF</p>
+<ul>
+<li><p>OPR 不能是立即寻址</p>
+</li>
+<li><p>SF&#x2F;ZF&#x2F;PF 根据结果设置，AF 不确定</p>
+<p>OF：若移位完成后的符号位与最后一次移位完成之前的符号位相同，则 OF 为 0，否则为 1</p>
+</li>
+</ul>
+</li>
+<li><p>SAR OPR,1&#x2F;CL（字&#x2F;字节操作）</p>
+<p>将 OPR 指明的操作数算数右移，高位补符号位，移出去的位进 CF</p>
+<ul>
+<li><p>OPR 不能是立即寻址</p>
+</li>
+<li><p>SF&#x2F;ZF&#x2F;PF 根据结果设置，AF 不确定</p>
+<p>OF：最后一次移位后的符号位与最后一次的前一次移位后的符号位不同，OF&#x3D;1，事实上只有移位次数为 1 的时候才有可能改变，因为大于一次时高位一直补符号位了</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>不带进位的循环移位指令</p>
+<ul>
+<li><p>ROL OPR,1&#x2F;CL（字&#x2F;字节操作）</p>
+<p>将 OPR 指明的操组数循环左移，低位空出的位用高位移出的位补，同时移出的位进入 CF</p>
+<ul>
+<li><p>不能是立即寻址</p>
+</li>
+<li><p><strong>不影响 SF&#x2F;ZF&#x2F;PF&#x2F;AF</strong></p>
+<p>OF：若移位完成后的符号位与最后一次移位完成之前的符号位相同，则 OF 为 0，否则为 1</p>
+</li>
+</ul>
+</li>
+<li><p>ROR OPR,1&#x2F;CL（字&#x2F;字节操作）</p>
+<p>将 OPR 指明的操组数循环右移，高位空出的位用低位移出的位补，同时移出的位进入 CF</p>
+<ul>
+<li><p>不能是立即寻址</p>
+</li>
+<li><p><strong>不影响 SF&#x2F;ZF&#x2F;PF&#x2F;AF</strong></p>
+<p>OF：若移位完成后的符号位与最后一次移位完成之前的符号位相同，则 OF 为 0，否则为 1</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>带进位循环移位指令</p>
+<ul>
+<li><p>RCL OPR,1&#x2F;CL（字&#x2F;字节操作）</p>
+<p>将 OPR 指明的操作数连同 CF 一起循环左移（CF 在左边）</p>
+<ul>
+<li><p>不能是立即寻址</p>
+</li>
+<li><p><strong>不影响 SF&#x2F;ZF&#x2F;PF&#x2F;AF</strong></p>
+<p>OF：若移位完成后的符号位与最后一次移位完成之前的符号位相同，则 OF 为 0，否则为 1</p>
+</li>
+</ul>
+</li>
+<li><p>RCR OPR,1.CL（字&#x2F;字节操作）</p>
+<p>将 OPR 指明的操作数连同 CF 一起循环右移（CF 在右边）</p>
+<ul>
+<li><p>不能是立即寻址</p>
+</li>
+<li><p><strong>不影响 SF&#x2F;ZF&#x2F;PF&#x2F;AF</strong></p>
+<p>OF：若移位完成后的符号位与最后一次移位完成之前的符号位相同，则 OF 为 0，否则为 1</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-1-4-算术运算类指令"><a href="#3-1-4-算术运算类指令" class="headerlink" title="3.1.4 算术运算类指令"></a>3.1.4 算术运算类指令</h3><p>算术运算的操作数一定是<strong>定点</strong>无&#x2F;带符号整数<br>双操作数指令至少有一个操作数在寄存器中&#x2F;立即寻址<br>单操作数不允许立即寻址<br><strong><em>要注意对标志位的影响</em></strong></p>
+<ul>
+<li><p>ADD DST,SRC（字&#x2F;字节操作）</p>
+<p>将 DST 和 SRT 指明的操作数相加，结果保存在 DST</p>
+<ul>
+<li><p>SF&#x2F;ZF&#x2F;PF&#x2F;AF 看运行情况</p>
+</li>
+<li><p>若两个操作数符号相同，但结果的符号与操作数的符号相反，则产生溢出，OF&#x3D;1，否则 OF&#x3D;0</p>
+</li>
+<li><p>若最高位产生进位，则 CF&#x3D;1，否则 CF&#x3D;0，<strong>CF 可以表示无符号数的溢出</strong></p>
+</li>
+</ul>
+</li>
+<li><p>SUB DST,SRC（字&#x2F;字节操作）</p>
+<p>DST 指明的操作数减 SRC 指明的操作数，结果保存在 DST</p>
+<ul>
+<li><p>SF&#x2F;ZF&#x2F;PF&#x2F;AF 看运行情况</p>
+</li>
+<li><p>若两个操作数符号相反，但结果的符号与减数（SRC）的符号相反，则产生溢出，OF&#x3D;1，否则 OF&#x3D;0</p>
+</li>
+<li><p>（无符号数）若被减数小于减数，则 CF&#x3D;1，否则 CF&#x3D;0</p>
+</li>
+</ul>
+</li>
+<li><p>ADC DST,SRC（字&#x2F;字节操作）</p>
+<p>将 DST 与 SRC 指明的操作数以及当前 CF 的值相加，结果保存在 DST</p>
+<ul>
+<li><p>SF&#x2F;ZF&#x2F;PF&#x2F;AF 看运行情况</p>
+</li>
+<li><p>若两个操作数符号相同，但结果的符号与操作数的符号相反，则产生溢出，OF&#x3D;1，否则 OF&#x3D;0</p>
+</li>
+<li><p>若最高位产生进位，则 CF&#x3D;1，否则 CF&#x3D;0</p>
+</li>
+</ul>
+<p>eg. 32 位数加法，目的操作数存放在 DX（高）和 AX（低）；源操作数存放在 BX（高）、CX（低）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ADD    AX, CX</span><br><span class="line">ADC    DX, BX</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>SBB DST,SRC（字&#x2F;字节操作）</p>
+<p>DST 指明的操作数减 SRC 指明的操作数，再减去当前 CF 的值，结果存 DST</p>
+<ul>
+<li><p>SF&#x2F;ZF&#x2F;PF&#x2F;AF 看运行情况</p>
+</li>
+<li><p>若两个操作数符号相反，但结果的符号与减数（SRC）的符号相反，则产生溢出，OF&#x3D;1，否则 OF&#x3D;0</p>
+</li>
+<li><p>（无符号数）若被减数小于减数，则 CF&#x3D;1，否则 CF&#x3D;0</p>
+</li>
+</ul>
+<p>eg. 32 位数减法，目的操作数存放在 DX（高）和 AX（低）中；源操作数为立即数 80004491H</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SUB    AX,4491H</span><br><span class="line">SBB    DX,8000H</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>INC OPR</p>
+<p>OPR 指明的操作数+1 后存于 OPR</p>
+<ul>
+<li><p>根据结果影响 OF&#x2F;SF&#x2F;ZF&#x2F;PF&#x2F;AF</p>
+</li>
+<li><p><strong>不影响 CF</strong></p>
+</li>
+</ul>
+</li>
+<li><p>DEC OPR</p>
+<p>OPR 指明的操组数-1 后存于 OPR</p>
+<ul>
+<li><p>根据结果影响 OF&#x2F;SF&#x2F;ZF&#x2F;PF&#x2F;AF</p>
+</li>
+<li><p><strong>不影响 CF</strong></p>
+</li>
+</ul>
+</li>
+<li><p>CMP DST,SRC（字&#x2F;字节操作）</p>
+<p>DST 指明的操作数减 SRC 指明的操作数，<strong>只做运算，不存结果</strong>，即只改变符号位，通常后面跟条件转移指令</p>
+<ul>
+<li><p>SF&#x2F;ZF&#x2F;PF&#x2F;AF 看运行情况</p>
+</li>
+<li><p>若两个操作数符号相反，但结果的符号与减数（SRC）的符号相反，则产生溢出，OF&#x3D;1，否则 OF&#x3D;0</p>
+</li>
+<li><p>（无符号数）若被减数小于减数，则 CF&#x3D;1，否则 CF&#x3D;0</p>
+</li>
+</ul>
+</li>
+<li><p>NEG OPR（字&#x2F;字节运算）<em>尚存疑？</em></p>
+<p>对 OPR 指明的操作数求补，即按位取反后加 1，结果存 OPR</p>
+<ul>
+<li><p><strong>相当于求相反数</strong></p>
+</li>
+<li><p>根据运算结果影响 CF&#x2F;OF&#x2F;ZF&#x2F;SF&#x2F;PF&#x2F;AF</p>
+</li>
+<li><p><strong>当且仅当操作数为 0 时 CF&#x3D;1</strong>，否则 CF&#x3D;0</p>
+</li>
+<li><p><strong>当且仅当字节运算时对-128 求补或字运算时对-32768 求补时 OF&#x3D;1</strong>，否则 OF&#x3D;0</p>
+</li>
+</ul>
+<blockquote>
+<p>附：一个求负数补码的简便方法</p>
+<p>找到二进制表示形式下的最右边的 1，对该位左边的所有位（除去符号位）按位取反</p>
+<p>eg. -1 的二进制表示为 10000001B，按如上操作后变为 11111111B，即 0FFH，为-1 的补码</p>
+</blockquote>
+</li>
+<li><p>MUL SRC（字&#x2F;字节操作）</p>
+<p>若 SRC 指明的操作数为 8 位，则将其与 AL 中的数相乘，结果存于 AX；若 SRC 指明的操作数为 16 位，则将其与 AX 中的数相乘，结果的高 16 位存于 DX，低 16 位存于 AX</p>
+<ul>
+<li><p>所有操作数都是<strong>无符号数</strong></p>
+</li>
+<li><p>若乘积的高半部分位 0，则 CF&#x3D;OF&#x3D;0；否则 CF&#x3D;OF&#x3D;1；反映乘法是否超过原有的位宽</p>
+</li>
+<li><p>其余标志位无定义（不确定 0&#x2F;1）</p>
+</li>
+</ul>
+</li>
+<li><p>IMUL SRC（字&#x2F;字节操作）</p>
+<p>若 SRC 指明的操作数为 8 位，则将其与 AL 中的数相乘，结果存于 AX；若 SRC 指明的操作数为 16 位，则将其与 AX 中的数相乘，结果的高 16 位存于 DX，低 16 位存于 AX</p>
+<ul>
+<li><p>所有操作数都是<strong>带符号数</strong></p>
+</li>
+<li><p>若乘积的高半部分位 0，则 CF&#x3D;OF&#x3D;0；否则 CF&#x3D;OF&#x3D;1；反映乘法是否超过原有的位宽</p>
+</li>
+<li><p>其余标志位无定义（不确定 0&#x2F;1）</p>
+</li>
+</ul>
+</li>
+<li><p>DIV SRC（字&#x2F;字节操作）</p>
+<p>若 SRC 为 8 位，则用 AX 中的数除以 SRC 指明的数，商存 AL，余数存 AH；若 SRC 为 16 位，则用 DX（高 16 位）和 AX（低 16 位）组成的 32 位无符号整数除以 SRC 指明的数，商存 AX，余数存 DX</p>
+<ul>
+<li><p>所有操作数都是<strong>无符号整数</strong></p>
+</li>
+<li><p>所有标志位均不确定</p>
+</li>
+<li><p>若位宽不足以容纳商（商溢出），将自动转入 0 型中断处理程序，此时得到的商和余数均不确定</p>
+</li>
+</ul>
+</li>
+<li><p>IDIV SRC（字&#x2F;字节操作）</p>
+<p>若 SRC 为 8 位，则用 AX 中的数除以 SRC 指明的数，商存 AL，余数存 AH；若 SRC 为 16 位，则用 DX（高 16 位）和 AX（低 16 位）组成的 32 位无符号整数除以 SRC 指明的数，商存 AX，余数存 DX</p>
+<ul>
+<li><p>所有操作数都是<strong>带符号整数</strong></p>
+</li>
+<li><p>所有标志位均不确定</p>
+</li>
+<li><p>商的符号根据代数除法规则确定，余数的符号同被除数</p>
+</li>
+<li><p>若位宽不足以容纳商（商溢出），将自动转入 0 型中断处理程序，此时得到的商和余数均不确定</p>
+</li>
+</ul>
+</li>
+<li><p>CBW （convert byte to word）</p>
+<p><strong>隐含操作数 AL</strong>，若 AL 最高位为 0，则令 AH&#x3D;00H，若 AL 最高位为 1，则令 AH&#x3D;0FFH</p>
+<ul>
+<li><p><strong>不影响标志位</strong></p>
+</li>
+<li><p>符号扩展指令用于将被除数调整为合适的位宽</p>
+</li>
+</ul>
+</li>
+<li><p>CWD （convert word to double word）</p>
+<p><strong>隐含操作数 AX</strong>，若 AX 最高位为 0，则令 DX&#x3D;0000H，若 AX 最高位为 1，则令 DX&#x3D;0FFFFH</p>
+<ul>
+<li><p><strong>不影响标志位</strong></p>
+</li>
+<li><p>符号扩展指令用于将被除数调整为合适的位宽</p>
+</li>
+</ul>
+</li>
+<li><p>DAA（十进制调整指令）</p>
+<p><strong>隐含操作数 AL</strong>，对 AL 中的压缩 BCD 码进行修正：</p>
+<ol>
+<li><p>若 AL 的低 4 位在 A~F 之间或 AF&#x3D;1，则将 AL 的值加 06H，结果存 AL 并将 AF 置 1</p>
+</li>
+<li><p>若 AL 的高 4 位在 A~F 之间或 CF&#x3D;1，则将 AL 的值加 60H，结果存 AL 并将 XF 置 1</p>
+</li>
+</ol>
+<ul>
+<li><p><strong>必须跟在 ADD 或 ADC 指令之后</strong>（AL 为目的操作数）</p>
+</li>
+<li><p>对 OF 无定义，根据结果影响所有其余标志位</p>
+</li>
+</ul>
+<p>eg. 计算两个压缩 BCD 码 28 与 68 之和</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">MOV    AL, 00101000B</span><br><span class="line">ADD    AL, 01101000B</span><br><span class="line">DAA</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>DAS（十进制调整指令）</p>
+<p><strong>隐含操作数 AL</strong>，对 AL 中的压缩 BCD 码进行修正：</p>
+<ol>
+<li><p>若 AL 的低 4 位在 A~F 之间或 AF&#x3D;1，则将 AL 的值减 06H，结果存 AL 并将 AF 置 1</p>
+</li>
+<li><p>若 AL 的高 4 位在 A~F 之间或 CF&#x3D;1，则将 AL 的值减 60H，结果存 AL 并将 XF 置 1</p>
+</li>
+</ol>
+<ul>
+<li><p><strong>必须跟在 SUB 或 ASBB 指令之后</strong>（AL 为目的操作数）</p>
+</li>
+<li><p>对 OF 无定义，根据结果影响所有其余标志位</p>
+</li>
+</ul>
+<p>eg. 计算两个压缩 BCD 码 86 与 97 之差</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">MOV    AL,10000110B</span><br><span class="line">SUB    AL,10010111B</span><br><span class="line">DAS</span><br><span class="line">; 86+(-97)</span><br><span class="line">; 0EFH-06H-60H=89H=10001001B即BCD码的-5</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>AAA（ASCII 调整指令）</p>
+<p><strong>隐含操作数 AL</strong>，对 AL 中的非压缩 BCD 码（或十进制数的 ASCII 码）进行修正：</p>
+<p><img src="/images/3/AAA.png"></p>
+<ul>
+<li><p><strong>必须跟在 ADD 或 ADC 指令之后</strong>（AL 为目的操作数）</p>
+</li>
+<li><p>影响 AF&#x2F;CF，对其余标志位无定义</p>
+</li>
+</ul>
+<p>eg. 已知(AX)&#x3D;0535H，(BL)&#x3D;39H，分析指令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ADD    AL,BL</span><br><span class="line">AAA</span><br></pre></td></tr></table></figure>
+
+<p>分析：</p>
+<p>结果(AX)&#x3D;0604H，<em>？？意义？？</em>不是很懂这个指令</p>
+</li>
+<li><p>AAS（ASCII 调整指令）</p>
+<p><strong>隐含操作数 AL</strong>，对 AL 中的非压缩 BCD 码（或十进制数的 ASCII 码）进行修正：</p>
+<p><img src="/images/3/AAS.png"></p>
+<ul>
+<li><p><strong>必须跟在 SUB 或 SBB 指令之后</strong>（AL 为目的操作数）</p>
+</li>
+<li><p>影响 AF&#x2F;CF，对其余标志位无定义</p>
+</li>
+</ul>
+</li>
+<li><p>AAM（ASCII 调整指令）</p>
+<p><strong>隐含操作数 AX</strong>，对 AL 中的<strong>非压缩 BCD 码</strong>修正：</p>
+<p>AL 中的内容除以 10，余数存 AL，商存 AH</p>
+<ul>
+<li><p><strong>必须跟在 MUL 指令之后</strong>，两个操作数为非压缩 BCD 码（<strong>高四位均为 0</strong>）</p>
+</li>
+<li><p>根据 AL 中结果设置 SF&#x2F;ZF&#x2F;PF，其余标志位无定义</p>
+<p>eg. 已知(AL)&#x3D;07H，(BL)&#x3D;09H，分析指令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">MUL    BL</span><br><span class="line">AAM</span><br></pre></td></tr></table></figure>
+
+<p>分析：</p>
+</li>
+</ul>
+</li>
+<li><p>AAD（ASCII 调整指令）</p>
+<p><strong>隐含操作数 AX</strong>，对 AX 中的<strong>非压缩 BCD 码</strong>修正：</p>
+<p>(AH)*10+(AL)结果存 AH，然后将 AH 清零</p>
+<ul>
+<li><strong>必须在 DIV 指令之前</strong>，被除数存于 AX，为非压缩 BCD 码（AH 存十位，AL 存各位且 AH、AL 高 4 位均为 0）</li>
+<li>根据 AL 中结果设置 SF&#x2F;ZF&#x2F;PF，其余标志位无定义</li>
+</ul>
+<p>eg. 编程实现 53&#x2F;3</p>
+</li>
+</ul>
+<h3 id="3-1-5-字符串操作类指令"><a href="#3-1-5-字符串操作类指令" class="headerlink" title="3.1.5 字符串操作类指令"></a>3.1.5 字符串操作类指令</h3><p>包括串传送、串比较、串扫描、从串取、存入串<br>一条串操作指令仅能完成 1 字节&#x2F;字的操作，需要配合重复前缀指令才能实现对整个串的操作<br>分别用 SI 和 DI 作为源串和目的串的指针，源串默认在数据段，但可以通过段跨越前缀修改，<strong>目的串必须在附加段</strong><br>每次处理完当前指向的字符后要修改段指针，修改方向由 DF 决定，DF&#x3D;0 时，DI&#x2F;SI 增加，DF&#x3D;1 时，DI&#x2F;SI 减小<br><strong>DF 标志位的清零和置 1 由指令 CLD 和 STD 完成</strong></p>
+<ul>
+<li><p>REP MOVS&#x2F;LODS&#x2F;STOS</p>
+<ol>
+<li><p>若 CX 为零则结束，否则转 2</p>
+</li>
+<li><p>CX&#x3D;CX-1</p>
+</li>
+<li><p>执行串操作指令，转 1</p>
+</li>
+</ol>
+<ul>
+<li>不影响标志位</li>
+</ul>
+</li>
+<li><p>MOVS DST, SRC（字&#x2F;字节操作）</p>
+<p>MOVS&#x2F;MOVSW</p>
+<p>将 SRC 指向的字节（字）存储单元的内容送至 ES:DI 指向的字节（字）存储单元；然后根据 DF 的值将 SI 和 DI 加&#x2F;减 1&#x2F;2</p>
+<ul>
+<li><p>第一种形式由操作数指明字&#x2F;字节操作</p>
+</li>
+<li><p>第二种形式默认[DS:SI]送[ES:DI]</p>
+</li>
+<li><p><strong>别忘了设置 DF</strong></p>
+<p><em>思考：DF 何时取 0，何时取 1？</em></p>
+<p>当源串与目的串存储空间有重合时，若源串在前，DF&#x3D;1；若源串在后，DF&#x3D;0</p>
+</li>
+<li><p>不影响状态位</p>
+</li>
+</ul>
+</li>
+<li><p>STOS DST</p>
+<p>STOSB&#x2F;STOSW</p>
+<p>将 AL（AX）的值传送至 ES:DI 指向的字节（字）存储单元，然后根据 DF 的值将 DI 增加&#x2F;减少 1&#x2F;2</p>
+<ul>
+<li><p>第一种形式由操作数指明字&#x2F;字节操作</p>
+</li>
+<li><p>常用于缓冲区初始化</p>
+</li>
+<li><p>不影响标志位</p>
+</li>
+</ul>
+</li>
+<li><p>LODS SRC</p>
+<p>LODSB&#x2F;LODSW</p>
+<p>将 SRC 指向的字节（字）存储单元送至 AL（AX），然后根据 DF 的值将 SI 增加&#x2F;减少 1&#x2F;2</p>
+<ul>
+<li><p>第一种形式由操作数指明字&#x2F;字节操作</p>
+</li>
+<li><p>不影响标志位</p>
+</li>
+<li><p>一般不与 REP 联用</p>
+</li>
+</ul>
+</li>
+<li><p>REPE&#x2F;REPZ CMPS&#x2F;SCAS</p>
+<ol>
+<li><p>若 CX 不为 0 且 ZF&#x3D;1 则转 2，否则结束</p>
+</li>
+<li><p>CX&#x3D;CX-1</p>
+</li>
+<li><p>执行串操作指令，转 1</p>
+</li>
+</ol>
+<ul>
+<li>本身不影响标志位，影响标志位的是其后的串操作</li>
+</ul>
+</li>
+<li><p>CMPS SRC, DST</p>
+<p>CMPSB&#x2F;CMPSW</p>
+<p>用 SRC 指向的字节（字）存储单元的内容减去 ES:DI 指向的字节（字）存储单元的内容，根据结果设置标志位，然后根据 DF 的值将 SI 和 DI 增加&#x2F;减少 1&#x2F;2</p>
+<ul>
+<li><p>对符号位的影响同 SUB 指令</p>
+</li>
+<li><p>第一种形式由操作数指明字&#x2F;字节操作</p>
+</li>
+<li><p>第二种形式默认[DS:SI]-[ES:DI]</p>
+</li>
+</ul>
+</li>
+<li><p>REPNZ&#x2F;REPNE CMPS&#x2F;SCAS</p>
+<ol>
+<li><p>若 CX 不为 0 且 ZF&#x3D;0 则转 2，否则结束</p>
+</li>
+<li><p>CX&#x3D;CX-1</p>
+</li>
+<li><p>执行串操作指令，转 1</p>
+</li>
+</ol>
+<ul>
+<li>指令本身不影响标志位，影响标志位的是串操作指令</li>
+</ul>
+</li>
+<li><p>SCAS DST</p>
+<p>SCASB&#x2F;SCASW</p>
+<p>用 AL（AX）中的内容减去 ES:DI 指向的字节（字）存储单元的内容，根据结果设置标志位，然后根据 DF 的值将 DI 增加&#x2F;减少 1&#x2F;2</p>
+<ul>
+<li><p>对符号位影响同 SUB 指令</p>
+</li>
+<li><p>第一种形式由操作数指明字&#x2F;字节操作</p>
+</li>
+</ul>
+<p>eg. 比较两个等长的字符串是否相同，相同用 0 表示，不同用-1 表示，结果存入 result 字节单元</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    LEA    SI,STR1</span><br><span class="line">    LEA    DI,STR2</span><br><span class="line">    MOV    CX,LEN    ;LEN是字符串长度</span><br><span class="line">    CLD              ;DF=0</span><br><span class="line">    REPZ   CMPSB</span><br><span class="line">    XOR    AL,AL</span><br><span class="line">    JNZ    RE        ;不为零则相等</span><br><span class="line">NE: DEC    AL</span><br><span class="line">RE: MOV    RESULT,AL</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="3-1-6-控制转移类指令"><a href="#3-1-6-控制转移类指令" class="headerlink" title="3.1.6 控制转移类指令"></a>3.1.6 控制转移类指令</h3><p>根据功能划分：包括无条件转移、条件转移、循环、子程序调用及返回、中断及返回<br>根据目标地址与本指令是否在同一代码段划分：段内转移、段间转移。段内转移范围在-128~127 之间，段内转移仅需目标的有效地址（CS）不变；段间转移需要确定目标的有效地址和段地址并改变 IP 和 CS 的值<br>寻址方式：</p>
+<ol>
+<li><p>相对寻址：用于段内转移，目标地址的有效地址为 IP 的当前值与指令中给出的 8 位或 16 位位移量之<strong>和</strong></p>
+</li>
+<li><p>段内寄存器寻址：段内转移的目标的有效地址为某 16 位寄存器的内容</p>
+</li>
+<li><p>段内间接寻址：段内转移的目标的有效地址为某字存储单元的内容</p>
+</li>
+<li><p>段间直接寻址：指令中直接给出目标的段地址和有效地址代替 CS 和 IP 的内容实现转移</p>
+</li>
+<li><p>段间间接寻址：目标地址为存储器中连续两个字单元的内容（<strong>低地址为有效地址，高地址为段地址</strong>）</p>
+</li>
+</ol>
+<p><strong>注意：</strong>所有的<strong>条件</strong>转移指令只能使用相对寻址的 8 位位移量，<strong>也就是都是段内转移</strong>，指令本身不影响标志位</p>
+<ul>
+<li><p>JMP（无条件转移指令）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 段内相对转移</span><br><span class="line">JMP    PROG    ; 16位</span><br><span class="line">JMP    SHORT PROG    ; 8位</span><br><span class="line">; 段内寄存器/间接转移</span><br><span class="line">JMP    BX</span><br><span class="line">JMP    WORD PTR [BX+SI]</span><br><span class="line">; 段间直接转移</span><br><span class="line">JMP    FAR PTR PROC    ; 4字节</span><br><span class="line">; 段间间接转移</span><br><span class="line">JMP    DWORD PTR [DI + BRCHTABLE]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>不影响标志位</li>
+</ul>
+</li>
+<li><p>条件转移指令</p>
+<ul>
+<li><p>JZ&#x2F;JE JNZ&#x2F;JNE</p>
+<p>JZ：ZF 为 1 时跳转，否则不跳转；JNZ 反之</p>
+</li>
+<li><p>JS JNS</p>
+<p>JS：SF 为 1 时跳转，否则不跳转；JNS 反之</p>
+</li>
+<li><p>JO JNO</p>
+<p>JO：OF 为 1 时跳转，否则不跳转；JNO 反之</p>
+</li>
+<li><p>JP&#x2F;JPE JNP&#x2F;JPO</p>
+<p>JP：PF 为 1 时跳转，否则不跳转；JNP 反之</p>
+</li>
+<li><p>JC&#x2F;JB&#x2F;JNAE JNC&#x2F;JNB&#x2F;JAE</p>
+<p>JC：CF 为 1 时跳转，否则不跳转；JNC 反之</p>
+</li>
+<li><p>JA&#x2F;JNBE JNA&#x2F;JBE</p>
+<p>JA：CF&#x3D;ZF&#x3D;0 则跳转，否则不跳转；JNA 反之</p>
+<p>其实 JA 就是高于则跳转，JNBE 就是不是低于或等于也就是高于，一个意思</p>
+</li>
+<li><p>JL&#x2F;JNGE JNL&#x2F;JGE</p>
+<p>JL：$OF \oplus SF &#x3D; 1$ 则跳转，否则不跳转；JNL 反之</p>
+<p>jump if less 小于则转移</p>
+</li>
+<li><p>JG&#x2F;JNLE JNG&#x2F;JLE</p>
+<p>JG：$OF \oplus SF&#x3D;0$ 且 ZF 为 0 则跳转，否则不跳转；JNG 反之</p>
+<p>jump if greater 大于则转移</p>
+</li>
+</ul>
+<p><strong>JB&#x2F;JBE&#x2F;JNB&#x2F;JNBE&#x2F;JA&#x2F;JAE&#x2F;JNA&#x2F;JNAE 用于无符号数比较</strong></p>
+<p><strong>JL&#x2F;JLE&#x2F;JNL&#x2F;JNLE&#x2F;JG&#x2F;JGE&#x2F;JNG&#x2F;JNGE 用于带符号数比较</strong></p>
+<ul>
+<li><p>JCXZ（jump if cx&#x3D;zero）</p>
+<p>CX&#x3D;0 则跳转，否则不转</p>
+</li>
+</ul>
+</li>
+<li><p>循环指令</p>
+<ul>
+<li><p>LOOP OPR</p>
+<p>CX 减 1 存 CX，若 CX 非 0，则转移至标号 OPR 处执行，否则按照代码顺序执行下一条指令</p>
+<ul>
+<li><p>属于“直到型循环”</p>
+</li>
+<li><p>只能使用相对寻址的 8 位位移量</p>
+</li>
+<li><p>不影响标志位</p>
+</li>
+</ul>
+</li>
+<li><p>LOOPZ&#x2F;LOOPE</p>
+<p>LOOPNZ&#x2F;LOOPNE</p>
+<p>CX 减 1 存 CX，若 CX 非零且 ZF&#x3D;1(0)，则转移至标号 OPR 处执行，否则按照代码顺序执行下一条指令</p>
+<ul>
+<li><p>只能用相对寻址的 8 位位移量</p>
+</li>
+<li><p>不影响标志位</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>子程序调用指令</p>
+<p>CALL DST</p>
+<p>DST：子程序入口地址</p>
+<ul>
+<li><p>段内调用：当前 IP 值进栈（保护断点），然后将 DST 指明的偏移地址送 IP</p>
+</li>
+<li><p>段间调用：当前 CS 值入栈，当前 IP 值入栈（保护断点，注意顺序），然后将 DST 指明的段地址送 CS，偏移地址送 IP</p>
+</li>
+</ul>
+</li>
+<li><p>子程序返回指令</p>
+<p>作为子程序的最后一条指令，返回主程序 CALL 指令后的下一条指令继续执行</p>
+<ul>
+<li><p>RET&#x2F;RET N</p>
+<p>段内返回，出栈一个字送 IP（恢复断点）</p>
+<p>若带一个立即数 N，则在上述操作完成后额外出栈 N&#x2F;2 个字</p>
+</li>
+<li><p>RETF&#x2F;RETF N</p>
+<p>段间返回，出栈两个字，第一个字送 IP，第二个字送 CS（恢复断点，注意顺序）</p>
+<p>若带一个立即数 N，则在上述操作完成后额外出栈 N&#x2F;2 个字</p>
+</li>
+</ul>
+<p>不影响标志位</p>
+</li>
+<li><p>中断指令 INT</p>
+<p>INT TYPE</p>
+<p>TYPE 为 0~255 之间的常量</p>
+<ol>
+<li><p>当前标志寄存器 FLAGS 入栈</p>
+</li>
+<li><p>当前 CS、IP 值入栈（注意顺序）（保护断点）</p>
+</li>
+<li><p>物理地址为 $TYPE \times 4$ 的字存储单元的内容送 IP，$TYPE\times 4+2$ 的字存储单元的内容送 CS（寻找中断服务程序入口地址）</p>
+</li>
+<li><p>将<strong>IF 和 TF 清零</strong>（关中断）</p>
+<p>注：参见中断向量表</p>
+<p><img src="/images/3/%E4%B8%AD%E6%96%AD%E5%90%91%E9%87%8F%E8%A1%A8.jpg"></p>
+</li>
+</ol>
+<ul>
+<li>INT 指令不影响除 IF 和 TF 之外的标志位</li>
+</ul>
+<blockquote>
+<p>关于 IP 和 CS 的入栈&#x2F;出栈顺序：</p>
+<p>可以这么记，栈是向下生长的（地址由大到小），在栈中，保存段地址的地址总是大于保存段内偏移地址的地址</p>
+</blockquote>
+</li>
+<li><p>中断返回指令 IRET</p>
+<p>IRET<br>出栈第一个字送 IP；出栈第二个字送 CS；出栈第三个字送 FLAGS</p>
+</li>
+<li><p>系统功能调用</p>
+<p>以 21H 为总入口，再配以具体功能号（AH），常用的有：</p>
+<ul>
+<li><p>01H：从键盘输入一个字符并回显至屏幕</p>
+</li>
+<li><p>02H：显示一个字符至屏幕（字符放在 DL）</p>
+</li>
+<li><p>09H：显示字符串至屏幕</p>
+</li>
+<li><p>0AH：从键盘输入字符串到缓冲区</p>
+</li>
+<li><p>4CH：带返回码结束</p>
+</li>
+</ul>
+</li>
+<li><p>中断指令 INTO（溢出中断服务）<br>若 OF&#x3D;0，继续执行下一条指令<br>若 OF&#x3D;1：</p>
+<ol>
+<li><p>FLAGS 入栈</p>
+</li>
+<li><p>CS、IP 入栈</p>
+</li>
+<li><p>物理地址为 10H 的字存储单元的内容送 IP，物理地址为 12H 的字存储单元的内容送 CS（类型为 4 的中断）</p>
+</li>
+<li><p>IF 和 TF 清零</p>
+</li>
+</ol>
+<ul>
+<li>INTO 不影响除 IF 和 TF 以外的标志位</li>
+</ul>
+</li>
+<li><p>标志操作指令（不影响其余标志位）</p>
+<ul>
+<li><p>CLC，将 CF 清零</p>
+</li>
+<li><p>CMC，将 CF 取反</p>
+</li>
+<li><p>STC，将 CF 置 1</p>
+</li>
+<li><p>CLD，将 DF 清零</p>
+</li>
+<li><p>STD，将 DF 置 1</p>
+</li>
+<li><p>CLI，将 IF 清零</p>
+</li>
+<li><p>STI，将 IF 置 1</p>
+<p><strong>开中断，8259A 编程中，调用某中断后若想中断嵌套，必须在中断处理程序开头加上 STI</strong></p>
+</li>
+</ul>
+<p><strong>对于其他标志位无相应的清零或置 1 指令</strong></p>
+</li>
+<li><p>无操作指令 NOP（不影响标志位）</p>
+</li>
+<li><p>停机指令 HLT<br>使处理机处于停机状态，以等待一次外部中断或 RESET 信号的到来，中断处理结束后继续执行后续指令</p>
+</li>
+<li><p>等待指令 WAIT<br>等待 $\overline{TEST}$ 信号有效，每五个时钟周期测试一次，有效后顺序执行下一条指令</p>
+</li>
+<li><p>交权指令 ESC<br>ESC OPCODE, SRC<br>与 WAIT 指令一同用于与协处理器配合</p>
+</li>
+<li><p>总线封锁前缀指令 LOCK<br>可以添加在任何指令之前，在该条指令执行期间保持 CPU 对总线的控制权，其他处理器不能从 CPU 抢占总线</p>
+</li>
+</ul>
+<h2 id="3-2-8086-汇编语言的基本语法"><a href="#3-2-8086-汇编语言的基本语法" class="headerlink" title="3.2 8086 汇编语言的基本语法"></a>3.2 8086 汇编语言的基本语法</h2><ul>
+<li><p>框架（简略模式）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">        ;采用简化版的段定义伪指令，下一个段的开始即表示上一个段的结束</span><br><span class="line">        .model small</span><br><span class="line">        .stack    [常量(大小为常量个字节)默认1KB]</span><br><span class="line">        .data</span><br><span class="line">; ...定义的数据</span><br><span class="line">; [变量名]    DB    操作数列表</span><br><span class="line">; DB(define word)</span><br><span class="line">; DD(define double word)</span><br><span class="line">; DQ</span><br><span class="line">; DT</span><br><span class="line">; PORTA    EQU    20H  符号常量也可用=定义</span><br><span class="line">; PTR 类型属性操作符 转换类型    类型 PTR 变量名/含变量名的表达式</span><br><span class="line">        .code    [段名]</span><br><span class="line">start:  mov    ax, @data     ; @data表示代码段名</span><br><span class="line">        mov    ds, ax        ; 装载数据段</span><br><span class="line"></span><br><span class="line">        ; ....一些操作</span><br><span class="line"></span><br><span class="line">        mov    ax,4c00h</span><br><span class="line">        int    21h           ; 调用21号中断结束汇编</span><br><span class="line">      end    start</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>框架（非简略模式）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SSTACK	SEGMEN	STACK</span><br><span class="line">		DB	200 DUP(0)</span><br><span class="line">SSTACK	ENDS</span><br><span class="line">DATA	SEGMENT</span><br><span class="line">; ORG 3000H    ; ORG规定起始地址</span><br><span class="line">; ARY     DB    100,98,-1,-2,-4,7,0,100,32,1</span><br><span class="line">; ARRY  DQ DUP(?)    ; DUP复制操作符,?表示只分配存储空间</span><br><span class="line">DATA	ENDS</span><br><span class="line">CODE    SEGMENT</span><br><span class="line">        ASSUME     CS:CODE,DS:DATA,SS:SSTACK</span><br><span class="line">START:  MOV     AX,DATA</span><br><span class="line">        MOV     DS,AX</span><br><span class="line">        MOV     AX,STACK</span><br><span class="line">        MOV     SS,AX</span><br><span class="line">        ; CS不需要送段寄存器</span><br><span class="line">        ; ...一些操作</span><br><span class="line">        MOV    AX,4C00H</span><br><span class="line">        INT    21H           ; 调用21号中断结束汇编</span><br><span class="line">CODE    ENDS</span><br><span class="line">        END      START</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>标识符的属性</p>
+<ul>
+<li><p>段属性<br>标号的段属性必在 CS 寄存器中</p>
+</li>
+<li><p>偏移属性（16 位无符号数）</p>
+</li>
+<li><p>类型属性</p>
+<ul>
+<li><p>标号：NEAR&#x2F;FAR</p>
+</li>
+<li><p>变量名：BYTE&#x2F;WORD&#x2F;DWORD&#x2F;QWORD&#x2F;TBYTE</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>常量</p>
+<ul>
+<li><p>常数</p>
+</li>
+<li><p>字符</p>
+</li>
+<li><p>字符串（可以在单引号里也可以在双引号里）</p>
+</li>
+<li><p>符号常量<br>标识符 EQU&#x2F;&#x3D; 常量或常量表达式 <strong>该语句不占内存</strong></p>
+<p>$：当前行的偏移地址</p>
+</li>
+</ul>
+</li>
+<li><p>变量</p>
+<ul>
+<li><p>DB&#x2F;DW&#x2F;DD&#x2F;DQ&#x2F;DT</p>
+</li>
+<li><p>类型转换：<br>类型 PTR 变量名&#x2F;含变量名的表达式</p>
+<p><code>JMP WORD PTR [BX]</code></p>
+</li>
+</ul>
+</li>
+<li><p>运算符（操作符）</p>
+<ul>
+<li><p>算术运算符：“+” “-” “*” “&#x2F;” 和 MOD</p>
+</li>
+<li><p>逻辑运算符：AND&#x2F;OR&#x2F;XOR&#x2F;NOT&#x2F;SHL&#x2F;SHR</p>
+</li>
+<li><p>关系运算符：EQ&#x2F;NE&#x2F;LT&#x2F;GT&#x2F;LE&#x2F;GE</p>
+</li>
+<li><p>属性运算符：PTR&#x2F;SHORT&#x2F;THIS&#x2F;HIGH&#x2F;LOW&#x2F;TYPE&#x2F;LENGTH&#x2F;SIZE</p>
+</li>
+<li><p>地址运算符：“[]” 、“$”、 “:”、 OFFSET、SEG</p>
+</li>
+</ul>
+<p>运算符出现在<strong>操作数项内部</strong>，运算在<strong>汇编时完成</strong></p>
+</li>
+</ul>
+<h2 id="3-3-汇编语言程序设计基础"><a href="#3-3-汇编语言程序设计基础" class="headerlink" title="3.3 汇编语言程序设计基础"></a>3.3 汇编语言程序设计基础</h2><p>理论不多说了，还是要编</p>
+<ul>
+<li><p>顺序结构程序设计</p>
+</li>
+<li><p>分支结构程序设计</p>
+<p><strong>注意跳过不该执行的分支</strong></p>
+<ul>
+<li><p>eg. 显示 2 位压缩 BCD 码的值（0-99），不输出前导 0，并设待显示字节数据已用 DB 伪指令存至变量 BCD 中</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">	  ; 核心部分</span><br><span class="line">      mov    dl, bcd</span><br><span class="line">      test   dl, 0F0H    ; 按位与看看是一位数还是两位数</span><br><span class="line">      jz     one</span><br><span class="line">two:  mov    cl, 4</span><br><span class="line">      shr    dl, cl      ; 把BCD码的十位移到ASCII的低4位</span><br><span class="line">      add    dl, 30h</span><br><span class="line">      mov    ah, 02h</span><br><span class="line">      int    21h</span><br><span class="line">      mov    dl, bcd</span><br><span class="line">      and    dl, 0fh</span><br><span class="line">      add    dl, 30h</span><br><span class="line">one:  mov    ah, 02h</span><br><span class="line">      int    21h</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>多分支结构<br><strong>跳跃表法</strong><br>eg. 根据 BX 的低四位哪一位为 1（由低到高）在屏幕上显示 1、2、4、8</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">        .model small</span><br><span class="line">        .data</span><br><span class="line">var     equ        ?    ; 测试数据</span><br><span class="line">tab     dw         foo1, foo2, foo3, foo4    ; ***</span><br><span class="line">        .code</span><br><span class="line">start:  mov        ax, @data</span><br><span class="line">        mov        ds, ax</span><br><span class="line">        mov        bx, var</span><br><span class="line">        xor        si, si</span><br><span class="line">find:   shr        bx, 1</span><br><span class="line">        jnc        no</span><br><span class="line">        mov        ah, 02h</span><br><span class="line">        jmp        tab[si]</span><br><span class="line">no:     add        si, 2</span><br><span class="line">        jmp        find</span><br><span class="line">foo1:   mov        dl,&#x27;1&#x27;</span><br><span class="line">        jmp        over</span><br><span class="line">foo2:   mov        dl,&#x27;2&#x27;</span><br><span class="line">        jmp        over</span><br><span class="line">foo3:   mov        dl,&#x27;4&#x27;</span><br><span class="line">        jmp        over</span><br><span class="line">foo4:   mov        dl,&#x27;8&#x27;</span><br><span class="line">        jmp        over</span><br><span class="line">over:   int        21h</span><br><span class="line">        mov        ax,4c00h</span><br><span class="line">        int        21h</span><br><span class="line">        end        start</span><br></pre></td></tr></table></figure>
+
+<p><strong>DW 标识符</strong>是将该标识符（标号、变量名、etc…）对应的段内偏移地址存入一个字单元，类似的，<strong>可用 DD 将某标识符的偏移地址和段地址存入两个相邻的字单元（双字，偏移地址放在低地址单元，段地址放在高地址单元</strong></p>
+</li>
+</ul>
+</li>
+<li><p>循环结构</p>
+<ul>
+<li><p>计数控制</p>
+</li>
+<li><p>条件控制（无条件转移指令、条件转移指令）</p>
+<p>eg. 输入若干学生姓名，直接按回车则结束，将其中最大者（按字典序）输出。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">		.model  small</span><br><span class="line">        .data</span><br><span class="line">maxlen	db      11h				;一个学生姓名的最大长度+1（回车）</span><br><span class="line">actlen	db      ?      			;实际输入的字符个数</span><br><span class="line">nmbuf	db      11h dup(0)		;namebuffer</span><br><span class="line">rslt	db      &#x27;Result: &#x27;		;</span><br><span class="line">longnm	db		0dh, 0ah, &#x27;$&#x27;	;初始化，一开始肯定比&#x27;a&#x27;小就对了</span><br><span class="line">        db		10h dup(0)		;最大的名字</span><br><span class="line">crlf	db		0dh, 0ah, &#x27;$&#x27;	;回车换行</span><br><span class="line">        .code</span><br><span class="line">start:  mov		ax, @data</span><br><span class="line">        mov		ds, ax</span><br><span class="line">        mov     es, ax</span><br><span class="line">        cld</span><br><span class="line">next:   lea     si, nmbuf</span><br><span class="line">        lea		di, longnm</span><br><span class="line">        lea		dx, maxlen		;把最大可输入字符数存到缓冲区第一个字节单元</span><br><span class="line">        mov		ah, 0ah			;输入姓名</span><br><span class="line">        int		21h</span><br><span class="line"></span><br><span class="line">        lea     dx, crlf        ;输出回车换行</span><br><span class="line">        dec 	ah              ;09H号，输出字符串</span><br><span class="line">        int   	21h</span><br><span class="line"></span><br><span class="line">        mov  	cl, actlen</span><br><span class="line">        xor    	ch, ch</span><br><span class="line">        jcxz	otpt            ;若CX=0则跳转，CX=0即只键入了一个回车，结束</span><br><span class="line"></span><br><span class="line">        repe    cmpsb           ;比较nmbuf和longnm的大小 SI-DI</span><br><span class="line">        jng     next            ;/js</span><br><span class="line">        lea   	si, nmbuf       ;更新当前的最大名字</span><br><span class="line">        lea  	di, longnm</span><br><span class="line">        mov   	cl, actlen</span><br><span class="line">        rep		movsb</span><br><span class="line"></span><br><span class="line">        mov		byte ptr [di], 0dh        ;回车换行结束</span><br><span class="line">        mov		byte ptr [di+1], 0ah</span><br><span class="line">        mov		byte ptr [di+2], &#x27;$&#x27;</span><br><span class="line"></span><br><span class="line">        jmp     next</span><br><span class="line">otpt:   mov     dx, offset rslt	;因为rslf后面存的就是结果，结果里才有&#x27;$&#x27;所以一直输出到结束</span><br><span class="line">         int        21h</span><br><span class="line">         mov        ax, 4c00h</span><br><span class="line">         int        21h</span><br><span class="line">         end        start</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>双重循环</p>
+<p>eg. 改进的冒泡排序</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">        ;改进的冒泡排序,递增</span><br><span class="line">        .model small</span><br><span class="line">        .data</span><br><span class="line">COUNT   EQU		11</span><br><span class="line">FLAG    DB		1</span><br><span class="line">        .CODE</span><br><span class="line">START:  MOV        AX,@DATA</span><br><span class="line">        MOV        DS,AX</span><br><span class="line">        MOV        DI,3000H</span><br><span class="line">        MOV        CX,COUNT</span><br><span class="line">        DEC        CX           ;外层循环次数</span><br><span class="line">OLP:    MOV        DX,CX        ;暂存外层循环</span><br><span class="line">        CMP        FLAG,0       ;如果上一轮没有进行交换</span><br><span class="line">        JE         OVER         ;提前结束[优化]</span><br><span class="line">        MOV        FLAG,0</span><br><span class="line">        MOV        DI,3000H</span><br><span class="line"></span><br><span class="line">ILP:    MOV        AL,[DI]</span><br><span class="line">        CMP        AL,[DI+1]    ;ax-[DI+1]</span><br><span class="line">        JB         STEP         ;小于则直接比较下一组</span><br><span class="line">        XCHG       AL,[DI+1]    ;大于则交换</span><br><span class="line">        MOV        [DI],AL</span><br><span class="line">        MOV        FLAG,1       ;一轮中发生交换将FLAG置1</span><br><span class="line">STEP:   INC        DI</span><br><span class="line">        LOOP       ILP</span><br><span class="line">        MOV        CX,DX        ;恢复CX继续计数</span><br><span class="line">        LOOP       OLP</span><br><span class="line"></span><br><span class="line">OVER:   MOV        AX,4C00H</span><br><span class="line">        INT        21</span><br><span class="line">END     START</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>子程序结构</p>
+<p>格式：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">过程名    PROC    [属性]</span><br><span class="line">    …         ;子程序主体部分</span><br><span class="line">过程名    ENDP</span><br></pre></td></tr></table></figure>
+
+<p>属性为 NEAR&#x2F;FAR</p>
+<p>eg. N 的阶乘</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">          	;N的阶乘</span><br><span class="line">STACK   SEGMENT STACK</span><br><span class="line">		DB 200 DUP(0)</span><br><span class="line">STACK   ENDS</span><br><span class="line">DATA	SEGMENT</span><br><span class="line">		N         DW 7</span><br><span class="line">		RESULT    DW ?</span><br><span class="line">DATA    ENDS</span><br><span class="line">CODE    SEGMENT</span><br><span class="line">  		ASSUME     CS:CODE,SS:STACK,DS:DATA</span><br><span class="line">START:	MOV		AX,DATA</span><br><span class="line">        MOV     DS,AX</span><br><span class="line">        MOV     AX,N</span><br><span class="line">        MOV     DX,1</span><br><span class="line">        CALL    FACT</span><br><span class="line">        MOV     RESULT,DX</span><br><span class="line">        MOV     AX,4C00H</span><br><span class="line">        INT     21H</span><br><span class="line"></span><br><span class="line">FACT    PROC</span><br><span class="line">        CMP     AX,0</span><br><span class="line">        JNE     STEP        ;没结束</span><br><span class="line">        MOV     DX,1</span><br><span class="line">        RET</span><br><span class="line"></span><br><span class="line">STEP:   PUSH    AX</span><br><span class="line">        DEC     AX</span><br><span class="line">        CALL    FACT        ;递归调用</span><br><span class="line">        POP     AX</span><br><span class="line">        MUL     DX</span><br><span class="line">        MOV     DX,AX</span><br><span class="line">        RET</span><br><span class="line">FACT    ENDP</span><br><span class="line"></span><br><span class="line">CODE    ENDS</span><br><span class="line">		END      START</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>子程序的参数传递——寄存器传参<br>适用于参数较少的时候</p>
+</li>
+<li><p>子程序的参数传递——<strong>地址表传参</strong><br>适用于参数较多的情况</p>
+<p>eg. 计算数组的累加和</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">        .model small</span><br><span class="line">        .data</span><br><span class="line">ary     dw        10 dup(?)</span><br><span class="line">cnt     dw        10</span><br><span class="line">sum     dw        ?</span><br><span class="line">tbl     dw        3 dup(?)</span><br><span class="line">        .code</span><br><span class="line">main    proc    far</span><br><span class="line">begin:  mov     ax, @data</span><br><span class="line">        mov     ds, ax</span><br><span class="line">        mov     tbl, offset ary</span><br><span class="line">        mov     tbl+2, offset cnt</span><br><span class="line">        mov     tbl+4, offset sum</span><br><span class="line">        mov     bx, offset tbl</span><br><span class="line">        call    addtab</span><br><span class="line">        mov     ax, 4c00h</span><br><span class="line">        int     21h</span><br><span class="line">main    endp</span><br><span class="line">addtab  proc	near</span><br><span class="line">        push	ax</span><br><span class="line">        push	cx</span><br><span class="line">        push	si</span><br><span class="line">        push    di</span><br><span class="line">        mov    	si, [bx]        ;数组首地址</span><br><span class="line">        mov   	di, [bx+2]      ;数组元素个数</span><br><span class="line">        mov     cx, [di]        ;数组元素个数送CX</span><br><span class="line">        mov     di, [bx+4]      ;sum</span><br><span class="line">        xor     ax, ax          ;ax存每次相加后的结果</span><br><span class="line">next:   add     ax, [si]</span><br><span class="line">        add     si, 2</span><br><span class="line">        loop    next</span><br><span class="line">        mov     [di], ax        ;结果送sum</span><br><span class="line">        pop     di</span><br><span class="line">        pop     si</span><br><span class="line">        pop     cx</span><br><span class="line">        pop     ax</span><br><span class="line">        ret</span><br><span class="line">addtab  endp</span><br><span class="line">        end   	begin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>子程序的参数传递——<strong>堆栈传参</strong><br>适用于子程序有嵌套、递归调用的情况，主程序将参数压栈，子程序将参数弹栈。使用堆栈传参要注意对栈的管理，最好可以画个图。</p>
+<p>eg. 数组累加</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">        .model small</span><br><span class="line">        .data</span><br><span class="line">ary     dw        10 dup(?)</span><br><span class="line">cnt     dw        10</span><br><span class="line">sum     dw        ?</span><br><span class="line">        .stack</span><br><span class="line">        dw        100 dup(?)</span><br><span class="line">btm     dw        ?                ;栈是向下生长的</span><br><span class="line">        .code</span><br><span class="line">main    proc	far</span><br><span class="line">begin:  mov     ax, @data</span><br><span class="line">        mov     ds, ax</span><br><span class="line">        mov     sp, offset btm    ;栈顶指针，当前指向栈底</span><br><span class="line">        mov     bx, offset ary    ;数组首地址</span><br><span class="line">        push    bx</span><br><span class="line">        mov     bx, offset cnt    ;数组元素个数</span><br><span class="line">        push    bx</span><br><span class="line">        mov     bx, offset sum    ;数组元素和</span><br><span class="line">        push    bx</span><br><span class="line">        call    addstk</span><br><span class="line">        mov     ax, 4c00h</span><br><span class="line">        int     21h</span><br><span class="line">main    endp</span><br><span class="line">addstk  proc    near</span><br><span class="line">        push    bp</span><br><span class="line">        mov        bp, sp</span><br><span class="line">        push    ax</span><br><span class="line">        push    cx</span><br><span class="line">        push    si</span><br><span class="line">        push    di</span><br><span class="line">        mov     si, [bp+8]  ;&amp;ary</span><br><span class="line">        mov     di, [bp+6]  ;&amp;cnt</span><br><span class="line">        mov     cx, [di]    ;数组元素个数</span><br><span class="line">        mov     di, [bp+4]	;&amp;sum</span><br><span class="line">        xor     ax, ax</span><br><span class="line">next:   add     ax, [si]</span><br><span class="line">        add     si, 2</span><br><span class="line">        loop    next</span><br><span class="line">        mov     [di], ax</span><br><span class="line">        pop     di</span><br><span class="line">        pop     si</span><br><span class="line">        pop     cx</span><br><span class="line">        pop     ax</span><br><span class="line">        pop     bp</span><br><span class="line">        ret     6        	;额外弹出3个字（丢弃不再需要的参数）</span><br><span class="line">addstk  endp</span><br><span class="line">        end     begin</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/3/%E6%A0%88%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0.JPG"></p>
+<p><strong>BP 的专门用途正是堆栈传参</strong>，BP 寄存器默认与 SS 段寄存器配合</p>
+<p>递归式累加代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 元素个数用堆栈传递，累加和用AX传递</span><br><span class="line">        .model    small</span><br><span class="line">        .data</span><br><span class="line">ary     dw        10 dup(2)</span><br><span class="line">cnt     dw        10</span><br><span class="line">sum     dw        ?</span><br><span class="line">        .stack</span><br><span class="line">        dw    100 dup(?)</span><br><span class="line">btm     dw    ?</span><br><span class="line">        .code</span><br><span class="line">main    proc	far</span><br><span class="line">begin:  mov   	ax, @data</span><br><span class="line">        mov 	ds, ax</span><br><span class="line">        mov		sp, offset btm        ;栈顶指针，初始指向栈底</span><br><span class="line">        push    cnt</span><br><span class="line">        mov     bx, offset ary</span><br><span class="line">        push    bx</span><br><span class="line">        xor     ax, ax</span><br><span class="line">        call    addrec</span><br><span class="line">        mov		sum, ax</span><br><span class="line">        mov     ax, 4c00h</span><br><span class="line">        int     21h</span><br><span class="line">main    endp</span><br><span class="line">addrec  proc    near</span><br><span class="line">        push    bp</span><br><span class="line">        mov     bp, sp</span><br><span class="line">        push    bx</span><br><span class="line">        mov     bx, [bp+6]        ;cnt</span><br><span class="line">        test    bx, bx            ;cnt=0?</span><br><span class="line">        jz      back</span><br><span class="line">recur:  dec     bx</span><br><span class="line">        push    bx</span><br><span class="line">        mov     bx, [bp+4]</span><br><span class="line">        add     bx, 2</span><br><span class="line">        push    bx</span><br><span class="line">        call    addrec</span><br><span class="line">        mov     bx, [bp+4]</span><br><span class="line">        add     ax, [bx]</span><br><span class="line">back:   pop     bx</span><br><span class="line">        pop     bp</span><br><span class="line">        ret     4</span><br><span class="line">        end     begin</span><br></pre></td></tr></table></figure>
+
+<p>当 CNT&#x3D;2 时堆栈的变化如下图：（借此了解一下栈帧）</p>
+</li>
+</ul>
+<p><img src="/images/3/%E5%A0%86%E6%A0%88%E4%BC%A0%E5%8F%82%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A8.JPG"></p>
+<ul>
+<li><p>子程序参数传递——<strong>结构化参数</strong></p>
+<p>格式：</p>
+<p>结构名 STRUC<br>… …<br>结构名 ENDS</p>
+<p>结构变量名 结构名 &lt;预赋值说明（给出各字段的值，用逗号分隔，不填表示缺省）&gt;</p>
+<p><img src="/images/3/%E6%95%B0%E7%BB%84%E5%92%8C%E7%BB%93%E6%9E%84%E4%BC%A0%E5%8F%82.png"></p>
+</li>
+</ul>
+</li>
+<li><p>宏定义</p>
+<ul>
+<li><p>格式：<br>宏名 MACRO [形参列表]<br> … ; 宏定义体<br>ENDM</p>
+</li>
+<li><p>宏名必须以字母开头，形参可缺省，也可有多个形参（逗号分隔）</p>
+</li>
+<li><p>宏定义中出现标号时，必须用 LOCAL 伪指令将其声明为局部标号，否则多次宏调用将出现重复标号问题</p>
+<p><strong>注意</strong>：LOCAL 伪指令只能用于宏定义体内部，必须是 MACRO 伪指令后的第一条语句，在 MARCO 和 LOCAL 之间不能有注释</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">; 将ASCII码转化为真值</span><br><span class="line">ASCTOH    MACRO</span><br><span class="line">        LOCAL    ASCTOH1, ASCTOH2</span><br><span class="line">        CMP        AL, ‘9’</span><br><span class="line">        JBE        ASCTOH1</span><br><span class="line">        CMP        AL, ‘a’</span><br><span class="line">        JB        ASCTOH2</span><br><span class="line">        SUB        AL, 20H</span><br><span class="line">ASCTOH2:</span><br><span class="line">        SUB        AL, 7</span><br><span class="line">ASCTOH1:</span><br><span class="line">        SUB        AL, 30H</span><br><span class="line">        ENDM</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>宏调用与宏展开</p>
+<ul>
+<li><p>宏调用</p>
+<p>格式：<code>宏名 [实参列表]</code></p>
+<p>宏调用也称宏指令，对汇编语言源程序进行汇编时，汇编程序将对每一个宏调用作宏展开</p>
+</li>
+<li><p>宏展开</p>
+<p>即以宏定义体替换宏名，并将宏定义提中出现的形参用与之位置相同的实参替换</p>
+</li>
+<li><p>宏指令名可以与指令或伪指令的助记符相同，<strong>宏的优先级最高</strong><br>可以用 PURGE 伪指令取消宏定义以恢复指令的原始含义，如 <code>PURGE ADD</code></p>
+<p>eg. 显示一个字符的宏定义</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">DISPCH  MACRO    CHAR</span><br><span class="line">        MOV        AH, 2</span><br><span class="line">        MOV        DL, CHAR</span><br><span class="line">        INT        21H</span><br><span class="line">        ENDM</span><br><span class="line">        ; 宏调用</span><br><span class="line">        DISPCH    ‘Y’</span><br><span class="line">        DISPCH    BL</span><br><span class="line">        DISPCH    BYTE_VAR</span><br></pre></td></tr></table></figure>
+
+<p>eg. <strong>实参作为指令操作码助记符的一部分</strong></p>
+<blockquote>
+<p>宏展开时，’&amp;’ 前后的符号将合并</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">LEAP     MACRO    COND, LAB</span><br><span class="line">J&amp;COND   LAB</span><br><span class="line">ENDM</span><br><span class="line">;宏调用</span><br><span class="line">LEAP     Z, THERE</span><br><span class="line">LEAP     NC, HERE</span><br><span class="line">;宏展开</span><br><span class="line">JZ       THERE</span><br><span class="line">JNC      HERE</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>重复汇编</p>
+<p>格式：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">REPT    表达式</span><br><span class="line">...        ;重复块</span><br><span class="line">ENDM</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>宏与子程序对比</p>
+<ul>
+<li>宏是文本替换，子程序是流程转移</li>
+<li>宏展开发生在程序执行之前的汇编阶段，程序执行时已经没有宏了；子程序则是在程序执行时才被执行</li>
+<li>宏的速度更快，函数的空间更小</li>
+<li>程序较短且要求执行较快时适合采用宏实现；程序段较长时适合采用子程序</li>
+</ul>
+</li>
+<li><p>条件汇编</p>
+<p>汇编程序根据条件决定是否对某一段源代码进行汇编</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">IFXX    参数</span><br><span class="line">    …    ;参数满足条件则汇编此块</span><br><span class="line">[ELSE]</span><br><span class="line">    …    ;参数不满足条件则汇编此块</span><br><span class="line">ENDIF</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>IF 表达式：计算表达式的值，若结果不为零则满足条件</p>
+</li>
+<li><p>IFE 表达式：计算表达式的值，若结果为零则满足条件</p>
+</li>
+<li><p>IFDEF 符号：若符号已在程序中定义，或者已经用 EXTERN 伪指令声明为外部符号，则满足条件</p>
+</li>
+<li><p>IFNDEF 符号：若符号未在程序中定义且未用 EXTERN 伪指令声明为外部符号，则满足条件</p>
+</li>
+<li><p>IFB &lt;自变量&gt;：若自变量为空则满足条件</p>
+</li>
+<li><p>IFNB &lt;自变量&gt;：若自变量非空则满足条件</p>
+<p>eg. GOTO L, X, REL</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    ;宏定义</span><br><span class="line">GOTO    MACRO    L, X, REL</span><br><span class="line">    	IFB    &lt;REL&gt;</span><br><span class="line">    	JMP    L</span><br><span class="line">    	ELSE</span><br><span class="line">    	MOV    CX, X</span><br><span class="line">L:      DEC    CX</span><br><span class="line">    	ADD    X, CX</span><br><span class="line">    	AND    CX, CX</span><br><span class="line">    	J&amp;REL    L</span><br><span class="line">    	ENDIF</span><br><span class="line">    	ENDM</span><br><span class="line">    	;宏调用</span><br><span class="line">    	…</span><br><span class="line">    	SUM    DW    100</span><br><span class="line">   	 	…</span><br><span class="line">    	GOTO    NEXT, SUM, NZ</span><br><span class="line">    	GOTO    EXIT</span><br><span class="line">   		 …</span><br><span class="line">    	;宏展开</span><br><span class="line">    	MOV    CX, SUM</span><br><span class="line">NEXT:   DEC    CX</span><br><span class="line">    	ADD    SUM, CX</span><br><span class="line">    	AND    CX, CX</span><br><span class="line">    	JNZ    NEXT</span><br><span class="line">    	JMP    EXIT</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><ol>
+<li><p>如何将 AX 寄存器清零</p>
+</li>
+<li><p>比较 REP 指令与 LOOP 指令：循环类型、影响标志位？</p>
+</li>
+<li><p><code>MOV BX,OFFEST LIST</code>与<code>LEA BX, LIST</code>的区别？</p>
+<p>OFFSET 属于运算符，在汇编时完成，属于立即寻址<br>LEA 则是在程序运行时执行，属于直接寻址</p>
+</li>
+<li><p>下面的代码完成了什么操作？如果直接执行<code>mov ax, dvar</code>会怎么样？</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.MODEL SMALL</span><br><span class="line">        .DATA</span><br><span class="line">dvar    dd    12347777h, 87651111h, ?</span><br><span class="line">        .CODE</span><br><span class="line">START:  mov        ax,@data</span><br><span class="line">        mov        ds,ax</span><br><span class="line">        mov        ax, word ptr dvar[0]    ;ax=7777h</span><br><span class="line">        mov        dx, word ptr dvar[2]    ;dx=1234h</span><br><span class="line">        add        ax, word ptr dvar[4]    ;ax=8888h</span><br><span class="line">        adc        dx, word ptr dvar[6]    ;dx=9999h</span><br><span class="line">        mov        word ptr dvar[8], ax    ;dvar[8]=88h dvar[9]=88h</span><br><span class="line">        mov        word ptr dvar[10], dx   ;dvar[10]=99h dvar[11]=99h</span><br><span class="line">        mov        ax, dvar                ;ax=7777h(warning)</span><br><span class="line">OVER:   MOV        AX, 4C00H</span><br><span class="line">        INT        21H</span><br><span class="line">        END        START</span><br></pre></td></tr></table></figure>
+
+<p>小端存储，它是这样存的：</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center">高地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">87H</td>
+<td align="center">dvar[7]</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">65H</td>
+<td align="center">dvar[6]</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">11H</td>
+<td align="center">dvar[5]</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">11H</td>
+<td align="center">dvar[4]</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">12H</td>
+<td align="center">dvar[3]</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">34H</td>
+<td align="center">dvar[2]</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">77H</td>
+<td align="center">dvar[1]</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">77H</td>
+<td align="center">dvar[0]</td>
+<td align="center">低地址</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>汇编与接口</category>
+      </categories>
+      <tags>
+        <tag>汇编与接口</tag>
+        <tag>汇编语言</tag>
+      </tags>
   </entry>
 </search>
