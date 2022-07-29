@@ -3,38 +3,18 @@
   <entry>
     <title>汇编与接口 汇编常用知识</title>
     <url>/posts/42ebdf66/</url>
-    <content><![CDATA[<h2 id="常用中断类型码"><a href="#常用中断类型码" class="headerlink" title="常用中断类型码"></a>常用中断类型码</h2><h3 id="21H-中断"><a href="#21H-中断" class="headerlink" title="21H 中断"></a>21H 中断</h3><ul>
-<li><p>4CH 号功能：结束程序</p>
-<p>MOV AX, 4C00H</p>
-</li>
-<li><p>02H 号功能：在屏幕上显示字符</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">MOV  DL, &#x27;A&#x27;</span><br><span class="line">MOV  AH, 02H</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>01H 号功能：由键盘输入一个字符</p>
-</li>
-<li><p>0A 号功能：由键盘输入字符串</p>
-<p>调用之前先设置好缓冲区，第一个字节事先填入最多允许接受的字符个数（包括 0DH），第二个字节留空，本功能自动回填实际输入的字符个数（不包括回车符），第三个字节起存放实际的字符串，用户按回车结束，从而最后一个字符是 0DH，若用户输入字符超过设置，不予响应</p>
-<ul>
-<li><p>调用参数：DS:DX&#x3D;缓冲区首地址 DS:[DX]&#x3D;缓冲区最大容量</p>
-</li>
-<li><p>返回参数：DS:[DX+1]&#x3D;实际输入字符数 DS:DX+2&#x3D;字符串首地址</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">LEA        SI</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-<h2 id="常用-ASCII-码"><a href="#常用-ASCII-码" class="headerlink" title="常用 ASCII 码"></a>常用 ASCII 码</h2><ul>
-<li>回车 0DH</li>
-<li>换行 0AH</li>
-<li>终结符 ‘$’</li>
-<li>‘A’ &#x3D; ‘9’ + 7</li>
-</ul>
-<h2 id="常用伪指令"><a href="#常用伪指令" class="headerlink" title="常用伪指令"></a>常用伪指令</h2><ul>
-<li>ORG</li>
-</ul>
-<h2 id="做题时注意事项"><a href="#做题时注意事项" class="headerlink" title="做题时注意事项"></a>做题时注意事项</h2><ul>
-<li>用到字符串操作指令时注意先设置 DF</li>
-</ul>
-]]></content>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="错啦！" data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="e7f8ff0a46cb169785bd11fce8afd5a2a4e35add4f054e6980aabe1f105c13ef">8193addc5eb4645f419686f3a48f6ea70125dfb75e52db03b9950de3866c2e63277d33e2f226d25f9730b103a4ea5b3b95baa5ccf6cf80a822f44feb59afbf61c4e57903ddc4095f5dfe6cc9bdb914500a99dc5cbc199bacc691d5b38ff95fae096a46fd6a7c5e267b6aefd35936a5142b46c0262e02f06df113462ea8e0246afc393597be64a3fe1cafbd635918bf75a85916c0d38e20f42ab49b648c3d1422575c482863e3da0c7cc71b71d48517b08f0dad1de984855279999474881922584bf3b305ae9e80307a024fc4a437e6dfd17e8904869b5b7e76ad3710de7f6f7cb2510caa0ff89b8073f5bfcf54da8b3afb73696522ba5ba52d03fbaf2d75eab12c1c2d60ed09e7a4e6f16a763586e75636cc643739580356cc33fcd4ecbbdc6c3ea1e9004b05db0a6a6503d1730038e16da02fa9f661b4b6965762f7173de35b89f14a9a4ee53695fd9e352252dd8ef879b2121e5dae007c2e1c258c35b721c118070a180914ed13b6d02f34b70e4e45e088d22525dab380bfc7add7fd7d625ddba2cfbe06bf0f08df14a73e68ccd2b29e02adcd6828e974a4d858641fb42cbb74a9898c5bab43c7ff7ac150c57f4f0f14f7f611e4341bcb9cda408c796a169e23f797d180df28b7ca4b9c10b00cc6f3d6c1026a7d7de3d8032e02d6ae6bda07ae37afccccfe99fff2b6cdff3f546675668d5815ca5e29976d8d293306a16e80dedae863384936e2f4527a818f152e5105f1344d487b4a58b0caa67ad98113352d83ea5afa3feb6fe21a0d65888f07d2c3f1f285ec6887af3ec84f4c07d386d6c7bf58ea00e8e96e66f22ea243fa5b8249dc1849d1848e9fe10cfc86995862771c3d3f20e6c7737c1e2f65c2cca04f530146f13568e435637c38118552b698e12f82bc5d2bc3b5771fbfc41760dee18bc4ab30e00a4da98c239df2a092d3a596a167abac53a6d4916f2356be1368f63c9ee4d7322c0770e374859f3f37a8671cbb8985990a4b081056fea8c1a3b8474fbb9729e5076ca88fbca31963af34b0a8a8d166e00016edde67d6781eb2e72c441ba4c52f731aca5a810563e7d92fd6691e13de9c71c385855657d9806e75e809582dc9db2b01e3623e76bab410a2b126e1ab1a311d148202662a7b3f9edda93a2e84cc87958248a642c648bc2f015bf3acc0bf6b69d212134477d839b62a7ff69fe0f5c2fb0715cef571c17396b4ba1dc1866539257a88d210122f29274b22254b0a78e01a7043150ab018f6d5caa252b9b19a13ea5737afaab014c081d2d9e8625d132f171075c06331544a5a9daeb190af375eb3d26c0e0ec4bdf5335e4216556cc19601591ef54097f242a5b29cebab4b601f677fa1740b4baea587bb207a4d9dbd63a9343a542c7b820a1332ec9dfdba03d43da8f4b9e0b2c1679071038644217872b560ab1d526af8d56ab2e789f1ebbc90977883184c720d3436af1b9d88d2cb1fc18ac309c2e1dd7151949d1d3c8043accd4d68f568ee57e2cfbf37b7336286cc5823abc89d8552d3b1ffc7f17bea8d62e2f7ed061a7781ad7110d3e6f2fe9a4b05e1ca6e75f7629c56995a53d23a83f9dac240b44eba3920bed97fd2d91544311d3b177b0e1bef7b97ad731add946744f177a3faa0b228b30f20570866d8605988e8a5e73e0a410cda308bd4246525b8c79b70f74e8468b12898d9934c0c3b72effd762ed695fc03af35db4cf8769d9fdb5fba93476ce6dd29b6cbefaf00ab437e0339390653d279611afc63512975d671b4c80cca405f4d8eb1bb1191e8bda1fef4d8e514054c08a2e21c3334dcafb8eb98a84be3d28aa3b7c74b8020f32f57671acb81240258459a8bd8660bb3b825f19596e14232dd800ed227652b10283dfe960ee59f6dd52c8db0d524e529a13eeb503d95d8415c62a5b4707c5ceaa237a345b1443cf2dfb04a195d77ffd40ebb49b93a674072b1808fbbf40f03ffff1191cdf20898c60a355e4db348cb36047976697350beebf078080f6183feb8e975c973c17efed1e127afe6fdebfcec4a541a4d4eb9420d121305781ef7569b285ba34241c3466ff8c1c71fbff549d8b4c1171cfa563d5436613d834218ab2ece93c1fd508fb95b0a331ac651314237ba4006fddf0d48ef66a543efb811667b045747be9270658f0ae68030a9e33958a46eae7bbc304f44c6ee71f95fbcc080dea277011c3407ac6052ce69126e83128f41ccee89637ddbe3880dc8b5fd2b118900d6cf240a47507facf059761f5045465eb2b9dc8fc3c5fdcd357a0aeb2e07c239ea893e02db15bc1226e00ff622da0b8df46ec4f10a16cebf7f29d226e01ac99b672b8bc6cdbdf25c006205d685580cbe02606f56b5b0acfc5c96b8172b5dbb7f431657ac04a7bd99acd2aa259a0e96c7e111f1c14c0da5e10924a470bc6631c91014a5657be03b3d7401b99253abd5a9c9a6ffff74e1ed471bf353143bbc3874205a93e03a452038d9148edc79e8db7b16954ca9fbfbf0f12c8a1fb7327e51905d272a627f592685fd952974151e0923722492c0c694031d3efbe5f76c112961b9989576924e6cb62c235806c43ad024503bd72fcd57870fba52ef791290c7e80f38a70150a3b01428ae5b78a48c44d490558d731c1bc7c52839945e0b0e80572fbce7474da9ccfcbd0f66f3531e4e55af3082b6e22c78b11af8fad9643be67da7574aea72ff262ffad1eb33b53998836574458761c6db0b35c3861b7abb7703510f305933d655dcdbe918d0d22fdbe93eb08adefeed372bd12469c23c6c1780dd8a3c976246f4464aa50f958e4746322c091ed59a067af7a5712a8bdb96f56ab76bdd65fe798fbd2bbbe2e8b235712c513b661c42b37ea58f43c8a39f395251427c1fb38de368d26a8ee949b962e24ae6bb24d431a6b0bfece26823fe64511f6ac32ecb8459a098b0990db1677318199cf297e923c771c11a85a6c3647735467fcffe77eca85ee17b9357cac4f5bfa69c551dc1bd63138df36d52d4c273dbc6efe20bd9896e224d9a21a3997cbd66ef5b9fe6313d0ccc4c8108db6ba56844f66ae48b4af6ca6ece4f5e202d8fff5b33032530858089f5aa20d914d35b5c483846b37f6226d51995dcaa0a35</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码~</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
         <category>汇编与接口</category>
       </categories>
