@@ -2310,63 +2310,6 @@
       </tags>
   </entry>
   <entry>
-    <title>智能电网安全简述</title>
-    <url>/posts/33e28c5/</url>
-    <content><![CDATA[<p>见我的语雀文档：</p>
-<p><a href="https://www.yuque.com/docs/share/95f1a4c1-acc7-41a8-af4f-46d429373fb4#">https://www.yuque.com/docs/share/95f1a4c1-acc7-41a8-af4f-46d429373fb4?#</a></p>
-]]></content>
-      <categories>
-        <category>论文阅读笔记</category>
-      </categories>
-      <tags>
-        <tag>智能电网</tag>
-        <tag>智能电网安全</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Non-Intrusive Load Monitoring (NILM)</title>
-    <url>/posts/28f6e9d8/</url>
-    <content><![CDATA[<p>见我的语雀文档：</p>
-<p><a href="https://www.yuque.com/docs/share/7ca2a900-ed97-47b6-95a1-c753d69cf652#">https://www.yuque.com/docs/share/7ca2a900-ed97-47b6-95a1-c753d69cf652?#</a></p>
-]]></content>
-      <categories>
-        <category>论文阅读笔记</category>
-      </categories>
-      <tags>
-        <tag>智能电网</tag>
-        <tag>智能电网安全</tag>
-        <tag>数据隐私安全</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>窃电检测相关文章阅读笔记</title>
-    <url>/posts/c4f16fab/</url>
-    <content><![CDATA[<p>见我的语雀文档：</p>
-<p><a href="https://www.yuque.com/docs/share/16d62497-11b9-4b53-8c9a-e59fb43be2b5#">https://www.yuque.com/docs/share/16d62497-11b9-4b53-8c9a-e59fb43be2b5?#</a></p>
-]]></content>
-      <categories>
-        <category>论文阅读笔记</category>
-      </categories>
-      <tags>
-        <tag>智能电网</tag>
-        <tag>智能电网安全</tag>
-        <tag>窃电检测</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>笔记：Security and Privacy in the Age of Commercial Drones</title>
-    <url>/posts/130f42fa/</url>
-    <content><![CDATA[<p><a href="https://www.yuque.com/docs/share/f4470b20-55ef-404c-b80d-98532bd6fd26#">https://www.yuque.com/docs/share/f4470b20-55ef-404c-b80d-98532bd6fd26?#</a></p>
-]]></content>
-      <categories>
-        <category>论文阅读笔记</category>
-      </categories>
-      <tags>
-        <tag>无人机安全</tag>
-        <tag>物联网安全</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>test</title>
     <url>/posts/a254d74d/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="错啦！" data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
@@ -2414,44 +2357,6 @@
       </categories>
       <tags>
         <tag>C</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LeetCode刷题小Tip记录</title>
-    <url>/posts/9d93cc8d/</url>
-    <content><![CDATA[<h2 id="临界值问题"><a href="#临界值问题" class="headerlink" title="临界值问题"></a>临界值问题</h2><p>以二分法为例，在写代码的时候</p>
-<p>例题：<a href="https://leetcode.cn/problems/spiral-matrix-ii/">LeetCode 59.螺旋矩阵 II</a></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">generateMatrix</span>(<span class="type">int</span> n) &#123;</span><br><span class="line">        vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">res</span>(n, <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(n,<span class="number">0</span>));</span><br><span class="line">        <span class="comment">// 统一左闭右开</span></span><br><span class="line">        <span class="type">int</span> count =<span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> mid=n/<span class="number">2</span>;</span><br><span class="line">        <span class="type">int</span> loop=n/<span class="number">2</span>;   <span class="comment">// 计算循环次数</span></span><br><span class="line">        <span class="type">int</span> x_start=<span class="number">0</span>, y_start=<span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> x, y;</span><br><span class="line">        <span class="type">int</span> offset=<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(loop--)&#123;</span><br><span class="line">            x=x_start;</span><br><span class="line">            y=y_start;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span>(y=y_start;y&lt;y_start+n-offset;y++)&#123;</span><br><span class="line">                res[x_start][y]=count++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span>(x=x_start; x&lt;x_start+n-offset; x++)&#123;</span><br><span class="line">                res[x][y]=count++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span>(;y&gt;y_start;y--)&#123;</span><br><span class="line">                res[x][y]=count++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span>(;x&gt;x_start;x--)&#123;</span><br><span class="line">                res[x][y_start]=count++;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            offset+=<span class="number">2</span>;</span><br><span class="line">            x_start++;</span><br><span class="line">            y_start++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (n%<span class="number">2</span>==<span class="number">1</span>)&#123;</span><br><span class="line">            res[mid][mid]=count;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="C-代码相关"><a href="#C-代码相关" class="headerlink" title="C++代码相关"></a>C++代码相关</h2><h3 id="二维数组声明和初始化"><a href="#二维数组声明和初始化" class="headerlink" title="二维数组声明和初始化"></a>二维数组声明和初始化</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">res</span>(n, <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(n,<span class="number">0</span>));</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-        <tag>算法</tag>
-        <tag>数据结构</tag>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【数据结构与算法】二分法与滑动窗口</title>
-    <url>/posts/c4c8e0ba/</url>
-    <content><![CDATA[<blockquote>
-<p>参考书籍：《代码随想录》</p>
-</blockquote>
-<h2 id="二分法"><a href="#二分法" class="headerlink" title="二分法"></a>二分法</h2><h3 id="使用前提"><a href="#使用前提" class="headerlink" title="使用前提"></a>使用前提</h3>]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-        <tag>算法</tag>
-        <tag>数据结构</tag>
-        <tag>二分法</tag>
-        <tag>滑动窗口</tag>
-        <tag>数组</tag>
       </tags>
   </entry>
 </search>
