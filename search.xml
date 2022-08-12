@@ -2359,4 +2359,21 @@
         <tag>C</tag>
       </tags>
   </entry>
+  <entry>
+    <title>python中的defaultdict</title>
+    <url>/posts/d5d0d265/</url>
+    <content><![CDATA[<h2 id="defaultdict-与-dict"><a href="#defaultdict-与-dict" class="headerlink" title="defaultdict 与 dict"></a>defaultdict 与 dict</h2><h3 id="字典-dict"><a href="#字典-dict" class="headerlink" title="字典 dict"></a>字典 dict</h3><p>定义字典:<code>dict=&#123;&#125;</code></p>
+<p>添加元素: <code>dict[key]=value</code></p>
+<p>取值：<code>dict[key]</code>，前提是 dict 有 key 这个键，否则会报 KeyError 错误</p>
+<h3 id="defaultdict"><a href="#defaultdict" class="headerlink" title="defaultdict"></a>defaultdict</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict</span><br><span class="line"><span class="built_in">dict</span> = defaultdict(factory_function)    <span class="comment"># factory_function = list/set/str...</span></span><br></pre></td></tr></table></figure>
+
+<p>defaultdict 接受一个 factory_function 作为参数，factory_function 可以是 list、set、str 等。defaultdict 可以处理 key 不存在的情况，当字典里的 key 不存在但被查找时，不会报 KeyError 错误，而是会根据 factory_function 返回一个默认值，list 返回[]，str 返回’’，set 返回 set()，int 返回 0。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
 </search>
