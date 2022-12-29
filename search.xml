@@ -2376,4 +2376,52 @@
         <tag>python</tag>
       </tags>
   </entry>
+  <entry>
+    <title>20221212-链表</title>
+    <url>/posts/c099b0b1/</url>
+    <content><![CDATA[<h2 id="单链表定义"><a href="#单链表定义" class="headerlink" title="单链表定义"></a>单链表定义</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">ListNode</span> &#123;</span><br><span class="line">    <span class="type">int</span> value;</span><br><span class="line">    ListNode* next;</span><br><span class="line">    ListNo</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>代码随想录</category>
+      </categories>
+      <tags>
+        <tag>Leetcode</tag>
+        <tag>代码随想录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Google API Client 设置 Proxy</title>
+    <url>/posts/58e6e58f/</url>
+    <content><![CDATA[<p>项目需要使用 YouTube Data API v3 抓取 YouTube 视频中的评论，google 提供的 python 代码中使用了 <a href="https://github.com/googleapis/google-api-python-client">google-api-python-client</a> 包，但是文档中并未说明如何启用代理，经过一上午的各种尝试，终于在读了源码之后成功使用代理访问 API 接口。</p>
+<h2 id="失败尝试"><a href="#失败尝试" class="headerlink" title="失败尝试"></a>失败尝试</h2><h3 id="用-requests-访问接口"><a href="#用-requests-访问接口" class="headerlink" title="用 requests 访问接口"></a>用 requests 访问接口</h3><p>既然 client 没有提供代理访问，那我就不用这个包了，直接用 requests 构造请求访问 API，然而，很遗憾，不是 SSL 错误就是返回 403。</p>
+<h3 id="设置-socket-global-proxy"><a href="#设置-socket-global-proxy" class="headerlink" title="设置 socket global proxy"></a>设置 socket global proxy</h3><p>见 <a href="https://github.com/googleapis/google-api-python-client/issues/569">issue #569</a></p>
+<blockquote>
+<p>Hello, you know the google APIs are blocked in China, so we can only access these APIs by proxy, but I don’t know whether the python client support proxy setup? If yes, please tell me how. If no, could you please add the proxy feature? Thanks!</p>
+</blockquote>
+<blockquote>
+<p>However, I can set up a global proxy manually by this way, but it a global proxy, other requests would go through with the proxy, which is unnecessary.</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"><span class="keyword">from</span> httplib2 <span class="keyword">import</span> socks</span><br><span class="line"><span class="keyword">import</span> google_auth_oauthlib.flow</span><br><span class="line"></span><br><span class="line">Socks5 proxy</span><br><span class="line">socket.socket = socks.socksocket</span><br><span class="line">socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, <span class="string">&quot;127.0.0.1&quot;</span>, <span class="number">1086</span>)</span><br><span class="line"></span><br><span class="line">flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(</span><br><span class="line">        CLIENT_SECRETS_FILE, scopes=SCOPES)</span><br><span class="line">flow.authorization_url(</span><br><span class="line">        <span class="comment"># Enable offline access so that you can refresh an access token without</span></span><br><span class="line">        <span class="comment"># re-prompting the user for permission. Recommended for web server apps.</span></span><br><span class="line">        access_type=<span class="string">&#x27;offline&#x27;</span>,</span><br><span class="line">        <span class="comment"># Enable incremental authorization. Recommended as a best practice.</span></span><br><span class="line">        include_granted_scopes=<span class="string">&#x27;true&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>我的 socket 连接会 timeout，估计和代理服务器有关系吧，我也没法改，对 socks5 也不了解。</p>
+<h2 id="成功方法"><a href="#成功方法" class="headerlink" title="成功方法"></a>成功方法</h2><p>既然都不行，就去看源码实现吧，要发送请求肯定会调用 urllib3 之类的包。</p>
+<p>定位到 <code>googleapiclient.discovery.build()</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">build</span>(<span class="params"></span></span><br><span class="line"><span class="params">    serviceName,</span></span><br><span class="line"><span class="params">    version,</span></span><br><span class="line"><span class="params">    http=<span class="literal">None</span>,</span></span><br><span class="line"><span class="params">    discoveryServiceUrl=<span class="literal">None</span>,</span></span><br><span class="line"><span class="params">    developerKey=<span class="literal">None</span>,</span></span><br><span class="line"><span class="params">    model=<span class="literal">None</span>,</span></span><br><span class="line"><span class="params">    requestBuilder=HttpRequest,</span></span><br><span class="line"><span class="params">    credentials=<span class="literal">None</span>,</span></span><br><span class="line"><span class="params">    cache_discovery=<span class="literal">True</span>,</span></span><br><span class="line"><span class="params">    cache=<span class="literal">None</span>,</span></span><br><span class="line"><span class="params">    client_options=<span class="literal">None</span>,</span></span><br><span class="line"><span class="params">    adc_cert_path=<span class="literal">None</span>,</span></span><br><span class="line"><span class="params">    adc_key_path=<span class="literal">None</span>,</span></span><br><span class="line"><span class="params">    num_retries=<span class="number">1</span>,</span></span><br><span class="line"><span class="params">    static_discovery=<span class="literal">None</span>,</span></span><br><span class="line"><span class="params">    always_use_jwt_access=<span class="literal">False</span>,</span></span><br><span class="line"><span class="params"></span>):</span><br><span class="line"></span><br><span class="line"> <span class="string">&quot;&quot;&quot;Construct a Resource for interacting with an API.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Construct a Resource object for interacting with an API. The serviceName and</span></span><br><span class="line"><span class="string">    version are the names from the Discovery service.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">      serviceName: string, name of the service.</span></span><br><span class="line"><span class="string">      version: string, the version of the service.</span></span><br><span class="line"><span class="string">      http: httplib2.Http, An instance of httplib2.Http or something that acts</span></span><br><span class="line"><span class="string">        like it that HTTP requests will be made through.</span></span><br></pre></td></tr></table></figure>
+
+<p>这里就很明显了，我们需要注意的是 http 这个参数。</p>
+<blockquote>
+<p>http: httplib2.Http, An instance of httplib2.Http or something that acts like it that HTTP requests will be made through.</p>
+</blockquote>
+<p>解决方法也很显然了，传入一个设置了代理信息的<code>httplib2.Http</code>实例即可。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> httplib2</span><br><span class="line"></span><br><span class="line">proxy_info = httplib2.ProxyInfo(proxy_type=httplib2.socks.PROXY_TYPE_HTTP, proxy_host=<span class="string">&quot;127.0.0.1&quot;</span>, proxy_port=<span class="number">10809</span>)</span><br><span class="line">http = httplib2.Http(timeout=<span class="number">10</span>, proxy_info=proxy_info, disable_ssl_certificate_validation=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line">youtube = googleapiclient.discovery.build(</span><br><span class="line">        api_service_name, api_version, developerKey=DEVELOPER_KEY, http=http)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+        <tag>httplib2</tag>
+      </tags>
+  </entry>
 </search>
